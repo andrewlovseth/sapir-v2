@@ -1,0 +1,22 @@
+body.single-post {
+
+    article.post {
+        padding-bottom: 3rem;
+        
+        & > * {
+            @include tablet {
+                grid-column: 3 / span 6;
+            }
+
+            @include desktop-small {
+                grid-column: 4 / span 8;
+            }
+        }
+    }
+
+    @import 'single-post/header';
+
+    @import 'single-post/body';
+
+    @import 'single-post/footer';
+}

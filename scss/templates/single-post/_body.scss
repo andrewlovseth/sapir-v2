@@ -1,0 +1,19 @@
+.article-body {
+    .wp-block-separator {
+        margin-top: 3rem;
+        border-color: transparent;
+        padding-bottom: 1rem;
+
+        &:before {
+            display: block;
+            content:'';
+            background: url(images/section-divider.svg) no-repeat center center;
+            background-size: contain;
+            width: 3rem;
+            height: 1rem;
+            margin: 0 auto;
+        }
+    }
+    
+
+}

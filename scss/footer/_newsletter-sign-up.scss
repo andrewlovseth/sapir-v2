@@ -1,0 +1,88 @@
+.newsletter-sign-up {
+    margin-top: 6rem;
+
+    .newsletter-wrapper {
+        padding: 2rem;
+        border: 1px solid $issue-seven-red;
+        grid-column: 2 / span 4 !important;
+
+        @include tablet-small {
+            grid-column: 2 / span 8 !important;
+        }
+
+        @include desktop-small {
+            grid-column: 2 / span 12 !important;
+            padding: 3rem;
+        }
+
+        &:before {
+            content: ' ';
+            position: absolute;
+            z-index: -1;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 1px solid $issue-six-purple;
+        }
+    }
+
+    .section-header {
+        padding-bottom: 1rem;
+
+        h3 {
+            font-family: $adams;
+            color: $issue-seven-red;
+            font-size: clamp(1.25rem, 1.3vw, 11.25rem);
+        }
+    }
+
+    .form-wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        input.email {
+            border: 1px solid #d5d5d5;
+            padding: 1rem;
+            height: 3rem;
+            line-height: 1em;
+            max-width: 30rem;
+            font-size: 1.125rem;
+            letter-spacing: 0.02em;
+            width: 100%;
+        }
+
+        input.button {
+            padding: 1rem 2rem;
+            height: 3rem;
+            line-height: 1em;
+            border: none;
+            background: $issue-seven-red;
+            color: $white;
+            font-size: 1.125rem;
+            letter-spacing: 0.02em;
+        }
+    }
+
+    #mce-responses {
+        padding-top: 1rem;
+        font-family: $interstate-mono;
+        color: #fff;
+        font-size: 0.875rem;
+
+        #mce-error-response,
+        #mce-success-response {
+            padding: 1rem;
+            max-width: 50rem;
+        }
+
+        #mce-error-response {
+            background: rgb(218, 91, 91);
+        }
+
+        #mce-success-response {
+            background: rgb(79, 141, 79);
+        }
+    }
+}

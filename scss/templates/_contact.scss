@@ -1,0 +1,20 @@
+body.page-template-contact {
+    @include page-header;
+
+    .page-header {
+        padding-bottom: 2rem;
+    }
+
+    @import 'contact/contact-form';
+
+    @import 'contact/faqs';
+    
+    .form-header {
+        padding-top: 3rem;
+        border-top: 2px solid $light-blue;
+        margin-top: 3rem;
+        font-size: clamp(1rem, 1.25vw, 1.25rem);
+        line-height: 1.75em;
+        padding-bottom: 2rem;
+    }
+}

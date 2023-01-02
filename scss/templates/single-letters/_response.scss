@@ -1,0 +1,18 @@
+.response {
+    padding: 2rem;
+    border: 3px solid rgba($light-blue, 1);
+    margin-bottom: 3rem;
+
+    @include desktop-small {
+        grid-column: 4 / span 9;
+    }
+
+    .copy {
+        font-size: clamp(1rem, 1.15vw, 1.25rem);
+        line-height: 1.75em;
+
+        & > * + * {
+            margin-top: 2.5rem;
+        }
+    }
+}

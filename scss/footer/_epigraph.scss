@@ -1,0 +1,26 @@
+.epigraph {
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    padding-top: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include desktop-small {
+        margin-top: 0;
+        border-top: none;
+        padding-top: 0;
+        grid-column: 8 / span 6;
+    }
+
+    .text {
+        flex: 1;
+        order: 2;
+        text-align: right;
+            
+        p {
+            font-size: clamp(1.125rem, 1.1vw, 1.5rem);
+            line-height: 1.75em;
+        }    
+    }
+}

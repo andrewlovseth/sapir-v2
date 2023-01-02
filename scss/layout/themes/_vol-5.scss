@@ -1,0 +1,88 @@
+// VOL 5 - Blue
+// Post Template
+body.single-post {
+    .volume-five {
+        a {
+            color: $issue-five-blue;
+        }
+
+        &.post .article-header .author .name-link {
+            color: $issue-five-blue;
+
+            :hover {
+                border-color: $issue-five-dark-blue;
+            }
+        }
+
+        .article-body .wp-block-separator:before {
+            background: url(images/section-divider-turquoise.svg) no-repeat center center;
+        }
+
+        .article-body {
+            li.last-p,
+            p.last-p {
+                &:after {
+                    background: url(images/icon-dingbat-turquoise.svg) no-repeat 0 0;
+                    background-size: 100%;
+                }
+            }
+
+            .question {
+                font-weight: bold;
+                color: $issue-five-blue;
+            }
+
+            .answer {
+                font-weight: bold;
+                color: $issue-five-blue;
+
+                &.light {
+                    color: $issue-five-turquoise;
+                }
+            }
+        }
+
+        &.post .article-body .wp-block-pullquote:not(.basic) {
+            border-color: $issue-five-yellow;
+        }
+
+        &.post .article-body .wp-block-pullquote:not(.basic) p {
+            color: $issue-five-blue;
+        }
+
+        .article-footer .back a {
+            border-color: $issue-five-blue;
+        }
+    }
+}
+
+// Issue Template
+body.single-issue {
+    .volume-five {
+        .sub-title {
+            color: $issue-five-blue;
+        }
+
+        &.table-of-contents {
+            .section-header {
+                border-color: $issue-five-turquoise;
+            }
+
+            .contents-header {
+                .cta {
+                    .btn {
+                        background: $issue-five-blue;
+                    }
+                }
+            }
+
+            .contents {
+                .headline {
+                    h2 {
+                        color: $issue-five-blue;
+                    }
+                }
+            }
+        }
+    }
+}

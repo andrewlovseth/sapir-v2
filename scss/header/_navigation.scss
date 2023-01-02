@@ -1,0 +1,48 @@
+.site-nav {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background: $issue-seven-red;
+    transition: all 0.2s ease-in-out;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.35) 0px 8px 16px -8px;
+    opacity: 0;
+    display: flex;
+    align-items: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include tablet {
+        left: -28rem;
+        width: 28rem;
+    }
+
+    ul {
+        padding: 3.75rem 0 0 2rem;
+        width: 100%;
+        flex: 1;
+
+        @include desktop-small {
+            padding: 3.75rem 0 0 3rem;
+        }
+
+        a:hover {
+            border-color: #fff;
+        }
+    }
+
+    .dingbat {
+        padding: 0 0 3.75rem 2rem;
+
+        @include desktop-small {
+            padding: 0 0 3.75rem 3.75rem;
+        }
+
+        img {
+            width: 100%;
+            max-width: 3rem;
+        }
+    }
+}

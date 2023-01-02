@@ -1,0 +1,25 @@
+.sub-grid {
+	display: grid;
+	gap: 0 2rem;
+    grid-template-columns: repeat(4, minmax(auto,  1fr));
+    
+	@include tablet-small {
+		grid-template-columns: repeat(8, minmax(auto,  1fr));
+	}
+
+	@include desktop-small {
+		grid-template-columns: repeat(12, minmax(0,  4.5rem));
+    }
+    
+	& > * {
+        grid-column: 1 / span 4;
+        
+        @include tablet-small {
+            grid-column: 1 / span 8;
+        }
+
+        @include desktop-small {
+            grid-column: 1 / span 12;
+        }
+	}
+}

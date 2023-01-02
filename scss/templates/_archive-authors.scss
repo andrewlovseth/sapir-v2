@@ -1,0 +1,52 @@
+body.post-type-archive-authors {
+
+    .index-section {
+        @include tablet {
+            min-height: 25vh;
+        }
+
+        .section-header {
+            padding-bottom: 1rem;
+        }
+    }
+
+    .index-columns {
+        @include tablet {
+            columns: 2;
+            column-gap: 2rem;
+        }
+
+        @include desktop-small {
+            columns: 3;
+        }
+
+        &.no-columns {
+            columns: unset;
+        }
+
+        & > * {
+            margin-bottom: 1rem;
+
+            @include tablet {
+                padding-right: 2rem;
+            }
+
+            @include desktop-medium {
+                padding-right: 4rem;
+            }
+        }
+
+        a {
+            display: inline-block;
+            line-height: 1.25em;
+            font-size: 1.25rem;
+            font-family: $fournier-std-grand;
+            color: $slate;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+    }
+}

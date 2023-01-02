@@ -1,0 +1,19 @@
+.site-logo {
+    grid-column: 3 / span 2;
+
+    @include tablet-small {
+        grid-column: 4 / span 4;
+    }
+
+    @include desktop-small {
+        grid-column: 6 / span 4;
+    }
+
+    a {
+        display: block;
+        
+        img {
+            width: 100%;
+        }
+    }
+}

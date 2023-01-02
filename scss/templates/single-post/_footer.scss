@@ -1,0 +1,61 @@
+.article-footer {
+    padding-top: 3rem;
+
+    .back {
+        border-top: 1px solid $dark-blue;
+        padding-top: 1.5rem;
+
+        a {
+            font-style: italic;
+            display: inline-block;
+            font-size: 1;
+            color: $dark-blue;
+            padding-bottom: 2px;
+            border-bottom: 1px solid $light-blue;
+
+            &:before {
+                content: '← ';
+            }
+        }
+    }
+
+    .authors {
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
+
+        .section-header {
+            padding-bottom: 1rem;
+
+            h3 {
+                display: inline-block;
+                color: $medium-blue;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-family: $fournier-std-grand;
+                font-size: clamp(1.25rem, 1.5vw, 1.75rem);
+                padding-bottom: 0.25rem;
+                border-bottom: 2px solid;
+            }
+        }
+
+        .author {
+            font-size: clamp(1.125rem, 1.25vw, 1.375rem);
+            line-height: 1.75em;
+
+            & + .author {
+                padding-top: 1.5rem;
+            }
+
+            .name-link {
+                display: inline-block;
+                text-transform: uppercase;
+                letter-spacing: 0.15em;
+                font-size: clamp(0.875rem, 1vw, 1.125rem);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

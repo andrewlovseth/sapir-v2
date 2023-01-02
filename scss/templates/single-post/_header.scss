@@ -1,0 +1,195 @@
+.article-header {
+    padding-bottom: 3rem;
+
+    @include desktop-small {
+        padding-bottom: 6rem;
+    }
+
+    .issue {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 3rem;
+
+        @include desktop-small {
+            padding-bottom: 6rem;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            width: auto;
+            flex: 1;
+            height: 1px;
+            background: $slate;
+            opacity: 0.33;
+        }
+
+        a {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: clamp(0.6125rem, 0.7vw, 0.8125rem);
+            letter-spacing: 0.1em;
+            margin: 0 1rem;
+            font-family: $fournier-std-grand;
+            color: $slate;
+
+            span + span {
+                &:before {
+                    content: '·';
+                    padding: 0 0.5rem;
+                }
+            }
+        }
+    }
+
+    .epigraph {
+        margin-bottom: 2rem;
+        background-image: url(images/epigraph.jpg);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: cover;
+        background-blend-mode: multiply;
+        aspect-ratio: 1200 / 658;
+
+        @include tablet {
+            margin-bottom: 4rem;
+        }
+
+        .copy {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 2rem;
+
+            @include tablet-small {
+                padding: 2rem 4rem;
+            }
+
+            p {
+                text-transform: uppercase;
+                color: $dark-blue;
+                font-family: $fournier-std-grand;
+                font-size: clamp(0.625rem, 2vw, 1rem);
+                line-height: 2em;
+                letter-spacing: 0.15em;
+                max-width: 30rem;
+                margin: 0 auto;
+
+                @include tablet {
+                    font-size: clamp(0.75rem, 1.5vw, 1.25rem);
+                }
+
+                @include desktop-medium {
+                    max-width: 40rem;
+                }
+            }
+        }
+    }
+
+    .author {
+        padding-bottom: 1rem;
+
+        @include desktop-small {
+            padding-bottom: 3rem;
+        }
+
+        .name {
+            display: inline-block;
+        }
+
+        .name + .name:before {
+            content: ',';
+            font-style: italic;
+        }
+
+        .name + .name:nth-child(n + 3):before {
+            content: '&';
+            padding-left: 0.5rem;
+        }
+    }
+
+    .authors-2 {
+        .name + .name:before {
+            content: '&';
+            padding-left: 0.5rem;
+        }
+    }
+
+    .pdf {
+        margin-top: 2rem;
+
+        a {
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.2s ease;
+            color: $dark-blue;
+
+            span {
+                padding-top: 2px;
+                border-bottom: 1px solid transparent;
+                transition: all 0.2s ease;
+            }
+
+            &:before {
+                display: block;
+                content: '';
+                width: 1.5rem;
+                height: 1.5rem;
+                background: url(images/icon-pdf.svg) no-repeat 0 0;
+                background-size: contain;
+                margin-right: 0.75rem;
+            }
+
+            &:hover {
+                span {
+                    border-bottom: 1px solid $dark-blue;
+                }
+            }
+        }
+    }
+
+    .external-links {
+        padding-top: 1rem;
+
+        .links {
+            padding-top: 0.5rem;
+            list-style-type: disc;
+            padding-left: 1.25rem;
+        }
+
+        .link {
+            & + .link {
+                padding-top: 0.5rem;
+            }
+
+            .mono {
+                text-transform: none;
+                letter-spacing: -0.04em;
+            }
+
+            a {
+                display: inline-block;
+
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .simple-epigraph {
+        text-align: right;
+        padding-top: 2rem;
+
+        .copy {
+            font-size: clamp(1rem, 1.1vw, 1.25rem);
+            line-height: 1.5em;
+        }
+    }
+}

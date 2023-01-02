@@ -1,0 +1,43 @@
+.letter {
+    @include desktop-small {
+        grid-column: 5 / span 7;
+    }
+
+    &-header {
+        padding-bottom: 2rem;
+    }
+
+    &-title {
+        font-weight: bold;
+        font-size: clamp(2rem, 2vw, 3rem);
+        color: $medium-blue;
+
+        font-family: $adams;
+    }
+
+    .copy {
+        font-size: clamp(1.125rem, 1.25vw, 1.375rem);
+        line-height: 1.75em;
+
+        & > * + * {
+            margin-top: 2.5rem;
+        }
+    }
+
+    .meta {
+        padding-top: 2.5rem;
+        text-align: right;
+
+        .name {
+            font-weight: bold;
+            font-size: clamp(1.125rem, 1.25vw, 1.5rem);
+            font-family: $adams;
+        }
+
+        .info {
+            padding-top: 0.5rem;
+            font-size: clamp(1rem, 1.125vw, 1.25rem);
+            font-style: italic;
+        }
+    }
+}

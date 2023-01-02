@@ -1,0 +1,29 @@
+.language-switcher {
+
+    .switcher {
+        top: -2.5rem;
+        left: 0;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        max-width: 8rem;
+
+        @include tablet {
+            top: clamp(1.25rem, 3vh, 1.5rem);
+        }
+
+        .selected {
+            width: 100%;
+            max-width: 8rem;
+            background: none;
+
+            a {
+                width: 116px;
+            }
+        }
+
+        .option {
+            width: 126px;
+        }
+    }
+}

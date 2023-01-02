@@ -1,0 +1,33 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+    font-family: $fournier-std;
+}
+
+a {
+    color: $light-blue;
+}
+
+::-moz-selection {
+    background: $light-blue;
+    color: $white;
+    text-shadow: none;
+}
+
+::selection {
+    background: $light-blue;
+    color: $white;
+    text-shadow: none;
+}
+
+.small-caps {
+    font-variant: small-caps;
+    letter-spacing: 0.075em;
+}
+
+@import 'headings';
+
+@import 'copy';

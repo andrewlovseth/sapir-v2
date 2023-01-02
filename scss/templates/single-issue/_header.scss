@@ -1,0 +1,41 @@
+.contents-header {
+    .headline {
+        h1 {
+            text-transform: uppercase;
+            font-family: $adams;
+        }
+
+        h2 {
+            font-size: clamp(1rem, 1vw, 1.25rem);
+            padding-bottom: 0.5rem;
+        }
+    }
+
+    .cta {
+        padding-top: 2rem;
+        
+        .btn {
+            display: inline-block;
+            background: $medium-blue;
+            color: $white;
+            padding: 0.625rem 1.5rem 0.625rem 1.5rem;
+            font-family: $interstate-mono;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.section-header {
+    margin-top: 3rem;
+    border-top: 1px solid $light-blue;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    h3 {
+        color: $dark-blue;
+
+    }                
+
+}

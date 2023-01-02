@@ -1,0 +1,57 @@
+body.post-type-archive-letters {
+    .page-header {
+        @include tablet {
+            padding-bottom: 4rem;
+        }
+    }
+
+    .letters-list {
+        padding-bottom: 6rem;
+
+        article.letter {
+            & + article.letter {
+                margin-top: 3rem;
+                border-top: 1px solid rgba($black, 0.1);
+                padding-top: 3rem;
+            }
+
+            .date-time {
+                padding-top: 0.25rem;
+
+                @include tablet {
+                    grid-column: 2 / span 2;
+                }
+
+                h4 {
+                    font-size: 1rem;
+                    font-variant: small-caps;
+                    letter-spacing: 0.05em;
+                }
+            }
+
+            .letter-header {
+                padding-top: 0.5rem;
+
+                @include tablet {
+                    padding-top: 0;
+                    grid-column: 4 / span 6;
+                }
+            }
+
+            .letter-title {
+                font-family: $adams;
+                font-size: clamp(2rem, 2vw, 3rem);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            .teaser {
+                padding-top: 0.5rem;
+                font-size: clamp(1rem, 1.1vw, 1.25rem);
+                line-height: 1.25em;
+            }
+        }
+    }
+}

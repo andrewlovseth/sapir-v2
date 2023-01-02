@@ -1,0 +1,41 @@
+body.single-news {
+
+    article.news {
+        & > * {
+            @include tablet {
+                grid-column: 3 / span 6;
+            }
+            
+            @include desktop-small {
+                grid-column: 4 / span 8;
+            }
+        }
+    }
+
+    .meta {
+        padding-bottom: 1rem;
+
+        .date {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+    }
+
+    .article-header {
+        .headline {
+            .title {
+                color: $medium-blue;
+            }
+        }
+    }
+
+    .article-body {
+         padding-top: 3rem;
+
+         & > p:first-child:first-line {
+			font-variant-caps: normal;
+			letter-spacing: 0.05em;
+		}
+    }
+}

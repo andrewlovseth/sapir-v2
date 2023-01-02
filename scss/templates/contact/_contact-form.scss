@@ -1,0 +1,48 @@
+.contact-form {
+    padding-top: 2rem;
+    
+    div.wpforms-container-full {
+        margin: 0;
+        max-width: 40rem;
+    }
+
+    div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
+    div.wpforms-container-full .wpforms-form select.wpforms-field-medium,
+    div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium {
+        max-width: 100%;
+    }
+
+    div.wpforms-container-full .wpforms-form .wpforms-field-label {
+        font-family: $interstate-mono;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+    }
+
+    div.wpforms-container-full .wpforms-form .wpforms-field-sublabel {
+        font-family: $interstate-mono;
+        text-transform: uppercase;
+        font-size: 0.6125rem;
+    }
+
+    div.wpforms-container-full .wpforms-form .wpforms-field {
+        padding: 1rem 0;
+    }
+
+    div.wpforms-container-full .wpforms-form button[type=submit] {
+        background: $medium-blue;
+        color: $white;
+        border: none;
+    }
+
+    div.wpforms-container-full .wpforms-form label.wpforms-error {
+        margin-top: 0.25rem;
+    }
+
+    .wpforms-confirmation-container-full {
+        background: $light-blue;
+        border: none;
+        color: $white;
+        margin: 0;
+        text-align: center;
+    }
+}

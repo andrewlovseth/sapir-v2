@@ -1,0 +1,90 @@
+// VOL 3 - RED
+// Post Template
+body.single-post {
+    .volume-three {
+
+        a {
+            color: $light-red;
+        }
+
+        &.post .article-header .author .name-link {
+            color: $dark-red;
+
+            :hover {
+                border-color: $dark-red;
+            }
+        }
+
+        .article-body .wp-block-separator:before {
+            background: url(images/section-divider-red.svg) no-repeat center center;
+        }
+
+        .article-body {
+            li.last-p,
+            p.last-p {
+                &:after {
+                    background: url(images/icon-dingbat-red.svg) no-repeat 0 0;
+                    background-size: 100%;
+                }
+            }
+
+            .question {
+                font-weight: bold;
+                color: $dark-red;
+            }
+
+            .answer {
+                font-weight: bold;
+                color: $dark-red;
+
+                &.light {
+                    color: $light-red;
+                }
+            }
+        }
+
+        &.post .article-body .wp-block-pullquote:not(.basic) {
+            border-color: $light-red;
+        }
+
+        &.post .article-body .wp-block-pullquote:not(.basic) p {
+            color: $dark-red;
+        }
+
+       .article-footer .back a {
+           border-color: $light-red;
+       }
+ 
+    }
+}
+
+// Issue Template
+body.single-issue {
+    .volume-three {
+        .sub-title {
+            color: $dark-red;
+        }
+    
+        &.table-of-contents {
+            .section-header {
+                border-color: $dark-red;
+            }
+
+            .contents-header {
+                .cta {
+                    .btn {
+                        background: $dark-red;
+                    }
+                }
+            }
+
+            .contents {
+                .headline {
+                    h2 {
+                        color: $dark-red;
+                    }
+                }
+            }    
+        }         
+    }
+}

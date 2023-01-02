@@ -1,0 +1,99 @@
+// VOL 6 - Purple/Orange
+// Post Template
+body.single-post {
+    .volume-seven {
+        .sub-title {
+            color: $issue-seven-orange;
+        }
+
+        .title {
+            color: $issue-seven-black;
+        }
+
+        &.post .article-header .author .name-link {
+            color: $issue-seven-red;
+
+            :hover {
+                border-color: $issue-seven-red;
+            }
+        }
+
+        .article-body .wp-block-separator:before {
+            background: url(images/section-divider-red-2.svg) no-repeat center center;
+        }
+
+        .article-body {
+            a {
+                color: $issue-seven-red;
+            }
+            li.last-p,
+            p.last-p {
+                &:after {
+                    background: url(images/icon-dingbat-red-2.svg) no-repeat 0 0;
+                    background-size: 100%;
+                }
+            }
+
+            .question {
+                font-weight: bold;
+                color: $issue-seven-red;
+            }
+
+            .answer {
+                font-weight: bold;
+                color: $issue-seven-black;
+
+                &.light {
+                    color: $issue-seven-orange;
+                }
+            }
+        }
+
+        &.post .article-body .wp-block-pullquote:not(.basic) {
+            border-color: $issue-seven-blue;
+        }
+
+        &.post .article-body .wp-block-pullquote:not(.basic) p {
+            color: $issue-seven-red;
+        }
+
+        .article-footer .back a {
+            border-color: $issue-seven-red;
+        }
+    }
+}
+
+// Issue Template
+body.single-issue {
+    .volume-seven {
+        .sub-title {
+            color: $issue-seven-red;
+        }
+
+        &.table-of-contents {
+            .section-header {
+                border-color: $issue-seven-red;
+            }
+
+            .contents-header {
+                .cta {
+                    .btn {
+                        background: $issue-seven-red;
+                    }
+                }
+            }
+
+            .contents {
+                a span.name {
+                    color: $issue-seven-red;
+                }
+
+                .headline {
+                    h2 {
+                        color: $issue-seven-red;
+                    }
+                }
+            }
+        }
+    }
+}

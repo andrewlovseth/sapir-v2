@@ -1,0 +1,19 @@
+.site-footer {
+    margin-top: 3rem;
+    padding: 3rem 0;
+    background: $issue-seven-red;
+    color: $white;
+
+    @include tablet {
+        margin-top: 6rem;
+        padding: 6rem 0;
+    }
+
+    @import 'logo';
+
+    @import 'nav';
+
+    @import 'epigraph';
+}
+
+@import 'newsletter-sign-up';

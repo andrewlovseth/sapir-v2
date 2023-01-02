@@ -1,0 +1,22 @@
+.site-header {
+    border-top: 5px solid $issue-seven-red;
+    padding: 3rem 0;
+
+    @include tablet-small {
+        padding: 4rem 0;
+    }
+
+    @include desktop-small {
+        padding: 6rem 0;
+    }
+
+    @import 'logo';
+
+    @import 'hamburger';
+
+    @import 'language-switcher';
+}
+
+@import 'navigation';
+
+@import 'nav-overlay-open';

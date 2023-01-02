@@ -1,0 +1,95 @@
+// VOL 6 - Purple/Orange
+// Post Template
+body.single-post {
+    .volume-six {
+        .sub-title {
+            color: $issue-six-orange;
+        }
+
+        .title {
+            color: $issue-six-dark-blue;
+        }
+
+        &.post .article-header .author .name-link {
+            color: $issue-six-orange;
+
+            :hover {
+                border-color: $issue-six-orange;
+            }
+        }
+
+        .article-body .wp-block-separator:before {
+            background: url(images/section-divider-orange.svg) no-repeat center center;
+        }
+
+        .article-body {
+            a {
+                color: $issue-six-orange;
+            }
+            li.last-p,
+            p.last-p {
+                &:after {
+                    background: url(images/icon-dingbat-orange.svg) no-repeat 0 0;
+                    background-size: 100%;
+                }
+            }
+
+            .question {
+                font-weight: bold;
+                color: $issue-six-orange;
+            }
+
+            .answer {
+                font-weight: bold;
+                color: $issue-six-purple;
+
+                &.light {
+                    color: $issue-six-purple;
+                }
+            }
+        }
+
+        &.post .article-body .wp-block-pullquote:not(.basic) {
+            border-color: $issue-six-green;
+        }
+
+        &.post .article-body .wp-block-pullquote:not(.basic) p {
+            color: $issue-six-dark-blue;
+        }
+
+        .article-footer .back a {
+            border-color: $issue-six-purple;
+        }
+    }
+}
+
+// Issue Template
+body.single-issue {
+    .volume-six {
+        .sub-title {
+            color: $issue-six-purple;
+        }
+
+        &.table-of-contents {
+            .section-header {
+                border-color: $issue-six-purple;
+            }
+
+            .contents-header {
+                .cta {
+                    .btn {
+                        background: $issue-six-orange;
+                    }
+                }
+            }
+
+            .contents {
+                .headline {
+                    h2 {
+                        color: $issue-six-orange;
+                    }
+                }
+            }
+        }
+    }
+}

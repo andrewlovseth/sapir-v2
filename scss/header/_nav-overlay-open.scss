@@ -1,0 +1,43 @@
+body.nav-overlay-open {
+	.hamburger {
+        z-index: 100;
+        position: fixed;
+        right: 2rem;
+
+        @include tablet {
+            position: relative;
+            right: auto;
+        }
+
+		a {
+			.patty {
+                background: none;
+
+                &:after {
+                    top: 0;
+                    transform: rotate(45deg);
+                    background: $white;
+
+                    @include tablet {
+                        background: $medium-blue;
+                    }
+                }
+
+                &:before {
+                    top: 0;
+                    transform: rotate(-45deg);
+                    background: $white;
+
+                    @include tablet {
+                        background: $medium-blue;
+                    }
+                }
+			}
+		}
+	}
+
+    .site-nav {
+        left: 0;
+        opacity: 1;
+    }
+}

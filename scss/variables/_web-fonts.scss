@@ -1,0 +1,16 @@
+@import url("https://use.typekit.net/pmv6jwg.css");
+
+$fournier-std: psfournier-std, serif;
+$fournier-std-grand: psfournier-std-grand, serif;
+$interstate-mono: interstate-mono, monospace;
+
+@font-face {
+    font-family: 'Adams';
+    src: url('fonts/Adams-Regular.woff2') format('woff2'),
+         url('fonts/Adams-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+$adams: 'Adams', serif;

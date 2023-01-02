@@ -1,0 +1,31 @@
+body.single-letters {
+    .letter-to-the-editor {
+        .letter-header {
+            @include desktop-small {
+                grid-column: 4 / span 7;
+            }
+        }
+        @import 'single-letters/letter';
+
+        @import 'single-letters/response';
+
+        .back {
+            margin-top: 6rem;
+            border-top: 1px solid $dark-blue;
+            padding-top: 1.5rem;
+
+            a {
+                font-style: italic;
+                display: inline-block;
+                font-size: 1;
+                color: $dark-blue;
+                padding-bottom: 2px;
+                border-bottom: 1px solid $light-blue;
+
+                &:before {
+                    content: '← ';
+                }
+            }
+        }
+    }
+}

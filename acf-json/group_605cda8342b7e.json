@@ -53,7 +53,7 @@
                         "issue"
                     ],
                     "taxonomy": "",
-                    "return_format": "",
+                    "return_format": "object",
                     "multiple": 0,
                     "allow_null": 0,
                     "ui": 1
@@ -684,5 +684,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673482448
+    "modified": 1673489265
 }

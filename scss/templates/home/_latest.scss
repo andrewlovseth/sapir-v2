@@ -1,0 +1,9 @@
+.latest {
+    padding-bottom: 3rem;
+
+    @import 'latest-issue';
+
+    @import 'latest-articles';
+
+    @import 'featured';
+}

@@ -1,7 +1,7 @@
 <?php
 
 $issue = get_field('issue'); 
-$volume = get_field('volume', $issue->ID);
+$volume = get_field('volume', $issue);
 $issue_slug = sanitize_title_with_dashes($volume);
 
 get_header(); ?>

@@ -6,6 +6,7 @@
             "key": "field_606e251e83c77",
             "label": "Info",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_6066107c07bda",
             "label": "Season",
             "name": "season",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -41,6 +43,7 @@
             "key": "field_6066108207bdb",
             "label": "Volume",
             "name": "volume",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -57,9 +60,35 @@
             "maxlength": ""
         },
         {
+            "key": "field_63bf6c86be45d",
+            "label": "Cover",
+            "name": "cover",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
             "key": "field_609b165b3a63b",
             "label": "Full Issue PDF",
             "name": "full_issue_pdf",
+            "aria-label": "",
             "type": "file",
             "instructions": "",
             "required": 0,
@@ -79,6 +108,7 @@
             "key": "field_606e252483c78",
             "label": "Table of Contents",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -95,6 +125,7 @@
             "key": "field_606e23e6e3df6",
             "label": "Table of Contents",
             "name": "table_of_contents",
+            "aria-label": "",
             "type": "flexible_content",
             "instructions": "",
             "required": 0,
@@ -115,6 +146,7 @@
                             "key": "field_606e23f2e3df7",
                             "label": "Heading",
                             "name": "heading",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "Optional",
                             "required": 0,
@@ -134,6 +166,7 @@
                             "key": "field_606e2402e3df8",
                             "label": "Articles",
                             "name": "articles",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -153,6 +186,7 @@
                                     "key": "field_606e240de3df9",
                                     "label": "Article",
                                     "name": "article",
+                                    "aria-label": "",
                                     "type": "post_object",
                                     "instructions": "",
                                     "required": 0,
@@ -169,12 +203,14 @@
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "return_format": "object",
-                                    "ui": 1
+                                    "ui": 1,
+                                    "parent_repeater": "field_606e2402e3df8"
                                 },
                                 {
                                     "key": "field_606e241ce3dfa",
                                     "label": "Alternate Display",
                                     "name": "alternate_display",
+                                    "aria-label": "",
                                     "type": "true_false",
                                     "instructions": "",
                                     "required": 0,
@@ -188,9 +224,11 @@
                                     "default_value": 0,
                                     "ui": 1,
                                     "ui_on_text": "",
-                                    "ui_off_text": ""
+                                    "ui_off_text": "",
+                                    "parent_repeater": "field_606e2402e3df8"
                                 }
-                            ]
+                            ],
+                            "rows_per_page": 20
                         }
                     ],
                     "min": "",
@@ -232,5 +270,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1620776554
+    "show_in_rest": 0,
+    "modified": 1673489599
 }

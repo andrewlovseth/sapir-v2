@@ -1,0 +1,24 @@
+.cta {
+    &.center {
+        text-align: center;
+    }
+    .btn {
+        display: inline-block;
+        border: 1px solid $light-blue;
+        padding: 1rem 1.5rem 0.875rem;
+        transition: all 200ms ease;
+        color: $black;
+
+        &.small-upper {
+            &:after {
+                content: ' ››';
+            }
+        }
+
+        &:hover {
+            background: $mid-blue;
+            border-color: $medium-blue;
+            color: $light-tan;
+        }
+    }
+}

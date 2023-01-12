@@ -33,3 +33,18 @@ article.post {
     font-family: $fournier-std-grand;
     font-size: clamp(1.25rem, 1.5vw, 1.75rem);
 }
+
+.upper-header {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: $type-size-050;
+    font-family: sans-serif;
+}
+
+.small-upper {
+    font-family: $adams;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.6125rem;
+    font-weight: bold;
+}

@@ -1,0 +1,37 @@
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 2rem;
+
+    @include tablet {
+        width: 8rem;
+    }
+
+    .about-link {
+        display: none;
+
+        @include tablet {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.6125rem;
+            font-family: $adams;
+            font-weight: bold;
+            color: $black;
+            margin-right: 0.75rem;
+        }
+    }
+
+    &__icon {
+        transform: translateY(1px);
+
+        svg {
+            width: 1rem;
+            height: 1rem;
+            path {
+                fill: rgba($black, 0.4);
+            }
+        }
+    }
+}

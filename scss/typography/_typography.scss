@@ -8,17 +8,17 @@ textarea {
 }
 
 a {
-    color: $light-blue;
+    color: $black;
 }
 
 ::-moz-selection {
-    background: $light-blue;
+    background: $dark-blue;
     color: $white;
     text-shadow: none;
 }
 
 ::selection {
-    background: $light-blue;
+    background: $dark-blue;
     color: $white;
     text-shadow: none;
 }

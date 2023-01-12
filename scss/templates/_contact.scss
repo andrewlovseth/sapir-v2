@@ -8,10 +8,10 @@ body.page-template-contact {
     @import 'contact/contact-form';
 
     @import 'contact/faqs';
-    
+
     .form-header {
         padding-top: 3rem;
-        border-top: 2px solid $light-blue;
+        border-top: 2px solid $issue-one-light-blue;
         margin-top: 3rem;
         font-size: clamp(1rem, 1.25vw, 1.25rem);
         line-height: 1.75em;

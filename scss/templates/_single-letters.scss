@@ -11,16 +11,16 @@ body.single-letters {
 
         .back {
             margin-top: 6rem;
-            border-top: 1px solid $dark-blue;
+            border-top: 1px solid $issue-one-dark-blue;
             padding-top: 1.5rem;
 
             a {
                 font-style: italic;
                 display: inline-block;
                 font-size: 1;
-                color: $dark-blue;
+                color: $issue-one-dark-blue;
                 padding-bottom: 2px;
-                border-bottom: 1px solid $light-blue;
+                border-bottom: 1px solid $issue-one-light-blue;
 
                 &:before {
                     content: '← ';

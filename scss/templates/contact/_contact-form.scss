@@ -1,6 +1,6 @@
 .contact-form {
     padding-top: 2rem;
-    
+
     div.wpforms-container-full {
         margin: 0;
         max-width: 40rem;
@@ -28,7 +28,7 @@
         padding: 1rem 0;
     }
 
-    div.wpforms-container-full .wpforms-form button[type=submit] {
+    div.wpforms-container-full .wpforms-form button[type='submit'] {
         background: $medium-blue;
         color: $white;
         border: none;
@@ -39,7 +39,7 @@
     }
 
     .wpforms-confirmation-container-full {
-        background: $light-blue;
+        background: $issue-one-light-blue;
         border: none;
         color: $white;
         margin: 0;

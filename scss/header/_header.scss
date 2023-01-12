@@ -1,20 +1,25 @@
 .site-header {
-    border-top: 5px solid $issue-seven-red;
-    padding: 3rem 0;
+    padding: 2rem 0 0.5rem 0;
 
-    @include tablet-small {
-        padding: 4rem 0;
+    @include tablet {
+        padding: 3rem 0 1rem 0;
     }
 
-    @include desktop-small {
-        padding: 6rem 0;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
-
-    @import 'logo';
 
     @import 'hamburger';
 
-    @import 'language-switcher';
+    @import 'logo';
+
+    @import 'search';
+
+    @import 'tagline';
+
+    @import 'divider';
 }
 
 @import 'navigation';

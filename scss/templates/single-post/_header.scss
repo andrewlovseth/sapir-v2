@@ -72,7 +72,7 @@
 
             p {
                 text-transform: uppercase;
-                color: $dark-blue;
+                color: $issue-one-dark-blue;
                 font-family: $fournier-std-grand;
                 font-size: clamp(0.625rem, 2vw, 1rem);
                 line-height: 2em;
@@ -127,7 +127,7 @@
             display: inline-flex;
             align-items: center;
             transition: all 0.2s ease;
-            color: $dark-blue;
+            color: $issue-one-dark-blue;
 
             span {
                 padding-top: 2px;
@@ -147,7 +147,7 @@
 
             &:hover {
                 span {
-                    border-bottom: 1px solid $dark-blue;
+                    border-bottom: 1px solid $issue-one-dark-blue;
                 }
             }
         }

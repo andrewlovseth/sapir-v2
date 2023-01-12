@@ -1,15 +1,13 @@
 body.page-template-events {
     @include page-header;
 
-
     section.events {
         & + section.events {
             padding-top: 6rem;
 
             .section-header {
-                border-top: 1px solid $light-blue;
+                border-top: 1px solid $issue-one-light-blue;
                 padding-top: 6rem;
-
             }
         }
 
@@ -23,7 +21,7 @@ body.page-template-events {
     }
 
     .event {
-        display: grid;        
+        display: grid;
         gap: 0 2rem;
         grid-template-columns: 1fr 3fr;
 
@@ -51,7 +49,7 @@ body.page-template-events {
             }
 
             .month {
-                background: $light-blue;
+                background: $issue-one-light-blue;
                 color: $white;
                 padding: 0.5rem;
                 font-size: 0.875rem;
@@ -59,11 +57,10 @@ body.page-template-events {
 
             .day {
                 padding: 1rem;
-                border: 1px solid $light-blue;
+                border: 1px solid $issue-one-light-blue;
                 border-top: none;
                 font-size: 1.5rem;
-                color: $light-blue;
-
+                color: $issue-one-light-blue;
             }
         }
 
@@ -114,6 +111,5 @@ body.page-template-events {
         &.no-events {
             grid-template-columns: 1fr;
         }
-    }    
-
+    }
 }

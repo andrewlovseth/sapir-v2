@@ -1,35 +1,35 @@
 .page-header {
-	padding-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 article.post {
-	.article-header {
-		.author {
-			.name-link {
-				display: inline-block;
-				padding-bottom: 0.25rem;
-				transition: all 0.2s ease;
-				border-bottom: 1px solid transparent;
+    .article-header {
+        .author {
+            .name-link {
+                display: inline-block;
+                padding-bottom: 0.25rem;
+                transition: all 0.2s ease;
+                border-bottom: 1px solid transparent;
 
-				&:hover {
-					border-color: $medium-blue;
-				}
-			}
-		}		
-	}
+                &:hover {
+                    border-color: $medium-blue;
+                }
+            }
+        }
+    }
 }
 
 .title {
-	color: $dark-blue;
-	font-family: $fournier-std-grand;
-	font-size: clamp(2rem, 3.5vw, 4rem);
-	line-height: 1.25em;
+    color: $issue-one-dark-blue;
+    font-family: $fournier-std-grand;
+    font-size: clamp(2rem, 3.5vw, 4rem);
+    line-height: 1.25em;
 }
 
 .sub-title {
-	color: $medium-blue;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	font-family: $fournier-std-grand;
-	font-size: clamp(1.25rem, 1.5vw, 1.75rem);	
+    color: $medium-blue;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: $fournier-std-grand;
+    font-size: clamp(1.25rem, 1.5vw, 1.75rem);
 }

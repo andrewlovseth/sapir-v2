@@ -1,13 +1,13 @@
 body {
-	background: #fafafa;
+    background: $light-tan;
 }
 
-.site-content{
-	min-height: 50vh;
+.site-content {
+    min-height: 50vh;
 }
 
-@import "grid";
+@import 'grid';
 
-@import "sub-grid";
+@import 'sub-grid';
 
-@import "themes";
+@import 'themes';

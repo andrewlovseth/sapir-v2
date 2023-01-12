@@ -3,10 +3,11 @@
     "title": "Options: Header",
     "fields": [
         {
-            "key": "field_6065f4e9e39ef",
-            "label": "Header Logo",
-            "name": "header_logo",
-            "type": "image",
+            "key": "field_63bf60cf61525",
+            "label": "Header",
+            "name": "header",
+            "aria-label": "",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -15,41 +16,14 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_606cd2d0976e1",
-            "label": "Navigation",
-            "name": "navigation",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "+ Add Nav Item",
+            "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_606cd2da976e2",
-                    "label": "Link",
-                    "name": "link",
-                    "type": "link",
+                    "key": "field_63bf60e061526",
+                    "label": "Logo",
+                    "name": "logo",
+                    "aria-label": "",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -58,7 +32,36 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium"
+                },
+                {
+                    "key": "field_63bf60e761527",
+                    "label": "Tagline",
+                    "name": "tagline",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         }
@@ -95,5 +98,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1617744625
+    "show_in_rest": 0,
+    "modified": 1673486573
 }

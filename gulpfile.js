@@ -9,18 +9,12 @@ function errorlog(err) {
 }
 
 function style() {
-    return gulp
-        .src('scss/style.scss')
-        .pipe(sass().on('error', errorlog))
-        .pipe(autoprefixer())
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./'))
-        .pipe(browserSync.stream());
+    return gulp.src('scss/style.scss').pipe(sass().on('error', errorlog)).pipe(autoprefixer()).pipe(sourcemaps.write()).pipe(gulp.dest('./')).pipe(browserSync.stream());
 }
 
 function watch() {
     browserSync.init({
-        proxy: 'https://sapirjournal.local',
+        proxy: 'https://sapirjournal-v2.local',
     });
 
     gulp.watch('./scss/**/*.scss', style);

@@ -128,3 +128,23 @@ function bearsmith_change_post_object() {
     $wp_post_types['post']->menu_icon = 'dashicons-text-page';
 } 
 add_action( 'init', 'bearsmith_change_post_object' );
+
+
+
+
+function get_svg($svg) {
+    $arrContextOptions=array(
+        "ssl"=>array(
+            "verify_peer"=>false,
+            "verify_peer_name"=>false,
+        ),
+    );  
+
+    $svg_file = file_get_contents($svg, false, stream_context_create($arrContextOptions));
+    $find_string = '<svg';
+    $position = strpos($svg_file, $find_string);
+    
+    $svg_file_new = substr($svg_file, $position);
+
+    return $svg_file_new;
+}

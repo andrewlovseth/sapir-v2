@@ -1,5 +1,4 @@
 body.single-authors {
-
     .site-content {
         .grid {
             & > * {
@@ -9,7 +8,6 @@ body.single-authors {
             }
         }
     }
-
 
     .bio {
         padding-bottom: 2rem;
@@ -24,15 +22,15 @@ body.single-authors {
             }
         }
 
-		.small-caps {
+        .small-caps {
             text-transform: uppercase;
-			letter-spacing: 0.075em;
-		}
+            letter-spacing: 0.075em;
+        }
 
-		.small-caps-alt {
+        .small-caps-alt {
             font-variant: small-caps;
-			letter-spacing: 0.075em;
-		}
+            letter-spacing: 0.075em;
+        }
     }
 
     .articles {
@@ -40,7 +38,6 @@ body.single-authors {
             padding-bottom: 0.5rem;
             border-bottom: 1px solid $medium-blue;
             margin-bottom: 2rem;
-
         }
 
         .article {
@@ -54,8 +51,8 @@ body.single-authors {
 
                 a {
                     display: inline-block;
-                    color: $dark-blue;
-    
+                    color: $issue-one-dark-blue;
+
                     &:hover {
                         text-decoration: underline;
                     }
@@ -70,14 +67,13 @@ body.single-authors {
 
                 a {
                     display: inline-block;
-                    color: $dark-blue;
-    
+                    color: $issue-one-dark-blue;
+
                     &:hover {
                         text-decoration: underline;
                     }
                 }
             }
         }
-
     }
 }

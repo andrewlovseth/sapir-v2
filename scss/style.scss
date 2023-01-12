@@ -1,21 +1,21 @@
 /*
 
-    Theme Name: Sapir Journal
-    Theme URI: https://sapirjournal.com/
-    Description: Version 1.0 of Sapir Journal Theme
-    Version: 1.0
+    Theme Name: Sapir Journal 2.0
+    Theme URI: https://sapirjournal.org/
+    Description: Version 2.0 of Sapir Journal Theme
+    Version: 2.0
 
 */
 
-@import "normalize";
+@import 'normalize';
 
-@import "variables/variables";
-@import "mixins/mixins";
-@import "typography/typography";
-@import "layout/layout";
-@import "elements/elements";
+@import 'variables/variables';
+@import 'mixins/mixins';
+@import 'typography/typography';
+@import 'layout/layout';
+@import 'elements/elements';
 
-@import "header/header";
-@import "footer/footer";
+@import 'header/header';
+@import 'footer/footer';
 
-@import "templates/templates";
+@import 'templates/templates';

@@ -17,12 +17,18 @@
 <div id="page" class="site">
 	
 	<header class="site-header grid">
+		<div class="site-header__wrapper">
+			<?php get_template_part('template-parts/header/hamburger'); ?>
 
-		<?php //get_template_part('template-parts/header/language-switcher'); ?>
+			<?php get_template_part('template-parts/header/logo'); ?>
 
-		<?php get_template_part('template-parts/header/logo'); ?>
+			<?php get_template_part('template-parts/header/search'); ?>
+		</div>
 
-		<?php get_template_part('template-parts/header/hamburger'); ?>
+		<?php get_template_part('template-parts/header/tagline'); ?>
+
+		<?php get_template_part('template-parts/header/divider'); ?>
+
 	</header>
 
 	<?php get_template_part('template-parts/header/navigation'); ?>

@@ -6,6 +6,7 @@
             "key": "field_60882e04a1570",
             "label": "Footer",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_606cd9066529a",
             "label": "Footer Logo",
             "name": "footer_logo",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -46,6 +48,7 @@
             "key": "field_606cd7d87be21",
             "label": "Epigraph",
             "name": "epigraph",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -65,6 +68,7 @@
             "key": "field_60882e0aa1571",
             "label": "Newsletter Sign Up",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -81,6 +85,7 @@
             "key": "field_60882e17a1572",
             "label": "Newsletter",
             "name": "newsletter",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -93,10 +98,36 @@
             "layout": "block",
             "sub_fields": [
                 {
+                    "key": "field_63bf54267afc0",
+                    "label": "Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium"
+                },
+                {
                     "key": "field_60882e1da1573",
                     "label": "Headline",
                     "name": "headline",
-                    "type": "text",
+                    "aria-label": "",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -106,15 +137,16 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "maxlength": "",
+                    "rows": 4,
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "new_lines": "br"
                 },
                 {
                     "key": "field_60882e21a1574",
                     "label": "Embed",
                     "name": "embed",
+                    "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
                     "required": 0,
@@ -165,5 +197,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1619537446
+    "show_in_rest": 0,
+    "modified": 1673483759
 }

@@ -1,8 +1,12 @@
 .site-footer {
     margin-top: 3rem;
     padding: 3rem 0;
-    background: $issue-seven-red;
-    color: $white;
+    background: $dark-blue;
+    color: $tan;
+
+    a {
+        color: $tan;
+    }
 
     @include tablet {
         margin-top: 6rem;

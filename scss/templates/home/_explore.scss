@@ -1,0 +1,120 @@
+.explore {
+    &__sections {
+        border-top: 1px solid $light-blue;
+        border-bottom: 1px solid $light-blue;
+        display: grid;
+
+        @include tablet-small {
+            grid-column: 3 / span 6;
+        }
+
+        @include tablet {
+            padding: 2rem 0;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include desktop-small {
+            grid-column: 2 / span 12;
+        }
+
+        &-link {
+            padding: 3rem 0;
+
+            @include tablet {
+                padding: 1rem 0;
+            }
+
+            & + .explore__sections-link {
+                border-top: 1px solid $light-blue;
+
+                @include tablet {
+                    border-top: none;
+                    border-left: 1px solid $light-blue;
+                }
+            }
+
+            a {
+                display: block;
+                text-align: center;
+            }
+
+            .icon {
+                display: block;
+
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+
+            .label {
+                display: block;
+                padding: 1rem 1rem 0;
+                font-style: italic;
+                font-size: $type-size-400;
+                line-height: 1.25em;
+
+                @include tablet {
+                    font-size: $type-size-300;
+                }
+
+                @include desktop-small {
+                    font-size: $type-size-400;
+                }
+            }
+        }
+    }
+
+    &__topics {
+        padding: 3rem 0;
+        border-bottom: 1px solid $light-blue;
+        margin-bottom: 2rem;
+
+        @include tablet-small {
+            grid-column: 3 / span 6;
+        }
+
+        @include desktop-small {
+            grid-column: 2 / span 12;
+        }
+
+        &-header {
+            text-align: center;
+            padding-bottom: 3rem;
+
+            .icon {
+                display: block;
+
+                svg {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+
+            h3 {
+                padding-top: 1.5rem;
+                font-size: $type-size-400;
+                font-style: italic;
+            }
+        }
+
+        &-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .topic {
+                & + .topic {
+                    border-left: 1px solid $light-blue;
+                    margin-bottom: 0.75rem;
+                }
+            }
+
+            a {
+                display: block;
+                font-size: $type-size-400;
+                padding: 0.25rem 1.25rem;
+            }
+        }
+    }
+}

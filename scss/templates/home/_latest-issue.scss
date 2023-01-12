@@ -11,10 +11,6 @@
         grid-row: 1;
     }
 
-    @include desktop-large {
-        margin-right: 4rem;
-    }
-
     &::before {
         display: block;
         content: '';

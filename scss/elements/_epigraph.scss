@@ -4,6 +4,7 @@
     @include desktop-small {
         max-width: 14rem;
         margin-left: auto;
+        grid-column: 11 / span 3;
     }
 
     .text {
@@ -11,6 +12,14 @@
         font-size: $type-size-300;
         line-height: 1.5em;
         font-family: $adams;
+
+        @include desktop-small {
+            font-size: $type-size-200;
+        }
+
+        @include desktop-medium {
+            font-size: $type-size-300;
+        }
     }
 
     strong {

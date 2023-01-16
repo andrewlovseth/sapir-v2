@@ -1,7 +1,48 @@
 {
     "key": "group_605cdad8db406",
     "title": "Post Type: Authors",
-    "fields": [],
+    "fields": [
+        {
+            "key": "field_63c5b45f618a5",
+            "label": "First Name",
+            "name": "first_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_63c5b4340ff52",
+            "label": "Last Name",
+            "name": "last_name",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
     "location": [
         [
             {
@@ -32,5 +73,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1616698087
+    "show_in_rest": 0,
+    "modified": 1673901167
 }

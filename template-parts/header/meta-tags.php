@@ -25,8 +25,11 @@
     }
 
     $char_limit = 140;
-    $content = $post->post_content; 
-    $description = substr(strip_tags($content), 0, $char_limit)  . '...'; 
+    if($post !== NULL) {
+        $content = $post->post_content; 
+        $description = substr(strip_tags($content), 0, $char_limit)  . '...'; 
+    }
+
 
 ?>
 

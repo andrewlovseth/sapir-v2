@@ -17,6 +17,22 @@
 
         // Open external links in text body in a new window
         $('.article-body a').not('[href^="https://sapirjournal.org/"]').attr('target', '_blank');
+
+        // AUTHOR A-Z TABS
+        $('.author__tabs-link').on('click', function () {
+            let activeLetter = $(this).data('letter');
+
+            // Active Tab Link
+            $('.author__tabs-link').removeClass('active');
+            $(this).addClass('active');
+
+            // Active Tab
+
+            $('.author__tabs-group').removeClass('active');
+            $('.author__tabs-group[data-letter="' + activeLetter + '"').addClass('active');
+
+            return false;
+        });
     });
 
     $(document).mouseup(function (e) {

@@ -3,7 +3,7 @@
         <div class="hamburger__buns">
             <div class="hamburger__patty"></div>
         </div>
-
-        <span class="hamburger__label">Explore</span>
     </a>
+
+    <a href="<?php echo site_url('/archive/'); ?>" class="explore-link">Explore</a>
 </div>

@@ -1,5 +1,7 @@
 .site-header {
     padding-bottom: 0.5rem;
+    background: $light-tan;
+    z-index: 6666;
 
     @include tablet {
         padding-bottom: 1rem;
@@ -17,11 +19,11 @@
 
     @import 'search';
 
+    @import 'navigation';
+
     @import 'tagline';
 
     @import 'divider';
 }
-
-@import 'navigation';
 
 @import 'nav-overlay-open';

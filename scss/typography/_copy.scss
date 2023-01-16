@@ -5,6 +5,14 @@
     text-transform: uppercase;
 }
 
+.copy {
+    line-height: 1.5em;
+
+    &-1 {
+        font-size: $type-size-400;
+    }
+}
+
 article.post {
     .article-body {
         * {

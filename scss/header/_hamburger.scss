@@ -3,6 +3,8 @@
 
     @include tablet {
         width: 8rem;
+        display: flex;
+        align-items: center;
     }
 
     &__link {
@@ -15,7 +17,7 @@
         height: 22px;
         display: flex;
         align-items: center;
-        margin-left: auto;
+        margin-right: auto;
     }
 
     &__patty {
@@ -45,7 +47,7 @@
         }
     }
 
-    &__label {
+    .explore-link {
         display: none;
 
         @include tablet {
@@ -57,7 +59,10 @@
             font-weight: bold;
             color: $black;
             padding-left: 1rem;
-            margin-right: auto;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }

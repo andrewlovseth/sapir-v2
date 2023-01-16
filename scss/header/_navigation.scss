@@ -1,2 +1,35 @@
-.site-navigation {
+.header-nav {
+    grid-column: 1 / -1;
+    background: $light-tan;
+    display: none;
+
+    &__wrapper {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 5555;
+        background: $light-tan;
+        transition: all 300ms ease;
+        box-shadow: 0 1.5rem 1rem rgba($dark-blue, 0.15);
+        padding: 3rem 0;
+
+        @include desktop-small {
+            padding: 4.5rem 0;
+        }
+    }
+
+    .site-nav {
+        @include desktop-large {
+            padding-left: 3rem;
+        }
+    }
+
+    .epigraph {
+        @include double-border($light-blue);
+        color: $mid-blue;
+
+        @include desktop-large {
+            margin-right: 3rem;
+        }
+    }
 }

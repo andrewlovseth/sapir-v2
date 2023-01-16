@@ -20,6 +20,10 @@
             font-weight: bold;
             color: $black;
             margin-right: 0.75rem;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 

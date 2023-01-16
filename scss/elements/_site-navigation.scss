@@ -1,0 +1,52 @@
+.site-nav {
+    display: grid;
+    gap: 4rem 2rem;
+
+    @include tablet-small {
+        grid-column: 3 / span 6;
+    }
+
+    @include tablet {
+        grid-column: 2 / 7;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include desktop-small {
+        grid-column: 2 / span 9;
+    }
+
+    &__group {
+        @include desktop-small {
+            max-width: 14rem;
+        }
+
+        &-header {
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid rgba($tan, 0.5);
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__title {
+        line-height: 1.125em;
+    }
+
+    &__list-item {
+        & + .site-nav__list-item {
+            padding-top: 1.5rem;
+        }
+
+        a {
+            font-size: $type-size-300;
+            line-height: 1.5em;
+
+            @include tablet {
+                font-size: $type-size-200;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

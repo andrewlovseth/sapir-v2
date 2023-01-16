@@ -20,31 +20,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_606cd9066529a",
-            "label": "Footer Logo",
-            "name": "footer_logo",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_606cd7d87be21",
             "label": "Epigraph",
             "name": "epigraph",
@@ -65,8 +40,28 @@
             "new_lines": "br"
         },
         {
+            "key": "field_63c59ef5ce893",
+            "label": "Copyright",
+            "name": "copyright",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
             "key": "field_60882e0aa1571",
-            "label": "Newsletter Sign Up",
+            "label": "Newsletter",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -198,5 +193,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1673483759
+    "modified": 1673895710
 }

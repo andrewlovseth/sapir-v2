@@ -1,11 +1,22 @@
 .footer-logo {
-    grid-column: 2 / span 2;
+    text-align: center;
+    padding-bottom: 3rem;
 
-    @include tablet-small {
-        grid-column: 2 / span 3;
+    @include desktop-small {
+        padding-bottom: 4.5rem;
     }
 
-    @include tablet {
-        grid-column: 2 / span 2;
+    a {
+        display: inline-block;
+    }
+
+    svg {
+        display: block;
+        width: 100%;
+        max-width: 14rem;
+
+        path {
+            fill: $tan;
+        }
     }
 }

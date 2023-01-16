@@ -17,6 +17,8 @@
 <div id="page" class="site">
 	
 	<header class="site-header grid">
+		<?php get_template_part('template-parts/header/border'); ?>
+
 		<div class="site-header__wrapper">
 			<?php get_template_part('template-parts/header/hamburger'); ?>
 
@@ -31,6 +33,5 @@
 
 	</header>
 
-	<?php get_template_part('template-parts/header/navigation'); ?>
 
 	<main class="site-content">

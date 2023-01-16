@@ -1,5 +1,12 @@
+<?php
+
+    $header = get_field('header', 'options');
+    $logo = $header['logo'];
+
+?>
+
 <div class="footer-logo">
     <a href="<?php echo site_url('/'); ?>">
-        <img src="<?php $image = get_field('footer_logo', 'options'); echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+        <?php echo get_svg($logo['url']); ?>
     </a>
 </div>

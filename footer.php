@@ -1,11 +1,15 @@
 	</main> <!-- .site-content -->
 
 	<footer class="site-footer grid">
+		<?php get_template_part('template-parts/footer/border'); ?>
+
 		<?php get_template_part('template-parts/footer/logo'); ?>
 
-		<?php get_template_part('template-parts/footer/navigation'); ?>
+		<?php get_template_part('template-parts/global/navigation'); ?>
 
 		<?php get_template_part('template-parts/footer/epigraph'); ?>
+
+		<?php get_template_part('template-parts/footer/copyright'); ?>
 	</footer>
 
 	<?php wp_footer(); ?>

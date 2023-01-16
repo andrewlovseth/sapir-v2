@@ -1,0 +1,19 @@
+.copyright {
+    margin-top: 3rem;
+    border-top: 1px solid rgba($tan, 0.5);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba($tan, 0.5);
+
+    @include tablet-small {
+        grid-column: 3 / span 6;
+    }
+
+    @include desktop-small {
+        grid-column: 2 / span 12;
+    }
+
+    p {
+        font-size: $type-size-100;
+        letter-spacing: 0.025em;
+    }
+}

@@ -1,8 +1,8 @@
 .site-header {
-    padding: 2rem 0 0.5rem 0;
+    padding-bottom: 0.5rem;
 
     @include tablet {
-        padding: 3rem 0 1rem 0;
+        padding-bottom: 1rem;
     }
 
     &__wrapper {

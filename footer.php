@@ -1,5 +1,3 @@
-
-			<?php get_template_part('template-parts/footer/newsletter-sign-up'); ?>
 	</main> <!-- .site-content -->
 
 	<footer class="site-footer grid">

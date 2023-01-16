@@ -1,0 +1,67 @@
+.quote {
+    text-align: center;
+
+    blockquote {
+        background: $off-white;
+        color: $dark-blue;
+        padding: 3rem;
+        margin: 0;
+        position: relative;
+
+        &::before,
+        &::after {
+            display: block;
+            position: absolute;
+            font-size: clamp(6rem, 12vw, 14rem);
+            color: $light-blue;
+        }
+
+        &::before {
+            content: '“';
+            top: 0.5rem;
+            left: 1rem;
+        }
+
+        &::after {
+            content: '”';
+            bottom: 0.5rem;
+            right: 1rem;
+            line-height: 0;
+        }
+    }
+
+    &__header {
+        padding-bottom: 1.5rem;
+    }
+
+    &__text {
+        font-size: $type-size-500;
+        line-height: 1.5em;
+
+        @include tablet {
+            font-size: $type-size-600;
+        }
+
+        @include tablet {
+            padding: 0 3rem;
+        }
+
+        @include desktop-small {
+            padding: 0 6rem;
+        }
+    }
+
+    &__meta {
+        font-size: $type-size-400;
+        line-height: 1.5em;
+        padding-top: 1rem;
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__source {
+        text-transform: uppercase;
+    }
+}

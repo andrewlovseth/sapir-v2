@@ -12,11 +12,10 @@ get_header(); ?>
 
     <?php get_template_part('templates/home/explore'); ?>
 
-    <?php get_template_part('template-parts/global/subscribe'); ?>
+	<?php get_template_part('template-parts/footer/newsletter-sign-up'); ?>
 
-    <?php get_template_part('templates/home/most-read-departures'); ?>
+    <?php get_template_part('templates/home/curated-articles'); ?>
 
     <?php get_template_part('templates/home/quote'); ?>
-
 
 <?php get_footer(); ?>

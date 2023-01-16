@@ -1,6 +1,6 @@
 .issue {
     padding: 2rem;
-    border: 1px solid $light-blue;
+    @include double-border($light-blue);
 
     @include tablet-small {
         grid-column: 3 / span 6;
@@ -9,20 +9,6 @@
     @include desktop-small {
         grid-column: 9 / span 5;
         grid-row: 1;
-    }
-
-    &::before {
-        display: block;
-        content: '';
-        width: calc(100% + 6px);
-        height: calc(100% + 6px);
-        position: absolute;
-        top: -4px;
-        left: -4px;
-        right: -4px;
-        bottom: -4px;
-        z-index: 0;
-        border: 1px solid $light-blue;
     }
 
     .header {

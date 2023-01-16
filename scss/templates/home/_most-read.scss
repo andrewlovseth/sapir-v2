@@ -1,0 +1,39 @@
+.most-read {
+    padding: 2rem;
+    color: $red;
+    @include double-border($red);
+    counter-reset: article;
+
+    a {
+        color: $red;
+    }
+
+    .section-header {
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    .teaser-small {
+        padding-left: 2rem;
+
+        @include desktop-small {
+            padding-left: 3rem;
+        }
+        .teaser__title {
+            &:before {
+                font-family: $adams;
+                font-size: $type-size-400;
+                font-weight: bold;
+                position: absolute;
+                left: -2rem;
+                top: 0;
+                counter-increment: article;
+                content: counter(article);
+
+                @include desktop-small {
+                    left: -3rem;
+                }
+            }
+        }
+    }
+}

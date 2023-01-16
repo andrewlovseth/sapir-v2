@@ -401,6 +401,17 @@ article.post .article-header .author .name-link:hover {
   font-weight: bold;
 }
 
+.section-title {
+  font-family: "Adams", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+  font-weight: bold;
+}
+.section-title.sans-serif {
+  font-family: sans-serif;
+}
+
 .mono {
   font-size: 0.75rem;
   font-family: interstate-mono, monospace;
@@ -1020,47 +1031,12 @@ nav a:hover {
   color: #fbf9f7;
 }
 
-.teaser + .teaser {
-  padding-top: 3rem;
-}
-@media screen and (min-width: 768px) {
-  .teaser + .teaser {
-    padding-top: 4rem;
-  }
-}
 .teaser a:hover {
   text-decoration: underline;
 }
-.teaser__headline {
-  padding-bottom: 0.5rem;
-}
-.teaser__title {
-  font-size: clamp(1.5rem, 1.29rem + 1.07vw, 1.95rem);
-}
-@media screen and (min-width: 768px) {
-  .teaser__title {
-    font-size: clamp(1.8rem, 1.54rem + 1.29vw, 2.34rem);
-  }
-}
-.teaser__dek {
-  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
-  line-height: 1.5em;
-}
-@media screen and (min-width: 768px) {
-  .teaser__dek {
-    font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
-  }
-}
 .teaser__authors {
-  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
-  padding-top: 1rem;
   display: flex;
   align-items: center;
-}
-@media screen and (min-width: 768px) {
-  .teaser__authors {
-    font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
-  }
 }
 .teaser__authors em {
   display: block;
@@ -1082,6 +1058,63 @@ nav a:hover {
   content: "&";
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+.teaser-large + .teaser-large {
+  padding-top: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .teaser-large + .teaser-large {
+    padding-top: 4rem;
+  }
+}
+.teaser-large .teaser__headline {
+  padding-bottom: 0.5rem;
+}
+.teaser-large .teaser__title {
+  font-size: clamp(1.5rem, 1.29rem + 1.07vw, 1.95rem);
+}
+@media screen and (min-width: 768px) {
+  .teaser-large .teaser__title {
+    font-size: clamp(1.8rem, 1.54rem + 1.29vw, 2.34rem);
+  }
+}
+.teaser-large .teaser__dek {
+  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
+  line-height: 1.5em;
+}
+@media screen and (min-width: 768px) {
+  .teaser-large .teaser__dek {
+    font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+  }
+}
+.teaser-large .teaser__authors {
+  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
+  padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .teaser-large .teaser__authors {
+    font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+  }
+}
+.teaser-small + .teaser-small {
+  padding-top: 2rem;
+}
+.teaser-small .teaser__title {
+  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
+}
+@media screen and (min-width: 768px) {
+  .teaser-small .teaser__title {
+    font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+  }
+}
+.teaser-small .teaser__authors {
+  font-size: clamp(0.66rem, 0.58rem + 0.48vw, 0.88rem);
+  padding-top: 0.675rem;
+}
+@media screen and (min-width: 768px) {
+  .teaser-small .teaser__authors {
+    font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
+  }
 }
 
 .site-header {
@@ -1365,7 +1398,6 @@ body.nav-overlay-open .site-nav {
 }
 @media screen and (min-width: 768px) {
   .site-footer {
-    margin-top: 6rem;
     padding: 6rem 0;
   }
 }
@@ -1554,17 +1586,6 @@ body.page-template-home .latest .issue {
   padding: 2rem;
   border: 1px solid #9e9aaf;
 }
-@media screen and (min-width: 480px) {
-  body.page-template-home .latest .issue {
-    grid-column: 3/span 6;
-  }
-}
-@media screen and (min-width: 992px) {
-  body.page-template-home .latest .issue {
-    grid-column: 9/span 5;
-    grid-row: 1;
-  }
-}
 body.page-template-home .latest .issue::before {
   display: block;
   content: "";
@@ -1577,6 +1598,17 @@ body.page-template-home .latest .issue::before {
   bottom: -4px;
   z-index: 0;
   border: 1px solid #9e9aaf;
+}
+@media screen and (min-width: 480px) {
+  body.page-template-home .latest .issue {
+    grid-column: 3/span 6;
+  }
+}
+@media screen and (min-width: 992px) {
+  body.page-template-home .latest .issue {
+    grid-column: 9/span 5;
+    grid-row: 1;
+  }
 }
 body.page-template-home .latest .issue .header {
   text-align: center;
@@ -1639,11 +1671,6 @@ body.page-template-home .explore__sections {
   border-bottom: 1px solid #9e9aaf;
   display: grid;
 }
-@media screen and (min-width: 480px) {
-  body.page-template-home .explore__sections {
-    grid-column: 3/span 6;
-  }
-}
 @media screen and (min-width: 768px) {
   body.page-template-home .explore__sections {
     padding: 2rem 0;
@@ -1703,12 +1730,7 @@ body.page-template-home .explore__sections-link .label {
 body.page-template-home .explore__topics {
   padding: 3rem 0;
   border-bottom: 1px solid #9e9aaf;
-  margin-bottom: 2rem;
-}
-@media screen and (min-width: 480px) {
-  body.page-template-home .explore__topics {
-    grid-column: 3/span 6;
-  }
+  margin-bottom: 3rem;
 }
 @media screen and (min-width: 992px) {
   body.page-template-home .explore__topics {
@@ -1744,6 +1766,149 @@ body.page-template-home .explore__topics-list a {
   display: block;
   font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
   padding: 0.25rem 1.25rem;
+}
+body.page-template-home .curated-articles__wrapper {
+  padding: 3rem 0;
+  border-top: 1px solid #9e9aaf;
+  border-bottom: 1px solid #9e9aaf;
+  margin: 3rem 0;
+  display: grid;
+  gap: 3rem 4rem;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-home .curated-articles__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+body.page-template-home .most-read {
+  padding: 2rem;
+  color: rgb(189, 86, 82);
+  border: 1px solid rgb(189, 86, 82);
+  counter-reset: article;
+}
+body.page-template-home .most-read::before {
+  display: block;
+  content: "";
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  z-index: 0;
+  border: 1px solid rgb(189, 86, 82);
+}
+body.page-template-home .most-read a {
+  color: rgb(189, 86, 82);
+}
+body.page-template-home .most-read .section-header {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+body.page-template-home .most-read .teaser-small {
+  padding-left: 2rem;
+}
+@media screen and (min-width: 992px) {
+  body.page-template-home .most-read .teaser-small {
+    padding-left: 3rem;
+  }
+}
+body.page-template-home .most-read .teaser-small .teaser__title:before {
+  font-family: "Adams", serif;
+  font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+  font-weight: bold;
+  position: absolute;
+  left: -2rem;
+  top: 0;
+  counter-increment: article;
+  content: counter(article);
+}
+@media screen and (min-width: 992px) {
+  body.page-template-home .most-read .teaser-small .teaser__title:before {
+    left: -3rem;
+  }
+}
+body.page-template-home .departures:before {
+  display: block;
+  content: "";
+}
+@media screen and (min-width: 768px) {
+  body.page-template-home .departures:before {
+    height: 100%;
+    width: 1px;
+    background: #9e9aaf;
+    position: absolute;
+    left: -1rem;
+    top: 0;
+  }
+}
+body.page-template-home .departures .section-header {
+  padding-top: 2rem;
+  text-align: center;
+}
+body.page-template-home .departures .article-list {
+  padding: 2rem;
+}
+body.page-template-home .quote {
+  text-align: center;
+}
+body.page-template-home .quote blockquote {
+  background: #f1eeed;
+  color: #424254;
+  padding: 3rem;
+  margin: 0;
+  position: relative;
+}
+body.page-template-home .quote blockquote::before, body.page-template-home .quote blockquote::after {
+  display: block;
+  position: absolute;
+  font-size: clamp(6rem, 12vw, 14rem);
+  color: #9e9aaf;
+}
+body.page-template-home .quote blockquote::before {
+  content: "“";
+  top: 0.5rem;
+  left: 1rem;
+}
+body.page-template-home .quote blockquote::after {
+  content: "”";
+  bottom: 0.5rem;
+  right: 1rem;
+  line-height: 0;
+}
+body.page-template-home .quote__header {
+  padding-bottom: 1.5rem;
+}
+body.page-template-home .quote__text {
+  font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
+  line-height: 1.5em;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-home .quote__text {
+    font-size: clamp(1.5rem, 1.29rem + 1.07vw, 1.95rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  body.page-template-home .quote__text {
+    padding: 0 3rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  body.page-template-home .quote__text {
+    padding: 0 6rem;
+  }
+}
+body.page-template-home .quote__meta {
+  font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+  line-height: 1.5em;
+  padding-top: 1rem;
+}
+body.page-template-home .quote__meta a:hover {
+  text-decoration: underline;
+}
+body.page-template-home .quote__source {
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 768px) {

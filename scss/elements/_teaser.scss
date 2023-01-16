@@ -1,48 +1,13 @@
 .teaser {
-    & + .teaser {
-        padding-top: 3rem;
-
-        @include tablet {
-            padding-top: 4rem;
-        }
-    }
-
     a {
         &:hover {
             text-decoration: underline;
         }
     }
 
-    &__headline {
-        padding-bottom: 0.5rem;
-    }
-
-    &__title {
-        font-size: $type-size-600;
-
-        @include tablet {
-            font-size: $type-size-700;
-        }
-    }
-
-    &__dek {
-        font-size: $type-size-300;
-        line-height: 1.5em;
-
-        @include tablet {
-            font-size: $type-size-400;
-        }
-    }
-
     &__authors {
-        font-size: $type-size-300;
-        padding-top: 1rem;
         display: flex;
         align-items: center;
-
-        @include tablet {
-            font-size: $type-size-400;
-        }
 
         em {
             display: block;
@@ -69,6 +34,73 @@
                 content: '&';
                 padding-left: 0.5rem;
                 padding-right: 0.5rem;
+            }
+        }
+    }
+
+    &-large {
+        & + .teaser-large {
+            padding-top: 3rem;
+
+            @include tablet {
+                padding-top: 4rem;
+            }
+        }
+
+        .teaser {
+            &__headline {
+                padding-bottom: 0.5rem;
+            }
+
+            &__title {
+                font-size: $type-size-600;
+
+                @include tablet {
+                    font-size: $type-size-700;
+                }
+            }
+
+            &__dek {
+                font-size: $type-size-300;
+                line-height: 1.5em;
+
+                @include tablet {
+                    font-size: $type-size-400;
+                }
+            }
+
+            &__authors {
+                font-size: $type-size-300;
+                padding-top: 1rem;
+
+                @include tablet {
+                    font-size: $type-size-400;
+                }
+            }
+        }
+    }
+
+    &-small {
+        & + .teaser-small {
+            padding-top: 2rem;
+        }
+
+        .teaser {
+            &__title {
+                font-size: $type-size-300;
+
+                @include tablet {
+                    font-size: $type-size-400;
+                }
+            }
+
+            &__authors {
+                font-size: $type-size-150;
+                padding-top: 0.675rem;
+
+                @include tablet {
+                    font-size: $type-size-200;
+                }
             }
         }
     }

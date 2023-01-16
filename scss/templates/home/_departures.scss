@@ -1,0 +1,23 @@
+.departures {
+    &:before {
+        display: block;
+        content: '';
+
+        @include tablet {
+            height: 100%;
+            width: 1px;
+            background: $light-blue;
+            position: absolute;
+            left: -1rem;
+            top: 0;
+        }
+    }
+    .section-header {
+        padding-top: 2rem;
+        text-align: center;
+    }
+
+    .article-list {
+        padding: 2rem;
+    }
+}

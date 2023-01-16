@@ -1,0 +1,14 @@
+.curated-articles {
+    &__wrapper {
+        padding: 3rem 0;
+        border-top: 1px solid $light-blue;
+        border-bottom: 1px solid $light-blue;
+        margin: 3rem 0;
+        display: grid;
+        gap: 3rem 4rem;
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

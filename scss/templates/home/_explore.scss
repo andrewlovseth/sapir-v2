@@ -4,10 +4,6 @@
         border-bottom: 1px solid $light-blue;
         display: grid;
 
-        @include tablet-small {
-            grid-column: 3 / span 6;
-        }
-
         @include tablet {
             padding: 2rem 0;
             grid-template-columns: repeat(3, 1fr);
@@ -68,11 +64,7 @@
     &__topics {
         padding: 3rem 0;
         border-bottom: 1px solid $light-blue;
-        margin-bottom: 2rem;
-
-        @include tablet-small {
-            grid-column: 3 / span 6;
-        }
+        margin-bottom: 3rem;
 
         @include desktop-small {
             grid-column: 2 / span 12;

@@ -2,4 +2,12 @@ body.page-template-home {
     @import 'home/latest';
 
     @import 'home/explore';
+
+    @import 'home/curated-articles';
+
+    @import 'home/most-read';
+
+    @import 'home/departures';
+
+    @import 'home/quote';
 }

@@ -48,3 +48,15 @@ article.post {
     font-size: $type-size-100;
     font-weight: bold;
 }
+
+.section-title {
+    font-family: $adams;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: $type-size-400;
+    font-weight: bold;
+
+    &.sans-serif {
+        font-family: sans-serif;
+    }
+}

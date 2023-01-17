@@ -1,6 +1,4 @@
 body.page-template-events {
-    @include page-header;
-
     section.events {
         & + section.events {
             padding-top: 6rem;

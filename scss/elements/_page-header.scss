@@ -1,0 +1,12 @@
+.page-header {
+    padding-bottom: 3rem;
+    text-align: center;
+
+    @include tablet {
+        padding-bottom: 4.5rem;
+    }
+
+    .section-title-alt {
+        font-size: $type-size-600;
+    }
+}

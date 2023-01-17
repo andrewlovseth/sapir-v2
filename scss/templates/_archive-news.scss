@@ -1,6 +1,4 @@
 body.post-type-archive-news {
-    @include page-header;
-
     .posts {
         @include tablet {
             min-height: 25vh;
@@ -8,7 +6,7 @@ body.post-type-archive-news {
     }
 
     article.news {
-        display: grid;        
+        display: grid;
         gap: 0 2rem;
 
         @include tablet {

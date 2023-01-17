@@ -6,7 +6,7 @@ $issue_slug = sanitize_title_with_dashes($volume);
 
 get_header(); ?>
 
-    <section class="table-of-contents grid <?php echo $issue_slug; ?>">
+    <section class="issue <?php echo $issue_slug; ?> grid">
 
         <?php get_template_part('templates/single-issue/header'); ?>
 

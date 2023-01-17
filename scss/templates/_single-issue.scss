@@ -1,7 +1,5 @@
 body.single-issue {
-    .table-of-contents {
-        @import 'single-issue/header';
+    @import 'single-issue/header';
 
-        @import 'single-issue/contents';
-    }
+    @import 'single-issue/contents';
 }

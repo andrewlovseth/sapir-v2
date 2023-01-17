@@ -1,6 +1,7 @@
 <?php
 
-    $search = get_field('search');
+    $archive = get_page_by_path( 'archive' );
+    $search = get_field('search', $archive->ID);
     $icon = $search['icon'];
     $header = $search['header'];
 

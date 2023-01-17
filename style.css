@@ -1276,21 +1276,21 @@ body.single-issue .volume-seven.table-of-contents .contents .headline h2 {
   }
 }
 .teaser-large .teaser__dek {
-  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
+  font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
   line-height: 1.5em;
 }
 @media screen and (min-width: 768px) {
   .teaser-large .teaser__dek {
-    font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+    font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
   }
 }
 .teaser-large .teaser__authors {
-  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
+  font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
   padding-top: 1rem;
 }
 @media screen and (min-width: 768px) {
   .teaser-large .teaser__authors {
-    font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+    font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
   }
 }
 .teaser-small + .teaser-small {
@@ -1312,6 +1312,25 @@ body.single-issue .volume-seven.table-of-contents .contents .headline h2 {
   .teaser-small .teaser__authors {
     font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
   }
+}
+.teaser-search-result .teaser__meta {
+  padding-bottom: 1rem;
+  font-size: clamp(0.66rem, 0.58rem + 0.48vw, 0.88rem);
+  font-family: "Adams", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.teaser-search-result .teaser__meta a {
+  display: flex;
+  align-items: center;
+}
+.teaser-search-result .teaser__meta span {
+  display: block;
+}
+.teaser-search-result .teaser__meta span.season {
+  padding-left: 0.5rem;
+  border-left: 1px solid;
+  margin-left: 0.5rem;
 }
 
 .site-border {
@@ -2175,6 +2194,105 @@ body.page-template-archive .author__link {
 }
 body.page-template-archive .author__link:hover {
   color: rgb(189, 86, 82);
+}
+
+body.search .search {
+  text-align: center;
+}
+body.search .search .icon svg {
+  display: block;
+  width: 4rem;
+  margin: 0 auto;
+}
+body.search .search .icon svg path {
+  display: block;
+  width: 100%;
+}
+body.search .search .section-title-alt {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+body.search .search-results-list__summary {
+  margin-top: 3rem;
+  border-top: 1px solid rgba(158, 154, 175, 0.5);
+  padding-top: 3rem;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+@media screen and (min-width: 992px) {
+  body.search .search-results-list__summary {
+    padding-bottom: 4.5rem;
+  }
+}
+body.search .search-results-list__title {
+  padding-top: 1rem;
+  font-size: clamp(2.16rem, 1.85rem + 1.54vw, 2.81rem);
+}
+body.search .search-results-list__header {
+  border-top: 1px solid rgba(158, 154, 175, 0.5);
+  border-bottom: 1px solid rgba(158, 154, 175, 0.5);
+  padding: 0.5rem 1rem;
+  font-size: clamp(0.6rem, 0.52rem + 0.43vw, 0.78rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: "Adams", serif;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 992px) {
+  body.search .teaser-search-result {
+    grid-column: 4/span 8;
+  }
+}
+body.search .no-pagination {
+  padding: 3rem 0;
+}
+body.search .pagination {
+  margin-top: 3rem;
+  border-top: 1px solid rgba(158, 154, 175, 0.5);
+  border-bottom: 1px solid rgba(158, 154, 175, 0.5);
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+@media screen and (min-width: 992px) {
+  body.search .pagination {
+    margin-top: 6rem;
+    grid-column: 4/span 8;
+  }
+}
+body.search .pagination a {
+  font-weight: bold;
+  font-family: "Adams", serif;
+  font-size: clamp(0.6rem, 0.52rem + 0.43vw, 0.78rem);
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(158, 154, 175, 0.5);
+  margin: 0 0.5rem;
+}
+body.search .pagination a:hover {
+  text-decoration: none;
+  background: #424254;
+  color: #fff;
+  border: 1px solid #424254;
+}
+body.search .pagination a.prev {
+  margin-right: auto;
+}
+body.search .pagination a.next {
+  margin-left: auto;
+}
+body.search .pagination span.current {
+  font-weight: bold;
+  font-family: "Adams", serif;
+  font-size: clamp(0.6rem, 0.52rem + 0.43vw, 0.78rem);
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #424254;
+  background: #424254;
+  color: #fff;
+  margin: 0 0.5rem;
 }
 
 @media screen and (min-width: 768px) {

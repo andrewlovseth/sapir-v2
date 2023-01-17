@@ -61,20 +61,20 @@
             }
 
             &__dek {
-                font-size: $type-size-300;
+                font-size: $type-size-200;
                 line-height: 1.5em;
 
                 @include tablet {
-                    font-size: $type-size-400;
+                    font-size: $type-size-300;
                 }
             }
 
             &__authors {
-                font-size: $type-size-300;
+                font-size: $type-size-200;
                 padding-top: 1rem;
 
                 @include tablet {
-                    font-size: $type-size-400;
+                    font-size: $type-size-300;
                 }
             }
         }
@@ -100,6 +100,31 @@
 
                 @include tablet {
                     font-size: $type-size-200;
+                }
+            }
+        }
+    }
+
+    &-search-result {
+        .teaser__meta {
+            padding-bottom: 1rem;
+            font-size: $type-size-150;
+            font-family: $adams;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+
+            a {
+                display: flex;
+                align-items: center;
+            }
+
+            span {
+                display: block;
+
+                &.season {
+                    padding-left: 0.5rem;
+                    border-left: 1px solid;
+                    margin-left: 0.5rem;
                 }
             }
         }

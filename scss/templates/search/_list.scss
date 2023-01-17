@@ -1,0 +1,36 @@
+.search-results-list {
+    &__summary {
+        margin-top: 3rem;
+        border-top: 1px solid rgba($light-blue, 0.5);
+        padding-top: 3rem;
+        text-align: center;
+        padding-bottom: 3rem;
+
+        @include desktop-small {
+            padding-bottom: 4.5rem;
+        }
+    }
+
+    &__title {
+        padding-top: 1rem;
+        font-size: $type-size-800;
+    }
+
+    &__header {
+        border-top: 1px solid rgba($light-blue, 0.5);
+        border-bottom: 1px solid rgba($light-blue, 0.5);
+        padding: 0.5rem 1rem;
+        font-size: $type-size-100;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-family: $adams;
+        margin-bottom: 3rem;
+    }
+}
+
+.teaser-search-result {
+    @include desktop-small {
+        grid-column: 4 / span 8;
+    }
+}

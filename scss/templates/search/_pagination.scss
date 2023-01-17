@@ -1,0 +1,55 @@
+.no-pagination {
+    padding: 3rem 0;
+}
+
+.pagination {
+    margin-top: 3rem;
+    border-top: 1px solid rgba($light-blue, 0.5);
+    border-bottom: 1px solid rgba($light-blue, 0.5);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    @include desktop-small {
+        margin-top: 6rem;
+        grid-column: 4 / span 8;
+    }
+
+    a {
+        font-weight: bold;
+        font-family: $adams;
+        font-size: $type-size-100;
+        display: block;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid rgba($light-blue, 0.5);
+        margin: 0 0.5rem;
+
+        &:hover {
+            text-decoration: none;
+            background: $dark-blue;
+            color: $white;
+            border: 1px solid $dark-blue;
+        }
+
+        &.prev {
+            margin-right: auto;
+        }
+
+        &.next {
+            margin-left: auto;
+        }
+    }
+
+    span.current {
+        font-weight: bold;
+        font-family: $adams;
+        font-size: $type-size-100;
+        display: block;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid rgba($dark-blue, 1);
+        background: $dark-blue;
+        color: $white;
+        margin: 0 0.5rem;
+    }
+}

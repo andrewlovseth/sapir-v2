@@ -5,6 +5,11 @@
         $p = $args['p']; 
     }
 
+    $issue = get_field('issue', $p);
+    $volume = get_field('volume', $issue->ID);
+    $season = get_field('season', $issue->ID);
+
+
     if(get_field('display_title', $p)) {
         $title = get_field('display_title', $p);
     } else {
@@ -18,7 +23,12 @@
 ?>
 
 
-<article class="teaser teaser-large">
+<article class="teaser teaser-large teaser-search-result">
+    <?php
+        $args = ['issue'=> $issue, 'volume' => $volume, 'season' => $season];
+        get_template_part('template-parts/global/teaser/search-results-meta', null, $args);
+    ?>
+
     <?php
         $args = ['title' => $title, 'permalink' => $permalink];
         get_template_part('template-parts/global/teaser/headline', null, $args);

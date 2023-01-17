@@ -1,0 +1,7 @@
+body.search {
+    @import 'templates/archive/search';
+
+    @import 'search/list';
+
+    @import 'search/pagination';
+}

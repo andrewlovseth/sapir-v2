@@ -13,7 +13,7 @@
 
     $permalink = get_permalink($p);
     $authors = get_field('author', $p);
-    $authors_count = count($authors);
+    $authors_count = count((array)$authors);
 ?>
 
 

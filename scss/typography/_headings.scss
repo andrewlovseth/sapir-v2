@@ -20,14 +20,12 @@ article.post {
 }
 
 .title {
-    color: $issue-one-dark-blue;
     font-family: $fournier-std-grand;
     font-size: clamp(2rem, 3.5vw, 4rem);
     line-height: 1.25em;
 }
 
 .sub-title {
-    color: $medium-blue;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-family: $fournier-std-grand;

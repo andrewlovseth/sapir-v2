@@ -34,7 +34,6 @@ body.post-type-archive-issue {
                 font-size: clamp(0.6125rem, 0.7vw, 0.8125rem);
                 letter-spacing: 0.15em;
                 font-family: $fournier-std-grand;
-                color: $slate;
             }
 
             h3 {
@@ -42,7 +41,6 @@ body.post-type-archive-issue {
                 font-weight: normal;
 
                 a {
-                    color: $slate;
                     padding-bottom: 0.25rem;
 
                     &:hover {

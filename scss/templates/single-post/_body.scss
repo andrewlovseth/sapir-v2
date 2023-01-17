@@ -6,7 +6,7 @@
 
         &:before {
             display: block;
-            content:'';
+            content: '';
             background: url(images/section-divider.svg) no-repeat center center;
             background-size: contain;
             width: 3rem;
@@ -14,6 +14,251 @@
             margin: 0 auto;
         }
     }
-    
+}
 
+article.post {
+    .article-body {
+        * {
+            font-size: $type-size-300;
+            line-height: 1.75em;
+        }
+
+        & > * + * {
+            margin-top: 1.5rem;
+        }
+
+        h4 {
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: clamp(0.875rem, 1vw, 1.125rem);
+            padding-top: 2rem;
+
+            & + * {
+                margin-top: 1rem;
+            }
+
+            &.has-text-align-right {
+                & + p {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        & > h4:first-child {
+            padding-top: 0;
+
+            & + * {
+                margin-top: 2rem;
+            }
+        }
+
+        a {
+            color: $issue-one-light-blue;
+            border-bottom: 1px solid;
+        }
+
+        ol {
+            list-style-type: decimal;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        ol,
+        ul {
+            padding-left: 1rem;
+
+            li {
+                padding-left: 1rem;
+
+                & + li {
+                    margin-top: 2.5rem;
+                }
+
+                .indent {
+                    display: block;
+                    text-indent: 3rem;
+                }
+            }
+
+            &.inset {
+                padding-left: 3rem;
+
+                li + li {
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+
+        li.last-p,
+        p.last-p {
+            &:after {
+                content: '';
+                display: inline-block;
+                width: 1rem;
+                height: 1rem;
+                background: url(images/icon-dingbat-blue.svg) no-repeat 0 0;
+                background-size: contain;
+                margin-left: 0.5rem;
+            }
+        }
+
+        .wp-block-pullquote:not(.basic) {
+            text-align: center;
+            padding: 0;
+            margin: 3rem 0 3rem 0;
+
+            &::before,
+            &::after {
+                width: 100%;
+                max-width: 24rem;
+                margin: 0 auto;
+
+                content: '';
+                display: block;
+            }
+
+            &::before {
+                border-top: 1px solid rgba($dark-blue, 0.5);
+                padding-top: 2rem;
+            }
+
+            &::after {
+                border-bottom: 1px solid rgba($dark-blue, 0.5);
+                padding-bottom: 2rem;
+            }
+
+            blockquote {
+                margin: 0 auto;
+                padding: 0;
+                max-width: 36rem;
+                width: 100%;
+            }
+
+            p {
+                padding: 0;
+                margin: 0;
+                font-size: clamp(1.25rem, 4.5vw, 1.75rem);
+                line-height: 1.75em;
+
+                .first-letter {
+                    font-size: 1em;
+                    display: inline;
+                }
+
+                & > * {
+                    font-size: clamp(1.25rem, 4.5vw, 1.75rem);
+                    line-height: 1.75em;
+                }
+            }
+        }
+
+        .wp-block-pullquote.basic {
+            margin: 2.5rem 0 0 0;
+            padding: 0 0 0 2rem;
+            text-align: left;
+            max-width: 100%;
+
+            blockquote {
+                margin: 0;
+                padding: 0;
+            }
+
+            * {
+                font-size: clamp(1rem, 1.1vw, 1.25rem);
+            }
+
+            p {
+                .first-letter {
+                    font-size: 1em;
+                    display: inline;
+                }
+            }
+
+            &.extended {
+                p + p {
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        & .wp-block-pullquote.basic:first-child {
+            margin: 0;
+            padding: 0;
+
+            .first-letter {
+                display: none;
+            }
+
+            p.dropcap:first-line {
+                font-variant-caps: small-caps;
+                letter-spacing: 0.05em;
+            }
+
+            p + p {
+                padding-left: 4rem;
+            }
+        }
+
+        .wp-block-image {
+            @include tablet {
+                width: calc(100% + 20vw);
+                margin-left: -10vw;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            figcaption {
+                text-align: center;
+                padding-top: 0.25rem;
+                font-size: clamp(0.875rem, 1vw, 1rem);
+                line-height: 1.5em;
+
+                em,
+                a,
+                span {
+                    font-size: 1em;
+                }
+            }
+        }
+
+        .wp-block-quote.extended {
+            p + p {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &.dropcap {
+        .article-body {
+            & > p:first-child,
+            p.dropcap {
+                &:before {
+                    float: left;
+                    display: block;
+                    content: '';
+                    width: clamp(5rem, 6.375vw, 6.1875rem);
+                    height: clamp(5rem, 6.375vh, 6.1875rem);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: contain;
+                    margin: 0.25rem 0.5rem 0 0;
+                    mix-blend-mode: multiply;
+
+                    @include desktop-medium {
+                        width: clamp(10rem, 10.75vw, 10.75rem);
+                        height: clamp(9rem, 6vh, 12.75rem);
+                        margin: 0 0.5rem 0.5rem 0;
+                    }
+                }
+            }
+
+            .first-letter {
+                display: none;
+            }
+        }
+    }
 }

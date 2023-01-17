@@ -6,7 +6,7 @@
 
     <?php if(get_field('full_issue_pdf')): ?>
         <div class="cta">
-            <a href="<?php the_field('full_issue_pdf'); ?>" rel="external" class="btn">Download full journal (PDF)</a>
+            <a href="<?php the_field('full_issue_pdf'); ?>" rel="external" class="btn">Download Issue (PDF)</a>
         </div>
     <?php endif; ?>
 </div>

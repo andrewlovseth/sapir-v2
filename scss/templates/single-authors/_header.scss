@@ -1,0 +1,32 @@
+.author-header {
+    text-align: center;
+    padding-bottom: 3rem;
+
+    @include tablet {
+        padding-bottom: 4.5rem;
+    }
+
+    &__photo {
+        max-width: 8rem;
+        margin: 0 auto;
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    &__title {
+        padding: 1.5rem 0;
+        font-style: italic;
+        font-size: $type-size-500;
+    }
+
+    &__copy {
+        max-width: 40rem;
+        margin: 0 auto;
+    }
+}
+
+.archive-results-list {
+    padding-bottom: 6rem;
+}

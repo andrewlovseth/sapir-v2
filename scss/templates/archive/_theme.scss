@@ -1,0 +1,30 @@
+.theme {
+    .section-header {
+        margin-top: 3rem;
+        border-top: 1px solid rgba($light-blue, 0.5);
+        padding-top: 3rem;
+        text-align: center;
+    }
+
+    &__list {
+        padding-top: 3rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 55rem;
+        margin: 0 auto;
+    }
+
+    &__item {
+        & + .theme__item {
+            border-left: 1px solid $light-blue;
+            margin-bottom: 0.75rem;
+        }
+    }
+
+    a {
+        display: block;
+        font-size: $type-size-400;
+        padding: 0.25rem 1.25rem;
+    }
+}

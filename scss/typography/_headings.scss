@@ -59,4 +59,9 @@ article.post {
     &.sans-serif {
         font-family: sans-serif;
     }
+
+    &-alt {
+        font-style: italic;
+        font-size: $type-size-500;
+    }
 }

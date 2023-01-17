@@ -411,6 +411,10 @@ article.post .article-header .author .name-link:hover {
 .section-title.sans-serif {
   font-family: sans-serif;
 }
+.section-title-alt {
+  font-style: italic;
+  font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
+}
 
 .mono {
   font-size: 0.75rem;
@@ -1047,6 +1051,58 @@ body.single-issue .volume-seven.table-of-contents .contents .headline h2 {
 }
 .site-nav__list-item a:hover {
   text-decoration: underline;
+}
+
+.search-form {
+  display: flex;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.search-form .search-field {
+  background: transparent;
+  border: 1px solid #65667a;
+  padding: 1rem;
+  height: 3rem;
+  line-height: 1em;
+  font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
+  letter-spacing: 0.02em;
+  flex: 1;
+  color: #424254;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 992px) {
+  .search-form .search-field {
+    margin-bottom: 0;
+  }
+}
+.search-form .search-field:focus, .search-form .search-field:active {
+  outline: none;
+}
+.search-form .search-field::-webkit-input-placeholder {
+  color: #424254;
+}
+.search-form .search-field::-moz-placeholder {
+  color: #424254;
+}
+.search-form .search-field:-moz-placeholder {
+  color: #424254;
+}
+.search-form .search-field:-ms-input-placeholder {
+  color: #424254;
+}
+.search-form .search-submit {
+  padding: 1rem 2rem 0.875rem;
+  height: 3rem;
+  line-height: 1em;
+  border: none;
+  background: #65667a;
+  color: #fff;
+  font-size: clamp(0.5rem, 0.42rem + 0.38vw, 0.675rem);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family: "Adams", serif;
+  font-weight: bold;
 }
 
 .cta.center {
@@ -1975,6 +2031,87 @@ body.page-template-home .quote__source {
   text-transform: uppercase;
 }
 
+body.page-template-archive .search {
+  text-align: center;
+}
+body.page-template-archive .search .icon svg {
+  display: block;
+  width: 4rem;
+  margin: 0 auto;
+}
+body.page-template-archive .search .icon svg path {
+  display: block;
+  width: 100%;
+}
+body.page-template-archive .search .section-title-alt {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+body.page-template-archive .theme .section-header {
+  margin-top: 3rem;
+  border-top: 1px solid rgba(158, 154, 175, 0.5);
+  padding-top: 3rem;
+  text-align: center;
+}
+body.page-template-archive .theme__list {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 55rem;
+  margin: 0 auto;
+}
+body.page-template-archive .theme__item + .theme__item {
+  border-left: 1px solid #9e9aaf;
+  margin-bottom: 0.75rem;
+}
+body.page-template-archive .theme a {
+  display: block;
+  font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+  padding: 0.25rem 1.25rem;
+}
+body.page-template-archive .issue .section-header {
+  margin-top: 3rem;
+  border-top: 1px solid rgba(158, 154, 175, 0.5);
+  padding-top: 3rem;
+  text-align: center;
+}
+body.page-template-archive .issue__gallery {
+  padding-top: 3rem;
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+body.page-template-archive .issue__cover {
+  aspect-ratio: 360/540;
+  background: #f1eeed;
+}
+body.page-template-archive .issue__link {
+  color: #424254;
+}
+body.page-template-archive .issue__title {
+  padding-top: 1rem;
+  text-align: center;
+  font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
+  font-family: "Adams", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+body.page-template-archive .issue__meta {
+  padding-top: 0.75rem;
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  opacity: 0.85;
+}
+body.page-template-archive .author {
+  padding-bottom: 3rem;
+}
+@media screen and (min-width: 992px) {
+  body.page-template-archive .author {
+    padding-bottom: 6rem;
+  }
+}
 body.page-template-archive .author .section-header {
   margin-top: 3rem;
   border-top: 1px solid rgba(158, 154, 175, 0.5);
@@ -2017,8 +2154,10 @@ body.page-template-archive .author__tabs-group {
 body.page-template-archive .author__tabs-group.active {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin-top: 1.5rem;
+  min-height: 6rem;
 }
 body.page-template-archive .author__item {
   display: flex;

@@ -1,0 +1,21 @@
+.search {
+    text-align: center;
+
+    .icon {
+        svg {
+            display: block;
+            width: 4rem;
+            margin: 0 auto;
+
+            path {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    .section-title-alt {
+        padding-top: 1rem;
+        padding-bottom: 3rem;
+    }
+}

@@ -1,3 +1,9 @@
 body.page-template-archive {
+    @import 'archive/search';
+
+    @import 'archive/theme';
+
+    @import 'archive/issue';
+
     @import 'archive/author';
 }

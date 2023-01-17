@@ -1,4 +1,10 @@
 .author {
+    padding-bottom: 3rem;
+
+    @include desktop-small {
+        padding-bottom: 6rem;
+    }
+
     .section-header {
         margin-top: 3rem;
         border-top: 1px solid rgba($light-blue, 0.5);
@@ -47,8 +53,10 @@
         &.active {
             display: flex;
             justify-content: center;
+            align-items: flex-start;
             flex-wrap: wrap;
             margin-top: 1.5rem;
+            min-height: 6rem;
         }
     }
 

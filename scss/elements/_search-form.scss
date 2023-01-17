@@ -1,0 +1,46 @@
+.search-form {
+    display: flex;
+    width: 100%;
+    max-width: 40rem;
+    margin: 0 auto;
+
+    .search-field {
+        background: transparent;
+        border: 1px solid $mid-blue;
+        padding: 1rem;
+        height: 3rem;
+        line-height: 1em;
+        font-size: $type-size-200;
+        letter-spacing: 0.02em;
+        flex: 1;
+        color: $dark-blue;
+        margin-bottom: 0.5rem;
+
+        @include desktop-small {
+            margin-bottom: 0;
+        }
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+
+        @include placeholder {
+            color: $dark-blue;
+        }
+    }
+
+    .search-submit {
+        padding: 1rem 2rem 0.875rem;
+        height: 3rem;
+        line-height: 1em;
+        border: none;
+        background: $mid-blue;
+        color: $white;
+        font-size: $type-size-050;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-family: $adams;
+        font-weight: bold;
+    }
+}

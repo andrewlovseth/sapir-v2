@@ -32,7 +32,7 @@
 
 ?>
 
-<section class="author grid">
+<section class="author grid" id="author">
     <div class="section-header">
         <h5 class="upper-header"><?php echo $header; ?></h5>
 
@@ -40,8 +40,6 @@
             <p><?php echo $copy; ?></p>
         </div>
     </div>
-
-
 
     <div class="author__tabs-links">
         <?php foreach(range('a','z') as $letter): ?>

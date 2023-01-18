@@ -2,4 +2,31 @@
     margin-top: 3rem;
     border-top: 1px solid $light-blue;
     padding-top: 3rem;
+
+    .upper-header {
+        padding-bottom: 2rem;
+    }
+
+    @import '../archive-conversations/teaser';
+
+    .teaser-conversation {
+        @include tablet {
+            grid-template-columns: 1fr 10rem;
+        }
+
+        &__participants {
+            @include tablet {
+                grid-column: 2;
+                grid-row: 1;
+            }
+        }
+
+        @include desktop-small {
+            grid-column: unset;
+        }
+    }
+
+    .cta {
+        padding-top: 1.5rem;
+    }
 }

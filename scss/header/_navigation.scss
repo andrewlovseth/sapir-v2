@@ -19,7 +19,7 @@
     }
 
     .site-nav {
-        @include desktop-large {
+        @include desktop-medium {
             padding-left: 3rem;
         }
     }
@@ -27,8 +27,23 @@
     .epigraph {
         @include double-border($light-blue);
         color: $mid-blue;
+        margin-top: 3rem;
+        align-self: start;
 
-        @include desktop-large {
+        @include tablet-small {
+            grid-column: 3 / span 6;
+        }
+
+        @include tablet {
+            grid-column: 7 / span 3;
+            margin-top: 0;
+        }
+
+        @include desktop-small {
+            grid-column: 11 / span 3;
+        }
+
+        @include desktop-medium {
             margin-right: 3rem;
         }
     }

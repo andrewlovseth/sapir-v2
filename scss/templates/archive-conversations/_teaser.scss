@@ -1,0 +1,152 @@
+.teaser-conversation {
+    display: grid;
+    gap: 1rem 2rem;
+
+    @include tablet {
+        grid-template-columns: 10rem 1fr;
+    }
+
+    @include desktop-small {
+        grid-column: 3 / span 10;
+    }
+
+    &__participants {
+        max-width: 7rem;
+
+        @include tablet {
+            max-width: 10rem;
+        }
+    }
+
+    &__participant {
+        & + .teaser-conversation__participant {
+            margin-top: -2.5rem;
+
+            @include tablet {
+                margin-top: -3.5rem;
+            }
+        }
+
+        &:nth-child(even) {
+            .photo {
+                margin-left: auto;
+            }
+        }
+
+        &:nth-child(1) {
+            z-index: 100;
+        }
+
+        &:nth-child(2) {
+            z-index: 90;
+        }
+
+        &:nth-child(3) {
+            z-index: 80;
+        }
+
+        .photo {
+            max-width: 4rem;
+
+            @include tablet {
+                max-width: 6rem;
+            }
+
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__meta {
+        font-family: $adams;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: $type-size-150;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        padding-bottom: 2rem;
+
+        span {
+            display: block;
+
+            & + span {
+                padding-left: 0.5rem;
+                border-left: 1px solid;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+    .teaser__title {
+        font-size: $type-size-500;
+        line-height: 1.25em;
+    }
+
+    .copy {
+        padding-top: 0.5rem;
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    .listen {
+        display: flex;
+        align-items: center;
+        padding-top: 2rem;
+
+        strong {
+            font-family: $adams;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: $type-size-150;
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-left: 0.75rem;
+
+            svg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+
+                path {
+                    transition: fill 300ms ease;
+                }
+            }
+
+            &.apple-podcasts:hover {
+                svg path {
+                    fill: #b150e2;
+                }
+            }
+
+            &.spotify:hover {
+                svg path {
+                    fill: #1db954;
+                }
+            }
+
+            &.google-podcasts:hover {
+                svg path {
+                    fill: #db4437;
+                }
+            }
+        }
+    }
+
+    .cta {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1rem;
+
+        @include tablet {
+            margin-top: 0;
+        }
+    }
+}

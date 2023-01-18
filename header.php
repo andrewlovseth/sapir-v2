@@ -7,7 +7,7 @@
 	
 	<?php wp_head(); ?>
 	<?php the_field('head_js', 'options'); ?>
-	<?php get_template_part('template-parts/header/meta-tags'); ?>
+	<?php // get_template_part('template-parts/header/meta-tags'); ?>
 </head>
 
 <body <?php body_class(); ?>>

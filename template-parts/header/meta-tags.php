@@ -1,6 +1,7 @@
 <?php
 
     $issue = get_field('issue'); 
+    var_dump($issue);
     $volume = get_field('volume', $issue);
     $issue_slug = sanitize_title_with_dashes($volume);
     $url = get_permalink();

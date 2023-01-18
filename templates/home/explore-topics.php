@@ -1,6 +1,7 @@
 <?php
 
     $explore = get_field('explore');
+    
     $topics_header = $explore['topics_header'];
     $topics_icon = $explore['topics_icon'];
     $topics = $explore['topics'];

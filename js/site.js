@@ -45,7 +45,7 @@
 
     $(document).keyup(function (e) {
         if (e.keyCode == 27) {
-            $('body').toggleClass('nav-overlay-open');
+            $('body').removeClass('nav-overlay-open');
         }
     });
 })(jQuery, window, document);

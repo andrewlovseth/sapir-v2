@@ -15,5 +15,9 @@
 
     &-3 {
         font-size: $type-size-200;
+
+        & > * + * {
+            margin-top: 1rem;
+        }
     }
 }

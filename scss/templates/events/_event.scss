@@ -1,0 +1,118 @@
+.event {
+    display: grid;
+    gap: 2rem;
+
+    @include desktop-small {
+        grid-column: 3 / span 10;
+        grid-template-columns: 10rem 1fr;
+    }
+
+    & + .event {
+        padding-top: 3rem;
+
+        @include tablet {
+            padding-top: 6rem;
+        }
+    }
+
+    &__meta {
+        font-family: $adams;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-size: $type-size-150;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        padding-bottom: 1.5rem;
+
+        span {
+            display: block;
+
+            & + span {
+                padding-left: 0.5rem;
+                border-left: 1px solid;
+                margin-left: 0.5rem;
+            }
+        }
+    }
+
+    &__title {
+        font-size: $type-size-600;
+    }
+
+    &__description {
+        padding-top: 1.5rem;
+    }
+
+    .cta {
+        padding-top: 2rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .authors {
+        max-width: 7rem;
+
+        @include tablet {
+            max-width: 10rem;
+        }
+    }
+
+    .author {
+        & + .author {
+            margin-top: -2.5rem;
+
+            @include tablet {
+                margin-top: -3.5rem;
+            }
+        }
+
+        &:nth-child(even) {
+            .photo {
+                margin-left: auto;
+            }
+        }
+
+        &:nth-child(1) {
+            z-index: 100;
+        }
+
+        &:nth-child(2) {
+            z-index: 90;
+        }
+
+        &:nth-child(3) {
+            z-index: 80;
+        }
+
+        .photo {
+            max-width: 4rem;
+
+            @include tablet {
+                max-width: 6rem;
+            }
+
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .graphic {
+        img {
+            border: 1px solid rgba($light-blue, 0.25);
+        }
+    }
+}
+
+.no-events {
+    text-align: center;
+    @include desktop-small {
+        grid-template-columns: 1fr;
+    }
+
+    &__title {
+        font-size: $type-size-400;
+        font-style: italic;
+    }
+}

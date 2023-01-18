@@ -12,6 +12,6 @@ get_header(); ?>
 
     <?php get_template_part('templates/events/upcoming'); ?>
 
-    <?php get_template_part('templates/events/recordings'); ?>
+    <?php // get_template_part('templates/events/recordings'); ?>
 
 <?php get_footer(); ?>

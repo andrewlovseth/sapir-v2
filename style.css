@@ -341,13 +341,13 @@ a {
 }
 
 ::-moz-selection {
-  background: #424254;
+  background: #bd5652;
   color: #fff;
   text-shadow: none;
 }
 
 ::selection {
-  background: #424254;
+  background: #bd5652;
   color: #fff;
   text-shadow: none;
 }
@@ -414,6 +414,14 @@ article.post .article-header .author .name-link:hover {
   font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
 }
 
+.module-title {
+  font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-family: "Adams", serif;
+}
+
 .copy {
   line-height: 1.5em;
 }
@@ -428,6 +436,9 @@ article.post .article-header .author .name-link:hover {
 }
 .copy-3 {
   font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
+}
+.copy-3 > * + * {
+  margin-top: 1rem;
 }
 
 body {
@@ -2026,104 +2037,153 @@ body.page-template-about .about__masthead .role .job-title {
   text-transform: uppercase;
 }
 
-body.page-template-events section.events + section.events {
-  padding-top: 6rem;
-}
-body.page-template-events section.events + section.events .section-header {
-  border-top: 1px solid #408ab6;
-  padding-top: 6rem;
-}
-body.page-template-events section.events .section-header {
-  padding-bottom: 2rem;
-}
-body.page-template-events section.events + .newsletter-sign-up {
-  padding-top: 6rem;
-}
 body.page-template-events .event {
   display: grid;
-  gap: 0 2rem;
-  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
 }
 @media screen and (min-width: 992px) {
   body.page-template-events .event {
-    grid-template-columns: 1fr 5fr;
+    grid-column: 3/span 10;
+    grid-template-columns: 10rem 1fr;
   }
 }
 body.page-template-events .event + .event {
-  margin-top: 3rem;
-  border-top: 1px solid #eee;
   padding-top: 3rem;
 }
-body.page-template-events .event .date {
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+@media screen and (min-width: 768px) {
+  body.page-template-events .event + .event {
+    padding-top: 6rem;
+  }
 }
-body.page-template-events .event .date .month,
-body.page-template-events .event .date .day {
-  display: block;
-  max-width: 5rem;
-  text-align: center;
-  font-family: psfournier-std-grand, serif;
-}
-body.page-template-events .event .date .month {
-  background: #408ab6;
-  color: #fff;
-  padding: 0.5rem;
-  font-size: 0.875rem;
-}
-body.page-template-events .event .date .day {
-  padding: 1rem;
-  border: 1px solid #408ab6;
-  border-top: none;
-  font-size: 1.5rem;
-  color: #408ab6;
-}
-body.page-template-events .event-title h3 {
+body.page-template-events .event__meta {
   font-family: "Adams", serif;
-  color: #355c7f;
-  font-size: clamp(1.25rem, 1.5vw, 1.5rem);
-}
-body.page-template-events .event-title + .event-description {
-  padding-top: 1rem;
-}
-body.page-template-events .event-date-time {
-  padding: 1rem 0;
-}
-body.page-template-events .event-date-time h4 {
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: clamp(0.75rem, 0.9vw, 0.875rem);
-}
-body.page-template-events .event-description p {
-  font-size: clamp(0.875rem, 1.2vw, 1.125rem);
-  line-height: 1.5rem;
-}
-body.page-template-events .event-cta {
-  padding-top: 1rem;
-}
-body.page-template-events .event-cta .btn {
-  display: inline-block;
-  background: #355c7f;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  font-family: interstate-mono, monospace;
-  font-size: 0.875rem;
   letter-spacing: 0.05em;
+  font-size: clamp(0.66rem, 0.58rem + 0.48vw, 0.88rem);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.5rem;
 }
-body.page-template-events .event.recording, body.page-template-events .event.no-events {
-  grid-template-columns: 1fr;
+body.page-template-events .event__meta span {
+  display: block;
+}
+body.page-template-events .event__meta span + span {
+  padding-left: 0.5rem;
+  border-left: 1px solid;
+  margin-left: 0.5rem;
+}
+body.page-template-events .event__title {
+  font-size: clamp(1.5rem, 1.29rem + 1.07vw, 1.95rem);
+}
+body.page-template-events .event__description {
+  padding-top: 1.5rem;
+}
+body.page-template-events .event .cta {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+body.page-template-events .event .authors {
+  max-width: 7rem;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-events .event .authors {
+    max-width: 10rem;
+  }
+}
+body.page-template-events .event .author + .author {
+  margin-top: -2.5rem;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-events .event .author + .author {
+    margin-top: -3.5rem;
+  }
+}
+body.page-template-events .event .author:nth-child(even) .photo {
+  margin-left: auto;
+}
+body.page-template-events .event .author:nth-child(1) {
+  z-index: 100;
+}
+body.page-template-events .event .author:nth-child(2) {
+  z-index: 90;
+}
+body.page-template-events .event .author:nth-child(3) {
+  z-index: 80;
+}
+body.page-template-events .event .author .photo {
+  max-width: 4rem;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-events .event .author .photo {
+    max-width: 6rem;
+  }
+}
+body.page-template-events .event .author .photo img {
+  border-radius: 50%;
+}
+body.page-template-events .event .graphic img {
+  border: 1px solid rgba(158, 154, 175, 0.25);
+}
+body.page-template-events .no-events {
+  text-align: center;
+}
+@media screen and (min-width: 992px) {
+  body.page-template-events .no-events {
+    grid-template-columns: 1fr;
+  }
+}
+body.page-template-events .no-events__title {
+  font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+  font-style: italic;
+}
+body.page-template-events .recordings-cta {
+  padding: 3rem 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-events .recordings-cta {
+    padding: 6rem 0;
+  }
+}
+body.page-template-events .recordings-cta .cta .btn {
+  width: 100%;
+  max-width: 32rem;
+  position: relative;
+  display: inline-block;
+  border: 1px solid #9e9aaf;
+  padding: 2rem 1.5rem 1.875rem;
+  font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
+}
+body.page-template-events .recordings-cta .cta .btn::before {
+  display: block;
+  content: "";
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  z-index: 0;
+  border: 1px solid #9e9aaf;
 }
 
-body.page-template-contact .page-header {
-  padding-bottom: 2rem;
+@media screen and (min-width: 768px) {
+  body.page-template-contact .page-body {
+    padding-bottom: 3rem;
+  }
 }
-body.page-template-contact .contact-form {
-  padding-top: 2rem;
+@media screen and (min-width: 768px) {
+  body.page-template-contact .contact-form {
+    grid-column: 3/span 6;
+  }
 }
-body.page-template-contact .contact-form div.wpforms-container-full {
-  margin: 0;
-  max-width: 40rem;
+@media screen and (min-width: 992px) {
+  body.page-template-contact .contact-form {
+    grid-column: 2/span 8;
+  }
 }
 body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
 body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form select.wpforms-field-medium,
@@ -2131,22 +2191,42 @@ body.page-template-contact .contact-form div.wpforms-container-full .wpforms-for
   max-width: 100%;
 }
 body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form .wpforms-field-label {
-  font-family: interstate-mono, monospace;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: clamp(0.66rem, 0.58rem + 0.48vw, 0.88rem);
+  font-family: "Adams", serif;
+  font-weight: bold;
+  letter-spacing: 0.05em;
 }
 body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form .wpforms-field-sublabel {
-  font-family: interstate-mono, monospace;
   text-transform: uppercase;
-  font-size: 0.6125rem;
+  font-size: clamp(0.6rem, 0.52rem + 0.43vw, 0.78rem);
+  font-family: "Adams", serif;
+  letter-spacing: 0.05em;
 }
 body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form .wpforms-field {
   padding: 1rem 0;
 }
+body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form .wpforms-field input {
+  height: 3rem;
+}
+body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form .wpforms-field textarea {
+  height: unset;
+  min-height: 12rem;
+}
 body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form button[type=submit] {
-  background: #355c7f;
-  color: #fff;
-  border: none;
+  display: inline-block;
+  border: 1px solid #9e9aaf;
+  padding: 1rem 1.5rem 0.875rem;
+  transition: all 200ms ease;
+  color: #000;
+  background: unset;
+  font-family: "Adams", serif;
+}
+body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form button[type=submit]:hover {
+  background: #65667a;
+  border-color: #355c7f;
+  color: #fbf9f7;
+  text-decoration: none;
 }
 body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form label.wpforms-error {
   margin-top: 0.25rem;
@@ -2158,48 +2238,37 @@ body.page-template-contact .contact-form .wpforms-confirmation-container-full {
   margin: 0;
   text-align: center;
 }
-body.page-template-contact section.faqs {
-  padding-top: 3rem;
-}
-body.page-template-contact section.faqs .section-header {
-  padding-bottom: 1rem;
-}
-body.page-template-contact section.faqs .section-header h2 {
-  color: #233040;
-  font-weight: 900;
-  font-size: clamp(1.25rem, 2vw, 2rem);
-  line-height: 1.25em;
-  font-family: interstate-mono, monospace;
-}
-body.page-template-contact section.faqs .faq + .faq {
-  margin-top: 2rem;
-  border-top: 1px solid #eee;
+body.page-template-contact .faqs {
   padding-top: 2rem;
 }
-body.page-template-contact section.faqs .faq .question {
+@media screen and (min-width: 768px) {
+  body.page-template-contact .faqs {
+    grid-column: 3/span 6;
+  }
+}
+@media screen and (min-width: 992px) {
+  body.page-template-contact .faqs {
+    grid-column: 10/span 4;
+    border-left: 1px solid rgba(158, 154, 175, 0.5);
+    padding: 1rem 0 1rem 2rem;
+  }
+}
+body.page-template-contact .faqs .section-header {
   padding-bottom: 1rem;
 }
-body.page-template-contact section.faqs .faq .question h3 {
-  color: #355c7f;
-  font-weight: 900;
-  font-size: clamp(1rem, 1.2vw, 1.25rem);
-  line-height: 1.25em;
-  font-family: interstate-mono, monospace;
+body.page-template-contact .faqs .faq + .faq {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(158, 154, 175, 0.5);
+  padding-top: 2rem;
 }
-body.page-template-contact section.faqs .faq .answer {
-  font-size: clamp(1rem, 1.25vw, 1.25rem);
-  line-height: 1.75em;
+body.page-template-contact .faqs .faq .question {
+  padding-bottom: 1rem;
+  font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
+  font-style: italic;
+  line-height: 1.375em;
 }
-body.page-template-contact section.faqs .faq .answer a {
+body.page-template-contact .faqs .faq .answer a {
   text-decoration: underline;
-}
-body.page-template-contact .form-header {
-  padding-top: 3rem;
-  border-top: 2px solid #408ab6;
-  margin-top: 3rem;
-  font-size: clamp(1rem, 1.25vw, 1.25rem);
-  line-height: 1.75em;
-  padding-bottom: 2rem;
 }
 
 body.post-type-archive-issue .page-header {

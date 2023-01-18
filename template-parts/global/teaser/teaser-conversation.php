@@ -20,14 +20,10 @@
     $spotify = $meta['spotify'];
     $google_podcasts = $meta['google_podcasts'];
 
-    
 ?>
 
-
 <article class="teaser teaser-large teaser-conversation">
-
-    
-
+   
     <div class="teaser-conversation__participants">
         <?php if($authors): ?>
             <?php foreach($authors as $a): ?>

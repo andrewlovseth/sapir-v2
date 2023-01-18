@@ -1,4 +1,4 @@
-<section class="contact-form grid">
+<div class="contact-form">
     <div class="form-header">
         <?php the_field('copy'); ?>
     </div>
@@ -7,4 +7,4 @@
         $shortcode = get_field('shortcode');
         echo do_shortcode($shortcode);
     ?>
-</section>
+</div>

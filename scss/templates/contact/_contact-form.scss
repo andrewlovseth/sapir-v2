@@ -1,9 +1,10 @@
 .contact-form {
-    padding-top: 2rem;
+    @include tablet {
+        grid-column: 3 / span 6;
+    }
 
-    div.wpforms-container-full {
-        margin: 0;
-        max-width: 40rem;
+    @include desktop-small {
+        grid-column: 2 / span 8;
     }
 
     div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
@@ -13,25 +14,47 @@
     }
 
     div.wpforms-container-full .wpforms-form .wpforms-field-label {
-        font-family: $interstate-mono;
         text-transform: uppercase;
-        font-size: 0.75rem;
+        font-size: $type-size-150;
+        font-family: $adams;
+        font-weight: bold;
+        letter-spacing: 0.05em;
     }
 
     div.wpforms-container-full .wpforms-form .wpforms-field-sublabel {
-        font-family: $interstate-mono;
         text-transform: uppercase;
-        font-size: 0.6125rem;
+        font-size: $type-size-100;
+        font-family: $adams;
+        letter-spacing: 0.05em;
     }
 
     div.wpforms-container-full .wpforms-form .wpforms-field {
         padding: 1rem 0;
+
+        input {
+            height: 3rem;
+        }
+        textarea {
+            height: unset;
+            min-height: 12rem;
+        }
     }
 
     div.wpforms-container-full .wpforms-form button[type='submit'] {
-        background: $medium-blue;
-        color: $white;
-        border: none;
+        display: inline-block;
+        border: 1px solid $light-blue;
+        padding: 1rem 1.5rem 0.875rem;
+        transition: all 200ms ease;
+        color: $black;
+        background: unset;
+        font-family: $adams;
+
+        &:hover {
+            background: $mid-blue;
+            border-color: $medium-blue;
+            color: $light-tan;
+            text-decoration: none;
+        }
     }
 
     div.wpforms-container-full .wpforms-form label.wpforms-error {

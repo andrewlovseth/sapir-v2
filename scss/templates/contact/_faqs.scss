@@ -1,41 +1,36 @@
-section.faqs {
-    padding-top: 3rem;
+.faqs {
+    padding-top: 2rem;
+
+    @include tablet {
+        grid-column: 3 / span 6;
+    }
+
+    @include desktop-small {
+        grid-column: 10 / span 4;
+
+        border-left: 1px solid rgba($light-blue, 0.5);
+        padding: 1rem 0 1rem 2rem;
+    }
 
     .section-header {
         padding-bottom: 1rem;
-
-        h2 {
-            color: $issue-one-dark-blue;
-            font-weight: 900;
-            font-size: clamp(1.25rem, 2vw, 2rem);
-            line-height: 1.25em;
-            font-family: $interstate-mono;
-        }
     }
 
     .faq {
         & + .faq {
             margin-top: 2rem;
-            border-top: 1px solid #eee;
+            border-top: 1px solid rgba($light-blue, 0.5);
             padding-top: 2rem;
         }
 
         .question {
             padding-bottom: 1rem;
-
-            h3 {
-                color: $medium-blue;
-                font-weight: 900;
-                font-size: clamp(1rem, 1.2vw, 1.25rem);
-                line-height: 1.25em;
-                font-family: $interstate-mono;
-            }
+            font-size: $type-size-200;
+            font-style: italic;
+            line-height: 1.375em;
         }
 
         .answer {
-            font-size: clamp(1rem, 1.25vw, 1.25rem);
-            line-height: 1.75em;
-
             a {
                 text-decoration: underline;
             }

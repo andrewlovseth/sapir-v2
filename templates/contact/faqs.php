@@ -1,9 +1,9 @@
 <?php if(have_rows('faqs')): ?>
 
-    <section class="faqs grid">
+    <div class="faqs">
 
         <div class="section-header">
-            <h2>FAQs</h2>
+            <h2 class="module-title">FAQs</h2>
         </div>
        
         <?php while(have_rows('faqs')) : the_row(); ?>
@@ -15,7 +15,7 @@
                         <h3><?php the_sub_field('question'); ?></h3>
                     </div>
 
-                    <div class="answer copy copy-2 extended">
+                    <div class="copy copy-3">
                         <?php the_sub_field('answer'); ?>
                     </div>
                 </div>
@@ -24,6 +24,6 @@
 
         <?php endwhile; ?>
 
-    </section>
+    </div>
 
 <?php endif; ?>

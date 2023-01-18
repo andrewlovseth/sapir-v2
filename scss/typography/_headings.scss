@@ -63,3 +63,11 @@ article.post {
         font-size: $type-size-500;
     }
 }
+
+.module-title {
+    font-size: $type-size-400;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-family: $adams;
+}

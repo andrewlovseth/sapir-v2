@@ -6,6 +6,7 @@
             "key": "field_609c6be46dcf1",
             "label": "Upcoming",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_6086ed367d14f",
             "label": "Events",
             "name": "events",
+            "aria-label": "",
             "type": "flexible_content",
             "instructions": "",
             "required": 0,
@@ -39,10 +41,11 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_6086ed427d150",
-                            "label": "Title",
-                            "name": "title",
-                            "type": "text",
+                            "key": "field_63c825326b812",
+                            "label": "Image Type",
+                            "name": "image_type",
+                            "aria-label": "",
+                            "type": "button_group",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -51,16 +54,87 @@
                                 "class": "",
                                 "id": ""
                             },
+                            "choices": {
+                                "graphic": "Graphic",
+                                "authors": "Authors"
+                            },
                             "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
+                            "return_format": "",
+                            "allow_null": 0,
+                            "layout": ""
+                        },
+                        {
+                            "key": "field_63c825506b813",
+                            "label": "Graphic",
+                            "name": "graphic",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_63c825326b812",
+                                        "operator": "==",
+                                        "value": "graphic"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium"
+                        },
+                        {
+                            "key": "field_63c825689fec2",
+                            "label": "Authors",
+                            "name": "authors",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_63c825326b812",
+                                        "operator": "==",
+                                        "value": "authors"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "authors"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search"
+                            ],
+                            "return_format": "object",
+                            "min": "",
+                            "max": "",
+                            "elements": ""
                         },
                         {
                             "key": "field_6086ed477d151",
                             "label": "Date",
                             "name": "date",
+                            "aria-label": "",
                             "type": "date_picker",
                             "instructions": "",
                             "required": 0,
@@ -78,6 +152,7 @@
                             "key": "field_6086ed4e7d152",
                             "label": "Time",
                             "name": "time",
+                            "aria-label": "",
                             "type": "time_picker",
                             "instructions": "",
                             "required": 0,
@@ -91,9 +166,30 @@
                             "return_format": "g:i a"
                         },
                         {
+                            "key": "field_6086ed427d150",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_6086ed537d153",
                             "label": "Description",
                             "name": "description",
+                            "aria-label": "",
                             "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
@@ -113,6 +209,7 @@
                             "key": "field_6086ed5d7d154",
                             "label": "Link",
                             "name": "link",
+                            "aria-label": "",
                             "type": "link",
                             "instructions": "",
                             "required": 0,
@@ -134,9 +231,26 @@
             "max": ""
         },
         {
+            "key": "field_63c828c96ba2e",
+            "label": "Recordings CTA",
+            "name": "recordings_cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": ""
+        },
+        {
             "key": "field_609c6be96dcf2",
             "label": "Recordings",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -153,6 +267,7 @@
             "key": "field_609c6bef6dcf3",
             "label": "Recordings",
             "name": "recordings",
+            "aria-label": "",
             "type": "flexible_content",
             "instructions": "",
             "required": 0,
@@ -173,6 +288,7 @@
                             "key": "field_609c6bef6dcf4",
                             "label": "Title",
                             "name": "title",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -192,6 +308,7 @@
                             "key": "field_609c6bef6dcf7",
                             "label": "Description",
                             "name": "description",
+                            "aria-label": "",
                             "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
@@ -211,6 +328,7 @@
                             "key": "field_609c6bef6dcf8",
                             "label": "Link",
                             "name": "link",
+                            "aria-label": "",
                             "type": "link",
                             "instructions": "",
                             "required": 0,
@@ -262,5 +380,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1620863995
+    "show_in_rest": 0,
+    "modified": 1674062733
 }

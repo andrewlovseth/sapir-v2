@@ -12,13 +12,13 @@ a {
 }
 
 ::-moz-selection {
-    background: $dark-blue;
+    background: $red;
     color: $white;
     text-shadow: none;
 }
 
 ::selection {
-    background: $dark-blue;
+    background: $red;
     color: $white;
     text-shadow: none;
 }

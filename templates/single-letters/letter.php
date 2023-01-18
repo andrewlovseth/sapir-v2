@@ -7,7 +7,7 @@
 ?>
 
 <section class="letter">
-    <div class="copy">
+    <div class="copy copy-1">
         <?php echo $copy; ?>
     </div>
 

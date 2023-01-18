@@ -59,10 +59,9 @@
 
         </div>
 
-        <?php
-            $args = ['title' => $title, 'permalink' => $permalink];
-            get_template_part('template-parts/global/teaser/headline', null, $args);
-        ?>
+        <div class="teaser__headline">
+            <h3 class="teaser__title"><?php echo $title; ?></h3>
+        </div>
 
         <div class="copy copy-2">
             <?php echo $description; ?>

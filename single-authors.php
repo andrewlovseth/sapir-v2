@@ -30,7 +30,7 @@ get_header(); ?>
 
             <h1 class="author-header__title"><?php the_title(); ?></h1>
 
-            <div class="author-header__copy copy copy-3">
+            <div class="author-header__copy copy copy-2">
                 <?php the_content(); ?>
             </div>
         </section>

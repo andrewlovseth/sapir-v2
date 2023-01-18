@@ -1,0 +1,16 @@
+.letter {
+    &__meta {
+        font-size: $type-size-150;
+        font-family: $adams;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        display: flex;
+        align-items: center;
+        padding-bottom: 1rem;
+
+        span {
+            display: block;
+            font-weight: bold;
+        }
+    }
+}

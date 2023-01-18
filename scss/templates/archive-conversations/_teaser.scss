@@ -10,6 +10,14 @@
         grid-column: 3 / span 10;
     }
 
+    & + .teaser-conversation {
+        padding-top: 3rem;
+
+        @include desktop-small {
+            padding-top: 6rem;
+        }
+    }
+
     &__participants {
         max-width: 7rem;
 

@@ -1,10 +1,11 @@
 <?php get_header(); ?>
 
     <section class="page-header grid">
-        <h1 class="title">Issues</h1>
+        <h1 class="section-title-alt">Issues</h1>
     </section>
 
-    <section class="issue-index grid">
+    <section class="issue grid" id="issue">
+
 
         <?php
             $args = array(
@@ -12,15 +13,42 @@
                 'posts_per_page' => 25
             );
             $query = new WP_Query( $args );
-            if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+            if ( $query->have_posts() ) : ?>
 
-            <div class="issue <?php echo sanitize_title_with_dashes(get_field('volume')); ?>">
-                <h4><?php the_field('volume'); ?> &middot; <?php the_field('season'); ?> </h4>
-                <h3 class="sub-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+            <div class="issue__gallery">
+                <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                    <?php 
+                        $cover = get_field('cover');
+                        $title = get_the_title();
+                        $volume = get_field('volume');
+                        $season = get_field('season');
+                    ?>
+            
+                    <div class="issue__gallery-item">
+                        <a href="<?php the_permalink(); ?>" class="issue__link">
+                            <div class="issue__cover">
+                                <?php if($cover): ?>
+                                    <?php echo wp_get_attachment_image($cover['ID'], 'full'); ?>
+                                <?php endif; ?>
+                            </div>
+
+                            <div class="info">
+                                <h3 class="issue__title"><?php echo $title; ?></h3>
+
+                                <div class="issue__meta">
+                                    <span class="volume"><?php echo $volume; ?></span>, <span class="season"><?php echo $season; ?></span>
+                                </div>
+                            </div>
+
+
+                        </a>
+                    </div>
+
+                <?php endwhile; ?>
             </div>
 
-        <?php endwhile; endif; wp_reset_postdata(); ?>    
+        <?php endif; wp_reset_postdata(); ?>
 
     </section>
-
-    <?php get_footer(); ?>
+    
+<?php get_footer(); ?>

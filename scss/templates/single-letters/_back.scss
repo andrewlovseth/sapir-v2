@@ -1,0 +1,18 @@
+.back {
+    margin-top: 6rem;
+    border-top: 1px solid rgba($light-blue, 0.5);
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+
+    a {
+        font-style: italic;
+        display: inline-block;
+        font-size: $type-size-150;
+        padding-bottom: 1px;
+        border-bottom: 1px solid rgba($light-blue, 0.5);
+
+        &:before {
+            content: '← ';
+        }
+    }
+}

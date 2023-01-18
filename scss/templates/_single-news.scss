@@ -1,41 +1,37 @@
 body.single-news {
-
-    article.news {
+    .news {
         & > * {
             @include tablet {
                 grid-column: 3 / span 6;
             }
-            
+
             @include desktop-small {
                 grid-column: 4 / span 8;
             }
         }
-    }
 
-    .meta {
-        padding-bottom: 1rem;
-
-        .date {
-            display: block;
+        &__meta {
+            font-size: $type-size-150;
+            font-family: $adams;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-        }
-    }
+            display: flex;
+            align-items: center;
+            padding-bottom: 0.5rem;
 
-    .article-header {
-        .headline {
-            .title {
-                color: $medium-blue;
+            span {
+                display: block;
+                font-weight: bold;
             }
         }
-    }
 
-    .article-body {
-         padding-top: 3rem;
+        &__title {
+            font-size: $type-size-600;
+            line-height: 1.375em;
+        }
 
-         & > p:first-child:first-line {
-			font-variant-caps: normal;
-			letter-spacing: 0.05em;
-		}
+        &__body {
+            padding: 1.5rem 0 3rem 0;
+        }
     }
 }

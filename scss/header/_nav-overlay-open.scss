@@ -19,3 +19,12 @@
         }
     }
 }
+
+.search-overlay-open {
+    .search__modal {
+        opacity: 1;
+        z-index: 6666;
+        pointer-events: unset;
+        transform: translateY(0);
+    }
+}

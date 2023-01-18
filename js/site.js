@@ -33,19 +33,30 @@
 
             return false;
         });
+
+        // SEARCH TOGGLE
+        $('.js-search-trigger').click(function () {
+            $('body').toggleClass('search-overlay-open');
+            return false;
+        });
+
+        $('.js-search-close').click(function () {
+            $('body').removeClass('search-overlay-open');
+            return false;
+        });
     });
 
     $(document).mouseup(function (e) {
-        var menu = $('.site-nav, .js-nav-trigger');
+        var search_container = $('.site-header .search, .js-search-trigger');
 
-        if (!menu.is(e.target) && menu.has(e.target).length === 0) {
-            $('body').removeClass('nav-overlay-open');
+        if (!search_container.is(e.target) && search_container.has(e.target).length === 0) {
+            $('body').removeClass('search-overlay-open');
         }
     });
 
     $(document).keyup(function (e) {
         if (e.keyCode == 27) {
-            $('body').removeClass('nav-overlay-open');
+            $('body').removeClass('nav-overlay-open search-overlay-open');
         }
     });
 })(jQuery, window, document);

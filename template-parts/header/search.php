@@ -5,5 +5,11 @@
         <?php get_template_part('svg/icon-search'); ?>
     </a>
 
-
+    <div class="search__modal">
+        <div class="search__close js-search-close">
+            <?php get_template_part('svg/icon-close'); ?>
+        </div>
+    
+        <?php get_template_part('template-parts/global/search-form'); ?>
+    </div>
 </div>

@@ -1,6 +1,6 @@
 <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
 	<input type="search" class="search-field"
-			placeholder="<?php echo esc_attr_x( 'Search the archive by keyword', 'placeholder' ) ?>"
+			placeholder="<?php echo esc_attr_x( 'Search by keyword.', 'placeholder' ) ?>"
 			value="" name="s" />
 	<input type="submit" class="search-submit"
 		value="<?php echo esc_attr_x( 'Search ››', 'submit button' ) ?>" />

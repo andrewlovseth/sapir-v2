@@ -125,12 +125,10 @@
             display: inline-flex;
             align-items: center;
             transition: all 0.2s ease;
-
-            span {
-                padding-top: 2px;
-                border-bottom: 1px solid transparent;
-                transition: all 0.2s ease;
-            }
+            font-family: $carnaby;
+            text-transform: uppercase;
+            letter-spacing: 0.075em;
+            font-size: $type-size-150;
 
             &:before {
                 display: block;
@@ -142,11 +140,7 @@
                 margin-right: 0.75rem;
             }
 
-            &:hover {
-                span {
-                    border-bottom: 1px solid $issue-one-dark-blue;
-                }
-            }
+            @include span-hover-underline('span');
         }
     }
 

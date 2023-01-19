@@ -19,6 +19,7 @@
         @include desktop-small {
             padding-left: 3rem;
         }
+
         .teaser__title {
             &:before {
                 font-family: $adams;
@@ -29,9 +30,29 @@
                 top: 0;
                 counter-increment: article;
                 content: counter(article);
+                padding: 0 0.25rem 2px 0.25rem;
+
+                border-bottom: 1px solid rgba($red, 0);
+                transition: all 200ms ease;
 
                 @include desktop-small {
                     left: -3rem;
+                }
+            }
+
+            &:hover {
+                &::before {
+                    border-bottom: 1px solid rgba($red, 0.5);
+                }
+            }
+        }
+
+        .teaser__authors-list {
+            a {
+                pointer-events: none;
+
+                &:hover {
+                    cursor: default;
                 }
             }
         }

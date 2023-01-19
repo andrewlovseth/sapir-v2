@@ -7,11 +7,22 @@
 
     &__title {
         font-family: $fournier-std-grand;
+
+        a {
+            &:hover {
+                text-decoration: none;
+                color: $red;
+            }
+        }
     }
 
     &__authors {
         display: flex;
         align-items: center;
+
+        &-list {
+            display: flex;
+        }
 
         em {
             display: block;
@@ -19,8 +30,13 @@
         }
 
         a {
+            display: flex;
             text-transform: uppercase;
             letter-spacing: 0.075em;
+
+            .name {
+                display: block;
+            }
 
             & + a:before {
                 content: ',';
@@ -31,6 +47,8 @@
                 content: '&';
                 padding-left: 0.5rem;
             }
+
+            @include span-hover-underline('.name');
         }
 
         &.authors-2 {
@@ -117,13 +135,19 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
 
-            a {
+            &-wrapper {
                 display: flex;
                 align-items: center;
             }
 
+            a {
+                display: inline-block;
+                @include hover-underline;
+            }
+
             span {
                 display: block;
+                white-space: nowrap;
 
                 &.season {
                     padding-left: 0.5rem;

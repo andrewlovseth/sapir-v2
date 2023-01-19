@@ -12,7 +12,7 @@
         <em>by</em>
 
         <div class="teaser__authors-list">
-            <?php foreach($authors as $author): ?><a href="<?php echo get_permalink($author); ?>"><?php echo get_the_title($author); ?></a><?php endforeach; ?>
+            <?php foreach($authors as $author): ?><a href="<?php echo get_permalink($author); ?>"><span class="name"><?php echo get_the_title($author); ?></span></a><?php endforeach; ?>
         </div>
     </div>
 <?php endif; ?>

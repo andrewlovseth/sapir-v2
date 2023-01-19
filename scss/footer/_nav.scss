@@ -1,2 +1,6 @@
 .site-nav {
+    a {
+        display: inline-block;
+        @include basic-underline;
+    }
 }

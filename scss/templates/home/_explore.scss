@@ -32,6 +32,8 @@
             a {
                 display: block;
                 text-align: center;
+
+                @include span-hover-underline('.label');
             }
 
             .icon {
@@ -44,7 +46,7 @@
             }
 
             .label {
-                display: block;
+                display: inline-block;
                 padding: 1rem 1rem 0;
                 font-style: italic;
                 font-size: $type-size-400;
@@ -106,6 +108,7 @@
                 display: block;
                 font-size: $type-size-400;
                 padding: 0.25rem 1.25rem;
+                @include basic-underline;
             }
         }
     }

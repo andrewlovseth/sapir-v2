@@ -26,5 +26,6 @@
         display: block;
         font-size: $type-size-400;
         padding: 0.25rem 1.25rem;
+        @include basic-underline;
     }
 }

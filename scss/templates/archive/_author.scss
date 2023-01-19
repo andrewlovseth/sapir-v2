@@ -77,8 +77,6 @@
         font-size: $type-size-300;
         font-style: italic;
 
-        &:hover {
-            color: $red;
-        }
+        @include hover-underline;
     }
 }

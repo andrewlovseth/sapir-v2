@@ -18,6 +18,18 @@ body.page-template-events {
                 @include double-border($light-blue);
                 padding: 2rem 1.5rem 1.875rem;
                 font-size: $type-size-200;
+
+                &::before {
+                    z-index: -1;
+                }
+
+                &:hover {
+                    background: rgb(234, 239, 237);
+
+                    &::before {
+                        background: rgb(234, 239, 237);
+                    }
+                }
             }
         }
     }

@@ -35,8 +35,8 @@ article.post {
 .upper-header {
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    font-size: $type-size-050;
-    font-family: sans-serif;
+    font-size: $type-size-150;
+    font-family: $carnaby;
 }
 
 .small-upper {
@@ -55,7 +55,9 @@ article.post {
     font-weight: bold;
 
     &.sans-serif {
-        font-family: sans-serif;
+        font-family: $carnaby;
+        font-size: $type-size-300;
+        letter-spacing: 0.1em;
     }
 
     &-alt {

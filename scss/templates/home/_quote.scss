@@ -32,6 +32,12 @@
 
     &__header {
         padding-bottom: 1.5rem;
+
+        .section-title {
+            a {
+                color: $dark-blue;
+            }
+        }
     }
 
     &__text {

@@ -5,6 +5,10 @@
         }
     }
 
+    &__title {
+        font-family: $fournier-std-grand;
+    }
+
     &__authors {
         display: flex;
         align-items: center;
@@ -16,7 +20,7 @@
 
         a {
             text-transform: uppercase;
-            letter-spacing: 0.025em;
+            letter-spacing: 0.075em;
 
             & + a:before {
                 content: ',';

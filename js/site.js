@@ -39,11 +39,6 @@
             $('body').toggleClass('search-overlay-open');
             return false;
         });
-
-        $('.js-search-close').click(function () {
-            $('body').removeClass('search-overlay-open');
-            return false;
-        });
     });
 
     $(document).mouseup(function (e) {
@@ -51,6 +46,12 @@
 
         if (!search_container.is(e.target) && search_container.has(e.target).length === 0) {
             $('body').removeClass('search-overlay-open');
+        }
+
+        var nav_container = $('.header-nav__wrapper, .js-nav-trigger');
+
+        if (!nav_container.is(e.target) && nav_container.has(e.target).length === 0) {
+            $('body').removeClass('nav-overlay-open');
         }
     });
 

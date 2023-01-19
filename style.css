@@ -327,6 +327,13 @@ img {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Carnaby";
+  src: url("fonts/Carnaby-Street.woff2") format("woff2"), url("fonts/Carnaby-Street.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 body,
 button,
 input,
@@ -387,8 +394,8 @@ article.post .article-header .author .name-link:hover {
 .upper-header {
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  font-size: clamp(0.5rem, 0.42rem + 0.38vw, 0.675rem);
-  font-family: sans-serif;
+  font-size: clamp(0.66rem, 0.58rem + 0.48vw, 0.88rem);
+  font-family: "Carnaby", sans-serif;
 }
 
 .small-upper {
@@ -407,7 +414,9 @@ article.post .article-header .author .name-link:hover {
   font-weight: bold;
 }
 .section-title.sans-serif {
-  font-family: sans-serif;
+  font-family: "Carnaby", sans-serif;
+  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
+  letter-spacing: 0.1em;
 }
 .section-title-alt {
   font-style: italic;
@@ -732,7 +741,6 @@ body {
 }
 .newsletter #mce-responses {
   transform: translateY(1rem);
-  font-family: interstate-mono, monospace;
   color: #fff;
   font-size: 0.875rem;
 }
@@ -764,6 +772,9 @@ body {
 .teaser a:hover {
   text-decoration: underline;
 }
+.teaser__title {
+  font-family: psfournier-std-grand, serif;
+}
 .teaser__authors {
   display: flex;
   align-items: center;
@@ -774,7 +785,7 @@ body {
 }
 .teaser__authors a {
   text-transform: uppercase;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.075em;
 }
 .teaser__authors a + a:before {
   content: ",";
@@ -1150,9 +1161,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   .site-header .search__modal {
-    top: 1.5rem;
+    top: 1.75rem;
     width: 32rem;
-    right: -3rem;
+    right: -1rem;
   }
 }
 .site-header .search__close {
@@ -1870,6 +1881,9 @@ body.page-template-home .quote blockquote::after {
 }
 body.page-template-home .quote__header {
   padding-bottom: 1.5rem;
+}
+body.page-template-home .quote__header .section-title a {
+  color: #424254;
 }
 body.page-template-home .quote__text {
   font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);

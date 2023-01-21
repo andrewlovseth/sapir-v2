@@ -18,6 +18,12 @@
             font-family: $adams;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            padding-bottom: 3px;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+                border-bottom: 1px solid rgba($light-blue, 0.5);
+            }
 
             span + span {
                 &:before {
@@ -96,6 +102,13 @@
             text-transform: uppercase;
             letter-spacing: 0.025em;
 
+            padding-bottom: 2px;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+                border-bottom: 1px solid rgba($light-blue, 0.5);
+            }
+
             & + a:before {
                 content: ',';
                 padding-right: 0.5rem;
@@ -127,7 +140,8 @@
             transition: all 0.2s ease;
             font-family: $carnaby;
             text-transform: uppercase;
-            letter-spacing: 0.075em;
+            font-weight: normal;
+            letter-spacing: 0.1em;
             font-size: $type-size-150;
 
             &:before {
@@ -138,6 +152,7 @@
                 background: url(images/icon-pdf.svg) no-repeat 0 0;
                 background-size: contain;
                 margin-right: 0.75rem;
+                transform: translateY(-2px);
             }
 
             @include span-hover-underline('span');

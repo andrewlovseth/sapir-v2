@@ -53,8 +53,7 @@ article.post {
         }
 
         a {
-            color: $issue-one-light-blue;
-            border-bottom: 1px solid;
+            border-bottom: 1px solid rgba($black, 0.5);
         }
 
         ol {
@@ -141,6 +140,7 @@ article.post {
                 margin: 0;
                 font-size: clamp(1.25rem, 4.5vw, 1.75rem);
                 line-height: 1.75em;
+                font-family: $fournier-std-grand;
 
                 .first-letter {
                     font-size: 1em;

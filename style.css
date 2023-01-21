@@ -3159,6 +3159,11 @@ body.single-post .article-header .issue a {
   font-family: "Adams", serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  padding-bottom: 3px;
+  border-bottom: 1px solid transparent;
+}
+body.single-post .article-header .issue a:hover {
+  border-bottom: 1px solid rgba(158, 154, 175, 0.5);
 }
 body.single-post .article-header .issue a span + span:before {
   content: "|";
@@ -3230,6 +3235,11 @@ body.single-post .article-header .authors em {
 body.single-post .article-header .authors a {
   text-transform: uppercase;
   letter-spacing: 0.025em;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+body.single-post .article-header .authors a:hover {
+  border-bottom: 1px solid rgba(158, 154, 175, 0.5);
 }
 body.single-post .article-header .authors a + a:before {
   content: ",";
@@ -3255,7 +3265,8 @@ body.single-post .article-header .pdf a {
   transition: all 0.2s ease;
   font-family: "Carnaby", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.075em;
+  font-weight: normal;
+  letter-spacing: 0.1em;
   font-size: clamp(0.66rem, 0.58rem + 0.48vw, 0.88rem);
 }
 body.single-post .article-header .pdf a:before {
@@ -3266,6 +3277,7 @@ body.single-post .article-header .pdf a:before {
   background: url(images/icon-pdf.svg) no-repeat 0 0;
   background-size: contain;
   margin-right: 0.75rem;
+  transform: translateY(-2px);
 }
 body.single-post .article-header .pdf a span:after {
   display: block;
@@ -3353,8 +3365,7 @@ body.single-post article.post .article-body > h4:first-child + * {
   margin-top: 2rem;
 }
 body.single-post article.post .article-body a {
-  color: #408ab6;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 body.single-post article.post .article-body ol {
   list-style-type: decimal;
@@ -3428,6 +3439,7 @@ body.single-post article.post .article-body .wp-block-pullquote:not(.basic) p {
   margin: 0;
   font-size: clamp(1.25rem, 4.5vw, 1.75rem);
   line-height: 1.75em;
+  font-family: psfournier-std-grand, serif;
 }
 body.single-post article.post .article-body .wp-block-pullquote:not(.basic) p .first-letter {
   font-size: 1em;
@@ -3584,6 +3596,10 @@ body.single-authors .author-header__copy {
 }
 body.single-authors .archive-results-list {
   padding-bottom: 6rem;
+}
+body.single-authors .teaser__authors-list a {
+  pointer-events: none;
+  cursor: text;
 }
 body.single-authors .archive-results-list__summary {
   margin-top: 3rem;

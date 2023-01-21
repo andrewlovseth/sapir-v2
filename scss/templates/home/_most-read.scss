@@ -22,12 +22,12 @@
 
         .teaser__title {
             &:before {
-                font-family: $adams;
+                font-family: $numbers;
                 font-size: $type-size-400;
                 font-weight: bold;
                 position: absolute;
                 left: -2rem;
-                top: 0;
+                top: 2px;
                 counter-increment: article;
                 content: counter(article);
                 padding: 0 0.25rem 2px 0.25rem;

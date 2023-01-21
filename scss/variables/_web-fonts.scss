@@ -22,3 +22,13 @@ $adams: 'Adams', serif;
 }
 
 $carnaby: 'Carnaby', sans-serif;
+
+@font-face {
+    font-family: 'Numbers';
+    src: url('fonts/Numbers.woff2') format('woff2'), url('fonts/Numbers.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+$numbers: 'Numbers', serif;

@@ -1,0 +1,35 @@
+.archive {
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba($light-blue, 0.5);
+    padding-top: 1.5rem;
+    align-self: start;
+
+    @include tablet-small {
+        grid-column: 3 / span 6;
+    }
+
+    @include desktop-small {
+        grid-column: 2 / span 6;
+        margin-top: 3rem;
+        padding-top: 3rem;
+    }
+
+    &__link {
+        background: rgb(237, 236, 238);
+        padding: 2rem;
+        display: grid;
+        gap: 2rem;
+        align-items: center;
+
+        @include tablet {
+            grid-template-columns: 12rem 1fr;
+        }
+    }
+
+    &__copy {
+        text-align: center;
+        font-size: $type-size-500;
+        font-family: $fournier-std-grand;
+        line-height: 1.375em;
+    }
+}

@@ -20,12 +20,14 @@
             <a href="<?php echo $issue_link; ?>" class="issue__title"><?php echo $issue_title; ?></a>
         </h3>
 
-        <div class="divider"></div>
+        <div class="ornament">
+            <?php get_template_part('svg/icon-ornament'); ?>
+        </div>
 
-        <div class="meta">
+        <a href="<?php echo $issue_link; ?>" class="meta">
             <span class="small-upper volume"><?php echo $volume; ?></span>
             <span class="small-upper season"><?php echo $season; ?></span>
-        </div>
+        </a>
     </div>
 
     <div class="cover">

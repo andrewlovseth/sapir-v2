@@ -4,6 +4,7 @@
     if(!empty($args)) {
         $header = $args['header']; 
         $featured_post = $args['featured_post']; 
+        $icon = $args['icon']; 
         $link = $args['link']; 
     }
 
@@ -25,35 +26,11 @@
 <h5 class="upper-header"><?php echo $header; ?></h5>
 
 <div class="teaser-conversation">
-        <div class="teaser-conversation__participants">
-        <?php if($authors): ?>
-            <?php foreach($authors as $a): ?>
-                <div class="teaser-conversation__participant">
-                    <div class="photo">
-                        <?php echo get_the_post_thumbnail($a->ID, 'thumbnail'); ?>
-                    </div>
-                </div>
-            <?php endforeach; ?>
-        <?php endif; ?>
-        
-        <?php if($additional_authors): ?>
-            <?php foreach($additional_authors as $a): ?>
-                <?php 
-                    $photo = $a['photo'];
-                ?>
-
-                <div class="teaser-conversation__participant">
-                    <div class="photo">
-                        <?php echo wp_get_attachment_image($photo['ID'], 'thumbnail'); ?>
-                    </div>
-                </div>
-
-            <?php endforeach; ?>
-        <?php endif; ?>
+    <div class="teaser-conversation__icon">
+        <?php echo wp_get_attachment_image($icon['ID'], 'full'); ?>
     </div>
-
+    
     <div class="teaser-conversation__info">
-
         <div class="teaser-conversation__meta">
             <span class="date"><?php echo $date; ?></span>
             <span class="running-time"><?php echo $running_time; ?></span>
@@ -68,10 +45,11 @@
         <div class="copy copy-2">
             <?php echo $description; ?>
         </div>
+
+        <?php
+            $args = ['link' => $link];
+            get_template_part('template-parts/global/cta', null, $args);
+        ?>      
     </div>                          
 </div>
 
-<?php
-    $args = ['link' => $link];
-    get_template_part('template-parts/global/cta', null, $args);
-?>      

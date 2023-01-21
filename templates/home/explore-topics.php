@@ -10,7 +10,9 @@
 
 <div class="explore__topics">
     <div class="explore__topics-header">
-        <div class="icon"><?php echo get_svg($topics_icon['url']); ?></div>
+        <div class="icon">
+            <?php echo wp_get_attachment_image($topics_icon['ID'], 'medium'); ?>
+        </div>
 
         <h3><?php echo $topics_header; ?></span>
     </div>

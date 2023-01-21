@@ -2,11 +2,20 @@
 
     $about = get_field('about');
 
+    $newsletter = get_field('newsletter', 'options');
+    $embed = $newsletter['embed'];
 ?>
 
 <section class="about grid">
     <div class="about__copy copy copy-2">
         <?php echo $about; ?>
+
+        <div class="newsletter">
+            <?php echo $embed; ?>
+        </div>
+
+
+        
     </div>
 
     <?php if(have_rows('masthead')): ?>

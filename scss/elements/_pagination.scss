@@ -51,5 +51,13 @@
         background: $dark-blue;
         color: $white;
         margin: 0 0.5rem;
+
+        &:first-child {
+            margin-left: auto;
+        }
+
+        &:last-child {
+            margin-right: auto;
+        }
     }
 }

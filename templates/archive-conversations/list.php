@@ -1,11 +1,10 @@
 <section class="archive-results-list grid">
     <?php if ( have_posts() ):?>
-        <div class="archive-results-list__summary">
-            <h5 class="upper-header">Podcast</h5>
-            <h2 class="archive-results-list__title">SAPIR Conversations</h2>
-        </div>
-
         <div class="archive-results-list__header">
+            <div class="back">
+                <a href="<?php echo site_url('/events/'); ?>">&larr; Upcoming Events</a>
+            </div>
+    
             <div class="count">
                 <?php 
                     if($wp_query->found_posts == 1) {

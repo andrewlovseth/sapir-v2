@@ -1,0 +1,33 @@
+.info {
+    align-self: start;
+    padding-bottom: 1.5rem;
+    @include tablet-small {
+        grid-column: 3 / span 6;
+    }
+
+    @include desktop-small {
+        padding-bottom: 0;
+        grid-column: 2 / span 6;
+    }
+
+    &__title {
+        font-size: $type-size-500;
+        line-height: 1.375em;
+
+        @include tablet {
+            font-size: $type-size-700;
+        }
+
+        span {
+            display: block;
+
+            & + span {
+                padding-top: 1rem;
+            }
+        }
+    }
+
+    &__copy {
+        padding: 2rem 0;
+    }
+}

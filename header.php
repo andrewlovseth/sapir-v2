@@ -17,7 +17,7 @@
 <div id="page" class="site">
 	
 	<header class="site-header grid">
-		<?php get_template_part('template-parts/header/border'); ?>
+		<?php get_template_part('template-parts/header/banner'); ?>
 
 		<div class="site-header__wrapper">
 			<?php get_template_part('template-parts/header/hamburger'); ?>

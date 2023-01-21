@@ -27,8 +27,12 @@
         }
     }
 
-    .divider {
+    .ornament {
         padding: 1rem 0;
+
+        svg {
+            width: 4rem;
+        }
     }
 
     .meta {

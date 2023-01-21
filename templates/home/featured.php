@@ -6,10 +6,11 @@
 
                 <?php
                     $header = get_sub_field('header');
+                    $icon = get_sub_field('icon');
                     $featured_post = get_sub_field('post');
                     $link = get_sub_field('cta');
 
-                    $args = ['header' => $header, 'featured_post' => $featured_post, 'link' => $link];
+                    $args = ['header' => $header, 'icon' => $icon, 'featured_post' => $featured_post, 'link' => $link];
                     get_template_part('templates/home/featured-conversation', null, $args);
                 ?>
                 

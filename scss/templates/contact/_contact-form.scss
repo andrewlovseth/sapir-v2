@@ -14,18 +14,13 @@
     }
 
     div.wpforms-container-full .wpforms-form .wpforms-field-label {
-        text-transform: uppercase;
-        font-size: $type-size-150;
-        font-family: $adams;
-        font-weight: bold;
-        letter-spacing: 0.05em;
+        font-size: $type-size-300;
+        font-weight: normal;
     }
 
     div.wpforms-container-full .wpforms-form .wpforms-field-sublabel {
-        text-transform: uppercase;
-        font-size: $type-size-100;
-        font-family: $adams;
-        letter-spacing: 0.05em;
+        font-size: $type-size-200;
+        font-style: italic;
     }
 
     div.wpforms-container-full .wpforms-form .wpforms-field {

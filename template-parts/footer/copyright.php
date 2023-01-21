@@ -1,6 +1,7 @@
 <?php
 
-    $copyright = get_field('copyright', 'options');
+    $footer = get_field('footer', 'options');
+    $copyright = $footer['copyright'];
 
 ?>
 

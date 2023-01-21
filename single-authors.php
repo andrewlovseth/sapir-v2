@@ -40,6 +40,10 @@ get_header(); ?>
     <section class="archive-results-list grid">
 
         <div class="archive-results-list__header">
+            <div class="back">
+                <a href="<?php echo site_url('/archive'); ?>">&larr; Archive</a>
+            </div>
+            
             <div class="count">
                 <?php 
                     if($query->found_posts == 1) {
@@ -50,7 +54,7 @@ get_header(); ?>
 
                     echo $query->found_posts . $str;
                 ?>
-            </div>
+            </div>   
         </div>
 
         <?php if($query->have_posts()) : while ($query->have_posts()) : $query->the_post(); ?>

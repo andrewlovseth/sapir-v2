@@ -23,9 +23,17 @@
         letter-spacing: 0.05em;
         font-family: $adams;
         margin-bottom: 3rem;
+        display: flex;
+        justify-content: space-between;
 
         @include tablet {
             margin-bottom: 4.5rem;
+        }
+
+        .back {
+            a:hover {
+                text-decoration: underline;
+            }
         }
     }
 }

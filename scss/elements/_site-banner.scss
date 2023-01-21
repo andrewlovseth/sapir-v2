@@ -1,0 +1,19 @@
+.site-banner {
+    background: $off-white;
+    width: 100%;
+    grid-column: 1 / -1;
+
+    .image {
+        height: clamp(2rem, 7vh, 4rem);
+    }
+
+    @include cover-fill-image;
+}
+
+.header-banner {
+    margin-bottom: 3rem;
+}
+
+.footer-banner {
+    margin-bottom: 3rem;
+}

@@ -1,0 +1,16 @@
+body.page-template-newsletter {
+    .newsletter {
+        padding-bottom: 1.5rem;
+
+        @include desktop-small {
+            padding-bottom: 3rem;
+            grid-template-rows: max-content 1fr;
+        }
+    }
+
+    @import 'newsletter/info';
+
+    @import 'newsletter/latest-issue';
+
+    @import 'newsletter/archive';
+}

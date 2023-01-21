@@ -1,7 +1,7 @@
 	</main> <!-- .site-content -->
 
 	<footer class="site-footer grid">
-		<?php get_template_part('template-parts/footer/border'); ?>
+		<?php get_template_part('template-parts/footer/banner'); ?>
 
 		<?php get_template_part('template-parts/footer/logo'); ?>
 

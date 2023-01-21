@@ -20,6 +20,10 @@
         </div>
 
         <div class="archive-results-list__header">
+            <div class="back">
+                <a href="<?php echo site_url('/archive'); ?>">&larr; Archive</a>
+            </div>
+    
             <div class="count">
                 <?php 
                     if($wp_query->found_posts == 1) {

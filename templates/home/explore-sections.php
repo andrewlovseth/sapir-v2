@@ -15,7 +15,7 @@
             <div class="explore__sections-link">
                 <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
                     <span class="icon">
-                        <?php echo get_svg($icon['url']); ?>
+                        <?php echo wp_get_attachment_image($icon['ID'], 'medium'); ?>
                     </span>
 
                     <span class="label">

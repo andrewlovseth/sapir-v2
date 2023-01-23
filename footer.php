@@ -9,6 +9,8 @@
 
 		<?php get_template_part('template-parts/footer/epigraph'); ?>
 
+		<?php get_template_part('template-parts/footer/social'); ?>
+
 		<?php get_template_part('template-parts/footer/copyright'); ?>
 	</footer>
 

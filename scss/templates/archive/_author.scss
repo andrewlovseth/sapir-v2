@@ -63,10 +63,15 @@
     &__item {
         display: flex;
         align-items: center;
-        & + .author__item {
-            &:before {
-                content: '/';
-                font-style: italic;
+
+        &::after {
+            content: '/';
+            font-style: italic;
+        }
+
+        &:last-of-type {
+            &::after {
+                display: none;
             }
         }
     }

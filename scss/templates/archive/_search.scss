@@ -2,15 +2,13 @@
     text-align: center;
 
     .icon {
-        svg {
-            display: block;
-            width: 4rem;
-            margin: 0 auto;
+        aspect-ratio: 7 / 6;
+        max-width: 8rem;
+        @include cover-fill-image;
+        margin: 0 auto;
 
-            path {
-                display: block;
-                width: 100%;
-            }
+        img {
+            mix-blend-mode: multiply;
         }
     }
 

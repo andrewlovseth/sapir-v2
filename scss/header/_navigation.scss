@@ -22,6 +22,10 @@
         @include desktop-medium {
             padding-left: 3rem;
         }
+
+        .footer-only {
+            display: none;
+        }
     }
 
     .epigraph {

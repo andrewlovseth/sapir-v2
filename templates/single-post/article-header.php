@@ -88,7 +88,7 @@
 
             <div class="external-links">
                 <div class="header"> 
-                    <h5><?php echo $header; ?></h5>
+                    <h5 class="upper-header"><?php echo $header; ?></h5>
                 </div>
                 
                 <ul class="links">

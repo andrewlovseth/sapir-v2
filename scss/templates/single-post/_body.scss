@@ -222,6 +222,12 @@ article.post {
                 margin-top: 1rem;
             }
         }
+
+        .wp-block-pullquote {
+            &.alignleft {
+                max-width: 100%;
+            }
+        }
     }
 
     &.dropcap {

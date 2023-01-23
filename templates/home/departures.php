@@ -15,7 +15,7 @@
             <?php echo wp_get_attachment_image($banner['ID'], 'full'); ?>
         </div>
 
-        <h2 class="section-title sans-serif"><?php echo $header; ?></h2>
+        <h2 class="section-title"><?php echo $header; ?></h2>
     </div>
 
     <div class="departures__body">

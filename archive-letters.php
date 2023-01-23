@@ -1,8 +1,6 @@
 <?php get_header(); ?>
 
-    <section class="page-header grid">
-        <h1 class="section-title-alt">Letters to the Editor</h1>
-    </section>
+    <?php get_template_part('templates/archive-letters/page-header'); ?>
 
     <?php if ( have_posts() ): ?>
         <section class="letters grid">

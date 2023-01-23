@@ -106,9 +106,11 @@
             flex-wrap: wrap;
 
             .topic {
-                & + .topic {
-                    border-left: 1px solid $light-blue;
-                    margin-bottom: 0.75rem;
+                border-right: 1px solid $light-blue;
+                margin-bottom: 0.75rem;
+
+                &:last-of-type {
+                    border-right: unset;
                 }
             }
 

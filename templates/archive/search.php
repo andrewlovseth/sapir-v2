@@ -12,7 +12,7 @@
 
     <div class="section-header">
         <div class="icon">
-            <?php echo get_svg($icon['url']); ?>
+            <?php echo wp_get_attachment_image($icon['ID'], 'full'); ?>
         </div>
 
         <h3 class="section-title-alt"><?php echo $header; ?></h3>

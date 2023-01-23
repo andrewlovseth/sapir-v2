@@ -2,6 +2,15 @@ $super-pink: #c16c9c;
 
 .site-theme-volume-eight,
 .issue-theme-volume-eight {
+    .site-banner {
+        .image {
+            height: 100px;
+
+            img {
+                object-position: bottom center;
+            }
+        }
+    }
     .sapir-star {
         fill: $super-pink;
     }

@@ -1,47 +1,35 @@
 <?php
-
-    $issue = get_field('issue'); 
-    var_dump($issue);
-    $volume = get_field('volume', $issue);
-    $issue_slug = sanitize_title_with_dashes($volume);
     $url = get_permalink();
     $title = get_the_title();
-
-    if( is_single() && $issue_slug == "volume-seven") {
-        $photo = get_bloginfo('template_directory') . "/images/seo-issue-7.jpg";    
-    }elseif( is_single() && $issue_slug == "volume-six") {
-        $photo = get_bloginfo('template_directory') . "/images/seo-issue-6.jpg";    
-    } elseif( is_single() && $issue_slug == "volume-five") {
-        $photo = get_bloginfo('template_directory') . "/images/seo-issue-5.jpg";    
-    } elseif( is_single() && $issue_slug == "volume-four") {
-        $photo = get_bloginfo('template_directory') . "/images/seo-issue-4.jpg";
-    } elseif( is_single() && $issue_slug == "volume-three") {
-        $photo = get_bloginfo('template_directory') . "/images/seo-issue-3.jpg";
-    } elseif( is_single() && $issue_slug == "volume-two") {
-        $photo = get_bloginfo('template_directory') . "/images/seo-issue-2.jpg";
-    } elseif( is_single() && $issue_slug == "volume-one") {
-        $photo = get_bloginfo('template_directory') . "/images/seo-image.jpg";
-    } else {
-        $photo = get_bloginfo('template_directory') . "/images/seo-default.jpg";
-    }
-
     $char_limit = 140;
+
+    if(is_single() && 'post' == get_post_type()) {
+        $issue = get_field('issue');
+        $image = get_field('meta_image', $issue->ID);
+    } elseif(is_single() && 'issue' == get_post_type())  {
+        $image = get_field('meta_image');
+    } else {
+        $image = get_field('header_default_meta_image', 'options');
+    }
+    
     if($post !== NULL) {
         $content = $post->post_content; 
-        $description = substr(strip_tags($content), 0, $char_limit)  . '...'; 
+        if($content) {
+            $description = substr(strip_tags($content), 0, $char_limit)  . '...'; 
+        } else {
+            $description = '';
+        }
     }
-
-
 ?>
 
-<meta property="og:title" content="<?php echo $title; ?> | Sapir Journal" />
-<meta property="og:image" content="<?php echo $photo; ?>" />
+<meta property="og:title" content="<?php echo $title; ?> | SAPIR Journal" />
+<meta property="og:image" content="<?php echo $image['url']; ?>" />
 <meta property="og:url" content="<?php echo $url; ?>" />
 <meta property="og:type" content="article" />
 <meta property="og:description" content="<?php echo $description; ?>" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="<?php echo $photo; ?>" />
+<meta name="twitter:image" content="<?php echo $image['url']; ?>" />
 <meta name="twitter:site" content="@SapirJournal">
 
 <meta name="twitter:text" content="<?php echo $description; ?>" />

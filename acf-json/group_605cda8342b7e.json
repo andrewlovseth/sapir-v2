@@ -104,6 +104,22 @@
                     "min": "",
                     "max": "",
                     "elements": ""
+                },
+                {
+                    "key": "field_63cecb0af8609",
+                    "label": "CTA",
+                    "name": "cta",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
                 }
             ]
         },
@@ -736,5 +752,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674434668
+    "modified": 1674496784
 }

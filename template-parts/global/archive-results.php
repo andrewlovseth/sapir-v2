@@ -4,7 +4,7 @@
 
     if(is_tag()) {
         $title = single_tag_title("", false);
-        $header = 'Theme';
+        $header = 'Results by theme';
     } else {
         $title = '“' . get_search_query() . '”';
         $header = 'Showing Results for';

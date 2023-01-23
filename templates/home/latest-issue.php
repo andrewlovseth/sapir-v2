@@ -1,6 +1,7 @@
 <?php
 
     $latest = get_field('latest');
+    $cta = $latest['cta'];
     $current_issue = $latest['current_issue'];
     $current_issue_id = $current_issue->ID;
 
@@ -36,8 +37,8 @@
         </a>
     </div>
 
-    <div class="cta center">
-        <a href="<?php echo $issue_link; ?>" class="btn small-upper">Read it now</a>
-    </div>
-
+    <?php
+        $args = ['link' => $cta];
+        get_template_part('template-parts/global/cta', null, $args);
+    ?>
 </div>

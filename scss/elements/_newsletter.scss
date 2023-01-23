@@ -4,6 +4,7 @@
         background: $off-white;
         display: grid;
         gap: 2rem 3rem;
+        align-items: center;
 
         @include tablet {
             grid-template-columns: auto 1fr;
@@ -15,12 +16,13 @@
         display: flex;
         align-items: center;
 
-        svg {
-            width: 2.5rem;
-            height: 2.5rem;
+        .icon {
+            aspect-ratio: 7 / 6;
+            max-width: 6rem;
+            @include cover-fill-image;
 
-            path {
-                fill: $dark-blue;
+            img {
+                mix-blend-mode: multiply;
             }
         }
 

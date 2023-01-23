@@ -14,8 +14,9 @@
 
                     <ul class="site-nav__list">
                         <?php if(have_rows('links')): while(have_rows('links')): the_row(); ?>
+
                         
-                            <li class="site-nav__list-item">
+                            <li class="site-nav__list-item<?php if(get_sub_field('footer')): ?> footer-only<?php endif; ?>">
                                 <?php
                                     $link = get_sub_field('link');
                                     $args = ['link' => $link];

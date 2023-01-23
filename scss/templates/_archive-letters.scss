@@ -1,53 +1,5 @@
 body.post-type-archive-letters {
-    .letter {
-        @include tablet {
-            grid-column: 3 / span 6;
-        }
+    @import 'archive-letter/page-header';
 
-        @include desktop-small {
-            grid-column: 4 / span 8;
-        }
-
-        & + .letter {
-            padding-top: 3rem;
-
-            @include desktop-small {
-                padding-top: 6rem;
-            }
-        }
-
-        &__meta {
-            font-family: $adams;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            font-size: $type-size-150;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            padding-bottom: 1rem;
-
-            span {
-                display: block;
-
-                & + span {
-                    padding-left: 0.5rem;
-                    border-left: 1px solid;
-                    margin-left: 0.5rem;
-                }
-            }
-        }
-
-        &__title {
-            font-size: $type-size-500;
-            line-height: 1.25em;
-
-            a:hover {
-                text-decoration: underline;
-            }
-        }
-
-        &__teaser {
-            padding-top: 1rem;
-        }
-    }
+    @import 'archive-letter/letter';
 }

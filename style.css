@@ -667,6 +667,7 @@ body {
   background: #f1eeed;
   display: grid;
   gap: 2rem 3rem;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .newsletter__wrapper {
@@ -678,12 +679,18 @@ body {
   display: flex;
   align-items: center;
 }
-.newsletter .section-header svg {
-  width: 2.5rem;
-  height: 2.5rem;
+.newsletter .section-header .icon {
+  aspect-ratio: 7/6;
+  max-width: 6rem;
 }
-.newsletter .section-header svg path {
-  fill: #424254;
+.newsletter .section-header .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.newsletter .section-header .icon img {
+  mix-blend-mode: multiply;
 }
 .newsletter .section-header h3 {
   color: #424254;
@@ -949,10 +956,12 @@ body {
 }
 
 .header-banner {
+  border-bottom: 1px solid #000;
   margin-bottom: 3rem;
 }
 
 .footer-banner {
+  border-top: 1px solid #000;
   margin-bottom: 3rem;
 }
 
@@ -1292,6 +1301,9 @@ body {
     padding-left: 3rem;
   }
 }
+.site-header .header-nav .site-nav .footer-only {
+  display: none;
+}
 .site-header .header-nav .epigraph {
   border: 1px solid #9e9aaf;
   color: #65667a;
@@ -1493,6 +1505,32 @@ body {
     grid-column: 11/span 3;
   }
 }
+.site-footer .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+.site-footer .social__item {
+  padding: 0 1rem;
+}
+.site-footer .social__link {
+  display: block;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.site-footer .social svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.site-footer .social svg path {
+  fill: #dfdad2;
+  transition: all 500ms ease;
+}
+.site-footer .social svg path:hover {
+  fill: #fff;
+}
 .site-footer .copyright {
   margin-top: 3rem;
   border-top: 1px solid rgba(223, 218, 210, 0.5);
@@ -1583,6 +1621,7 @@ body.page-template-home .latest .issue .cover img {
 }
 body.page-template-home .latest .issue .cta {
   padding-top: 1.5rem;
+  text-align: center;
 }
 body.page-template-home .latest .articles {
   padding-top: 3rem;
@@ -1913,9 +1952,12 @@ body.page-template-home .explore__topics-list {
   justify-content: center;
   flex-wrap: wrap;
 }
-body.page-template-home .explore__topics-list .topic + .topic {
-  border-left: 1px solid #9e9aaf;
+body.page-template-home .explore__topics-list .topic {
+  border-right: 1px solid #9e9aaf;
   margin-bottom: 0.75rem;
+}
+body.page-template-home .explore__topics-list .topic:last-of-type {
+  border-right: unset;
 }
 body.page-template-home .explore__topics-list a {
   display: block;
@@ -2123,14 +2165,19 @@ body.page-template-home .quote__source {
 body.page-template-archive .search {
   text-align: center;
 }
-body.page-template-archive .search .icon svg {
-  display: block;
-  width: 4rem;
+body.page-template-archive .search .icon {
+  aspect-ratio: 7/6;
+  max-width: 8rem;
   margin: 0 auto;
 }
-body.page-template-archive .search .icon svg path {
-  display: block;
+body.page-template-archive .search .icon img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body.page-template-archive .search .icon img {
+  mix-blend-mode: multiply;
 }
 body.page-template-archive .search .section-title-alt {
   padding-top: 1rem;
@@ -2150,9 +2197,12 @@ body.page-template-archive .theme__list {
   max-width: 55rem;
   margin: 0 auto;
 }
-body.page-template-archive .theme__item + .theme__item {
-  border-left: 1px solid #9e9aaf;
+body.page-template-archive .theme__item {
+  border-right: 1px solid #9e9aaf;
   margin-bottom: 0.75rem;
+}
+body.page-template-archive .theme__item:last-of-type {
+  border-right: unset;
 }
 body.page-template-archive .theme a {
   display: block;
@@ -2292,9 +2342,12 @@ body.page-template-archive .author__item {
   display: flex;
   align-items: center;
 }
-body.page-template-archive .author__item + .author__item:before {
+body.page-template-archive .author__item::after {
   content: "/";
   font-style: italic;
+}
+body.page-template-archive .author__item:last-of-type::after {
+  display: none;
 }
 body.page-template-archive .author__link {
   display: block;
@@ -2322,14 +2375,19 @@ body.page-template-archive .author__link:hover:after {
 body.search .search {
   text-align: center;
 }
-body.search .search .icon svg {
-  display: block;
-  width: 4rem;
+body.search .search .icon {
+  aspect-ratio: 7/6;
+  max-width: 8rem;
   margin: 0 auto;
 }
-body.search .search .icon svg path {
-  display: block;
+body.search .search .icon img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body.search .search .icon img {
+  mix-blend-mode: multiply;
 }
 body.search .search .section-title-alt {
   padding-top: 1rem;
@@ -2986,6 +3044,35 @@ body.post-type-archive-news article.news .excerpt a {
   color: #355c7f;
 }
 
+@media screen and (min-width: 992px) {
+  body.post-type-archive-letters .page-header {
+    padding-bottom: 6rem;
+  }
+}
+body.post-type-archive-letters .page-header .icon {
+  display: block;
+  aspect-ratio: 7/6;
+  max-width: 8rem;
+  margin: 0 auto 1rem auto;
+}
+body.post-type-archive-letters .page-header .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  mix-blend-mode: multiply;
+}
+body.post-type-archive-letters .page-header .copy {
+  padding-top: 2rem;
+}
+@media screen and (min-width: 992px) {
+  body.post-type-archive-letters .page-header .copy {
+    grid-column: 4/span 8;
+  }
+}
+body.post-type-archive-letters .page-header .copy a {
+  text-decoration: underline;
+}
 @media screen and (min-width: 768px) {
   body.post-type-archive-letters .letter {
     grid-column: 3/span 6;
@@ -3266,7 +3353,7 @@ body.single-post .article-header .issue a span + span:before {
   padding: 0 0.5rem;
 }
 body.single-post .article-header .epigraph {
-  margin-bottom: 2rem;
+  margin-top: 3rem;
   background-image: url(images/epigraph.jpg);
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -3274,9 +3361,11 @@ body.single-post .article-header .epigraph {
   background-blend-mode: multiply;
   aspect-ratio: 1200/658;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   body.single-post .article-header .epigraph {
-    margin-bottom: 4rem;
+    max-width: unset;
+    margin-left: unset;
+    grid-column: unset;
   }
 }
 body.single-post .article-header .epigraph .copy {
@@ -3392,25 +3481,20 @@ body.single-post .article-header .pdf a:hover span:after {
   opacity: 1;
 }
 body.single-post .article-header .external-links {
-  padding-top: 1rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 body.single-post .article-header .external-links .links {
-  padding-top: 0.5rem;
+  padding-top: 1rem;
   list-style-type: disc;
   padding-left: 1.25rem;
 }
 body.single-post .article-header .external-links .link + .link {
-  padding-top: 0.5rem;
-}
-body.single-post .article-header .external-links .link .mono {
-  text-transform: none;
-  letter-spacing: -0.04em;
+  padding-top: 1rem;
 }
 body.single-post .article-header .external-links .link a {
   display: inline-block;
-}
-body.single-post .article-header .external-links .link a:hover {
-  cursor: pointer;
   text-decoration: underline;
 }
 body.single-post .article-header .simple-epigraph {
@@ -3594,6 +3678,9 @@ body.single-post article.post .article-body .wp-block-image figcaption span {
 }
 body.single-post article.post .article-body .wp-block-quote.extended p + p {
   margin-top: 1rem;
+}
+body.single-post article.post .article-body .wp-block-pullquote.alignleft {
+  max-width: 100%;
 }
 body.single-post article.post.dropcap .article-body > p:first-child:before,
 body.single-post article.post.dropcap .article-body p.dropcap:before {
@@ -3944,6 +4031,15 @@ body.single-letters .letter .back a:before {
   content: "← ";
 }
 
+.site-theme-volume-eight .site-banner .image,
+.issue-theme-volume-eight .site-banner .image {
+  height: 100px;
+}
+.site-theme-volume-eight .site-banner .image img,
+.issue-theme-volume-eight .site-banner .image img {
+  -o-object-position: bottom center;
+     object-position: bottom center;
+}
 .site-theme-volume-eight .sapir-star,
 .issue-theme-volume-eight .sapir-star {
   fill: #c16c9c;

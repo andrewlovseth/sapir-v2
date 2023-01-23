@@ -42,7 +42,7 @@
     }
 
     .epigraph {
-        margin-bottom: 2rem;
+        margin-top: 3rem;
         background-image: url(images/epigraph.jpg);
         background-repeat: no-repeat;
         background-position: 0 0;
@@ -50,8 +50,10 @@
         background-blend-mode: multiply;
         aspect-ratio: 1200 / 658;
 
-        @include tablet {
-            margin-bottom: 4rem;
+        @include desktop-small {
+            max-width: unset;
+            margin-left: unset;
+            grid-column: unset;
         }
 
         .copy {
@@ -167,31 +169,24 @@
     }
 
     .external-links {
-        padding-top: 1rem;
+        margin-top: 3rem;
+        padding: 2rem;
+        border: 1px solid rgba($black, 0.1);
 
         .links {
-            padding-top: 0.5rem;
+            padding-top: 1rem;
             list-style-type: disc;
             padding-left: 1.25rem;
         }
 
         .link {
             & + .link {
-                padding-top: 0.5rem;
-            }
-
-            .mono {
-                text-transform: none;
-                letter-spacing: -0.04em;
+                padding-top: 1rem;
             }
 
             a {
                 display: inline-block;
-
-                &:hover {
-                    cursor: pointer;
-                    text-decoration: underline;
-                }
+                text-decoration: underline;
             }
         }
     }

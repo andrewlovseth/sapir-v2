@@ -12,7 +12,10 @@
     <div class="newsletter__wrapper">
 
         <div class="section-header">
-            <?php echo get_svg($icon['url']); ?>
+            <div class="icon">
+                <?php echo wp_get_attachment_image($icon['ID'], 'full'); ?>
+            </div>
+            
             <h3><?php echo $headline; ?></h3>
         </div>
 

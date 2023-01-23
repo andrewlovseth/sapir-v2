@@ -24,6 +24,7 @@
                         <div class="author">
                             <div class="photo">
                                 <?php echo get_the_post_thumbnail($a->ID, 'thumbnail'); ?>
+                                <?php get_template_part('svg/icon-speech-bubble'); ?>
                             </div>
                         </div>
                     <?php endforeach; ?>

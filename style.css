@@ -784,6 +784,19 @@ body {
 .page-header .section-title-alt {
   font-size: clamp(1.5rem, 1.29rem + 1.07vw, 1.95rem);
 }
+.page-header .icon {
+  display: block;
+  aspect-ratio: 7/6;
+  max-width: 8rem;
+  margin: 0 auto 1rem auto;
+}
+.page-header .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  mix-blend-mode: multiply;
+}
 
 .teaser__title {
   font-family: psfournier-std-grand, serif;
@@ -2585,16 +2598,51 @@ body.page-template-events .event .author:nth-child(2) {
 body.page-template-events .event .author:nth-child(3) {
   z-index: 80;
 }
+body.page-template-events .event .author:nth-child(even) .photo {
+  margin-left: auto;
+}
+body.page-template-events .event .author:nth-child(even) .photo img {
+  transform: translateX(-1px);
+}
+@media screen and (min-width: 768px) {
+  body.page-template-events .event .author:nth-child(even) .photo img {
+    transform: translateX(-2px);
+  }
+}
+body.page-template-events .event .author:nth-child(even) .photo svg {
+  transform: scaleX(-1);
+}
 body.page-template-events .event .author .photo {
   max-width: 4rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   body.page-template-events .event .author .photo {
     max-width: 6rem;
   }
 }
+body.page-template-events .event .author .photo svg {
+  grid-row: 1;
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 body.page-template-events .event .author .photo img {
+  grid-row: 1;
+  grid-column: 1;
   border-radius: 50%;
+  width: 85%;
+  margin: 0 auto;
+  transform: translateX(1px);
+  mix-blend-mode: multiply;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-events .event .author .photo img {
+    transform: translateX(2px);
+  }
 }
 body.page-template-events .event .graphic img {
   border: 1px solid rgba(158, 154, 175, 0.25);
@@ -3049,19 +3097,6 @@ body.post-type-archive-news article.news .excerpt a {
     padding-bottom: 6rem;
   }
 }
-body.post-type-archive-letters .page-header .icon {
-  display: block;
-  aspect-ratio: 7/6;
-  max-width: 8rem;
-  margin: 0 auto 1rem auto;
-}
-body.post-type-archive-letters .page-header .icon img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  mix-blend-mode: multiply;
-}
 body.post-type-archive-letters .page-header .copy {
   padding-top: 2rem;
 }
@@ -3120,19 +3155,6 @@ body.post-type-archive-letters .letter__teaser {
   padding-top: 1rem;
 }
 
-body.post-type-archive-conversations .page-header .icon {
-  display: block;
-  aspect-ratio: 7/6;
-  max-width: 8rem;
-  margin: 0 auto 1rem auto;
-}
-body.post-type-archive-conversations .page-header .icon img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  mix-blend-mode: multiply;
-}
 body.post-type-archive-conversations .teaser-conversation {
   display: grid;
   gap: 1rem 2rem;

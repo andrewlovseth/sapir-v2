@@ -9,4 +9,18 @@
     .section-title-alt {
         font-size: $type-size-600;
     }
+
+    .icon {
+        display: block;
+        aspect-ratio: 7 / 6;
+        max-width: 8rem;
+        margin: 0 auto 1rem auto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            mix-blend-mode: multiply;
+        }
+    }
 }

@@ -85,15 +85,54 @@
             z-index: 80;
         }
 
+        &:nth-child(even) {
+            .photo {
+                margin-left: auto;
+
+                img {
+                    transform: translateX(-1px);
+
+                    @include tablet {
+                        transform: translateX(-2px);
+                    }
+                }
+
+                svg {
+                    transform: scaleX(-1);
+                }
+            }
+        }
+
         .photo {
             max-width: 4rem;
+            display: grid;
+            align-items: center;
+            justify-content: center;
 
             @include tablet {
                 max-width: 6rem;
             }
 
+            svg {
+                grid-row: 1;
+                grid-column: 1;
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
             img {
+                grid-row: 1;
+                grid-column: 1;
                 border-radius: 50%;
+                width: 85%;
+                margin: 0 auto;
+                transform: translateX(1px);
+                mix-blend-mode: multiply;
+
+                @include tablet {
+                    transform: translateX(2px);
+                }
             }
         }
     }

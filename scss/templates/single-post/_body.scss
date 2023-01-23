@@ -90,16 +90,12 @@ article.post {
             }
         }
 
-        li.last-p,
-        p.last-p {
-            &:after {
-                content: '';
+        .last-p {
+            svg {
                 display: inline-block;
                 width: 1rem;
                 height: 1rem;
-                background: url(images/icon-dingbat-blue.svg) no-repeat 0 0;
-                background-size: contain;
-                margin-left: 0.5rem;
+                transform: translateY(3px);
             }
         }
 
@@ -205,10 +201,6 @@ article.post {
             @include tablet {
                 width: calc(100% + 20vw);
                 margin-left: -10vw;
-            }
-
-            img {
-                width: 100%;
             }
 
             figcaption {

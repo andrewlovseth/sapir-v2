@@ -1,6 +1,4 @@
 <div class="issue__contents">
-    <h2 class="issue__contents-title">Contents</h2>
-
     <?php if(have_rows('table_of_contents')): while(have_rows('table_of_contents')) : the_row(); ?>
 
         <?php if( get_row_layout() == 'section' ): ?>
@@ -10,7 +8,7 @@
 
             <div class="issue__contents-section">
                 <?php if($header):?>
-                    <h2 class="issue__contents-header"><?php echo $header; ?></h2>
+                    <h2 class="issue__contents-header upper-header"><?php echo $header; ?></h2>
                 <?php endif; ?>
 
                 <?php if(have_rows('articles')):  while(have_rows('articles')): the_row(); ?>

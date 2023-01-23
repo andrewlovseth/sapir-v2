@@ -13,7 +13,9 @@
 ?>
 
     <div class="teaser__status">
-        <span class="teaser__date">Available on <?php echo get_the_time('F j', $p); ?></span>
+        <span class="teaser__date upper-header">
+            <span class="coming-soon">Available on <?php echo get_the_time('F j', $p); ?></span>
+        </span>
     </div>
 
 <?php endif; ?>

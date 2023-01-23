@@ -10,11 +10,30 @@
 	<?php // get_template_part('template-parts/header/meta-tags'); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<?php
+    $home = get_option('page_on_front');
+    $current_issue = get_field('latest_current_issue', $home);
+    $current_issue_slug = sanitize_title_with_dashes(get_field('volume', $current_issue->ID));
+
+
+    if(is_single() && 'post' == get_post_type()) {
+        $issue = get_field('issue');
+		$volume = get_field('volume', $issue->ID);
+		$issue_class = ' issue-theme-' . sanitize_title_with_dashes($volume);
+
+    } elseif(is_single() && 'issue' == get_post_type())  {
+        $volume = get_field('volume');
+		$issue_class = ' issue-theme-' . sanitize_title_with_dashes($volume);
+    }
+
+?>
+
+
+<body <?php body_class('site-theme-' . $current_issue_slug); ?>>
 <?php wp_body_open(); ?>
 <?php the_field('body_top_js', 'options'); ?>
 
-<div id="page" class="site">
+<div id="page" class="site<?php echo $issue_class; ?>">
 	
 	<header class="site-header grid">
 		<?php get_template_part('template-parts/header/banner'); ?>

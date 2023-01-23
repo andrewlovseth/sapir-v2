@@ -23,10 +23,18 @@
     $external_links = get_field('external_links');
     $links_header = $external_links['header'];
     $volume = get_field('volume', $issue->ID);
+
+    $banner = get_field('banner'); 
     
 ?>
 
 <section class="article-header">
+    <?php if($banner): ?>
+        <div class="article-header__banner">
+            <?php echo wp_get_attachment_image($banner['ID'], 'full'); ?>
+        </div>
+    <?php endif; ?>    
+
     <?php if($issue): ?>
         <div class="issue">
             <a href="<?php echo get_permalink($issue->ID); ?>">

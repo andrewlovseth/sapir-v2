@@ -6,13 +6,6 @@ if( get_field('dropcap') ) {
     $className .= ' dropcap';
 }
 
-$issue = get_field('issue'); 
-$volume = get_field('volume', $issue->ID);
-$issue_slug = sanitize_title_with_dashes($volume);
-if($issue_slug) {
-    $className .= ' ' . $issue_slug;
-}
-
 get_header(); ?>
 
     <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>

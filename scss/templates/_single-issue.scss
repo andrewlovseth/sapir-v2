@@ -1,5 +1,7 @@
 body.single-issue {
     @import 'single-issue/header';
 
+    @import 'single-issue/cover';
+
     @import 'single-issue/contents';
 }

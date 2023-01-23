@@ -8,11 +8,11 @@
 ?>
 
 <?php if($authors): ?>
-    <div class="teaser__authors authors-<?php echo $authors_count; ?>">
-        <em>by</em>
-
-        <div class="teaser__authors-list">
-            <?php foreach($authors as $author): ?><a href="<?php echo get_permalink($author); ?>"><span class="name"><?php echo get_the_title($author); ?></span></a><?php endforeach; ?>
-        </div>
+    <div class="teaser__authors teaser__authors-<?php echo $authors_count; ?>">
+        <em class="teaser__authors-by">by</em>
+        
+        <?php foreach($authors as $author): ?>
+            <div class="teaser__author"><a href="<?php echo get_permalink($author); ?>" class="teaser__author-link"><span class="teaser__author-name"><?php echo get_the_title($author); ?></span></a></div>
+        <?php endforeach; ?>
     </div>
 <?php endif; ?>

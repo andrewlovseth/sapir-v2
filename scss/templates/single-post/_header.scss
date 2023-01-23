@@ -5,6 +5,13 @@
         padding-bottom: 6rem;
     }
 
+    &__banner {
+        padding-bottom: 3rem;
+        img {
+            mix-blend-mode: multiply;
+        }
+    }
+
     .issue {
         padding-bottom: 1.5rem;
 

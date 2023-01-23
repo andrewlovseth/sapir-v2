@@ -39,6 +39,9 @@
             $('body').toggleClass('search-overlay-open');
             return false;
         });
+
+        // DINGBAT ON LAST P
+        $('.last-p').append($('#dingbat').html());
     });
 
     $(document).mouseup(function (e) {

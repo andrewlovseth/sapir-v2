@@ -1,25 +1,47 @@
 .issue {
     &__header {
-        display: grid;
-        gap: 2rem;
-        align-items: center;
+        text-align: center;
+        padding-bottom: 3rem;
 
-        @include tablet {
-            grid-template-columns: 4rem 1fr;
+        @include tablet-small {
+            grid-column: 3 / span 6;
         }
 
         @include desktop-small {
-            grid-column: 4 / span 8;
-            grid-template-columns: 24rem 1fr;
+            grid-column: 3 / span 10;
+        }
+
+        .pre-header {
+            display: block;
+            padding-bottom: 0.5rem;
+        }
+
+        .ornament {
+            padding: 2rem 0;
+            max-width: 6rem;
+            margin: 0 auto;
+
+            svg {
+                display: block;
+                height: auto;
+                width: 100%;
+            }
         }
     }
 
+    &__title {
+        font-size: $type-size-500;
+        font-family: $adams;
+        text-transform: uppercase;
+    }
+
     &__meta {
-        font-size: $type-size-150;
+        font-size: $type-size-100;
         font-family: $adams;
         text-transform: uppercase;
         letter-spacing: 0.1em;
         display: flex;
+        justify-content: center;
         align-items: center;
         padding-bottom: 0.5rem;
 
@@ -32,14 +54,5 @@
                 margin-left: 0.5rem;
             }
         }
-    }
-
-    &__title {
-        font-size: $type-size-900;
-        font-family: $adams;
-    }
-
-    &__cta {
-        padding-top: 2rem;
     }
 }

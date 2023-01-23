@@ -3,8 +3,6 @@
     $issue = get_field('issue');
     $issue_url = get_permalink($issue->ID);
     $authors = get_field('author');
-    $authors_count = count($authors);
-
 
 ?>
 
@@ -33,5 +31,20 @@
 
         </div>
     <?php endif; ?>
+
+    <div class="article-footer__links">
+        <div class="cta">
+            <a class="btn small-upper" href="<?php echo site_url('/contact/'); ?>">
+                <span class="label">Write a Letter<br/> to the editor</span>
+            </a>
+        </div>
+
+        <div class="link cta">
+            <a class="btn small-upper" href="<?php echo $issue_url; ?>">
+                <span class="label">View contents<br/> of this issue</span>
+            </a>
+        </div>
+
+    </div>
 
 </section>

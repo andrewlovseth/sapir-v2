@@ -1,4 +1,8 @@
 .departures {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     &:before {
         display: block;
         content: '';
@@ -8,16 +12,32 @@
             width: 1px;
             background: $light-blue;
             position: absolute;
-            left: -1rem;
+            left: -2rem;
             top: 0;
         }
     }
-    .section-header {
-        padding-top: 2rem;
+
+    &__header {
         text-align: center;
+
+        .section-title {
+            padding: 1.5rem 0;
+        }
     }
 
-    .article-list {
-        padding: 2rem;
+    &__body {
+        padding: 0 2rem;
+        flex: 1;
+        align-self: center;
+    }
+
+    &__footer {
+        padding-top: 1.5rem;
+    }
+
+    .banner {
+        &__footer {
+            transform: rotate(180deg);
+        }
     }
 }

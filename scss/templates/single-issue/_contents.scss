@@ -1,81 +1,61 @@
 .issue {
     &__contents {
-        margin-top: 3rem;
-        border-top: 1px solid rgba($light-blue, 0.5);
-        padding-top: 3rem;
-        padding-bottom: 6rem;
+        padding-bottom: 3rem;
+
+        @include tablet-small {
+            grid-column: 3 / span 6;
+        }
 
         @include desktop-small {
-            grid-column: 4 / span 8;
+            grid-row: 2;
         }
 
         &-section {
             & + .issue__contents-section {
-                padding-top: 3rem;
+                padding-top: 4.5rem;
 
                 @include tablet {
-                    padding-top: 4.5rem;
+                    padding-top: 6rem;
                 }
             }
         }
 
-        &-title {
-            font-size: $type-size-700;
-            padding-bottom: 3rem;
-            font-style: italic;
-            font-weight: normal;
-        }
-
         &-header {
-            font-size: $type-size-300;
-            letter-spacing: 0.1em;
-            font-family: $adams;
-            text-transform: uppercase;
-            font-weight: bold;
-            padding-bottom: 2rem;
-            color: $mid-blue;
+            padding-bottom: 1.5rem;
         }
     }
 }
 
 .teaser {
     &__status {
-        padding-top: 0.5rem;
-        font-family: $adams;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        font-weight: bold;
-        font-size: $type-size-150;
+        padding-bottom: 0.25rem;
+    }
+
+    &__date {
+        font-size: 0.675rem;
+        display: flex;
+        align-items: center;
+
+        @include tablet {
+            font-size: 0.7125rem;
+        }
+
+        .coming-soon {
+            display: inline-block;
+            color: $red;
+        }
+    }
+
+    &__title {
+        font-size: $type-size-500;
+        line-height: 1.375em;
     }
 
     &.draft {
         pointer-events: none;
 
-        * {
-            color: $light-blue;
-        }
-
         &:hover {
             cursor: default;
-        }
-    }
-
-    &.alt {
-        display: flex;
-        align-items: center;
-
-        .teaser {
-            &__authors {
-                order: -1;
-                padding-top: 2px;
-                padding-right: 1rem;
-                border-right: 1px solid rgba($light-blue, 0.5);
-                margin-right: 1rem;
-
-                em {
-                    display: none;
-                }
-            }
         }
     }
 }

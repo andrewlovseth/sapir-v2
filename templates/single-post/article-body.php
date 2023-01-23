@@ -9,4 +9,8 @@
             }
         </style>
     <?php endif; ?>
+        
+    <div id="dingbat" style="display: none;">
+        <?php get_template_part('svg/icon-dingbat'); ?>
+    </div>
 </section>

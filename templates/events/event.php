@@ -23,7 +23,11 @@
                     <?php foreach($authors as $a): ?>
                         <div class="author">
                             <div class="photo">
-                                <?php echo get_the_post_thumbnail($a->ID, 'thumbnail'); ?>
+                                <?php if(get_the_post_thumbnail($a->ID, 'thumbnail')): ?>
+                                    <?php echo get_the_post_thumbnail($a->ID, 'thumbnail'); ?>
+                                <?php else: ?>
+                                    <div class="no-photo"></div>
+                                <?php endif; ?>
                                 <?php get_template_part('svg/icon-speech-bubble'); ?>
                             </div>
                         </div>

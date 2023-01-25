@@ -29,7 +29,11 @@
             <?php foreach($authors as $a): ?>
                 <div class="teaser-conversation__participant">
                     <div class="photo">
-                        <?php echo get_the_post_thumbnail($a->ID, 'thumbnail'); ?>
+                        <?php if(get_the_post_thumbnail($a->ID, 'thumbnail')): ?>
+                            <?php echo get_the_post_thumbnail($a->ID, 'thumbnail'); ?>
+                        <?php else: ?>
+                            <div class="no-photo"></div>
+                        <?php endif; ?>
                         <?php get_template_part('svg/icon-speech-bubble'); ?>
                     </div>
                 </div>
@@ -44,7 +48,12 @@
 
                 <div class="teaser-conversation__participant">
                     <div class="photo">
-                        <?php echo wp_get_attachment_image($photo['ID'], 'thumbnail'); ?>
+                        <?php if(get_the_post_thumbnail($photo['ID'], 'thumbnail')): ?>
+                            <?php echo get_the_post_thumbnail($photo['ID'], 'thumbnail'); ?>
+                        <?php else: ?>
+                            <div class="no-photo"></div>
+                        <?php endif; ?>
+
                         <?php get_template_part('svg/icon-speech-bubble'); ?>
                     </div>
                 </div>

@@ -70,7 +70,6 @@
 
         .teaser {
             &__headline {
-                padding-bottom: 0.5rem;
             }
 
             &__title {
@@ -84,6 +83,7 @@
             &__dek {
                 font-size: $type-size-200;
                 line-height: 1.5em;
+                padding-top: 1rem;
 
                 @include tablet {
                     font-size: $type-size-300;

@@ -42,6 +42,10 @@
 
     &__description {
         padding-top: 1.5rem;
+
+        a {
+            text-decoration: underline;
+        }
     }
 
     .cta {

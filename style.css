@@ -864,9 +864,6 @@ body {
     padding-top: 4rem;
   }
 }
-.teaser-large .teaser__headline {
-  padding-bottom: 0.5rem;
-}
 .teaser-large .teaser__title {
   font-size: clamp(1.5rem, 1.29rem + 1.07vw, 1.95rem);
 }
@@ -878,6 +875,7 @@ body {
 .teaser-large .teaser__dek {
   font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
   line-height: 1.5em;
+  padding-top: 1rem;
 }
 @media screen and (min-width: 768px) {
   .teaser-large .teaser__dek {
@@ -1755,6 +1753,12 @@ body.page-template-home .latest .featured .teaser-conversation__participant .pho
     transform: translateX(2px);
   }
 }
+body.page-template-home .latest .featured .teaser-conversation__participant .photo .no-photo {
+  grid-row: 1;
+  grid-column: 1;
+  width: 5rem;
+  height: 5rem;
+}
 body.page-template-home .latest .featured .teaser-conversation__meta {
   font-family: "Adams", serif;
   text-transform: uppercase;
@@ -1828,6 +1832,9 @@ body.page-template-home .latest .featured .teaser-conversation .cta {
   body.page-template-home .latest .featured .teaser-conversation .cta {
     margin-top: 0;
   }
+}
+body.page-template-home .latest .featured .teaser-conversation .copy + .cta {
+  padding-top: 2rem;
 }
 @media screen and (min-width: 768px) {
   body.page-template-home .latest .featured .teaser-conversation {
@@ -2565,6 +2572,9 @@ body.page-template-events .event__title {
 body.page-template-events .event__description {
   padding-top: 1.5rem;
 }
+body.page-template-events .event__description a {
+  text-decoration: underline;
+}
 body.page-template-events .event .cta {
   padding-top: 2rem;
   display: flex;
@@ -3248,6 +3258,12 @@ body.post-type-archive-conversations .teaser-conversation__participant .photo im
     transform: translateX(2px);
   }
 }
+body.post-type-archive-conversations .teaser-conversation__participant .photo .no-photo {
+  grid-row: 1;
+  grid-column: 1;
+  width: 5rem;
+  height: 5rem;
+}
 body.post-type-archive-conversations .teaser-conversation__meta {
   font-family: "Adams", serif;
   text-transform: uppercase;
@@ -3321,6 +3337,9 @@ body.post-type-archive-conversations .teaser-conversation .cta {
   body.post-type-archive-conversations .teaser-conversation .cta {
     margin-top: 0;
   }
+}
+body.post-type-archive-conversations .teaser-conversation .copy + .cta {
+  padding-top: 2rem;
 }
 
 body.single-post article.post {
@@ -3427,7 +3446,7 @@ body.single-post .article-header .epigraph .copy p {
 body.single-post .article-header .dek {
   font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
   line-height: 1.5em;
-  padding-top: 0.5rem;
+  padding-top: 0.75rem;
 }
 body.single-post .article-header .authors {
   padding-top: 1.5rem;

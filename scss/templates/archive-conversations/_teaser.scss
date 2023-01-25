@@ -96,6 +96,13 @@
                     transform: translateX(2px);
                 }
             }
+
+            .no-photo {
+                grid-row: 1;
+                grid-column: 1;
+                width: 5rem;
+                height: 5rem;
+            }
         }
     }
 
@@ -189,5 +196,9 @@
         @include tablet {
             margin-top: 0;
         }
+    }
+
+    .copy + .cta {
+        padding-top: 2rem;
     }
 }

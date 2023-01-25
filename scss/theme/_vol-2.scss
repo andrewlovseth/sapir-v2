@@ -2,4 +2,10 @@
     .sapir-star {
         fill: #66a05a;
     }
+
+    .wp-block-pullquote:not(.basic) {
+        p {
+            color: #66a05a;
+        }
+    }
 }

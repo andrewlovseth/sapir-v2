@@ -11,7 +11,14 @@ $super-pink: #c16c9c;
             }
         }
     }
+
     .sapir-star {
         fill: $super-pink;
+    }
+
+    .wp-block-pullquote:not(.basic) {
+        p {
+            color: $super-pink;
+        }
     }
 }

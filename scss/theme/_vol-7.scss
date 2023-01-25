@@ -1,10 +1,17 @@
-$blue-bell: #aea8c6;
+$blue-bell: rgb(174, 168, 198);
+$independence: #3b3c59;
 
 .site-theme-volume-seven {
 }
 
 .issue-theme-volume-seven {
     .sapir-star {
-        fill: $blue-bell;
+        fill: $independence;
+    }
+
+    .wp-block-pullquote:not(.basic) {
+        p {
+            color: $independence;
+        }
     }
 }

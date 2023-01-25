@@ -3546,185 +3546,8 @@ body.single-post .article-header .simple-epigraph .copy {
   font-size: clamp(1rem, 1.1vw, 1.25rem);
   line-height: 1.5em;
 }
-body.single-post .article-body .wp-block-separator {
-  margin-top: 3rem;
-  border-color: transparent;
-  padding-bottom: 1rem;
-}
-body.single-post .article-body .wp-block-separator:before {
-  display: block;
-  content: "";
-  background: url(images/section-divider.svg) no-repeat center center;
-  background-size: contain;
-  width: 3rem;
-  height: 1rem;
-  margin: 0 auto;
-}
-body.single-post article.post .article-body * {
-  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
-  line-height: 1.75em;
-}
-body.single-post article.post .article-body > * + * {
-  margin-top: 1.5rem;
-}
-body.single-post article.post .article-body h4 {
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: clamp(0.875rem, 1vw, 1.125rem);
-  padding-top: 2rem;
-}
-body.single-post article.post .article-body h4 + * {
-  margin-top: 1rem;
-}
-body.single-post article.post .article-body h4.has-text-align-right + p {
-  margin-top: 0;
-}
-body.single-post article.post .article-body > h4:first-child {
-  padding-top: 0;
-}
-body.single-post article.post .article-body > h4:first-child + * {
-  margin-top: 2rem;
-}
-body.single-post article.post .article-body a {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-}
-body.single-post article.post .article-body ol {
-  list-style-type: decimal;
-}
-body.single-post article.post .article-body ul {
-  list-style-type: disc;
-}
-body.single-post article.post .article-body ol,
-body.single-post article.post .article-body ul {
-  padding-left: 1rem;
-}
-body.single-post article.post .article-body ol li,
-body.single-post article.post .article-body ul li {
-  padding-left: 1rem;
-}
-body.single-post article.post .article-body ol li + li,
-body.single-post article.post .article-body ul li + li {
-  margin-top: 2.5rem;
-}
-body.single-post article.post .article-body ol li .indent,
-body.single-post article.post .article-body ul li .indent {
-  display: block;
-  text-indent: 3rem;
-}
-body.single-post article.post .article-body ol.inset,
-body.single-post article.post .article-body ul.inset {
-  padding-left: 3rem;
-}
-body.single-post article.post .article-body ol.inset li + li,
-body.single-post article.post .article-body ul.inset li + li {
-  margin-top: 0.5rem;
-}
-body.single-post article.post .article-body .last-p svg {
-  display: inline-block;
-  width: 1rem;
-  height: 1rem;
-  transform: translateY(3px);
-}
-body.single-post article.post .article-body .wp-block-pullquote:not(.basic) {
-  text-align: center;
-  padding: 0;
-  margin: 3rem 0 3rem 0;
-}
-body.single-post article.post .article-body .wp-block-pullquote:not(.basic)::before, body.single-post article.post .article-body .wp-block-pullquote:not(.basic)::after {
-  width: 100%;
-  max-width: 24rem;
-  margin: 0 auto;
-  content: "";
-  display: block;
-}
-body.single-post article.post .article-body .wp-block-pullquote:not(.basic)::before {
-  border-top: 1px solid rgba(66, 66, 84, 0.5);
-  padding-top: 2rem;
-}
-body.single-post article.post .article-body .wp-block-pullquote:not(.basic)::after {
-  border-bottom: 1px solid rgba(66, 66, 84, 0.5);
-  padding-bottom: 2rem;
-}
-body.single-post article.post .article-body .wp-block-pullquote:not(.basic) blockquote {
-  margin: 0 auto;
-  padding: 0;
-  max-width: 36rem;
-  width: 100%;
-}
-body.single-post article.post .article-body .wp-block-pullquote:not(.basic) p {
-  padding: 0;
-  margin: 0;
-  font-size: clamp(1.25rem, 4.5vw, 1.75rem);
-  line-height: 1.75em;
-  font-family: psfournier-std-grand, serif;
-}
-body.single-post article.post .article-body .wp-block-pullquote:not(.basic) p .first-letter {
-  font-size: 1em;
-  display: inline;
-}
-body.single-post article.post .article-body .wp-block-pullquote:not(.basic) p > * {
-  font-size: clamp(1.25rem, 4.5vw, 1.75rem);
-  line-height: 1.75em;
-}
-body.single-post article.post .article-body .wp-block-pullquote.basic {
-  margin: 2.5rem 0 0 0;
-  padding: 0 0 0 2rem;
-  text-align: left;
-  max-width: 100%;
-}
-body.single-post article.post .article-body .wp-block-pullquote.basic blockquote {
-  margin: 0;
-  padding: 0;
-}
-body.single-post article.post .article-body .wp-block-pullquote.basic * {
-  font-size: clamp(1rem, 1.1vw, 1.25rem);
-}
-body.single-post article.post .article-body .wp-block-pullquote.basic p .first-letter {
-  font-size: 1em;
-  display: inline;
-}
-body.single-post article.post .article-body .wp-block-pullquote.basic.extended p + p {
-  margin-top: 1rem;
-}
-body.single-post article.post .article-body .wp-block-pullquote.basic:first-child {
-  margin: 0;
-  padding: 0;
-}
-body.single-post article.post .article-body .wp-block-pullquote.basic:first-child .first-letter {
-  display: none;
-}
-body.single-post article.post .article-body .wp-block-pullquote.basic:first-child p.dropcap:first-line {
-  font-variant-caps: small-caps;
-  letter-spacing: 0.05em;
-}
-body.single-post article.post .article-body .wp-block-pullquote.basic:first-child p + p {
-  padding-left: 4rem;
-}
-@media screen and (min-width: 768px) {
-  body.single-post article.post .article-body .wp-block-image {
-    width: calc(100% + 20vw);
-    margin-left: -10vw;
-  }
-}
-body.single-post article.post .article-body .wp-block-image figcaption {
-  text-align: center;
-  padding-top: 0.25rem;
-  font-size: clamp(0.875rem, 1vw, 1rem);
-  line-height: 1.5em;
-}
-body.single-post article.post .article-body .wp-block-image figcaption em,
-body.single-post article.post .article-body .wp-block-image figcaption a,
-body.single-post article.post .article-body .wp-block-image figcaption span {
-  font-size: 1em;
-}
-body.single-post article.post .article-body .wp-block-quote.extended p + p {
-  margin-top: 1rem;
-}
-body.single-post article.post .article-body .wp-block-pullquote.alignleft {
-  max-width: 100%;
-}
-body.single-post article.post.dropcap .article-body > p:first-child:before,
-body.single-post article.post.dropcap .article-body p.dropcap:before {
+body.single-post article.dropcap .article-body > p:first-child:before,
+body.single-post article.dropcap .article-body p.dropcap:before {
   float: left;
   display: block;
   content: "";
@@ -3737,15 +3560,170 @@ body.single-post article.post.dropcap .article-body p.dropcap:before {
   mix-blend-mode: multiply;
 }
 @media screen and (min-width: 1280px) {
-  body.single-post article.post.dropcap .article-body > p:first-child:before,
-  body.single-post article.post.dropcap .article-body p.dropcap:before {
+  body.single-post article.dropcap .article-body > p:first-child:before,
+  body.single-post article.dropcap .article-body p.dropcap:before {
     width: clamp(10rem, 10.75vw, 10.75rem);
     height: clamp(9rem, 6vh, 12.75rem);
     margin: 0 0.5rem 0.5rem 0;
   }
 }
-body.single-post article.post.dropcap .article-body .first-letter {
+body.single-post article.dropcap .article-body > p:first-child .first-letter,
+body.single-post article.dropcap .article-body p.dropcap .first-letter {
   display: none;
+}
+body.single-post .article-body * {
+  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
+  line-height: 1.75em;
+}
+body.single-post .article-body > * + * {
+  margin-top: 1.5rem;
+}
+body.single-post .article-body h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: clamp(0.875rem, 1vw, 1.125rem);
+  padding-top: 2rem;
+}
+body.single-post .article-body h4 + * {
+  margin-top: 1rem;
+}
+body.single-post .article-body h4.has-text-align-right + p {
+  margin-top: 0;
+}
+body.single-post .article-body > h4:first-child {
+  padding-top: 0;
+}
+body.single-post .article-body > h4:first-child + * {
+  margin-top: 2rem;
+}
+body.single-post .article-body a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+body.single-post .article-body ol {
+  list-style-type: decimal;
+}
+body.single-post .article-body ul {
+  list-style-type: disc;
+}
+body.single-post .article-body ol,
+body.single-post .article-body ul {
+  padding-left: 1rem;
+}
+body.single-post .article-body ol li,
+body.single-post .article-body ul li {
+  padding-left: 1rem;
+}
+body.single-post .article-body ol li + li,
+body.single-post .article-body ul li + li {
+  margin-top: 2.5rem;
+}
+body.single-post .article-body ol li .indent,
+body.single-post .article-body ul li .indent {
+  display: block;
+  text-indent: 3rem;
+}
+body.single-post .article-body ol.inset,
+body.single-post .article-body ul.inset {
+  padding-left: 3rem;
+}
+body.single-post .article-body ol.inset li + li,
+body.single-post .article-body ul.inset li + li {
+  margin-top: 0.5rem;
+}
+body.single-post .article-body .last-p svg {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  transform: translateY(3px);
+}
+body.single-post .wp-block-pullquote:not(.basic) {
+  text-align: center;
+  padding: 0;
+  margin: 3rem 0 3rem 0;
+}
+body.single-post .wp-block-pullquote:not(.basic)::before, body.single-post .wp-block-pullquote:not(.basic)::after {
+  width: 100%;
+  max-width: 24rem;
+  margin: 0 auto;
+  content: "";
+  display: block;
+}
+body.single-post .wp-block-pullquote:not(.basic)::before {
+  border-top: 1px solid rgba(66, 66, 84, 0.5);
+  padding-top: 2rem;
+}
+body.single-post .wp-block-pullquote:not(.basic)::after {
+  border-bottom: 1px solid rgba(66, 66, 84, 0.5);
+  padding-bottom: 2rem;
+}
+body.single-post .wp-block-pullquote:not(.basic) p {
+  font-family: psfournier-std-grand, serif;
+  font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
+  line-height: 1.75em;
+  padding: 0;
+  margin: 0;
+}
+body.single-post .wp-block-pullquote:not(.basic) blockquote {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 44rem;
+  width: 100%;
+}
+body.single-post .wp-block-pullquote:not(.basic) blockquote > * + * {
+  margin-top: 2rem;
+}
+body.single-post .wp-block-pullquote.basic {
+  margin: 2.5rem 0 0 0;
+  padding: 0 0 0 2rem;
+  text-align: left;
+  max-width: 100%;
+}
+body.single-post .wp-block-pullquote.basic blockquote {
+  margin: 0;
+  padding: 0;
+}
+body.single-post .wp-block-pullquote.basic * {
+  font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
+}
+body.single-post .wp-block-pullquote.basic.extended p + p {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  body.single-post .wp-block-image {
+    width: calc(100% + 20vw);
+    margin-left: -10vw;
+  }
+}
+body.single-post .wp-block-image figcaption {
+  text-align: center;
+  padding-top: 0.25rem;
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  line-height: 1.5em;
+}
+body.single-post .wp-block-image figcaption em,
+body.single-post .wp-block-image figcaption a,
+body.single-post .wp-block-image figcaption span {
+  font-size: 1em;
+}
+body.single-post .wp-block-quote.extended p + p {
+  margin-top: 1rem;
+}
+body.single-post .wp-block-pullquote.alignleft {
+  max-width: 100%;
+}
+body.single-post .wp-block-separator {
+  margin-top: 3rem;
+  border-color: transparent;
+  padding-bottom: 1rem;
+}
+body.single-post .wp-block-separator:before {
+  display: block;
+  content: "";
+  background: url(images/section-divider.svg) no-repeat center center;
+  background-size: contain;
+  width: 3rem;
+  height: 1rem;
+  margin: 0 auto;
 }
 body.single-post .article-footer {
   padding-top: 3rem;
@@ -4085,31 +4063,56 @@ body.single-letters .letter .back a:before {
 .issue-theme-volume-eight .sapir-star {
   fill: #c16c9c;
 }
+.site-theme-volume-eight .wp-block-pullquote:not(.basic) p,
+.issue-theme-volume-eight .wp-block-pullquote:not(.basic) p {
+  color: #c16c9c;
+}
 
 .issue-theme-volume-seven .sapir-star {
-  fill: #aea8c6;
+  fill: #3b3c59;
+}
+.issue-theme-volume-seven .wp-block-pullquote:not(.basic) p {
+  color: #3b3c59;
 }
 
 .issue-theme-volume-six .sapir-star {
   fill: #e3745e;
 }
+.issue-theme-volume-six .wp-block-pullquote:not(.basic) p {
+  color: #e3745e;
+}
 
 .issue-theme-volume-five .sapir-star {
   fill: #416eb4;
+}
+.issue-theme-volume-five .wp-block-pullquote:not(.basic) p {
+  color: #416eb4;
 }
 
 .issue-theme-volume-four .sapir-star {
   fill: #c6c1a1;
 }
+.issue-theme-volume-four .wp-block-pullquote:not(.basic) p {
+  color: #c6c1a1;
+}
 
 .issue-theme-volume-three .sapir-star {
   fill: #dd594d;
+}
+.issue-theme-volume-three .wp-block-pullquote:not(.basic) p {
+  color: #dd594d;
 }
 
 .issue-theme-volume-two .sapir-star {
   fill: #66a05a;
 }
+.issue-theme-volume-two .wp-block-pullquote:not(.basic) p {
+  color: #66a05a;
+}
 
 .issue-theme-volume-one .sapir-star {
   fill: #408ab6;
+}
+.issue-theme-volume-one .wp-block-pullquote:not(.basic) p {
+  color: #408ab6;
 }

@@ -2,9 +2,12 @@
     gap: 2rem;
 
     &__copy {
+        @include tablet-small {
+            grid-column: 3 / span 6;
+        }
+
         @include desktop-small {
             grid-column: 3 / span 7;
-            padding-right: 2rem;
         }
 
         a {
@@ -15,6 +18,10 @@
     &__masthead {
         border-top: 1px solid rgba($light-blue, 0.5);
         padding-top: 2rem;
+
+        @include tablet-small {
+            grid-column: 3 / span 6;
+        }
 
         @include desktop-small {
             grid-column: 10 / span 3;

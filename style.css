@@ -2422,10 +2422,14 @@ body.search .archive-results-list__summary {
 body.page-template-about .about {
   gap: 2rem;
 }
+@media screen and (min-width: 480px) {
+  body.page-template-about .about__copy {
+    grid-column: 3/span 6;
+  }
+}
 @media screen and (min-width: 992px) {
   body.page-template-about .about__copy {
     grid-column: 3/span 7;
-    padding-right: 2rem;
   }
 }
 body.page-template-about .about__copy a {
@@ -2434,6 +2438,11 @@ body.page-template-about .about__copy a {
 body.page-template-about .about__masthead {
   border-top: 1px solid rgba(158, 154, 175, 0.5);
   padding-top: 2rem;
+}
+@media screen and (min-width: 480px) {
+  body.page-template-about .about__masthead {
+    grid-column: 3/span 6;
+  }
 }
 @media screen and (min-width: 992px) {
   body.page-template-about .about__masthead {
@@ -2467,8 +2476,67 @@ body.page-template-about .about__masthead .role .job-title {
   letter-spacing: 0.125em;
   text-transform: uppercase;
 }
+body.page-template-about .quote {
+  text-align: center;
+}
+body.page-template-about .quote blockquote {
+  background: #f1eeed;
+  color: #65667a;
+  padding: 2rem;
+  margin: 0;
+  position: relative;
+  transition: all 500ms ease;
+}
+body.page-template-about .quote blockquote::before, body.page-template-about .quote blockquote::after {
+  display: block;
+  position: absolute;
+  font-size: clamp(5rem, 8vw, 6.5rem);
+  color: #9e9aaf;
+  transition: all 500ms ease;
+}
+body.page-template-about .quote blockquote::before {
+  content: "“";
+  top: 3rem;
+  left: 1rem;
+}
+body.page-template-about .quote blockquote::after {
+  content: "”";
+  bottom: 0rem;
+  right: 1rem;
+  line-height: 0;
+}
+body.page-template-about .quote__header {
+  padding-bottom: 1.5rem;
+}
+body.page-template-about .quote__header .section-title {
+  color: #424254;
+}
+body.page-template-about .quote__text {
+  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
+  line-height: 1.5em;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-about .quote__text {
+    font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  body.page-template-about .quote__text {
+    padding: 0 3rem;
+  }
+}
+body.page-template-about .quote__meta {
+  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
+  line-height: 1.5em;
+  padding: 1rem 3rem 0 3rem;
+}
 body.page-template-about .news-section {
   padding-bottom: 3rem;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-about .news-section {
+    padding-bottom: 6rem;
+  }
 }
 body.page-template-about .news-section .section-header {
   margin-top: 3rem;
@@ -2476,9 +2544,16 @@ body.page-template-about .news-section .section-header {
   padding: 3rem 0;
   text-align: center;
 }
+@media screen and (min-width: 480px) {
+  body.page-template-about .news-section .section-header {
+    grid-column: 3/span 6;
+  }
+}
 @media screen and (min-width: 992px) {
   body.page-template-about .news-section .section-header {
-    padding-bottom: 4.5rem;
+    margin-top: 4.5rem;
+    padding: 4.5rem 0;
+    grid-column: 3/span 10;
   }
 }
 body.page-template-about .news-section .section-title-alt {
@@ -2491,7 +2566,7 @@ body.page-template-about .news-section .section-title-alt {
 }
 @media screen and (min-width: 992px) {
   body.page-template-about .news {
-    grid-column: 3/span 10;
+    grid-column: 4/span 8;
   }
 }
 body.page-template-about .news + .news {

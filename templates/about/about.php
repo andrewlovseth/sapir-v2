@@ -14,8 +14,7 @@
             <?php echo $embed; ?>
         </div>
 
-
-        
+        <?php get_template_part('templates/about/quote'); ?>        
     </div>
 
     <?php if(have_rows('masthead')): ?>

@@ -1,14 +1,24 @@
 .news-section {
     padding-bottom: 3rem;
 
+    @include tablet {
+        padding-bottom: 6rem;
+    }
+
     .section-header {
         margin-top: 3rem;
         border-top: 1px solid rgba($light-blue, 0.5);
         padding: 3rem 0;
         text-align: center;
 
+        @include tablet-small {
+            grid-column: 3 / span 6;
+        }
+
         @include desktop-small {
-            padding-bottom: 4.5rem;
+            margin-top: 4.5rem;
+            padding: 4.5rem 0;
+            grid-column: 3 / span 10;
         }
     }
 
@@ -23,7 +33,7 @@
     }
 
     @include desktop-small {
-        grid-column: 3 / span 10;
+        grid-column: 4 / span 8;
     }
 
     & + .news {

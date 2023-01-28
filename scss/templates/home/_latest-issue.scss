@@ -1,6 +1,7 @@
 .issue {
     padding: 2rem;
     @include double-border($light-blue);
+    align-self: start;
 
     @include tablet-small {
         grid-column: 3 / span 6;

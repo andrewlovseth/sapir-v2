@@ -1570,6 +1570,7 @@ body.page-template-home .latest {
 body.page-template-home .latest .issue {
   padding: 2rem;
   border: 1px solid #9e9aaf;
+  align-self: start;
 }
 body.page-template-home .latest .issue::before {
   display: block;

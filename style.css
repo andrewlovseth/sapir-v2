@@ -3646,7 +3646,7 @@ body.single-post article.dropcap .article-body > p:first-child .first-letter,
 body.single-post article.dropcap .article-body p.dropcap .first-letter {
   display: none;
 }
-body.single-post .article-body * {
+body.single-post .article-body > * {
   font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
   line-height: 1.75em;
 }

@@ -6,8 +6,14 @@ $args = array(
     'orderby' => 'date',
     'order' => 'DESC',
     'meta_query' => array(
+        'relation' => 'OR',
         array(
             'key' => 'author',
+            'value' => '"' . get_the_ID() . '"',
+            'compare' => 'LIKE'
+        ),
+        array(
+            'key' => 'interviewers',
             'value' => '"' . get_the_ID() . '"',
             'compare' => 'LIKE'
         )

@@ -20,6 +20,10 @@
     $dek = get_field('dek', $p);
     $authors = get_field('author', $p);    
     $authors_count = count((array)$authors);
+
+    $interviewers = get_field('interviewers', $p);    
+    $interviewers_count = count((array)$interviewers);
+
 ?>
 
 
@@ -42,5 +46,10 @@
     <?php
         $args = ['authors' => $authors, 'authors_count' => $authors_count];
         get_template_part('template-parts/global/teaser/authors', null, $args);
+    ?>
+
+    <?php
+        $args = ['interviewers' => $interviewers, 'interviewers_count' => $interviewers_count];
+        get_template_part('template-parts/global/teaser/interviewers', null, $args);
     ?>
 </article>

@@ -106,6 +106,29 @@
             "ui": 1
         },
         {
+            "key": "field_64078dff145fe",
+            "label": "Interviewers",
+            "name": "interviewers",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "authors"
+            ],
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 1,
+            "allow_null": 0,
+            "ui": 1
+        },
+        {
             "key": "field_605cd84833e59",
             "label": "Dropcap",
             "name": "dropcap",
@@ -349,5 +372,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674446666
+    "modified": 1678216745
 }

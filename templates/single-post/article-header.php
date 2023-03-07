@@ -14,6 +14,11 @@
     $dek = get_field('dek'); 
     $authors = get_field('author');
     $authors_count = count($authors);
+    $interviewers = get_field('interviewers');
+    if($interviewers) {
+        $interviewers_count = count($interviewers);
+    }
+
 
     $epigraph = get_field('epigraph');
     $simple_epigraph = get_field('simple_epigraph');
@@ -65,6 +70,18 @@
             </div>
         </div>
     <?php endif; ?>    
+
+    <?php if($interviewers): ?>
+        <div class="interviewers interviewers-<?php echo $interviewers_count; ?>">
+            <em>Interviewed by</em>
+
+            <div class="interviewers-list">
+                <?php foreach($interviewers as $interviewer): ?><a href="<?php echo get_permalink($interviewer); ?>"><?php echo get_the_title($interviewer); ?></a><?php endforeach; ?>
+            </div>
+        </div>
+    <?php endif; ?>    
+
+
 
     <?php if($pdf): ?>
         <div class="pdf">

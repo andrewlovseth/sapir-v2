@@ -138,6 +138,47 @@
         }
     }
 
+    .interviewers {
+        padding-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        font-size: $type-size-300;
+
+        font-style: italic;
+
+        em {
+            display: block;
+            padding-right: 0.25rem;
+        }
+
+        a {
+            padding-bottom: 2px;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+                border-bottom: 1px solid rgba($light-blue, 0.5);
+            }
+
+            & + a:before {
+                content: ',';
+                padding-right: 0.5rem;
+            }
+
+            & + a:nth-child(n + 3):before {
+                content: '&';
+                padding-left: 0.5rem;
+            }
+        }
+
+        &.interviewers-2 {
+            a + a:before {
+                content: '&';
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+        }
+    }
+
     .pdf {
         display: flex;
         justify-content: flex-end;

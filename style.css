@@ -856,6 +856,56 @@ body {
   bottom: 0;
   left: 0;
 }
+.teaser__interviewers {
+  padding-top: 0.5rem;
+}
+.teaser__interviewer {
+  display: inline-block;
+  line-height: 1.5em;
+}
+.teaser__interviewer::after {
+  display: inline-block;
+  content: ",";
+  padding-right: 0.125rem;
+}
+.teaser__interviewer:nth-last-child(2)::after {
+  content: "&";
+  padding: 0 0.25rem 0 0.375rem;
+}
+.teaser__interviewer:last-of-type::after {
+  display: none;
+}
+.teaser__interviewer-link {
+  font-style: italic;
+}
+.teaser__interviewer-link:hover {
+  text-decoration: none;
+}
+.teaser__interviewer-link .teaser__interviewer-name:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: rgba(158, 154, 175, 0.5);
+  transform: translateY(2px);
+  opacity: 0;
+  transition: all 200ms ease;
+}
+.teaser__interviewer-link:hover {
+  text-decoration: none;
+}
+.teaser__interviewer-link:hover .teaser__interviewer-name:after {
+  opacity: 1;
+}
+.teaser__interviewer-link .teaser__interviewer-name {
+  position: relative;
+}
+.teaser__interviewer-link .teaser__interviewer-name::after {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
 .teaser-large + .teaser-large {
   padding-top: 3rem;
 }
@@ -3555,6 +3605,37 @@ body.single-post .article-header .authors a + a:nth-child(n+3):before {
   padding-left: 0.5rem;
 }
 body.single-post .article-header .authors.authors-2 a + a:before {
+  content: "&";
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+body.single-post .article-header .interviewers {
+  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
+  font-style: italic;
+}
+body.single-post .article-header .interviewers em {
+  display: block;
+  padding-right: 0.25rem;
+}
+body.single-post .article-header .interviewers a {
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+body.single-post .article-header .interviewers a:hover {
+  border-bottom: 1px solid rgba(158, 154, 175, 0.5);
+}
+body.single-post .article-header .interviewers a + a:before {
+  content: ",";
+  padding-right: 0.5rem;
+}
+body.single-post .article-header .interviewers a + a:nth-child(n+3):before {
+  content: "&";
+  padding-left: 0.5rem;
+}
+body.single-post .article-header .interviewers.interviewers-2 a + a:before {
   content: "&";
   padding-left: 0.5rem;
   padding-right: 0.5rem;

@@ -1157,6 +1157,79 @@ body {
   margin-right: auto;
 }
 
+body.single-post .article-body .lutm-number {
+  font-family: "Adams", serif;
+  font-weight: bold;
+  font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+  padding: 3rem 0 0 0;
+}
+body.single-post .article-body .lutm-headline {
+  margin: 0;
+  font-family: "Adams", serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+}
+body.single-post .article-body .lutn::first-letter {
+  color: transparent;
+  margin-left: -0.75rem;
+}
+body.single-post .article-body .lutn:before {
+  float: left;
+  display: block;
+  content: "";
+  width: clamp(5rem, 6.375vw, 6.1875rem);
+  height: clamp(5rem, 6.375vh, 6.1875rem);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  margin: 0.25rem 0.5rem 0 0;
+  mix-blend-mode: multiply;
+}
+body.single-post .article-body .lutn-01::before {
+  background-image: url(images/lutn/lutn_1.jpg);
+}
+body.single-post .article-body .lutn-02::before {
+  background-image: url(images/lutn/lutn_2.jpg);
+}
+body.single-post .article-body .lutn-03::before {
+  background-image: url(images/lutn/lutn_3.jpg);
+}
+body.single-post .article-body .lutn-04::before {
+  background-image: url(images/lutn/lutn_4.jpg);
+}
+body.single-post .article-body .lutn-05::before {
+  background-image: url(images/lutn/lutn_5.jpg);
+}
+body.single-post .article-body .lutn-06::before {
+  background-image: url(images/lutn/lutn_6.jpg);
+}
+body.single-post .article-body .lutn-07::before {
+  background-image: url(images/lutn/lutn_7.jpg);
+}
+body.single-post .article-body .lutn-08::before {
+  background-image: url(images/lutn/lutn_8.jpg);
+}
+body.single-post .article-body .lutn-09::before {
+  background-image: url(images/lutn/lutn_9.jpg);
+}
+body.single-post .article-body .lutn-10::before {
+  background-image: url(images/lutn/lutn_10.jpg);
+}
+body.single-post .article-body .lutn-11::before {
+  background-image: url(images/lutn/lutn_11.jpg);
+}
+body.single-post .article-body .lutn-12::before {
+  background-image: url(images/lutn/lutn_12.jpg);
+}
+body.single-post .article-body .lutn-13::before {
+  background-image: url(images/lutn/lutn_13.jpg);
+}
+body.single-post .article-body .lutn-14::before {
+  background-image: url(images/lutn/lutn_14.jpg);
+}
+
 .site-header {
   padding-bottom: 0.5rem;
   background: #fbf9f7;

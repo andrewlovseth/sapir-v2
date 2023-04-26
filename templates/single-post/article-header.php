@@ -13,7 +13,10 @@
 
     $dek = get_field('dek'); 
     $authors = get_field('author');
-    $authors_count = count($authors);
+    if($authors) {
+        $authors_count = count($authors);
+    }
+    
     $interviewers = get_field('interviewers');
     if($interviewers) {
         $interviewers_count = count($interviewers);

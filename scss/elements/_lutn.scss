@@ -1,0 +1,49 @@
+body.single-post .article-body {
+    .lutm-number {
+        font-family: $adams;
+        font-weight: bold;
+        font-size: $type-size-400;
+        padding: 3rem 0 0 0;
+    }
+
+    .lutm-headline {
+        margin: 0;
+        font-family: $adams;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        font-size: $type-size-400;
+    }
+
+    .lutn {
+        &::first-letter {
+            color: transparent;
+            margin-left: -0.75rem;
+        }
+
+        &:before {
+            float: left;
+            display: block;
+            content: "";
+            width: clamp(5rem, 6.375vw, 6.1875rem);
+            height: clamp(5rem, 6.375vh, 6.1875rem);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            margin: 0.25rem 0.5rem 0 0;
+            mix-blend-mode: multiply;
+        }
+
+        @for $i from 1 through 9 {
+            &-0#{$i}::before {
+                background-image: url(images/lutn/lutn_#{$i}.jpg);
+            }
+        }
+
+        @for $ii from 10 through 14 {
+            &-#{$ii}::before {
+                background-image: url(images/lutn/lutn_#{$ii}.jpg);
+            }
+        }
+    }
+}

@@ -1184,8 +1184,9 @@ body.single-post .article-body .lutn:before {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  margin: 0.25rem 0.5rem 0 0;
+  margin: 0 -0.75rem 0 0;
   mix-blend-mode: multiply;
+  transform: translate3d(-1rem, 0rem, 0);
 }
 body.single-post .article-body .lutn-01::before {
   background-image: url(images/lutn/lutn_1.jpg);
@@ -1228,6 +1229,19 @@ body.single-post .article-body .lutn-13::before {
 }
 body.single-post .article-body .lutn-14::before {
   background-image: url(images/lutn/lutn_14.jpg);
+}
+
+body.single-post.postid-2036 article.dropcap .article-body > p:first-child:before,
+body.single-post.postid-2036 body.single-post article.dropcap .article-body p.dropcap:before {
+  transform: translate3d(-0.25rem, -0.375rem, 0);
+  margin: 0 -0.125rem -1.1rem 0;
+}
+@media screen and (min-width: 1280px) {
+  body.single-post.postid-2036 article.dropcap .article-body > p:first-child:before,
+  body.single-post.postid-2036 body.single-post article.dropcap .article-body p.dropcap:before {
+    transform: translate3d(-0.75rem, -0.725rem, 0);
+    margin: 0 -0.5rem -1.1rem 0;
+  }
 }
 
 .site-header {
@@ -4309,10 +4323,6 @@ body.single-letters .letter .back a:before {
 }
 .site-theme-volume-nine .sapir-star,
 .issue-theme-volume-nine .sapir-star {
-  fill: #fed098;
-}
-.site-theme-volume-nine .last-p .sapir-star,
-.issue-theme-volume-nine .last-p .sapir-star {
   fill: #bf575d;
 }
 .site-theme-volume-nine .wp-block-pullquote:not(.basic) p,
@@ -4341,6 +4351,11 @@ body.single-letters .letter .back a:before {
 .site-theme-volume-nine .site-header .header-nav .epigraph,
 .issue-theme-volume-nine .site-header .header-nav .epigraph {
   color: #bf575d;
+  border-color: #bf575d;
+}
+.site-theme-volume-nine .site-header .header-nav .epigraph::before,
+.issue-theme-volume-nine .site-header .header-nav .epigraph::before {
+  border-color: #bf575d;
 }
 .site-theme-volume-nine .newsletter__wrapper,
 .issue-theme-volume-nine .newsletter__wrapper {
@@ -4396,6 +4411,9 @@ body.single-letters .letter .back a:before {
 body.page-template-home.site-theme-volume-nine .latest .issue,
 body.page-template-home.site-theme-volume-nine .latest .issue::before {
   border-color: #a9806d;
+}
+body.page-template-home.site-theme-volume-nine .latest .issue .ornament path {
+  fill: #a9806d;
 }
 body.page-template-home.site-theme-volume-nine .explore__sections-link a .label:after {
   background: rgba(53, 91, 119, 0.5);

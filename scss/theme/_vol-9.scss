@@ -18,13 +18,7 @@ $vol-9-red: #bf575d;
     }
 
     .sapir-star {
-        fill: $vol-9-yellow;
-    }
-
-    .last-p {
-        .sapir-star {
-            fill: $vol-9-red;
-        }
+        fill: $vol-9-red;
     }
 
     .wp-block-pullquote:not(.basic) {
@@ -54,6 +48,11 @@ $vol-9-red: #bf575d;
 
     .site-header .header-nav .epigraph {
         color: $vol-9-red;
+        border-color: $vol-9-red;
+
+        &::before {
+            border-color: $vol-9-red;
+        }
     }
     .newsletter {
         &__wrapper {
@@ -100,6 +99,10 @@ body.page-template-home.site-theme-volume-nine {
     .latest .issue,
     .latest .issue::before {
         border-color: $vol-9-brown;
+    }
+
+    .latest .issue .ornament path {
+        fill: $vol-9-brown;
     }
 
     .explore__sections-link a .label:after {

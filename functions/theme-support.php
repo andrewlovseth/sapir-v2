@@ -150,6 +150,27 @@ function get_svg($svg) {
 }
 
 
+add_filter( 'searchwp\source\post\attributes\content', function( $content, $args ) {
+    if ( 'post' !== $args['post']->post_type ) {
+        return $content;
+    }
+
+    $authors = get_field('author');
+    $authors_string = '';
+
+    if($authors) {
+        foreach($authors as $author) {
+            $authors_string .= $author->post_content . ' ';
+        }
+    }
+
+    $html_segment = '<div class="search-meta">' . $authors_string . '</div>';
+    $content = $content . $html_segment;
+  
+    return $content;
+}, 20, 2 );
+
+
 function search_meta_to_content( $content ) {
     if(is_singular('post')) {
         $authors = get_field('author');

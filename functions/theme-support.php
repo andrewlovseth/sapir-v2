@@ -148,3 +148,23 @@ function get_svg($svg) {
 
     return $svg_file_new;
 }
+
+
+function search_meta_to_content( $content ) {
+    if(is_singular('post')) {
+        $authors = get_field('author');
+        $authors_string = '';
+
+        if($authors) {
+            foreach($authors as $author) {
+                $authors_string .= $author->post_content . ' ';
+            }
+        }
+
+        $html_segment = '<div class="search-meta">' . $authors_string . '</div>';
+        $content = $content . $html_segment;
+        return $content;
+    }
+
+}
+add_filter( 'the_content', 'search_meta_to_content', 99);

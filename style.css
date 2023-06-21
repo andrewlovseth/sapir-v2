@@ -3972,6 +3972,9 @@ body.single-post .wp-block-separator:before {
   height: 1rem;
   margin: 0 auto;
 }
+body.single-post .search-meta {
+  display: none;
+}
 body.single-post .article-footer {
   padding-top: 3rem;
 }

@@ -4315,6 +4315,69 @@ body.single-letters .letter .back a:before {
   }
 }
 
+.issue-theme-volume-one .sapir-star {
+  fill: #408ab6;
+}
+.issue-theme-volume-one .wp-block-pullquote:not(.basic) p {
+  color: #408ab6;
+}
+
+.issue-theme-volume-two .sapir-star {
+  fill: #66a05a;
+}
+.issue-theme-volume-two .wp-block-pullquote:not(.basic) p {
+  color: #66a05a;
+}
+
+.issue-theme-volume-three .sapir-star {
+  fill: #dd594d;
+}
+.issue-theme-volume-three .wp-block-pullquote:not(.basic) p {
+  color: #dd594d;
+}
+
+.issue-theme-volume-four .sapir-star {
+  fill: #c6c1a1;
+}
+.issue-theme-volume-four .wp-block-pullquote:not(.basic) p {
+  color: #c6c1a1;
+}
+
+.issue-theme-volume-five .sapir-star {
+  fill: #416eb4;
+}
+.issue-theme-volume-five .wp-block-pullquote:not(.basic) p {
+  color: #416eb4;
+}
+
+.issue-theme-volume-six .sapir-star {
+  fill: #e3745e;
+}
+.issue-theme-volume-six .wp-block-pullquote:not(.basic) p {
+  color: #e3745e;
+}
+
+.issue-theme-volume-seven .sapir-star {
+  fill: #3b3c59;
+}
+.issue-theme-volume-seven .wp-block-pullquote:not(.basic) p {
+  color: #3b3c59;
+}
+
+.issue-theme-volume-eight .site-banner .image {
+  height: 100px;
+}
+.issue-theme-volume-eight .site-banner .image img {
+  -o-object-position: bottom center;
+     object-position: bottom center;
+}
+.issue-theme-volume-eight .sapir-star {
+  fill: #c16c9c;
+}
+.issue-theme-volume-eight .wp-block-pullquote:not(.basic) p {
+  color: #c16c9c;
+}
+
 .site-theme-volume-nine .site-banner .image,
 .issue-theme-volume-nine .site-banner .image {
   height: 100px;
@@ -4465,65 +4528,155 @@ body.single-issue.site-theme-volume-nine .teaser__date .coming-soon {
   color: #bf575d;
 }
 
-.issue-theme-volume-eight .site-banner .image {
+.site-theme-volume-ten .site-banner .image,
+.issue-theme-volume-ten .site-banner .image {
   height: 100px;
 }
-.issue-theme-volume-eight .site-banner .image img {
+.site-theme-volume-ten .site-banner .image img,
+.issue-theme-volume-ten .site-banner .image img {
   -o-object-position: bottom center;
      object-position: bottom center;
 }
-.issue-theme-volume-eight .sapir-star {
-  fill: #c16c9c;
+.site-theme-volume-ten .sapir-star,
+.issue-theme-volume-ten .sapir-star {
+  fill: #89af66;
 }
-.issue-theme-volume-eight .wp-block-pullquote:not(.basic) p {
-  color: #c16c9c;
+.site-theme-volume-ten .wp-block-pullquote:not(.basic) p,
+.issue-theme-volume-ten .wp-block-pullquote:not(.basic) p {
+  color: #89af66;
+}
+.site-theme-volume-ten .teaser__title a:hover,
+.issue-theme-volume-ten .teaser__title a:hover {
+  color: #89af66;
+}
+.site-theme-volume-ten .teaser__author-link:hover .teaser__author-name:after,
+.issue-theme-volume-ten .teaser__author-link:hover .teaser__author-name:after {
+  background: rgba(137, 175, 102, 0.5);
+}
+.site-theme-volume-ten .cta .btn,
+.issue-theme-volume-ten .cta .btn {
+  border-color: #f8ca7d;
+  color: #000;
+}
+.site-theme-volume-ten .cta .btn:hover,
+.issue-theme-volume-ten .cta .btn:hover {
+  background-color: #f8ca7d;
+  border-color: #f8ca7d;
+  color: #fff;
+}
+.site-theme-volume-ten .site-header .header-nav .epigraph,
+.issue-theme-volume-ten .site-header .header-nav .epigraph {
+  color: #89af66;
+  border-color: #89af66;
+}
+.site-theme-volume-ten .site-header .header-nav .epigraph::before,
+.issue-theme-volume-ten .site-header .header-nav .epigraph::before {
+  border-color: #89af66;
+}
+.site-theme-volume-ten .newsletter__wrapper,
+.issue-theme-volume-ten .newsletter__wrapper {
+  background: rgba(137, 175, 102, 0.1);
+}
+.site-theme-volume-ten .newsletter .section-header h3,
+.issue-theme-volume-ten .newsletter .section-header h3 {
+  color: #89af66;
+}
+.site-theme-volume-ten .newsletter .form-wrapper input.email,
+.issue-theme-volume-ten .newsletter .form-wrapper input.email {
+  border-color: #89af66;
+  color: #89af66;
+}
+.site-theme-volume-ten .newsletter .form-wrapper input.email::-webkit-input-placeholder,
+.issue-theme-volume-ten .newsletter .form-wrapper input.email::-webkit-input-placeholder {
+  color: #000;
+}
+.site-theme-volume-ten .newsletter .form-wrapper input.email::-moz-placeholder,
+.issue-theme-volume-ten .newsletter .form-wrapper input.email::-moz-placeholder {
+  color: #000;
+}
+.site-theme-volume-ten .newsletter .form-wrapper input.email:-moz-placeholder,
+.issue-theme-volume-ten .newsletter .form-wrapper input.email:-moz-placeholder {
+  color: #000;
+}
+.site-theme-volume-ten .newsletter .form-wrapper input.email:-ms-input-placeholder,
+.issue-theme-volume-ten .newsletter .form-wrapper input.email:-ms-input-placeholder {
+  color: #000;
+}
+.site-theme-volume-ten .newsletter .form-wrapper input.button,
+.issue-theme-volume-ten .newsletter .form-wrapper input.button {
+  background: #89af66;
+}
+.site-theme-volume-ten ::-moz-selection,
+.issue-theme-volume-ten ::-moz-selection {
+  background: #89af66;
+  color: #fff;
+  text-shadow: none;
+}
+.site-theme-volume-ten ::-moz-selection, .issue-theme-volume-ten ::-moz-selection {
+  background: #89af66;
+  color: #fff;
+  text-shadow: none;
+}
+.site-theme-volume-ten ::selection,
+.issue-theme-volume-ten ::selection {
+  background: #89af66;
+  color: #fff;
+  text-shadow: none;
 }
 
-.issue-theme-volume-seven .sapir-star {
-  fill: #3b3c59;
+body.page-template-home.site-theme-volume-ten .latest .issue,
+body.page-template-home.site-theme-volume-ten .latest .issue::before {
+  border-color: #f8ca7d;
 }
-.issue-theme-volume-seven .wp-block-pullquote:not(.basic) p {
-  color: #3b3c59;
+body.page-template-home.site-theme-volume-ten .latest .issue .ornament path {
+  fill: #f8ca7d;
 }
-
-.issue-theme-volume-six .sapir-star {
-  fill: #e3745e;
+body.page-template-home.site-theme-volume-ten .explore__sections-link a .label:after {
+  background: rgba(137, 175, 102, 0.5);
 }
-.issue-theme-volume-six .wp-block-pullquote:not(.basic) p {
-  color: #e3745e;
+body.page-template-home.site-theme-volume-ten .explore__topics-list a:after {
+  background: rgba(137, 175, 102, 0.5);
 }
-
-.issue-theme-volume-five .sapir-star {
-  fill: #416eb4;
+body.page-template-home.site-theme-volume-ten .most-read,
+body.page-template-home.site-theme-volume-ten .most-read::before {
+  border-color: #f8ca7d;
+  color: #f8ca7d;
 }
-.issue-theme-volume-five .wp-block-pullquote:not(.basic) p {
-  color: #416eb4;
+body.page-template-home.site-theme-volume-ten .most-read a {
+  color: #89af66;
 }
-
-.issue-theme-volume-four .sapir-star {
-  fill: #c6c1a1;
+body.page-template-home.site-theme-volume-ten .quote__header .section-title {
+  color: #89af66;
 }
-.issue-theme-volume-four .wp-block-pullquote:not(.basic) p {
-  color: #c6c1a1;
+body.page-template-home.site-theme-volume-ten .quote blockquote {
+  background: rgba(248, 202, 125, 0.1);
+  color: #89af66;
 }
-
-.issue-theme-volume-three .sapir-star {
-  fill: #dd594d;
+body.page-template-home.site-theme-volume-ten .quote blockquote::before, body.page-template-home.site-theme-volume-ten .quote blockquote::after {
+  color: rgba(248, 202, 125, 0.7);
 }
-.issue-theme-volume-three .wp-block-pullquote:not(.basic) p {
-  color: #dd594d;
-}
-
-.issue-theme-volume-two .sapir-star {
-  fill: #66a05a;
-}
-.issue-theme-volume-two .wp-block-pullquote:not(.basic) p {
-  color: #66a05a;
+body.page-template-home.site-theme-volume-ten .quote a:hover blockquote::before, body.page-template-home.site-theme-volume-ten .quote a:hover blockquote::after {
+  color: #89af66;
 }
 
-.issue-theme-volume-one .sapir-star {
-  fill: #408ab6;
+body.single-post .issue-theme-volume-ten .article-header .authors a:hover {
+  border-color: rgba(137, 175, 102, 0.5);
 }
-.issue-theme-volume-one .wp-block-pullquote:not(.basic) p {
-  color: #408ab6;
+body.single-post .issue-theme-volume-ten .article-footer__links .btn,
+body.single-post .issue-theme-volume-ten .article-footer__links .btn:before {
+  border-color: #f8ca7d;
+}
+body.single-post .issue-theme-volume-ten .article-footer__links .btn {
+  color: #000;
+}
+body.single-post .issue-theme-volume-ten .article-footer__links .btn:hover {
+  background-color: #f8ca7d;
+  color: #fff;
+}
+
+body.single-issue .issue-theme-volume-ten .issue__header .ornament svg path {
+  fill: #f8ca7d;
+}
+body.single-issue .issue-theme-volume-ten .teaser__date .coming-soon {
+  color: #89af66;
 }

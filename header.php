@@ -15,7 +15,6 @@
     $current_issue = get_field('latest_current_issue', $home);
     $current_issue_slug = 'site-theme-' . sanitize_title_with_dashes(get_field('volume', $current_issue->ID));
 
-
     if(is_single() && 'post' == get_post_type()) {
         $issue = get_field('issue');
 		$volume = get_field('volume', $issue->ID);
@@ -24,10 +23,11 @@
     } elseif(is_single() && 'issue' == get_post_type())  {
         $volume = get_field('volume');
 		$issue_class = ' issue-theme-' . sanitize_title_with_dashes($volume);
+
     } else {
 		$issue_class = '';
-	}
 
+	}
 ?>
 
 

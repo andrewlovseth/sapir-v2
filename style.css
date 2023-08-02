@@ -4539,144 +4539,147 @@ body.single-issue.site-theme-volume-nine .teaser__date .coming-soon {
 }
 .site-theme-volume-ten .sapir-star,
 .issue-theme-volume-ten .sapir-star {
-  fill: #89af66;
+  fill: #91b869;
 }
 .site-theme-volume-ten .wp-block-pullquote:not(.basic) p,
 .issue-theme-volume-ten .wp-block-pullquote:not(.basic) p {
-  color: #89af66;
+  color: #91b869;
 }
 .site-theme-volume-ten .teaser__title a:hover,
 .issue-theme-volume-ten .teaser__title a:hover {
-  color: #89af66;
+  color: #33aebe;
 }
 .site-theme-volume-ten .teaser__author-link:hover .teaser__author-name:after,
 .issue-theme-volume-ten .teaser__author-link:hover .teaser__author-name:after {
-  background: rgba(137, 175, 102, 0.5);
+  background: rgba(51, 174, 190, 0.5);
 }
 .site-theme-volume-ten .cta .btn,
 .issue-theme-volume-ten .cta .btn {
-  border-color: #f8ca7d;
+  border-color: #b0a2ce;
   color: #000;
 }
 .site-theme-volume-ten .cta .btn:hover,
 .issue-theme-volume-ten .cta .btn:hover {
-  background-color: #f8ca7d;
-  border-color: #f8ca7d;
+  background-color: #b0a2ce;
+  border-color: #b0a2ce;
   color: #fff;
 }
 .site-theme-volume-ten .site-header .header-nav .epigraph,
 .issue-theme-volume-ten .site-header .header-nav .epigraph {
-  color: #89af66;
-  border-color: #89af66;
+  color: #173256;
+  border-color: #173256;
 }
 .site-theme-volume-ten .site-header .header-nav .epigraph::before,
 .issue-theme-volume-ten .site-header .header-nav .epigraph::before {
-  border-color: #89af66;
+  border-color: #173256;
 }
 .site-theme-volume-ten .newsletter__wrapper,
 .issue-theme-volume-ten .newsletter__wrapper {
-  background: rgba(137, 175, 102, 0.1);
+  background: rgba(176, 162, 206, 0.25);
 }
 .site-theme-volume-ten .newsletter .section-header h3,
 .issue-theme-volume-ten .newsletter .section-header h3 {
-  color: #89af66;
+  color: #173256;
 }
 .site-theme-volume-ten .newsletter .form-wrapper input.email,
 .issue-theme-volume-ten .newsletter .form-wrapper input.email {
-  border-color: #89af66;
-  color: #89af66;
+  border-color: #173256;
+  color: #173256;
 }
 .site-theme-volume-ten .newsletter .form-wrapper input.email::-webkit-input-placeholder,
 .issue-theme-volume-ten .newsletter .form-wrapper input.email::-webkit-input-placeholder {
-  color: #000;
+  color: #424254;
 }
 .site-theme-volume-ten .newsletter .form-wrapper input.email::-moz-placeholder,
 .issue-theme-volume-ten .newsletter .form-wrapper input.email::-moz-placeholder {
-  color: #000;
+  color: #424254;
 }
 .site-theme-volume-ten .newsletter .form-wrapper input.email:-moz-placeholder,
 .issue-theme-volume-ten .newsletter .form-wrapper input.email:-moz-placeholder {
-  color: #000;
+  color: #424254;
 }
 .site-theme-volume-ten .newsletter .form-wrapper input.email:-ms-input-placeholder,
 .issue-theme-volume-ten .newsletter .form-wrapper input.email:-ms-input-placeholder {
-  color: #000;
+  color: #424254;
 }
 .site-theme-volume-ten .newsletter .form-wrapper input.button,
 .issue-theme-volume-ten .newsletter .form-wrapper input.button {
-  background: #89af66;
+  background: #173256;
 }
 .site-theme-volume-ten ::-moz-selection,
 .issue-theme-volume-ten ::-moz-selection {
-  background: #89af66;
+  background: #91b869;
   color: #fff;
   text-shadow: none;
 }
 .site-theme-volume-ten ::-moz-selection, .issue-theme-volume-ten ::-moz-selection {
-  background: #89af66;
+  background: #91b869;
   color: #fff;
   text-shadow: none;
 }
 .site-theme-volume-ten ::selection,
 .issue-theme-volume-ten ::selection {
-  background: #89af66;
+  background: #91b869;
   color: #fff;
   text-shadow: none;
 }
 
 body.page-template-home.site-theme-volume-ten .latest .issue,
 body.page-template-home.site-theme-volume-ten .latest .issue::before {
-  border-color: #f8ca7d;
+  border-color: #173256;
 }
 body.page-template-home.site-theme-volume-ten .latest .issue .ornament path {
-  fill: #f8ca7d;
+  fill: #b0a2ce;
 }
 body.page-template-home.site-theme-volume-ten .explore__sections-link a .label:after {
-  background: rgba(137, 175, 102, 0.5);
+  background: rgba(145, 184, 105, 0.5);
 }
 body.page-template-home.site-theme-volume-ten .explore__topics-list a:after {
-  background: rgba(137, 175, 102, 0.5);
+  background: rgba(145, 184, 105, 0.5);
 }
 body.page-template-home.site-theme-volume-ten .most-read,
 body.page-template-home.site-theme-volume-ten .most-read::before {
-  border-color: #f8ca7d;
-  color: #f8ca7d;
+  border-color: #33aebe;
+  color: #33aebe;
 }
 body.page-template-home.site-theme-volume-ten .most-read a {
-  color: #89af66;
+  color: #33aebe;
 }
 body.page-template-home.site-theme-volume-ten .quote__header .section-title {
-  color: #89af66;
+  color: #173256;
 }
 body.page-template-home.site-theme-volume-ten .quote blockquote {
-  background: rgba(248, 202, 125, 0.1);
-  color: #89af66;
+  background: rgba(176, 162, 206, 0.25);
+  color: #173256;
 }
 body.page-template-home.site-theme-volume-ten .quote blockquote::before, body.page-template-home.site-theme-volume-ten .quote blockquote::after {
-  color: rgba(248, 202, 125, 0.7);
+  color: rgba(23, 50, 86, 0.7);
 }
 body.page-template-home.site-theme-volume-ten .quote a:hover blockquote::before, body.page-template-home.site-theme-volume-ten .quote a:hover blockquote::after {
-  color: #89af66;
+  color: #173256;
 }
 
 body.single-post .issue-theme-volume-ten .article-header .authors a:hover {
-  border-color: rgba(137, 175, 102, 0.5);
+  border-color: rgba(145, 184, 105, 0.5);
 }
 body.single-post .issue-theme-volume-ten .article-footer__links .btn,
 body.single-post .issue-theme-volume-ten .article-footer__links .btn:before {
-  border-color: #f8ca7d;
+  border-color: #91b869;
 }
 body.single-post .issue-theme-volume-ten .article-footer__links .btn {
   color: #000;
 }
 body.single-post .issue-theme-volume-ten .article-footer__links .btn:hover {
-  background-color: #f8ca7d;
+  background-color: #91b869;
   color: #fff;
 }
 
 body.single-issue .issue-theme-volume-ten .issue__header .ornament svg path {
-  fill: #f8ca7d;
+  fill: #b0a2ce;
+}
+body.single-issue .issue-theme-volume-ten .issue__contents-header {
+  color: #173256;
 }
 body.single-issue .issue-theme-volume-ten .teaser__date .coming-soon {
-  color: #89af66;
+  color: #91b869;
 }

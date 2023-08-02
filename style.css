@@ -3920,7 +3920,7 @@ body.single-post .wp-block-pullquote:not(.basic) blockquote > * + * {
   margin-top: 2rem;
 }
 body.single-post .wp-block-pullquote.basic {
-  margin: 2.5rem 0 0 0;
+  margin: 1.5rem 0 0 0;
   padding: 0 0 0 2rem;
   text-align: left;
   max-width: 100%;

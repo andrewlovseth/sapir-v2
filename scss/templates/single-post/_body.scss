@@ -77,13 +77,14 @@ article.dropcap {
 
     ol,
     ul {
+        clear: both;
         padding-left: 1rem;
 
         li {
             padding-left: 1rem;
 
             & + li {
-                margin-top: 2.5rem;
+                margin-top: 1.5rem;
             }
 
             .indent {

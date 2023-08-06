@@ -3854,6 +3854,7 @@ body.single-post .article-body ul {
 }
 body.single-post .article-body ol,
 body.single-post .article-body ul {
+  clear: both;
   padding-left: 1rem;
 }
 body.single-post .article-body ol li,
@@ -3862,7 +3863,7 @@ body.single-post .article-body ul li {
 }
 body.single-post .article-body ol li + li,
 body.single-post .article-body ul li + li {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 body.single-post .article-body ol li .indent,
 body.single-post .article-body ul li .indent {

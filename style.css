@@ -3941,6 +3941,10 @@ body.single-post .wp-block-pullquote.basic.extended p + p {
     width: calc(100% + 20vw);
     margin-left: -10vw;
   }
+  body.single-post .wp-block-image.inset {
+    width: unset;
+    margin-left: unset;
+  }
 }
 body.single-post .wp-block-image figcaption {
   text-align: center;

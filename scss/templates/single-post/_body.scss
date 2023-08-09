@@ -183,6 +183,11 @@ article.dropcap {
     @include tablet {
         width: calc(100% + 20vw);
         margin-left: -10vw;
+
+        &.inset {
+            width: unset;
+            margin-left: unset;
+        }
     }
 
     figcaption {

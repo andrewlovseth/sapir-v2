@@ -3670,26 +3670,30 @@ body.single-post .article-header .authors {
   align-items: center;
   font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
 }
-body.single-post .article-header .authors em {
+body.single-post .article-header .authors-by {
   display: block;
   padding-right: 0.375rem;
 }
-body.single-post .article-header .authors a {
+body.single-post .article-header .authors-list {
+  display: flex;
+  align-items: center;
+}
+body.single-post .article-header .authors-item + .authors-item:before {
+  content: ",";
+  padding-right: 0.5rem;
+}
+body.single-post .article-header .authors-item + .authors-item:nth-child(n+2):before {
+  content: "&";
+  padding-left: 0.5rem;
+}
+body.single-post .article-header .authors-link {
   text-transform: uppercase;
   letter-spacing: 0.025em;
   padding-bottom: 2px;
   border-bottom: 1px solid transparent;
 }
-body.single-post .article-header .authors a:hover {
+body.single-post .article-header .authors-link:hover {
   border-bottom: 1px solid rgba(158, 154, 175, 0.5);
-}
-body.single-post .article-header .authors a + a:before {
-  content: ",";
-  padding-right: 0.5rem;
-}
-body.single-post .article-header .authors a + a:nth-child(n+3):before {
-  content: "&";
-  padding-left: 0.5rem;
 }
 body.single-post .article-header .authors.authors-2 a + a:before {
   content: "&";

@@ -34,7 +34,7 @@
 
             span + span {
                 &:before {
-                    content: '|';
+                    content: "|";
                     padding: 0 0.5rem;
                 }
             }
@@ -102,36 +102,42 @@
         align-items: center;
         font-size: $type-size-300;
 
-        em {
+        &-by {
             display: block;
             padding-right: 0.375rem;
         }
 
-        a {
+        &-list {
+            display: flex;
+            align-items: center;
+        }
+
+        &-item {
+            & + .authors-item:before {
+                content: ",";
+                padding-right: 0.5rem;
+            }
+
+            & + .authors-item:nth-child(n + 2):before {
+                content: "&";
+                padding-left: 0.5rem;
+            }
+        }
+
+        &-link {
             text-transform: uppercase;
             letter-spacing: 0.025em;
-
             padding-bottom: 2px;
             border-bottom: 1px solid transparent;
 
             &:hover {
                 border-bottom: 1px solid rgba($light-blue, 0.5);
             }
-
-            & + a:before {
-                content: ',';
-                padding-right: 0.5rem;
-            }
-
-            & + a:nth-child(n + 3):before {
-                content: '&';
-                padding-left: 0.5rem;
-            }
         }
 
         &.authors-2 {
             a + a:before {
-                content: '&';
+                content: "&";
                 padding-left: 0.5rem;
                 padding-right: 0.5rem;
             }
@@ -160,19 +166,19 @@
             }
 
             & + a:before {
-                content: ',';
+                content: ",";
                 padding-right: 0.5rem;
             }
 
             & + a:nth-child(n + 3):before {
-                content: '&';
+                content: "&";
                 padding-left: 0.5rem;
             }
         }
 
         &.interviewers-2 {
             a + a:before {
-                content: '&';
+                content: "&";
                 padding-left: 0.5rem;
                 padding-right: 0.5rem;
             }
@@ -196,7 +202,7 @@
 
             &:before {
                 display: block;
-                content: '';
+                content: "";
                 width: 1.5rem;
                 height: 1.5rem;
                 background: url(images/icon-pdf.svg) no-repeat 0 0;
@@ -205,7 +211,7 @@
                 transform: translateY(-2px);
             }
 
-            @include span-hover-underline('span');
+            @include span-hover-underline("span");
         }
     }
 

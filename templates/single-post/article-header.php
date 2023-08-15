@@ -66,10 +66,10 @@
 
     <?php if($authors): ?>
         <div class="authors authors-<?php echo $authors_count; ?>">
-            <em>by</em>
+            <em class="authors-by">by</em>
 
             <div class="authors-list">
-                <?php foreach($authors as $author): ?><a href="<?php echo get_permalink($author); ?>"><?php echo get_the_title($author); ?></a><?php endforeach; ?>
+                <?php foreach($authors as $author): ?><div class="authors-item"><a class="authors-link" href="<?php echo get_permalink($author); ?>"><?php echo get_the_title($author); ?></a></div><?php endforeach; ?>
             </div>
         </div>
     <?php endif; ?>    

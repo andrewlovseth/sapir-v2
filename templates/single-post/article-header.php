@@ -25,6 +25,7 @@
 
     $epigraph = get_field('epigraph');
     $simple_epigraph = get_field('simple_epigraph');
+    $pre_article_note = get_field('pre_article_note');
 
     $pdf = get_field('pdf'); 
 
@@ -135,6 +136,12 @@
             <div class="copy">
                 <p><?php echo $simple_epigraph; ?></p>
             </div>
+        </div>
+    <?php endif; ?>
+
+    <?php if($pre_article_note): ?>
+        <div class="pre-article-note copy">
+            <?php echo $pre_article_note; ?>
         </div>
     <?php endif; ?>
 

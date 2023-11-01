@@ -923,23 +923,13 @@ body {
   }
 }
 .teaser-large .teaser__dek {
-  font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
+  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
   line-height: 1.5em;
   padding-top: 1rem;
 }
-@media screen and (min-width: 768px) {
-  .teaser-large .teaser__dek {
-    font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
-  }
-}
 .teaser-large .teaser__authors {
-  font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
   padding-top: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .teaser-large .teaser__authors {
-    font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
-  }
+  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
 }
 .teaser-small + .teaser-small {
   padding-top: 2rem;

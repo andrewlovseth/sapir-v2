@@ -22,12 +22,12 @@
 
         &::after {
             display: inline-block;
-            content: ',';
+            content: ",";
             padding-right: 0.125rem;
         }
 
         &:nth-last-child(2)::after {
-            content: '&';
+            content: "&";
             padding: 0 0.25rem 0 0.375rem;
         }
 
@@ -45,7 +45,7 @@
                 text-decoration: none;
             }
 
-            @include span-hover-underline('.teaser__author-name');
+            @include span-hover-underline(".teaser__author-name");
 
             .teaser__author-name {
                 position: relative;
@@ -69,12 +69,12 @@
 
         &::after {
             display: inline-block;
-            content: ',';
+            content: ",";
             padding-right: 0.125rem;
         }
 
         &:nth-last-child(2)::after {
-            content: '&';
+            content: "&";
             padding: 0 0.25rem 0 0.375rem;
         }
 
@@ -90,7 +90,7 @@
                 text-decoration: none;
             }
 
-            @include span-hover-underline('.teaser__interviewer-name');
+            @include span-hover-underline(".teaser__interviewer-name");
 
             .teaser__interviewer-name {
                 position: relative;
@@ -126,22 +126,14 @@
             }
 
             &__dek {
-                font-size: $type-size-200;
+                font-size: $type-size-300;
                 line-height: 1.5em;
                 padding-top: 1rem;
-
-                @include tablet {
-                    font-size: $type-size-300;
-                }
             }
 
             &__authors {
-                font-size: $type-size-200;
                 padding-top: 1rem;
-
-                @include tablet {
-                    font-size: $type-size-300;
-                }
+                font-size: $type-size-300;
             }
         }
     }

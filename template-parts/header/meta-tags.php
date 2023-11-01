@@ -5,7 +5,7 @@
 
     if(is_single() && 'post' == get_post_type()) {
         $issue = get_field('issue');
-        $image = get_field('meta_image', $issue->ID);
+        $image = get_field('meta_image', $issue);
     } elseif(is_single() && 'issue' == get_post_type())  {
         $image = get_field('meta_image');
     } else {

@@ -1,7 +1,7 @@
 <?php
 
     $issue = get_field('issue');
-    $issue_url = get_permalink($issue->ID);
+    $issue_url = get_permalink($issue);
     $authors = get_field('author');
 
 ?>
@@ -34,8 +34,8 @@
 
     <div class="article-footer__links">
         <div class="cta">
-            <a class="btn small-upper" href="<?php echo site_url('/contact/'); ?>">
-                <span class="label">Write a Letter<br/> to the editor</span>
+            <a class="btn small-upper" href="<?php echo site_url('/newsletter/'); ?>">
+                <span class="label">Subscribe to the<br/> <span class="small-caps">Sapir</span> newsletter</span>
             </a>
         </div>
 

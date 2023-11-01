@@ -1,8 +1,8 @@
 <?php
 
     $issue = get_field('issue');
-    $volume = get_field('volume', $issue->ID);
-    $season = get_field('season', $issue->ID); 
+    $volume = get_field('volume', $issue);
+    $season = get_field('season', $issue); 
 
     $display_title = get_field('display_title');
     if($display_title) {
@@ -31,7 +31,7 @@
 
     $external_links = get_field('external_links');
     $links_header = $external_links['header'];
-    $volume = get_field('volume', $issue->ID);
+    $volume = get_field('volume', $issue);
 
     $banner = get_field('banner'); 
     

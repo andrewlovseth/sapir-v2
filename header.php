@@ -17,7 +17,7 @@
 
     if(is_single() && 'post' == get_post_type()) {
         $issue = get_field('issue');
-		$volume = get_field('volume', $issue->ID);
+		$volume = get_field('volume', $issue);
 		$issue_class = ' issue-theme-' . sanitize_title_with_dashes($volume);
 
     } elseif(is_single() && 'issue' == get_post_type())  {

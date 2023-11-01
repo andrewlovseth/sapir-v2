@@ -4,7 +4,7 @@
 
     if(is_single() && 'post' == get_post_type()) {
         $issue = get_field('issue');
-        $banner_image = get_field('banner', $issue->ID);
+        $banner_image = get_field('banner', $issue);
 
         if($banner_image) {
             $banner = $banner_image;

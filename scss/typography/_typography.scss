@@ -27,6 +27,10 @@ a {
 .small-caps {
     font-variant: small-caps;
     letter-spacing: 0.075em;
+
+    &.lower {
+        text-transform: lowercase;
+    }
 }
 
 @import "headings";

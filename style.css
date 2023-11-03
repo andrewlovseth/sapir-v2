@@ -371,6 +371,9 @@ a {
   font-variant: small-caps;
   letter-spacing: 0.075em;
 }
+.small-caps.lower {
+  text-transform: lowercase;
+}
 
 .page-header {
   padding-bottom: 2rem;

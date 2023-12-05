@@ -1,0 +1,193 @@
+$vol-11-green: #91b869;
+$vol-11-dark-blue: #173256;
+$vol-11-purple: #b0a2ce;
+$vol-11-turquoise: #33aebe;
+$vol-11-light-orange: #f8ca7d;
+
+$vol-11-orange: #c86547;
+$vol-11-dusky-purple: #8b8187;
+$vol-11-bright-purple: #aaa1cd;
+$vol-11-pale-blue: #7cacbe;
+$vol-11-dark-green: #214547;
+
+.site-theme-volume-eleven,
+.issue-theme-volume-eleven {
+    .site-banner {
+        .image {
+            height: 100px;
+
+            img {
+                object-position: bottom center;
+            }
+        }
+    }
+
+    .sapir-star {
+        fill: $vol-11-bright-purple;
+    }
+
+    .wp-block-pullquote:not(.basic) {
+        p {
+            color: $vol-11-orange;
+        }
+    }
+
+    .teaser__title a:hover {
+        color: $vol-11-orange;
+    }
+
+    .teaser__author-link:hover .teaser__author-name:after {
+        background: rgba($vol-11-orange, 0.5);
+    }
+
+    .cta .btn {
+        border-color: $vol-11-dusky-purple;
+        color: $black;
+
+        &:hover {
+            background-color: $vol-11-dusky-purple;
+            border-color: $vol-11-dusky-purple;
+            color: $white;
+        }
+    }
+
+    .site-header .header-nav .epigraph {
+        color: $vol-11-orange;
+        border-color: $vol-11-orange;
+
+        &::before {
+            border-color: $vol-11-orange;
+        }
+    }
+
+    .newsletter {
+        &__wrapper {
+            background: rgba($vol-11-pale-blue, 0.5);
+        }
+
+        .section-header h3 {
+            color: $black;
+        }
+
+        .form-wrapper {
+            input.email {
+                border-color: $black;
+                color: $black;
+
+                @include placeholder {
+                    color: rgba($black, 0.7);
+                }
+            }
+            input.button {
+                background: $black;
+            }
+        }
+    }
+
+    ::-moz-selection {
+        background: $vol-11-orange;
+        color: $white;
+        text-shadow: none;
+    }
+
+    ::selection {
+        background: $vol-11-orange;
+        color: $white;
+        text-shadow: none;
+    }
+}
+
+body.page-template-home.site-theme-volume-eleven {
+    .latest .issue,
+    .latest .issue::before {
+        border-color: $vol-11-dusky-purple;
+    }
+
+    .latest .issue .ornament path {
+        fill: $vol-11-dusky-purple;
+    }
+
+    .explore__sections-link a .label:after {
+        background: rgba($vol-11-orange, 0.5);
+    }
+
+    .explore__topics-list a:after {
+        background: rgba($vol-11-orange, 0.5);
+    }
+
+    .most-read,
+    .most-read::before {
+        border-color: $vol-11-orange;
+        color: $vol-11-orange;
+    }
+
+    .most-read {
+        a {
+            color: $vol-11-orange;
+        }
+    }
+
+    .quote {
+        &__header {
+            .section-title {
+                color: $vol-11-dusky-purple;
+            }
+        }
+
+        blockquote {
+            background: rgba($vol-11-pale-blue, 0.5);
+            color: rgba($black, 0.7);
+
+            &::before,
+            &::after {
+                color: rgba($black, 0.7);
+            }
+        }
+
+        a:hover {
+            blockquote {
+                &::before,
+                &::after {
+                    color: $black;
+                }
+
+                color: $black;
+            }
+        }
+    }
+}
+
+body.single-post .issue-theme-volume-eleven {
+    .article-header .authors a:hover {
+        border-color: rgba($vol-11-orange, 0.5);
+    }
+
+    .article-footer__links {
+        .btn,
+        .btn:before {
+            border-color: $vol-11-dusky-purple;
+        }
+
+        .btn {
+            color: $black;
+            &:hover {
+                background-color: $vol-11-dusky-purple;
+                color: $white;
+            }
+        }
+    }
+}
+
+body.single-issue .issue-theme-volume-eleven {
+    .issue__header .ornament svg path {
+        fill: $vol-11-bright-purple;
+    }
+
+    .issue__contents-header {
+        color: $vol-11-pale-blue;
+    }
+
+    .teaser__date .coming-soon {
+        color: $vol-11-orange;
+    }
+}

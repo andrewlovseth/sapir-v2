@@ -4387,7 +4387,12 @@ body.single-letters .letter .back a:before {
 }
 
 .issue-theme-volume-eight .site-banner .image {
-  height: 100px;
+  height: 48px;
+}
+@media screen and (min-width: 768px) {
+  .issue-theme-volume-eight .site-banner .image {
+    height: 96px;
+  }
 }
 .issue-theme-volume-eight .site-banner .image img {
   -o-object-position: bottom center;
@@ -4402,7 +4407,13 @@ body.single-letters .letter .back a:before {
 
 .site-theme-volume-nine .site-banner .image,
 .issue-theme-volume-nine .site-banner .image {
-  height: 100px;
+  height: 48px;
+}
+@media screen and (min-width: 768px) {
+  .site-theme-volume-nine .site-banner .image,
+  .issue-theme-volume-nine .site-banner .image {
+    height: 96px;
+  }
 }
 .site-theme-volume-nine .site-banner .image img,
 .issue-theme-volume-nine .site-banner .image img {
@@ -4552,7 +4563,13 @@ body.single-issue.site-theme-volume-nine .teaser__date .coming-soon {
 
 .site-theme-volume-ten .site-banner .image,
 .issue-theme-volume-ten .site-banner .image {
-  height: 100px;
+  height: 48px;
+}
+@media screen and (min-width: 768px) {
+  .site-theme-volume-ten .site-banner .image,
+  .issue-theme-volume-ten .site-banner .image {
+    height: 96px;
+  }
 }
 .site-theme-volume-ten .site-banner .image img,
 .issue-theme-volume-ten .site-banner .image img {
@@ -4871,7 +4888,13 @@ body.single-issue .issue-theme-special-edition .teaser__date .coming-soon {
 
 .site-theme-volume-eleven .site-banner .image,
 .issue-theme-volume-eleven .site-banner .image {
-  height: 100px;
+  height: 48px;
+}
+@media screen and (min-width: 768px) {
+  .site-theme-volume-eleven .site-banner .image,
+  .issue-theme-volume-eleven .site-banner .image {
+    height: 96px;
+  }
 }
 .site-theme-volume-eleven .site-banner .image img,
 .issue-theme-volume-eleven .site-banner .image img {

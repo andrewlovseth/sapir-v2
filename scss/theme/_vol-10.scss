@@ -8,7 +8,11 @@ $vol-10-light-orange: #f8ca7d;
 .issue-theme-volume-ten {
     .site-banner {
         .image {
-            height: 100px;
+            height: 48px;
+
+            @include tablet {
+                height: 96px;
+            }
 
             img {
                 object-position: bottom center;

@@ -14,7 +14,11 @@ $vol-11-dark-green: #214547;
 .issue-theme-volume-eleven {
     .site-banner {
         .image {
-            height: 100px;
+            height: 48px;
+
+            @include tablet {
+                height: 96px;
+            }
 
             img {
                 object-position: bottom center;

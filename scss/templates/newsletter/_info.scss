@@ -17,14 +17,6 @@
         @include tablet {
             font-size: $type-size-700;
         }
-
-        span {
-            display: block;
-
-            & + span {
-                padding-top: 1rem;
-            }
-        }
     }
 
     &__copy {

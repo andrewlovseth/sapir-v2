@@ -3052,12 +3052,6 @@ body.page-template-newsletter .info__title {
     font-size: clamp(1.8rem, 1.54rem + 1.29vw, 2.34rem);
   }
 }
-body.page-template-newsletter .info__title span {
-  display: block;
-}
-body.page-template-newsletter .info__title span + span {
-  padding-top: 1rem;
-}
 body.page-template-newsletter .info__copy {
   padding: 2rem 0;
 }

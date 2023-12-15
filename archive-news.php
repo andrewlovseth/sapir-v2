@@ -20,7 +20,7 @@
                     </div>
 
                     <div class="excerpt">
-                        <p><?php $char_limit = 180; $content = $post->post_content; echo substr(strip_tags($content), 0, $char_limit)  . '...'; ?> <a href="<?php the_permalink(); ?>">Read more</a></p>
+                    <p><?php echo get_the_excerpt(); ?></p>
                     </div>
                 </div>
                 

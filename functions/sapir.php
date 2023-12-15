@@ -14,6 +14,8 @@ function wrap_sapir_in_span( $content ) {
 add_filter( 'the_title', 'wrap_sapir_in_span', 10 );
 
 add_filter( 'the_content', 'wrap_sapir_in_span', 10 );
+add_filter( 'get_the_excerpt', 'wrap_sapir_in_span', 10 );
+
 add_filter( 'acf/load_value/key=field_63c78da692d45', 'wrap_sapir_in_span', 10 );
 add_filter( 'acf/load_value/key=field_63cc5065418fe', 'wrap_sapir_in_span', 10 );
 add_filter( 'acf/load_value/key=field_6086ed537d153', 'wrap_sapir_in_span', 10 );
@@ -30,6 +32,3 @@ function wrap_sapir_in_span_array( $content ) {
 
 
 add_filter('acf/load_value/key=field_63c59df0c760d', 'wrap_sapir_in_span_array');
-
-
-

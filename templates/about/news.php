@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="news__copy copy copy-2">
-                    <p><?php $char_limit = 240; $content = $post->post_content; echo substr(strip_tags($content), 0, $char_limit)  . '...'; ?></p>
+                    <p><?php echo get_the_excerpt(); ?></p>
                 </div>
                 
                 <div class="news__cta cta">

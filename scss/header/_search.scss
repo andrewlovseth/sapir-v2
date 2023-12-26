@@ -20,10 +20,27 @@
             font-weight: bold;
             color: $black;
             margin-right: 0.75rem;
+            white-space: nowrap;
 
             &:hover {
                 text-decoration: underline;
             }
+        }
+    }
+
+    .newsletter-link {
+        position: relative;
+        background: #e2d98e;
+        transition: all 300ms ease;
+        padding: 0.25rem 1.5rem;
+
+        &:hover {
+            text-decoration: none;
+            background: lighten(#e2d98e, 5%);
+        }
+
+        @include tablet {
+            margin-right: 1.5rem;
         }
     }
 

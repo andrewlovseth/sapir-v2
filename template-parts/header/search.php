@@ -1,4 +1,6 @@
 <div class="search">
+    <a href="<?php echo site_url('/newsletter/'); ?>" class="about-link newsletter-link">Sign Up</a>
+
     <a href="<?php echo site_url('/about/'); ?>" class="about-link">About Us</a>
 
     <a href="#" class="js-search-trigger search__icon">

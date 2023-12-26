@@ -1358,9 +1358,25 @@ body.single-post.postid-2036 body.single-post article.dropcap .article-body p.dr
     font-weight: bold;
     color: #000;
     margin-right: 0.75rem;
+    white-space: nowrap;
   }
   .site-header .search .about-link:hover {
     text-decoration: underline;
+  }
+}
+.site-header .search .newsletter-link {
+  position: relative;
+  background: #e2d98e;
+  transition: all 300ms ease;
+  padding: 0.25rem 1.5rem;
+}
+.site-header .search .newsletter-link:hover {
+  text-decoration: none;
+  background: #e7e0a2;
+}
+@media screen and (min-width: 768px) {
+  .site-header .search .newsletter-link {
+    margin-right: 1.5rem;
   }
 }
 .site-header .search__icon {
@@ -4898,6 +4914,15 @@ body.single-issue .issue-theme-special-edition .teaser__date .coming-soon {
 .issue-theme-volume-eleven .site-banner .image img {
   -o-object-position: bottom center;
      object-position: bottom center;
+}
+.site-theme-volume-eleven .site-header .search .newsletter-link,
+.issue-theme-volume-eleven .site-header .search .newsletter-link {
+  background: #7cacbe;
+  color: #fff;
+}
+.site-theme-volume-eleven .site-header .search .newsletter-link:hover,
+.issue-theme-volume-eleven .site-header .search .newsletter-link:hover {
+  background: #8db7c6;
 }
 .site-theme-volume-eleven .sapir-star,
 .issue-theme-volume-eleven .sapir-star {

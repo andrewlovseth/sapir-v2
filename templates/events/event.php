@@ -8,6 +8,8 @@
     $date = DateTime::createFromFormat('Ymd', $date_string);
     $title = get_sub_field('title');
     $time = get_sub_field('time');
+    $time_zone = get_sub_field('time_zone');
+
     $description = get_sub_field('description');
     $link = get_sub_field('link');
 ?>
@@ -48,8 +50,10 @@
         <div class="event__meta">
             <span class="date"><?php echo $date->format('l, F j, Y'); ?></span>
             <?php if($time): ?>
-                <span class="time"><?php the_sub_field('time'); ?></span>
+                <span class="time"><?php echo $time; ?><?php if($time_zone): ?> <?php echo $time_zone; ?><?php endif; ?></span>
             <?php endif; ?>
+
+            
         </div>
         
         <div class="event__headline">

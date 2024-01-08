@@ -1,4 +1,6 @@
 .explore {
+    margin-top: 3rem;
+
     &__sections {
         border-top: 1px solid $light-blue;
         border-bottom: 1px solid $light-blue;
@@ -33,7 +35,7 @@
                 display: block;
                 text-align: center;
 
-                @include span-hover-underline('.label');
+                @include span-hover-underline(".label");
             }
 
             .icon {

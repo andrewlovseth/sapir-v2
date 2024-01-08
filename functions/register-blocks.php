@@ -5,7 +5,6 @@
 */
 
 
-/*
 
 add_action('acf/init', 'my_register_blocks');
 function my_register_blocks() {
@@ -13,16 +12,14 @@ function my_register_blocks() {
     if( function_exists('acf_register_block_type') ) {
 
         acf_register_block_type(array(
-            'name'              => 'block-name',
-            'title'             => __('Block Title'),
-            'description'       => __('Description of custom block.'),
-            'render_template'   => 'blocks/block-dir/block-file.php',
+            'name'              => 'newsletter-signup',
+            'title'             => __('Newsletter Signup'),
+            'description'       => __('Block that embeds the default newsletter signup form.'),
+            'render_template'   => 'blocks/newsletter-signup/newsletter-signup.php',
             'category'          => 'layout',
-            'icon'              => 'XXXXXX',
+            'icon'              => 'email',
             'align'             => 'full',
         ));
 
     }
 }
-
- */

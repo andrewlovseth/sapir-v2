@@ -7,17 +7,18 @@
 
 */
 
-@import 'normalize';
+@import "normalize";
 
-@import 'variables/variables';
-@import 'mixins/mixins';
-@import 'typography/typography';
-@import 'layout/layout';
-@import 'elements/elements';
+@import "variables/variables";
+@import "mixins/mixins";
+@import "typography/typography";
+@import "layout/layout";
+@import "elements/elements";
 
-@import 'header/header';
-@import 'footer/footer';
+@import "header/header";
+@import "footer/footer";
 
-@import 'templates/templates';
+@import "blocks/blocks";
+@import "templates/templates";
 
-@import 'theme/theme';
+@import "theme/theme";

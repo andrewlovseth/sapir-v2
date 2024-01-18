@@ -12,11 +12,11 @@
 
                 <div class="faq">
                     <div class="question">
-                        <h3><?php the_sub_field('question'); ?></h3>
+                        <h3><?php echo get_sub_field('question'); ?></h3>
                     </div>
 
                     <div class="copy copy-3">
-                        <?php the_sub_field('answer'); ?>
+                        <?php echo get_sub_field('answer'); ?>
                     </div>
                 </div>
 

@@ -11,11 +11,11 @@
                 <div class="event recording">
                     <div class="info">
                         <div class="event-title">
-                            <h3><?php the_sub_field('title'); ?></h3>
+                            <h3><?php echo get_sub_field('title'); ?></h3>
                         </div>
 
                         <div class="event-description">
-                            <?php the_sub_field('description'); ?>
+                            <?php echo get_sub_field('description'); ?>
                         </div>
 
                         <?php 

@@ -1,5 +1,5 @@
 <div class="epigraph">
     <div class="text">
-        <p><?php the_field('epigraph', 'options'); ?></p>
+        <p><?php echo get_field('epigraph', 'options'); ?></p>
     </div>
 </div>

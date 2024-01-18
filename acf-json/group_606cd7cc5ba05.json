@@ -306,11 +306,11 @@
                     "new_lines": ""
                 },
                 {
-                    "key": "field_659c2aea8d41b",
-                    "label": "Block Copy",
-                    "name": "block_copy",
+                    "key": "field_65a960b87b3f2",
+                    "label": "Modal Copy",
+                    "name": "modal_copy",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -320,10 +320,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": ""
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 0
                 }
             ]
         }
@@ -361,5 +361,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704733428
+    "modified": 1705599174
 }

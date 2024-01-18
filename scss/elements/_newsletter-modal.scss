@@ -1,0 +1,73 @@
+.newsletter-modal {
+    border: none;
+    padding: 1.25rem;
+    max-width: 37.5rem;
+    box-shadow: 0 0 12px rgba($black, 0.1);
+
+    &__wrapper {
+        border: 1px solid #da9589;
+        padding: 0.125rem;
+    }
+
+    &__content {
+        border: 1px solid #da9589;
+        padding: 2.5rem;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__close {
+        appearance: none;
+        border: none;
+        background: none;
+        width: 1.5rem;
+        height: 1.5rem;
+        outline: none;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        z-index: 10;
+    }
+
+    &__copy {
+        text-align: center;
+        font-size: $type-size-500;
+        line-height: 1.25em;
+        padding: 2.5rem 0;
+        font-weight: 300;
+    }
+
+    .form-wrapper {
+        display: grid;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    input.email {
+        display: block;
+        width: 100%;
+        border: 1px solid #9a9cb0;
+        outline: none;
+        padding: 0.75rem;
+        font-size: $fournier-std;
+        text-align: center;
+    }
+
+    input.button {
+        width: 12rem;
+        margin: auto;
+        display: inline-block;
+        background: #da9589;
+        color: $white;
+        font-family: $adams;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: normal;
+        border: none;
+        font-size: $type-size-200;
+        padding: 1rem;
+    }
+}

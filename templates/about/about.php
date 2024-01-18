@@ -22,8 +22,8 @@
             <?php while(have_rows('masthead')): the_row(); ?>
 
                 <div class="role">
-                    <span class="name"><?php the_sub_field('name'); ?></span>
-                    <span class="job-title"><?php the_sub_field('title'); ?></span>
+                    <span class="name"><?php echo get_sub_field('name'); ?></span>
+                    <span class="job-title"><?php echo get_sub_field('title'); ?></span>
                 </div>
 
             <?php endwhile; ?>

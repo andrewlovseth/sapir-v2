@@ -13,9 +13,11 @@
 
 		<?php get_template_part('template-parts/footer/copyright'); ?>
 	</footer>
+	
+	<?php get_template_part('template-parts/global/newsletter-modal'); ?>
 
 	<?php wp_footer(); ?>
-	<?php the_field('body_bottom_js', 'options'); ?>
+	<?php echo get_field('body_bottom_js', 'options'); ?>
 
 </div> <!-- .site -->
 

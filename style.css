@@ -2007,11 +2007,11 @@ body.page-template-home .latest .featured .teaser-conversation__participants {
   }
 }
 body.page-template-home .latest .featured .teaser-conversation__participant + .teaser-conversation__participant {
-  margin-top: -2.5rem;
+  margin-top: -2.25rem;
 }
 @media screen and (min-width: 768px) {
   body.page-template-home .latest .featured .teaser-conversation__participant + .teaser-conversation__participant {
-    margin-top: -3.5rem;
+    margin-top: -2.5rem;
   }
 }
 body.page-template-home .latest .featured .teaser-conversation__participant:nth-child(even) .photo {
@@ -3584,11 +3584,11 @@ body.post-type-archive-conversations .teaser-conversation__participants {
   }
 }
 body.post-type-archive-conversations .teaser-conversation__participant + .teaser-conversation__participant {
-  margin-top: -2.5rem;
+  margin-top: -2.25rem;
 }
 @media screen and (min-width: 768px) {
   body.post-type-archive-conversations .teaser-conversation__participant + .teaser-conversation__participant {
-    margin-top: -3.5rem;
+    margin-top: -2.5rem;
   }
 }
 body.post-type-archive-conversations .teaser-conversation__participant:nth-child(even) .photo {

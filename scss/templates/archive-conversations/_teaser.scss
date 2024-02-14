@@ -28,10 +28,10 @@
 
     &__participant {
         & + .teaser-conversation__participant {
-            margin-top: -2.5rem;
+            margin-top: -2.25rem;
 
             @include tablet {
-                margin-top: -3.5rem;
+                margin-top: -2.5rem;
             }
         }
 

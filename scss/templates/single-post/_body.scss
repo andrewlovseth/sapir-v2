@@ -6,19 +6,13 @@ article.dropcap {
                 float: left;
                 display: block;
                 content: "";
-                width: clamp(5rem, 6.375vw, 6.1875rem);
-                height: clamp(5rem, 6.375vh, 6.1875rem);
+                width: clamp(10rem, 10.75vw, 10.75rem);
+                height: clamp(9rem, 6vh, 12.75rem);
+                margin: 0 0.5rem 0.5rem 0;
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: contain;
-                margin: 0.25rem 0.5rem 0 0;
                 mix-blend-mode: multiply;
-
-                @include desktop-medium {
-                    width: clamp(10rem, 10.75vw, 10.75rem);
-                    height: clamp(9rem, 6vh, 12.75rem);
-                    margin: 0 0.5rem 0.5rem 0;
-                }
             }
 
             .first-letter {

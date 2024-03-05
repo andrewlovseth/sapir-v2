@@ -1,4 +1,5 @@
 <section class="article-body">
+
     <?php the_content(); ?>        
 
     <?php if(get_field('dropcap')): $dropcap = get_field('dropcap'); ?>

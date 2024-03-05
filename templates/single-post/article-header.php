@@ -145,5 +145,7 @@
         </div>
     <?php endif; ?>
 
-
+    <div class="date-published">
+        <span>Published on <?php the_time('F j, Y'); ?></span>
+    </div>
 </section>

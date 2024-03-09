@@ -20,14 +20,22 @@
 
     &__cta {
         text-align: center;
-        padding-top: 2rem;
+        padding-top: 1rem;
+
+        .btn {
+            width: 100%;
+        }
     }
 
     .newsletter-form {
-        margin-top: 2rem;
+        margin-top: 3rem;
 
         .blakeslee-powered-by {
             opacity: 0;
+        }
+
+        .blakeslee-imge-content {
+            background: #fbf9f7;
         }
 
         img {

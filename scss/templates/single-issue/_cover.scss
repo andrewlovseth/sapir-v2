@@ -22,4 +22,16 @@
         text-align: center;
         padding-top: 2rem;
     }
+
+    .newsletter-form {
+        margin-top: 2rem;
+
+        .blakeslee-powered-by {
+            opacity: 0;
+        }
+
+        img {
+            mix-blend-mode: multiply;
+        }
+    }
 }

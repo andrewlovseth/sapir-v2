@@ -4363,6 +4363,15 @@ body.single-issue .issue__cta {
   text-align: center;
   padding-top: 2rem;
 }
+body.single-issue .issue .newsletter-form {
+  margin-top: 2rem;
+}
+body.single-issue .issue .newsletter-form .blakeslee-powered-by {
+  opacity: 0;
+}
+body.single-issue .issue .newsletter-form img {
+  mix-blend-mode: multiply;
+}
 body.single-issue .issue__contents {
   padding-bottom: 3rem;
 }

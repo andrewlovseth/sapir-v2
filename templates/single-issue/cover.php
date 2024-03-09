@@ -16,5 +16,5 @@
         </div>
     <?php endif; ?>
 
-    <?php get_template_part('global/inline-newsletter-form-default'); ?>
+    <?php get_template_part('template-parts/global/inline-newsletter-form-default'); ?>
 </div>

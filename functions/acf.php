@@ -13,6 +13,8 @@ if(function_exists('acf_add_options_page')) {
     acf_add_options_sub_page('Code Snippets');
     acf_add_options_sub_page('Conversations');
     acf_add_options_sub_page('Letters');
+    acf_add_options_sub_page('Email');
+
 }
 
 

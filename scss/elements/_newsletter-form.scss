@@ -1,0 +1,15 @@
+.inline-newsletter-form {
+    &__default {
+        .blakeslee-powered-by {
+            opacity: 0;
+        }
+
+        .blakeslee-imge-content {
+            background: #fbf9f7;
+        }
+
+        img {
+            mix-blend-mode: multiply;
+        }
+    }
+}

@@ -1309,6 +1309,16 @@ body.single-post.postid-2036 body.single-post article.dropcap .article-body p.dr
   padding: 1rem;
 }
 
+.inline-newsletter-form__default .blakeslee-powered-by {
+  opacity: 0;
+}
+.inline-newsletter-form__default .blakeslee-imge-content {
+  background: #fbf9f7;
+}
+.inline-newsletter-form__default img {
+  mix-blend-mode: multiply;
+}
+
 .site-header {
   padding-bottom: 0.5rem;
   background: #fbf9f7;
@@ -4366,17 +4376,8 @@ body.single-issue .issue__cta {
 body.single-issue .issue__cta .btn {
   width: 100%;
 }
-body.single-issue .issue .newsletter-form {
+body.single-issue .issue .inline-newsletter-form__default {
   margin-top: 3rem;
-}
-body.single-issue .issue .newsletter-form .blakeslee-powered-by {
-  opacity: 0;
-}
-body.single-issue .issue .newsletter-form .blakeslee-imge-content {
-  background: #fbf9f7;
-}
-body.single-issue .issue .newsletter-form img {
-  mix-blend-mode: multiply;
 }
 body.single-issue .issue__contents {
   padding-bottom: 3rem;

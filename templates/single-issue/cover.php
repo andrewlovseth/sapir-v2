@@ -16,7 +16,5 @@
         </div>
     <?php endif; ?>
 
-    <div class="newsletter-form">
-        <?php echo do_shortcode('[optin-monster-inline slug="sktztimql2qui8uzuxll"]'); ?>
-    </div>
+    <?php get_template_part('global/inline-newsletter-form-default'); ?>
 </div>

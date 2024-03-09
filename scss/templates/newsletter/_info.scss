@@ -22,4 +22,16 @@
     &__copy {
         padding: 2rem 0;
     }
+
+    .blakeslee-imge-content {
+        img {
+            max-width: 6rem;
+        }
+    }
+
+    .blakeslee-te-content {
+        span {
+            font-size: 24px !important;
+        }
+    }
 }

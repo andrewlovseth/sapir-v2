@@ -3246,6 +3246,12 @@ body.page-template-newsletter .info__title {
 body.page-template-newsletter .info__copy {
   padding: 2rem 0;
 }
+body.page-template-newsletter .info .blakeslee-imge-content img {
+  max-width: 6rem;
+}
+body.page-template-newsletter .info .blakeslee-te-content span {
+  font-size: 24px !important;
+}
 body.page-template-newsletter .latest-issue {
   margin-top: 3px;
   padding: 2rem;

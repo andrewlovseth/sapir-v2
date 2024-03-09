@@ -15,4 +15,8 @@
             <a href="<?php echo $pdf_link; ?>" target="window" class="btn small-upper">Download PDF</a>
         </div>
     <?php endif; ?>
+
+    <div class="newsletter-form">
+        <?php echo do_shortcode('[optin-monster-inline slug="sktztimql2qui8uzuxll"]'); ?>
+    </div>
 </div>

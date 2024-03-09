@@ -1,0 +1,25 @@
+.blakeslee-powered-by {
+    opacity: 0;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.blakeslee-imge-content {
+    background: #fbf9f7;
+
+    img {
+        max-width: 6rem;
+        mix-blend-mode: multiply;
+    }
+}
+
+.blakeslee-c-content {
+    max-width: 960px;
+}
+
+.blakeslee-te-content {
+    span {
+        font-size: 24px !important;
+    }
+}

@@ -4208,11 +4208,11 @@ body.single-post .blakeslee-imge-content {
   background: #fbf9f7;
 }
 body.single-post .blakeslee-imge-content img {
-  max-width: 6rem;
+  max-width: 6rem !important;
   mix-blend-mode: multiply;
 }
 body.single-post .blakeslee-c-content {
-  max-width: 960px;
+  max-width: 960px !important;
 }
 body.single-post .blakeslee-te-content span {
   font-size: 24px !important;

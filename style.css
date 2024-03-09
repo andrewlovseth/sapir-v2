@@ -4198,6 +4198,25 @@ body.single-post .wp-block-separator:before {
 body.single-post .search-meta {
   display: none;
 }
+body.single-post .blakeslee-powered-by {
+  opacity: 0;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+body.single-post .blakeslee-imge-content {
+  background: #fbf9f7;
+}
+body.single-post .blakeslee-imge-content img {
+  max-width: 6rem;
+  mix-blend-mode: multiply;
+}
+body.single-post .blakeslee-c-content {
+  max-width: 960px;
+}
+body.single-post .blakeslee-te-content span {
+  font-size: 24px !important;
+}
 body.single-post .article-footer {
   padding-top: 3rem;
 }

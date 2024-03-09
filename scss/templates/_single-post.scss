@@ -1,8 +1,7 @@
 body.single-post {
-
     article.post {
         padding-bottom: 3rem;
-        
+
         & > * {
             @include tablet {
                 grid-column: 3 / span 6;
@@ -14,9 +13,11 @@ body.single-post {
         }
     }
 
-    @import 'single-post/header';
+    @import "single-post/header";
 
-    @import 'single-post/body';
+    @import "single-post/body";
 
-    @import 'single-post/footer';
+    @import "single-post/optin-monster";
+
+    @import "single-post/footer";
 }

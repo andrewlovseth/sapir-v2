@@ -1,0 +1,213 @@
+$vol-12-dark-blue: #3d435d;
+$vol-12-violet: #ddddda;
+$vol-12-blue: #82b0bc;
+$vol-12-purple: #aaa1cd;
+$vol-12-yellow: #efc595;
+
+.site-theme-volume-twelve,
+.issue-theme-volume-twelve {
+    .site-banner {
+        .image {
+            height: 48px;
+
+            @include tablet {
+                height: 96px;
+            }
+
+            img {
+                object-position: bottom center;
+            }
+        }
+    }
+
+    .site-header {
+        .search {
+            .newsletter-link {
+                background: $vol-12-dark-blue;
+                color: $white;
+
+                &:hover {
+                    background: lighten($vol-12-dark-blue, 5%);
+                }
+            }
+        }
+    }
+
+    .site-footer {
+        background: $vol-12-dark-blue;
+    }
+
+    .sapir-star {
+        fill: $vol-12-yellow;
+    }
+
+    .wp-block-pullquote:not(.basic) {
+        p {
+            color: $vol-12-dark-blue;
+        }
+    }
+
+    .teaser__title a:hover {
+        color: $vol-12-purple;
+    }
+
+    .teaser__author-link:hover .teaser__author-name:after {
+        background: rgba($vol-12-purple, 0.5);
+    }
+
+    .cta .btn {
+        border-color: $vol-12-dark-blue;
+        color: $black;
+
+        &:hover {
+            background-color: $vol-12-dark-blue;
+            border-color: $vol-12-dark-blue;
+            color: $white;
+        }
+    }
+
+    .site-header .header-nav .epigraph {
+        color: $vol-12-purple;
+        border-color: $vol-12-purple;
+
+        &::before {
+            border-color: $vol-12-purple;
+        }
+    }
+
+    .newsletter {
+        &__wrapper {
+            background: rgba($vol-12-violet, 0.5);
+        }
+
+        .section-header h3 {
+            color: $vol-12-dark-blue;
+        }
+
+        .form-wrapper {
+            input.email {
+                border-color: $vol-12-dark-blue;
+                color: $vol-12-dark-blue;
+
+                @include placeholder {
+                    color: rgba($vol-12-dark-blue, 0.7);
+                }
+            }
+            input.button {
+                background: $vol-12-dark-blue;
+            }
+        }
+    }
+
+    ::-moz-selection {
+        background: $vol-12-blue;
+        color: $white;
+        text-shadow: none;
+    }
+
+    ::selection {
+        background: $vol-12-blue;
+        color: $white;
+        text-shadow: none;
+    }
+}
+
+body.page-template-home.site-theme-volume-twelve {
+    .latest .issue,
+    .latest .issue::before {
+        border-color: $vol-12-dark-blue;
+    }
+
+    .latest .issue .ornament path {
+        fill: $vol-12-dark-blue;
+    }
+
+    .explore__sections-link a .label:after {
+        background: rgba($vol-12-purple, 0.5);
+    }
+
+    .explore__topics-list a:after {
+        background: rgba($vol-12-purple, 0.5);
+    }
+
+    .most-read,
+    .most-read::before {
+        border-color: $vol-12-purple;
+        color: $vol-12-purple;
+    }
+
+    .most-read {
+        a {
+            color: $vol-12-purple;
+        }
+
+        .teaser-small .teaser__title:hover::before {
+            border-bottom-color: $vol-12-purple;
+        }
+    }
+
+    .quote {
+        &__header {
+            .section-title {
+                color: $vol-12-dark-blue;
+            }
+        }
+
+        blockquote {
+            background: rgba($vol-12-violet, 0.5);
+            color: rgba($dark-blue, 0.7);
+
+            &::before,
+            &::after {
+                color: rgba($dark-blue, 0.7);
+            }
+        }
+
+        a:hover {
+            blockquote {
+                &::before,
+                &::after {
+                    color: $dark-blue;
+                }
+
+                color: $dark-blue;
+            }
+        }
+    }
+}
+
+body.single-post .issue-theme-volume-twelve {
+    .article-header .authors a:hover {
+        border-color: rgba($vol-12-purple, 0.5);
+    }
+
+    .article-footer__links {
+        .btn,
+        .btn:before {
+            border-color: $vol-12-blue;
+        }
+
+        .btn {
+            color: $vol-12-blue;
+
+            &:hover {
+                background-color: $vol-12-blue;
+                color: $white;
+            }
+        }
+    }
+}
+
+body.single-issue .issue-theme-volume-twelve {
+    .issue__header .ornament svg path {
+        fill: $vol-12-yellow;
+    }
+
+    .issue__contents-header {
+        color: $vol-12-dark-blue;
+    }
+
+    .teaser__date .coming-soon {
+        color: $vol-12-purple;
+    }
+}

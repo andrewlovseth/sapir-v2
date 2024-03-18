@@ -676,7 +676,7 @@ body {
   max-width: 100% !important;
 }
 .newsletter .slim-line-FieldsElement--content {
-  justify-content: right;
+  justify-content: right !important;
 }
 .newsletter .slim-line-field-submit {
   max-width: 10rem !important;
@@ -3170,7 +3170,7 @@ body.page-template-newsletter .info__copy {
   padding: 2rem 0;
 }
 body.page-template-newsletter .info .blakeslee-imge-content img {
-  max-width: 6rem;
+  max-width: 6rem !important;
 }
 body.page-template-newsletter .info .blakeslee-te-content span {
   font-size: 24px !important;

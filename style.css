@@ -1329,6 +1329,14 @@ body.single-post.postid-2036 body.single-post article.dropcap .article-body p.dr
   mix-blend-mode: multiply;
 }
 
+.slim-line-row-inner {
+  align-items: center;
+}
+
+.slim-line-field-submit {
+  white-space: nowrap;
+}
+
 .site-header {
   padding-bottom: 0.5rem;
   background: #fbf9f7;
@@ -4233,7 +4241,7 @@ body.single-post .slim-line-c-content {
   max-width: 960px !important;
 }
 body.single-post .slim-line-te-content span {
-  font-size: 24px !important;
+  font-size: 20px !important;
 }
 body.single-post .article-footer {
   padding-top: 3rem;

@@ -4,8 +4,22 @@
             opacity: 0;
         }
 
-        .broaddus-imge-content,
+        .slim-line-imge-content,
         .blakeslee-imge-content {
+            background: #fbf9f7;
+        }
+
+        img {
+            mix-blend-mode: multiply;
+        }
+    }
+
+    &__slim {
+        .blakeslee-powered-by {
+            opacity: 0;
+        }
+
+        .slim-line-imge-content {
             background: #fbf9f7;
         }
 

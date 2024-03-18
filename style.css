@@ -1312,10 +1312,20 @@ body.single-post.postid-2036 body.single-post article.dropcap .article-body p.dr
 .inline-newsletter-form__default .blakeslee-powered-by {
   opacity: 0;
 }
+.inline-newsletter-form__default .slim-line-imge-content,
 .inline-newsletter-form__default .blakeslee-imge-content {
   background: #fbf9f7;
 }
 .inline-newsletter-form__default img {
+  mix-blend-mode: multiply;
+}
+.inline-newsletter-form__slim .blakeslee-powered-by {
+  opacity: 0;
+}
+.inline-newsletter-form__slim .slim-line-imge-content {
+  background: #fbf9f7;
+}
+.inline-newsletter-form__slim img {
   mix-blend-mode: multiply;
 }
 
@@ -4206,23 +4216,23 @@ body.single-post .wp-block-separator:before {
 body.single-post .search-meta {
   display: none;
 }
-body.single-post .blakeslee-powered-by {
+body.single-post .slim-line-powered-by {
   opacity: 0;
   height: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
 }
-body.single-post .blakeslee-imge-content {
+body.single-post .slim-line-imge-content {
   background: #fbf9f7;
 }
-body.single-post .blakeslee-imge-content img {
+body.single-post .slim-line-imge-content img {
   max-width: 6rem !important;
   mix-blend-mode: multiply;
 }
-body.single-post .blakeslee-c-content {
+body.single-post .slim-line-c-content {
   max-width: 960px !important;
 }
-body.single-post .blakeslee-te-content span {
+body.single-post .slim-line-te-content span {
   font-size: 24px !important;
 }
 body.single-post .article-footer {

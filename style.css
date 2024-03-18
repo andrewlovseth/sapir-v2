@@ -669,11 +669,19 @@ body {
   text-decoration: none;
 }
 
+.newsletter .slim-line-c-alpha {
+  border: none !important;
+}
 .newsletter .slim-line-c-content {
   max-width: 100% !important;
 }
 .newsletter .slim-line-FieldsElement--content {
   justify-content: right;
+}
+.newsletter .slim-line-field-submit {
+  max-width: 10rem !important;
+  font-family: "Adams", serif !important;
+  font-weight: 700 !important;
 }
 
 .page-header {

@@ -1,8 +1,19 @@
 .newsletter {
+    .slim-line-c-alpha {
+        border: none !important;
+    }
+
     .slim-line-c-content {
         max-width: 100% !important;
     }
+
     .slim-line-FieldsElement--content {
         justify-content: right;
+    }
+
+    .slim-line-field-submit {
+        max-width: 10rem !important;
+        font-family: "Adams", serif !important;
+        font-weight: 700 !important;
     }
 }

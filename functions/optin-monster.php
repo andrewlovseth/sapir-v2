@@ -8,8 +8,8 @@ function wp_insert_shortcode_after_fifth_paragraph($content) {
     $shortcode = get_field('default_inline_form', 'options');
 
     // Only proceed if there are more than 5 paragraphs
-    if ($paragraphCount > 5) {
-        $paragraphs[5] .= do_shortcode($shortcode); // Insert the shortcode after the fifth paragraph
+    if ($paragraphCount > 9) {
+        $paragraphs[9] .= do_shortcode($shortcode); // Insert the shortcode after the fifth paragraph
     }
 
     return implode('</p>', $paragraphs);

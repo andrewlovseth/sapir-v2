@@ -19,5 +19,5 @@
         <?php echo $copy; ?>
     </div>
     
-    <?php get_template_part('template-parts/global/inline-newsletter-form-default'); ?>
+    <?php echo $embed; ?>
 </div>

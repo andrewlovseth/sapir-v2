@@ -4609,10 +4609,10 @@ body.single-letters .letter .back a:before {
   max-width: 100%;
 }
 .landing-page__issue .issue-landing-page__form {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .landing-page__issue .issue-landing-page__form div {
-  background: #f8f4f0;
+  background: #fbf9f7;
 }
 .landing-page__issue .issue-landing-page__form img {
   mix-blend-mode: multiply;

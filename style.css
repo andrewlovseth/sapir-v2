@@ -4575,10 +4575,22 @@ body.single-letters .letter .back a:before {
   align-items: start;
   gap: 4rem 2rem;
 }
+.landing-page__issue .info__title {
+  font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
+  line-height: 1.375em;
+}
+@media screen and (min-width: 768px) {
+  .landing-page__issue .info__title {
+    font-size: clamp(1.5rem, 1.29rem + 1.07vw, 1.95rem);
+  }
+}
+.landing-page__issue .info__copy {
+  padding: 1rem 0 2rem 0;
+}
 @media screen and (min-width: 992px) {
   .landing-page__issue .issue__contents {
     grid-row: 1;
-    grid-column: 2/span 5;
+    grid-column: 2/span 6;
   }
 }
 .landing-page__issue .latest-issue {
@@ -4595,6 +4607,15 @@ body.single-letters .letter .back a:before {
 }
 .landing-page__issue .latest-issue .cover img {
   max-width: 100%;
+}
+.landing-page__issue .issue-landing-page__form {
+  margin-bottom: 2rem;
+}
+.landing-page__issue .issue-landing-page__form div {
+  background: #f8f4f0;
+}
+.landing-page__issue .issue-landing-page__form img {
+  mix-blend-mode: multiply;
 }
 
 .issue-theme-volume-one .sapir-star {

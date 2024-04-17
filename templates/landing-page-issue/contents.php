@@ -1,11 +1,26 @@
 <?php
 
-    $issue = get_field('content_issue');
-    $shortcode = get_field('content_form_shortcode');
+    $content = get_field('content');
+
+    $issue = $content['issue'];
+    $shortcode = $content['form_shortcode'];
+    $headline = $content['headline'];
+    $copy = $content['copy'];
+
 
 ?>
 
 <div class="issue__contents">
+    <div class="info">
+        <div class="info__header">
+            <h1 class="info__title"><?php echo $headline; ?></h1>
+        </div>
+
+        <div class="info__copy copy copy-1">
+            <?php echo $copy; ?>
+        </div>
+    </div>
+
     <div class="issue-landing-page__form">
         <?php echo do_shortcode($shortcode); ?>
     </div>

@@ -2,11 +2,26 @@
     align-items: start;
     gap: 4rem 2rem;
 
+    .info {
+        &__title {
+            font-size: $type-size-500;
+            line-height: 1.375em;
+
+            @include tablet {
+                font-size: $type-size-600;
+            }
+        }
+
+        &__copy {
+            padding: 1rem 0 2rem 0;
+        }
+    }
+
     .issue {
         &__contents {
             @include desktop-small {
                 grid-row: 1;
-                grid-column: 2 / span 5;
+                grid-column: 2 / span 6;
             }
         }
     }
@@ -23,6 +38,18 @@
 
         .cover img {
             max-width: 100%;
+        }
+    }
+
+    .issue-landing-page__form {
+        margin-bottom: 2rem;
+
+        div {
+            background: darken(#fbf9f7, 2%);
+        }
+
+        img {
+            mix-blend-mode: multiply;
         }
     }
 }

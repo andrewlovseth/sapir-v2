@@ -9,18 +9,18 @@
 
 ?>
 
-<div class="latest-issue">
-    <div class="latest-issue__cover">
+<div class="latest-issue-newsletter">
+    <div class="latest-issue-newsletter__cover">
         <a href="<?php echo $link; ?>">
             <?php echo wp_get_attachment_image($cover['ID'], 'medium'); ?>
         </a>
     </div>
 
-    <div class="latest-issue__copy copy copy-1">
+    <div class="latest-issue-newsletter__copy | copy copy-1">
         <?php echo $copy; ?>
     </div>
 
-    <div class="latest-issue__cta cta">
+    <div class="latest-issue-newsletter__cta | cta">
         <a href="<?php echo $link; ?>" class="btn small-upper">Read it now</a>
     </div>
 </div>

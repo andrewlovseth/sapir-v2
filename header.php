@@ -20,13 +20,17 @@
 		$volume = get_field('volume', $issue);
 		$issue_class = ' issue-theme-' . sanitize_title_with_dashes($volume);
 
-    } elseif(is_single() && 'issue' == get_post_type())  {
+    } elseif(is_single() && 'issue' == get_post_type()) {
         $volume = get_field('volume');
+		$issue_class = ' issue-theme-' . sanitize_title_with_dashes($volume);
+
+    } elseif(is_page_template('templates/landing-page-issue.php')) {
+        $issue = get_field('content_issue');
+		$volume = get_field('volume', $issue->ID);
 		$issue_class = ' issue-theme-' . sanitize_title_with_dashes($volume);
 
     } else {
 		$issue_class = '';
-
 	}
 ?>
 

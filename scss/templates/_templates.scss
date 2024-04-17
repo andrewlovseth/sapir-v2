@@ -1,21 +1,22 @@
-@import 'home';
-@import 'archive';
-@import 'search';
-@import 'about';
-@import 'events';
-@import 'contact';
-@import 'newsletter';
+@import "home";
+@import "archive";
+@import "search";
+@import "about";
+@import "events";
+@import "contact";
+@import "newsletter";
 
-@import 'archive-issue';
-@import 'archive-authors';
-@import 'archive-news';
-@import 'archive-letters';
-@import 'archive-conversations';
+@import "archive-issue";
+@import "archive-authors";
+@import "archive-news";
+@import "archive-letters";
+@import "archive-conversations";
 
-@import 'single-post';
-@import 'single-authors';
-@import 'single-issue';
-@import 'single-news';
-@import 'single-letters';
+@import "single-post";
+@import "single-authors";
+@import "single-issue";
+@import "single-news";
+@import "single-letters";
 
-@import 'page';
+@import "page";
+@import "landing-page-issue";

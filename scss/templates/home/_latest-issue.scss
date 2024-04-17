@@ -1,6 +1,4 @@
-.issue {
-    padding: 2rem;
-    @include double-border($light-blue);
+.latest-issue {
     align-self: start;
 
     @include tablet-small {
@@ -10,57 +8,5 @@
     @include desktop-small {
         grid-column: 9 / span 5;
         grid-row: 1;
-    }
-
-    .header {
-        text-align: center;
-        padding-bottom: 1rem;
-
-        h3 {
-            a {
-                margin-top: 0.5rem;
-                display: block;
-                font-family: $adams;
-                font-size: $type-size-500;
-                text-transform: uppercase;
-                font-weight: normal;
-            }
-        }
-    }
-
-    .ornament {
-        padding: 1rem 0;
-
-        svg {
-            width: 4rem;
-        }
-    }
-
-    .meta {
-        display: flex;
-        justify-content: center;
-
-        span {
-            display: block;
-
-            &.season {
-                padding-left: 0.5rem;
-                border-left: 1px solid $dark-blue;
-                margin-left: 0.5rem;
-            }
-        }
-    }
-
-    .cover {
-        img {
-            width: 100%;
-            max-width: 24rem;
-            margin: 0 auto;
-        }
-    }
-
-    .cta {
-        padding-top: 1.5rem;
-        text-align: center;
     }
 }

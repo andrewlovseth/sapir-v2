@@ -1,9 +1,6 @@
 <?php
-
-    $latest = get_field('latest');
-    $cta = $latest['cta'];
-    $current_issue = $latest['current_issue'];
-    $current_issue_id = $current_issue->ID;
+    $issue = get_field('content_issue');
+    $current_issue_id = $issue->ID;
 
     $issue_title = get_the_title($current_issue_id);
     $issue_link = get_permalink($current_issue_id);
@@ -36,9 +33,4 @@
             <?php echo wp_get_attachment_image($cover['ID'], 'medium'); ?>
         </a>
     </div>
-
-    <?php
-        $args = ['link' => $cta];
-        get_template_part('template-parts/global/cta', null, $args);
-    ?>
 </div>

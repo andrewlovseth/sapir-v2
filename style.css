@@ -1242,6 +1242,63 @@ body.single-post.postid-2036 body.single-post article.dropcap .article-body p.dr
   white-space: nowrap !important;
 }
 
+.latest-issue {
+  padding: 2rem;
+  border: 1px solid #9e9aaf;
+}
+.latest-issue::before {
+  display: block;
+  content: "";
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  z-index: 0;
+  border: 1px solid #9e9aaf;
+}
+.latest-issue .header {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.latest-issue .header h3 a {
+  margin-top: 0.5rem;
+  display: block;
+  font-family: "Adams", serif;
+  font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.latest-issue .ornament {
+  padding: 1rem 0;
+}
+.latest-issue .ornament svg {
+  width: 4rem;
+}
+.latest-issue .meta {
+  display: flex;
+  justify-content: center;
+}
+.latest-issue .meta span {
+  display: block;
+}
+.latest-issue .meta span.season {
+  padding-left: 0.5rem;
+  border-left: 1px solid #424254;
+  margin-left: 0.5rem;
+}
+.latest-issue .cover img {
+  width: 100%;
+  max-width: 24rem;
+  margin: 0 auto;
+}
+.latest-issue .cta {
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
 .site-header {
   padding-bottom: 0.5rem;
   background: #fbf9f7;
@@ -1815,73 +1872,19 @@ body.page-template-home .latest {
   padding-top: 0.25rem;
   padding-bottom: 3rem;
 }
-body.page-template-home .latest .issue {
-  padding: 2rem;
-  border: 1px solid #9e9aaf;
+body.page-template-home .latest .latest-issue {
   align-self: start;
 }
-body.page-template-home .latest .issue::before {
-  display: block;
-  content: "";
-  width: calc(100% + 6px);
-  height: calc(100% + 6px);
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
-  z-index: 0;
-  border: 1px solid #9e9aaf;
-}
 @media screen and (min-width: 480px) {
-  body.page-template-home .latest .issue {
+  body.page-template-home .latest .latest-issue {
     grid-column: 3/span 6;
   }
 }
 @media screen and (min-width: 992px) {
-  body.page-template-home .latest .issue {
+  body.page-template-home .latest .latest-issue {
     grid-column: 9/span 5;
     grid-row: 1;
   }
-}
-body.page-template-home .latest .issue .header {
-  text-align: center;
-  padding-bottom: 1rem;
-}
-body.page-template-home .latest .issue .header h3 a {
-  margin-top: 0.5rem;
-  display: block;
-  font-family: "Adams", serif;
-  font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
-  text-transform: uppercase;
-  font-weight: normal;
-}
-body.page-template-home .latest .issue .ornament {
-  padding: 1rem 0;
-}
-body.page-template-home .latest .issue .ornament svg {
-  width: 4rem;
-}
-body.page-template-home .latest .issue .meta {
-  display: flex;
-  justify-content: center;
-}
-body.page-template-home .latest .issue .meta span {
-  display: block;
-}
-body.page-template-home .latest .issue .meta span.season {
-  padding-left: 0.5rem;
-  border-left: 1px solid #424254;
-  margin-left: 0.5rem;
-}
-body.page-template-home .latest .issue .cover img {
-  width: 100%;
-  max-width: 24rem;
-  margin: 0 auto;
-}
-body.page-template-home .latest .issue .cta {
-  padding-top: 1.5rem;
-  text-align: center;
 }
 body.page-template-home .latest .articles {
   padding-top: 3rem;
@@ -3243,13 +3246,13 @@ body.page-template-newsletter .info #mce-responses #mce-error-response {
 body.page-template-newsletter .info #mce-responses #mce-success-response {
   background: rgb(79, 141, 79);
 }
-body.page-template-newsletter .latest-issue {
+body.page-template-newsletter .latest-issue-newsletter {
   margin-top: 3px;
   padding: 2rem;
   border: 1px solid #9e9aaf;
   align-self: start;
 }
-body.page-template-newsletter .latest-issue::before {
+body.page-template-newsletter .latest-issue-newsletter::before {
   display: block;
   content: "";
   width: calc(100% + 6px);
@@ -3263,32 +3266,32 @@ body.page-template-newsletter .latest-issue::before {
   border: 1px solid #9e9aaf;
 }
 @media screen and (min-width: 480px) {
-  body.page-template-newsletter .latest-issue {
+  body.page-template-newsletter .latest-issue-newsletter {
     grid-column: 3/span 6;
   }
 }
 @media screen and (min-width: 992px) {
-  body.page-template-newsletter .latest-issue {
+  body.page-template-newsletter .latest-issue-newsletter {
     grid-column: 9/span 5;
     grid-row: 1/span 2;
   }
 }
-body.page-template-newsletter .latest-issue__cover a {
+body.page-template-newsletter .latest-issue-newsletter__cover a {
   display: block;
 }
-body.page-template-newsletter .latest-issue__copy {
+body.page-template-newsletter .latest-issue-newsletter__copy {
   text-align: center;
   padding: 1rem 0;
 }
 @media screen and (min-width: 992px) {
-  body.page-template-newsletter .latest-issue__copy {
+  body.page-template-newsletter .latest-issue-newsletter__copy {
     padding: 1.5rem 0;
   }
 }
-body.page-template-newsletter .latest-issue__cta {
+body.page-template-newsletter .latest-issue-newsletter__cta {
   text-align: center;
 }
-body.page-template-newsletter .latest-issue__cta .btn {
+body.page-template-newsletter .latest-issue-newsletter__cta .btn {
   font-weight: bold;
 }
 body.page-template-newsletter .archive {
@@ -4323,40 +4326,40 @@ body.single-authors .archive-results-list__summary {
   padding-top: 3rem;
 }
 
-body.single-issue .issue__header {
+.issue__header {
   text-align: center;
   padding-bottom: 3rem;
 }
 @media screen and (min-width: 480px) {
-  body.single-issue .issue__header {
+  .issue__header {
     grid-column: 3/span 6;
   }
 }
 @media screen and (min-width: 992px) {
-  body.single-issue .issue__header {
+  .issue__header {
     grid-column: 3/span 10;
   }
 }
-body.single-issue .issue__header .pre-header {
+.issue__header .pre-header {
   display: block;
   padding-bottom: 0.5rem;
 }
-body.single-issue .issue__header .ornament {
+.issue__header .ornament {
   padding: 2rem 0;
   max-width: 6rem;
   margin: 0 auto;
 }
-body.single-issue .issue__header .ornament svg {
+.issue__header .ornament svg {
   display: block;
   height: auto;
   width: 100%;
 }
-body.single-issue .issue__title {
+.issue__title {
   font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
   font-family: "Adams", serif;
   text-transform: uppercase;
 }
-body.single-issue .issue__meta {
+.issue__meta {
   font-size: clamp(0.6rem, 0.52rem + 0.43vw, 0.78rem);
   font-family: "Adams", serif;
   text-transform: uppercase;
@@ -4366,93 +4369,96 @@ body.single-issue .issue__meta {
   align-items: center;
   padding-bottom: 0.5rem;
 }
-body.single-issue .issue__meta span {
+.issue__meta span {
   display: block;
 }
-body.single-issue .issue__meta span.season {
+.issue__meta span.season {
   padding-left: 0.5rem;
   border-left: 1px solid;
   margin-left: 0.5rem;
 }
-body.single-issue .issue__cover {
+
+.issue__cover {
   padding-bottom: 4.5rem;
 }
 @media screen and (min-width: 480px) {
-  body.single-issue .issue__cover {
+  .issue__cover {
     grid-column: 3/span 6;
   }
 }
 @media screen and (min-width: 992px) {
-  body.single-issue .issue__cover {
+  .issue__cover {
     grid-column: 10/span 3;
     grid-row: 2;
     padding-bottom: 0;
   }
 }
-body.single-issue .issue__cover-image {
+.issue__cover-image {
   max-width: 24rem;
   margin: 0 auto;
 }
-body.single-issue .issue__cta {
+.issue__cta {
   text-align: center;
   padding-top: 1rem;
 }
-body.single-issue .issue__cta .btn {
+.issue__cta .btn {
   width: 100%;
 }
-body.single-issue .issue .inline-newsletter-form__default {
+.issue .inline-newsletter-form__default {
   margin-top: 3rem;
 }
-body.single-issue .issue__contents {
+
+.issue__contents {
   padding-bottom: 3rem;
 }
 @media screen and (min-width: 480px) {
-  body.single-issue .issue__contents {
+  .issue__contents {
     grid-column: 3/span 6;
   }
 }
 @media screen and (min-width: 992px) {
-  body.single-issue .issue__contents {
+  .issue__contents {
     grid-row: 2;
   }
 }
-body.single-issue .issue__contents-section + .issue__contents-section {
+.issue__contents-section + .issue__contents-section {
   padding-top: 4.5rem;
 }
 @media screen and (min-width: 768px) {
-  body.single-issue .issue__contents-section + .issue__contents-section {
+  .issue__contents-section + .issue__contents-section {
     padding-top: 6rem;
   }
 }
-body.single-issue .issue__contents-header {
+.issue__contents-header {
   padding-bottom: 2rem;
   font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
 }
-body.single-issue .teaser__status {
+
+.teaser__status {
   padding-bottom: 0.25rem;
 }
-body.single-issue .teaser__date {
+.teaser__date {
   font-size: 0.675rem;
   display: flex;
   align-items: center;
 }
 @media screen and (min-width: 768px) {
-  body.single-issue .teaser__date {
+  .teaser__date {
     font-size: 0.7125rem;
   }
 }
-body.single-issue .teaser__date .coming-soon {
+.teaser__date .coming-soon {
   display: inline-block;
   color: #ac6e90;
 }
-body.single-issue .teaser__title {
+.teaser__title {
   font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
   line-height: 1.375em;
 }
-body.single-issue .teaser.draft {
+.teaser.draft {
   pointer-events: none;
 }
-body.single-issue .teaser.draft:hover {
+.teaser.draft:hover {
   cursor: default;
 }
 
@@ -4563,6 +4569,32 @@ body.single-letters .letter .back a:before {
   .default-page__header, .default-page__body {
     grid-column: 4/span 8;
   }
+}
+
+.landing-page__issue {
+  align-items: start;
+  gap: 4rem 2rem;
+}
+@media screen and (min-width: 992px) {
+  .landing-page__issue .issue__contents {
+    grid-row: 1;
+    grid-column: 2/span 5;
+  }
+}
+.landing-page__issue .latest-issue {
+  max-width: 26rem;
+  margin: 3px auto 0 auto;
+}
+@media screen and (min-width: 992px) {
+  .landing-page__issue .latest-issue {
+    max-width: unset;
+    margin: 3px 0 0 0;
+    grid-column: 9/span 5;
+    grid-row: 1;
+  }
+}
+.landing-page__issue .latest-issue .cover img {
+  max-width: 100%;
 }
 
 .issue-theme-volume-one .sapir-star {
@@ -5463,12 +5495,12 @@ body.single-post .issue-theme-volume-twelve .article-footer__links .btn:hover {
   color: #fff;
 }
 
-body.single-issue .issue-theme-volume-twelve .issue__header .ornament svg path {
+.issue-theme-volume-twelve .issue__header .ornament svg path {
   fill: #efc595;
 }
-body.single-issue .issue-theme-volume-twelve .issue__contents-header {
+.issue-theme-volume-twelve .issue__contents-header {
   color: #3d435d;
 }
-body.single-issue .issue-theme-volume-twelve .teaser__date .coming-soon {
+.issue-theme-volume-twelve .teaser__date .coming-soon {
   color: #aaa1cd;
 }

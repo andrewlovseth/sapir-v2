@@ -3,6 +3,7 @@
     gap: 4rem 2rem;
 
     .info {
+        max-width: 40rem;
         &__title {
             font-size: $type-size-500;
             line-height: 1.375em;
@@ -21,7 +22,7 @@
         &__contents {
             @include desktop-small {
                 grid-row: 1;
-                grid-column: 2 / span 6;
+                grid-column: 2 / span 7;
             }
         }
     }
@@ -43,6 +44,7 @@
 
     .issue-landing-page__form {
         margin-bottom: 4rem;
+        max-width: 40rem;
 
         div {
             background: #fbf9f7;
@@ -50,6 +52,26 @@
 
         img {
             mix-blend-mode: multiply;
+        }
+    }
+}
+
+.issue-theme-volume-twelve {
+    .landing-page__issue {
+        .issue__contents-body {
+            @include desktop-medium {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 4rem 2rem;
+            }
+        }
+
+        .issue__contents-section {
+            &:nth-child(1),
+            &:nth-child(4) {
+                @include desktop-medium {
+                    grid-column: span 2;
+                }
+            }
         }
     }
 }

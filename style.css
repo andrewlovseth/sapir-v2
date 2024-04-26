@@ -4421,12 +4421,13 @@ body.single-authors .archive-results-list__summary {
     grid-row: 2;
   }
 }
-.issue__contents-section + .issue__contents-section {
-  padding-top: 4.5rem;
+.issue__contents-body {
+  display: grid;
+  gap: 4.5rem 0;
 }
 @media screen and (min-width: 768px) {
-  .issue__contents-section + .issue__contents-section {
-    padding-top: 6rem;
+  .issue__contents-body {
+    gap: 6rem 0;
   }
 }
 .issue__contents-header {
@@ -4575,6 +4576,9 @@ body.single-letters .letter .back a:before {
   align-items: start;
   gap: 4rem 2rem;
 }
+.landing-page__issue .info {
+  max-width: 40rem;
+}
 .landing-page__issue .info__title {
   font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
   line-height: 1.375em;
@@ -4590,7 +4594,7 @@ body.single-letters .letter .back a:before {
 @media screen and (min-width: 992px) {
   .landing-page__issue .issue__contents {
     grid-row: 1;
-    grid-column: 2/span 6;
+    grid-column: 2/span 7;
   }
 }
 .landing-page__issue .latest-issue {
@@ -4610,12 +4614,25 @@ body.single-letters .letter .back a:before {
 }
 .landing-page__issue .issue-landing-page__form {
   margin-bottom: 4rem;
+  max-width: 40rem;
 }
 .landing-page__issue .issue-landing-page__form div {
   background: #fbf9f7;
 }
 .landing-page__issue .issue-landing-page__form img {
   mix-blend-mode: multiply;
+}
+
+@media screen and (min-width: 1280px) {
+  .issue-theme-volume-twelve .landing-page__issue .issue__contents-body {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4rem 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .issue-theme-volume-twelve .landing-page__issue .issue__contents-section:nth-child(1), .issue-theme-volume-twelve .landing-page__issue .issue__contents-section:nth-child(4) {
+    grid-column: span 2;
+  }
 }
 
 .issue-theme-volume-one .sapir-star {

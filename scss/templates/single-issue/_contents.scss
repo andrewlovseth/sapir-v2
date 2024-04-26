@@ -10,13 +10,12 @@
             grid-row: 2;
         }
 
-        &-section {
-            & + .issue__contents-section {
-                padding-top: 4.5rem;
+        &-body {
+            display: grid;
+            gap: 4.5rem 0;
 
-                @include tablet {
-                    padding-top: 6rem;
-                }
+            @include tablet {
+                gap: 6rem 0;
             }
         }
 

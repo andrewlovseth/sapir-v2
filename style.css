@@ -2731,6 +2731,80 @@ body.page-template-about .about__masthead .role .job-title {
   letter-spacing: 0.125em;
   text-transform: uppercase;
 }
+body.page-template-about .about .form-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+body.page-template-about .about .form-wrapper input.email {
+  background: transparent;
+  border: 1px solid #65667a;
+  padding: 1rem;
+  height: 3rem;
+  line-height: 1em;
+  font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
+  letter-spacing: 0.02em;
+  flex: 1;
+  color: #424254;
+  margin-bottom: 0.5rem;
+  background: #fff;
+}
+@media screen and (min-width: 992px) {
+  body.page-template-about .about .form-wrapper input.email {
+    margin-bottom: 0;
+  }
+}
+body.page-template-about .about .form-wrapper input.email:focus, body.page-template-about .about .form-wrapper input.email:active {
+  outline: none;
+}
+body.page-template-about .about .form-wrapper input.email::-webkit-input-placeholder {
+  color: #424254;
+}
+body.page-template-about .about .form-wrapper input.email::-moz-placeholder {
+  color: #424254;
+}
+body.page-template-about .about .form-wrapper input.email:-moz-placeholder {
+  color: #424254;
+}
+body.page-template-about .about .form-wrapper input.email:-ms-input-placeholder {
+  color: #424254;
+}
+body.page-template-about .about .form-wrapper input.button {
+  padding: 1rem 2rem;
+  height: 3rem;
+  line-height: 1em;
+  border: none;
+  background: #65667a;
+  color: #fff;
+  font-size: clamp(0.5rem, 0.42rem + 0.38vw, 0.675rem);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family: "Adams", serif;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 992px) {
+  body.page-template-about .about .form-wrapper input.button {
+    margin-bottom: 0;
+  }
+}
+body.page-template-about .about #mce-responses {
+  transform: translateY(1rem);
+  color: #fff;
+  font-size: 0.875rem;
+}
+body.page-template-about .about #mce-responses #mce-error-response,
+body.page-template-about .about #mce-responses #mce-success-response {
+  padding: 1rem;
+  max-width: 50rem;
+}
+body.page-template-about .about #mce-responses #mce-error-response {
+  background: rgb(218, 91, 91);
+}
+body.page-template-about .about #mce-responses #mce-success-response {
+  background: rgb(79, 141, 79);
+}
 body.page-template-about .quote {
   text-align: center;
 }

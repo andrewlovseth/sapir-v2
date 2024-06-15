@@ -1,0 +1,292 @@
+$vol-13-turquoise: #3aa383;
+$vol-13-light-blue: #82b0bc;
+$vol-13-pink: #e67b93;
+$vol-13-mint: #dfefdd;
+
+.site-theme-volume-thirteen,
+.issue-theme-volume-thirteen {
+    .site-banner {
+        .image {
+            height: 48px;
+
+            @include tablet {
+                height: 96px;
+            }
+
+            img {
+                object-position: bottom center;
+            }
+        }
+    }
+
+    .site-header {
+        .search {
+            .newsletter-link {
+                background: $vol-13-pink;
+                color: $white;
+
+                &:hover {
+                    background: lighten($vol-13-pink, 5%);
+                }
+            }
+        }
+    }
+
+    .sapir-star {
+        fill: $vol-13-pink;
+    }
+
+    .wp-block-pullquote:not(.basic) {
+        p {
+            color: $vol-13-pink;
+        }
+    }
+
+    .teaser__title a:hover {
+        color: $vol-13-turquoise;
+    }
+
+    .teaser__author-link:hover .teaser__author-name:after {
+        background: rgba($vol-13-turquoise, 0.5);
+    }
+
+    .cta .btn {
+        border-color: $vol-13-turquoise;
+        color: $vol-13-turquoise;
+
+        &:hover {
+            background-color: $vol-13-turquoise;
+            border-color: $vol-13-turquoise;
+            color: $white;
+        }
+    }
+
+    .site-header .header-nav .epigraph {
+        color: $vol-13-pink;
+        border-color: $vol-13-pink;
+
+        &::before {
+            border-color: $vol-13-pink;
+        }
+    }
+
+    .newsletter {
+        &__wrapper {
+            background: rgba($vol-13-mint, 0.85);
+        }
+
+        .slim-line-imge-content {
+            background: rgba($vol-13-mint, 0.82);
+        }
+
+        .section-header h3 {
+            color: $vol-13-pink;
+        }
+
+        .form-wrapper {
+            input.email {
+                border-color: $vol-13-pink;
+                color: $vol-13-pink;
+
+                @include placeholder {
+                    color: rgba($vol-13-pink, 0.7);
+                }
+            }
+            input.button {
+                background: $vol-13-pink;
+            }
+        }
+    }
+
+    ::-moz-selection {
+        background: $vol-13-pink;
+        color: $white;
+        text-shadow: none;
+    }
+
+    ::selection {
+        background: $vol-13-pink;
+        color: $white;
+        text-shadow: none;
+    }
+}
+
+body.page-template-home.site-theme-volume-thirteen {
+    .latest .latest-issue,
+    .latest .latest-issue::before {
+        border-color: $vol-13-turquoise;
+    }
+
+    .latest .latest-issue .ornament path {
+        fill: $vol-13-pink;
+    }
+
+    .explore__sections-link a .label:after {
+        background: rgba($vol-13-turquoise, 0.5);
+    }
+
+    .explore__topics-list a:after {
+        background: rgba($vol-13-turquoise, 0.5);
+    }
+
+    .most-read,
+    .most-read::before {
+        border-color: $vol-13-pink;
+        color: $vol-13-pink;
+    }
+
+    .most-read {
+        a {
+            color: $vol-13-pink;
+        }
+
+        .teaser-small .teaser__title:hover::before {
+            border-bottom-color: $vol-13-pink;
+        }
+    }
+
+    .quote {
+        &__header {
+            .section-title {
+                color: $vol-13-mint;
+            }
+        }
+
+        blockquote {
+            background: rgba($vol-13-mint, 0.5);
+            color: rgba($dark-blue, 0.7);
+
+            &::before,
+            &::after {
+                color: rgba($dark-blue, 0.7);
+            }
+        }
+
+        a:hover {
+            blockquote {
+                &::before,
+                &::after {
+                    color: $black;
+                }
+
+                color: $black;
+            }
+        }
+    }
+}
+
+body.single-post .issue-theme-volume-thirteen {
+    .article-header .authors a:hover {
+        border-color: rgba($vol-13-pink, 0.5);
+    }
+
+    .article-footer__links {
+        .btn,
+        .btn:before {
+            border-color: $vol-13-turquoise;
+        }
+
+        .btn {
+            color: $vol-13-turquoise;
+
+            &:hover {
+                background-color: $vol-13-turquoise;
+                color: $white;
+            }
+        }
+    }
+}
+
+.issue-theme-volume-thirteen {
+    .issue__header .ornament svg path {
+        fill: $vol-13-pink;
+    }
+
+    .issue__contents-header {
+        color: $vol-13-turquoise;
+    }
+
+    .teaser__date .coming-soon {
+        color: $vol-13-turquoise;
+    }
+}
+
+.resilience-o-dropcap {
+    &:before {
+        float: left;
+        display: block;
+        content: "";
+        width: clamp(10rem, 10.75vw, 10.75rem);
+        height: clamp(9rem, 6vh, 12.75rem);
+        margin: 0 0.5rem 0.5rem 0;
+        background-image: url(images/resilience/resilience-o-dropcap.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        mix-blend-mode: multiply;
+    }
+
+    .first-letter {
+        display: none;
+    }
+}
+
+.resilience-t-dropcap {
+    &:before {
+        float: left;
+        display: block;
+        content: "";
+        width: clamp(10rem, 10.75vw, 10.75rem);
+        height: clamp(9rem, 6vh, 12.75rem);
+        margin: 0 0.5rem 0.5rem 0;
+        background-image: url(images/resilience/resilience-t-dropcap.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        mix-blend-mode: multiply;
+    }
+
+    .first-letter {
+        display: none;
+    }
+}
+
+.resilience-r-dropcap {
+    &:before {
+        float: left;
+        display: block;
+        content: "";
+        width: clamp(10rem, 10.75vw, 10.75rem);
+        height: clamp(9rem, 6vh, 12.75rem);
+        margin: 0 0.5rem 0.5rem 0;
+        background-image: url(images/resilience/resilience-r-dropcap.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        mix-blend-mode: multiply;
+    }
+
+    .first-letter {
+        display: none;
+    }
+}
+
+.resilience-i-dropcap {
+    &:before {
+        float: left;
+        display: block;
+        content: "";
+        width: clamp(10rem, 10.75vw, 10.75rem);
+        height: clamp(9rem, 6vh, 12.75rem);
+        margin: 0 0.5rem 0.5rem 0;
+        background-image: url(images/resilience/resilience-i-dropcap.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        mix-blend-mode: multiply;
+    }
+
+    .first-letter {
+        display: none;
+    }
+}

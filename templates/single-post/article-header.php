@@ -67,10 +67,19 @@
 
     <?php if($authors): ?>
         <div class="authors authors-<?php echo $authors_count; ?>">
-            <em class="authors-by">by</em>
+            
 
             <div class="authors-list">
-                <?php foreach($authors as $author): ?><div class="authors-item"><a class="authors-link" href="<?php echo get_permalink($author); ?>"><?php echo get_the_title($author); ?></a></div><?php endforeach; ?>
+                <?php $i = 1; foreach($authors as $author): ?>
+                    <div class="authors-item">
+                        <?php if($i == 1): ?>
+                            <em class="authors-by">by</em>
+                        <?php endif; ?>
+                        <a class="authors-link" href="<?php echo get_permalink($author); ?>">
+                            <?php echo get_the_title($author); ?>
+                        </a>
+                    </div>
+                <?php $i++; endforeach; ?>
             </div>
         </div>
     <?php endif; ?>    

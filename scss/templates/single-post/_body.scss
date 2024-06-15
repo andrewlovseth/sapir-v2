@@ -175,6 +175,11 @@ article.dropcap {
     blockquote {
         margin: 0;
         padding: 0;
+
+        & > div[id^="om-"] {
+            margin-left: -2rem;
+            margin-top: 1.5rem;
+        }
     }
 
     * {

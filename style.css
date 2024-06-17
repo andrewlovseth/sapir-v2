@@ -5902,4 +5902,7 @@ body.single-post .issue-theme-volume-thirteen .article-footer__links .btn:hover 
   body.single-post .article-footer__links {
     display: none !important;
   }
+  body.single-post div[id^=om-] {
+    display: none !important;
+  }
 }

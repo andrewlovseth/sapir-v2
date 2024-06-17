@@ -11,5 +11,9 @@ body.single-post {
                 display: none !important;
             }
         }
+
+        div[id^="om-"] {
+            display: none !important;
+        }
     }
 }

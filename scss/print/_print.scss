@@ -1,0 +1,22 @@
+@media print {
+    .site-banner,
+    .site-footer,
+    .site-header .hamburger,
+    .site-header .search {
+        display: none !important;
+    }
+
+    body,
+    .site-header,
+    .site-header .dingbat {
+        background: #fff !important;
+    }
+}
+
+* {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+@import "single-post";

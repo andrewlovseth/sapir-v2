@@ -1,0 +1,15 @@
+body.single-post {
+    @media print {
+        .article-header {
+            .pdf {
+                display: none !important;
+            }
+        }
+
+        .article-footer {
+            &__links {
+                display: none !important;
+            }
+        }
+    }
+}

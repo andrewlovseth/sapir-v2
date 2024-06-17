@@ -5876,3 +5876,30 @@ body.single-post .issue-theme-volume-thirteen .article-footer__links .btn:hover 
 .resilience-i-dropcap .first-letter {
   display: none;
 }
+
+@media print {
+  .site-banner,
+  .site-footer,
+  .site-header .hamburger,
+  .site-header .search {
+    display: none !important;
+  }
+  body,
+  .site-header,
+  .site-header .dingbat {
+    background: #fff !important;
+  }
+}
+* {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+}
+
+@media print {
+  body.single-post .article-header .pdf {
+    display: none !important;
+  }
+  body.single-post .article-footer__links {
+    display: none !important;
+  }
+}

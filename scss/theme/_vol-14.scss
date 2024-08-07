@@ -1,0 +1,194 @@
+$vol-14-red: #d65449;
+$vol-14-aqua: #82b0bc;
+$vol-14-pink: #f0cfe3;
+$vol-14-blue: #2462ae;
+
+.site-theme-volume-fourteen,
+.issue-theme-volume-fourteen {
+    .site-banner {
+        .image {
+            height: 48px;
+
+            @include tablet {
+                height: 96px;
+            }
+
+            img {
+                object-position: bottom center;
+            }
+        }
+    }
+
+    .site-header {
+        .search {
+            .newsletter-link {
+                background: $vol-14-red;
+                color: $white;
+
+                &:hover {
+                    background: lighten($vol-14-red, 5%);
+                }
+            }
+        }
+    }
+
+    .sapir-star {
+        fill: $vol-14-red;
+    }
+
+    .wp-block-pullquote:not(.basic) {
+        p {
+            color: $vol-14-red;
+        }
+    }
+
+    .teaser__title a:hover {
+        color: $vol-14-blue;
+    }
+
+    .teaser__author-link:hover .teaser__author-name:after {
+        background: rgba($vol-14-blue, 0.5);
+    }
+
+    .cta .btn {
+        border-color: $vol-14-blue;
+        color: $vol-14-blue;
+
+        &:hover {
+            background-color: $vol-14-blue;
+            border-color: $vol-14-blue;
+            color: $white;
+        }
+    }
+
+    .site-header .header-nav .epigraph {
+        color: $vol-14-blue;
+        border-color: $vol-14-blue;
+
+        &::before {
+            border-color: $vol-14-blue;
+        }
+    }
+
+    .newsletter {
+        &__wrapper {
+            background: rgba($vol-14-aqua, 0.2);
+        }
+
+        .slim-line-imge-content {
+            background: rgba($vol-14-aqua, 0.23);
+        }
+    }
+
+    ::-moz-selection {
+        background: $vol-14-blue;
+        color: $white;
+        text-shadow: none;
+    }
+
+    ::selection {
+        background: $vol-14-blue;
+        color: $white;
+        text-shadow: none;
+    }
+}
+
+body.page-template-home.site-theme-volume-fourteen {
+    .latest .latest-issue,
+    .latest .latest-issue::before {
+        border-color: $vol-14-blue;
+    }
+
+    .latest .latest-issue .ornament path {
+        fill: $vol-14-red;
+    }
+
+    .explore__sections-link a .label:after {
+        background: rgba($vol-14-blue, 0.5);
+    }
+
+    .explore__topics-list a:after {
+        background: rgba($vol-14-blue, 0.5);
+    }
+
+    .most-read,
+    .most-read::before {
+        border-color: $vol-14-red;
+        color: $vol-14-red;
+    }
+
+    .most-read {
+        a {
+            color: $vol-14-red;
+        }
+
+        .teaser-small .teaser__title:hover::before {
+            border-bottom-color: $vol-14-blue;
+        }
+    }
+
+    .quote {
+        &__header {
+            .section-title {
+                color: $vol-14-aqua;
+            }
+        }
+
+        blockquote {
+            background: rgba($vol-14-aqua, 0.2);
+            color: rgba($dark-blue, 0.7);
+
+            &::before,
+            &::after {
+                color: rgba($dark-blue, 0.7);
+            }
+        }
+
+        a:hover {
+            blockquote {
+                &::before,
+                &::after {
+                    color: $black;
+                }
+
+                color: $black;
+            }
+        }
+    }
+}
+
+body.single-post .issue-theme-volume-fourteen {
+    .article-header .authors a:hover {
+        border-color: rgba($vol-14-blue, 0.5);
+    }
+
+    .article-footer__links {
+        .btn,
+        .btn:before {
+            border-color: $vol-14-blue;
+        }
+
+        .btn {
+            color: $vol-14-blue;
+
+            &:hover {
+                background-color: $vol-14-blue;
+                color: $white;
+            }
+        }
+    }
+}
+
+.issue-theme-volume-fourteen {
+    .issue__header .ornament svg path {
+        fill: $vol-14-red;
+    }
+
+    .issue__contents-header {
+        color: $vol-14-red;
+    }
+
+    .teaser__date .coming-soon {
+        color: $vol-14-blue;
+    }
+}

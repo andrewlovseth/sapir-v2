@@ -40,7 +40,7 @@
                             <h3 class="issue__title"><?php echo $title; ?></h3>
 
                             <div class="issue__meta">
-                                <span class="volume"><?php echo $volume; ?></span>, <span class="season"><?php echo $season; ?></span>
+                                <span class="volume"><?php echo $volume; ?></span> <span class="season"><?php echo $season; ?></span>
                             </div>
                         </div>
 

@@ -118,12 +118,21 @@ body.page-template-home.site-theme-volume-fourteen {
     }
 
     .most-read {
-        a {
+        .teaser__title-link {
             color: $vol-14-red;
+            transition: all 300ms ease;
+
+            &:hover {
+                color: $vol-14-blue;
+
+                &::after {
+                    background: $vol-14-blue;
+                }
+            }
         }
 
-        .teaser-small .teaser__title:hover::before {
-            border-bottom-color: $vol-14-blue;
+        .teaser__author-link {
+            color: $vol-14-red;
         }
     }
 

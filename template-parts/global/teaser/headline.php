@@ -8,5 +8,5 @@
 ?>
 
 <div class="teaser__headline">
-    <h3 class="teaser__title"><a href="<?php echo $permalink; ?>"><?php echo $title; ?></a></h3>
+    <h3 class="teaser__title"><a class="teaser__title-link" href="<?php echo $permalink; ?>"><?php echo $title; ?></a></h3>
 </div>

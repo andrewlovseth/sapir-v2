@@ -37,11 +37,6 @@
                     left: -3rem;
                 }
             }
-            @include span-hover-underline(".teaser__title-link");
-
-            .teaser__title-link {
-                display: inline-block;
-            }
         }
 
         .teaser__authors-list {

@@ -2319,25 +2319,6 @@ body.page-template-home .most-read .teaser-small .teaser__title:before {
     left: -3rem;
   }
 }
-body.page-template-home .most-read .teaser-small .teaser__title .teaser__title-link:after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 1px;
-  background: rgba(158, 154, 175, 0.5);
-  transform: translateY(2px);
-  opacity: 0;
-  transition: all 200ms ease;
-}
-body.page-template-home .most-read .teaser-small .teaser__title:hover {
-  text-decoration: none;
-}
-body.page-template-home .most-read .teaser-small .teaser__title:hover .teaser__title-link:after {
-  opacity: 1;
-}
-body.page-template-home .most-read .teaser-small .teaser__title .teaser__title-link {
-  display: inline-block;
-}
 body.page-template-home .most-read .teaser-small .teaser__authors-list a {
   pointer-events: none;
 }
@@ -6006,9 +5987,6 @@ body.page-template-home.site-theme-volume-fourteen .most-read .teaser__title-lin
 }
 body.page-template-home.site-theme-volume-fourteen .most-read .teaser__title-link:hover {
   color: #2462ae;
-}
-body.page-template-home.site-theme-volume-fourteen .most-read .teaser__title-link:hover::after {
-  background: #2462ae;
 }
 body.page-template-home.site-theme-volume-fourteen .most-read .teaser__author-link {
   color: #d65449;

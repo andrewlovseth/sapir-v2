@@ -781,32 +781,6 @@
                     "button_label": "+ Add Link"
                 },
                 {
-                    "key": "field_63bf4e86eb515",
-                    "label": "Posts",
-                    "name": "posts",
-                    "aria-label": "",
-                    "type": "relationship",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "post_type": "",
-                    "taxonomy": "",
-                    "filters": [
-                        "search",
-                        "taxonomy"
-                    ],
-                    "return_format": "object",
-                    "min": "",
-                    "max": "",
-                    "elements": "",
-                    "bidirectional_target": []
-                },
-                {
                     "key": "field_63cdd86340a23",
                     "label": "Banner",
                     "name": "banner",
@@ -977,5 +951,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724225245
+    "modified": 1724225884
 }

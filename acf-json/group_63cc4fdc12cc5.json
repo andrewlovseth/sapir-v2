@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_63cc4feebe220",
@@ -92,7 +93,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_63cc5016be222",
@@ -131,7 +133,8 @@
                     "return_format": "object",
                     "multiple": 0,
                     "allow_null": 0,
-                    "ui": 1
+                    "ui": 1,
+                    "bidirectional_target": []
                 },
                 {
                     "key": "field_63cc5089f2b2d",
@@ -170,7 +173,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_63cc5022be224",
@@ -230,6 +234,45 @@
                     "return_format": "array"
                 }
             ]
+        },
+        {
+            "key": "field_66e37616b0895",
+            "label": "SEO",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_66e3761db0896",
+            "label": "Meta Description",
+            "name": "meta_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -263,5 +306,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1674338817
+    "modified": 1726182959
 }

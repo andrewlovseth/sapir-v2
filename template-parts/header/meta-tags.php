@@ -11,14 +11,16 @@
     } else {
         $image = get_field('header_default_meta_image', 'options');
     }
-    
-    if($post !== NULL) {
+
+    if(get_field('meta_description', $post->ID)) {
+        $description = get_field('meta_description', $post->ID);
+    } elseif ($post !== NULL) {
         $content = $post->post_content; 
         if($content) {
-            $description = substr(strip_tags($content), 0, $char_limit)  . '...'; 
-        } else {
-            $description = '';
+            $description = substr(strip_tags($content), 0, $char_limit)  . '...';
         }
+    } else {
+        $description = '';
     }
 ?>
 

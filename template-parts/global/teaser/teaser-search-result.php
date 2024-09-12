@@ -29,6 +29,7 @@
 
 <article class="teaser teaser-large teaser-search-result">
     <?php
+
         $args = ['issue'=> $issue, 'volume' => $volume, 'season' => $season];
         get_template_part('template-parts/global/teaser/search-results-meta', null, $args);
     ?>

@@ -2190,9 +2190,7 @@ body.page-template-home .explore__sections-link .label {
   }
 }
 body.page-template-home .explore__topics {
-  padding: 3rem 0;
-  border-bottom: 1px solid #9e9aaf;
-  margin-bottom: 3rem;
+  padding-top: 3rem;
 }
 @media screen and (min-width: 992px) {
   body.page-template-home .explore__topics {
@@ -2354,9 +2352,15 @@ body.page-template-home .departures__body {
   padding: 0 2rem;
   flex: 1;
   align-self: center;
+  display: flex;
+  align-items: center;
 }
 body.page-template-home .departures__footer {
   padding-top: 1.5rem;
+}
+body.page-template-home .departures .teaser__title {
+  font-style: italic;
+  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
 }
 body.page-template-home .departures .banner__footer {
   transform: rotate(180deg);

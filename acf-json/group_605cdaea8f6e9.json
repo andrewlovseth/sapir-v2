@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_63cee05dcfca8",
@@ -97,7 +98,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6086ed367d14f",
@@ -267,6 +269,27 @@
                             "append": ""
                         },
                         {
+                            "key": "field_66f59decb2940",
+                            "label": "Location",
+                            "name": "location",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
                             "key": "field_6086ed427d150",
                             "label": "Title",
                             "name": "title",
@@ -362,7 +385,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_609c6bef6dcf3",
@@ -482,5 +506,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704734074
+    "modified": 1727372792
 }

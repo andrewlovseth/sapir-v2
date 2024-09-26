@@ -4,6 +4,7 @@
         $header = get_sub_field('header');
         $icon = get_sub_field('icon');
         $date_time = get_sub_field('date_time');
+        $location = get_sub_field('location');
         $title = get_sub_field('title');
         $description = get_sub_field('description');
         $link = get_sub_field('cta');
@@ -19,6 +20,9 @@
         <div class="teaser-conversation__info">
             <div class="teaser-conversation__meta">
                 <span class="date"><?php echo $date_time; ?></span>
+                <?php if($location): ?>
+                    <span class="location"><?php echo $location; ?></span>
+                <?php endif; ?>
             </div>
 
             <div class="teaser__headline">

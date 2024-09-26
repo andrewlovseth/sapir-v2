@@ -10,6 +10,8 @@
     $time = get_sub_field('time');
     $time_zone = get_sub_field('time_zone');
 
+    $location = get_sub_field('location');
+
     $description = get_sub_field('description');
     $link = get_sub_field('link');
 ?>
@@ -52,8 +54,9 @@
             <?php if($time): ?>
                 <span class="time"><?php echo $time; ?><?php if($time_zone): ?> <?php echo $time_zone; ?><?php endif; ?></span>
             <?php endif; ?>
-
-            
+            <?php if($location): ?>
+                <span class="location"><?php echo $location; ?></span>
+            <?php endif; ?>
         </div>
         
         <div class="event__headline">

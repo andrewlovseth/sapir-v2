@@ -1,13 +1,15 @@
 body.page-template-home {
-    @import 'home/latest';
+    @import "home/latest";
 
-    @import 'home/explore';
+    @import "home/newsletter";
 
-    @import 'home/curated-articles';
+    @import "home/explore";
 
-    @import 'home/most-read';
+    @import "home/curated-articles";
 
-    @import 'home/departures';
+    @import "home/most-read";
 
-    @import 'home/quote';
+    @import "home/departures";
+
+    @import "home/quote";
 }

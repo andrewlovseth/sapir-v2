@@ -1,0 +1,95 @@
+.newsletter {
+    &__container {
+        padding: 3rem 2rem;
+        background: rgba($light-blue, 0.1);
+    }
+
+    &__content {
+        max-width: 48rem;
+        margin: 0 auto;
+    }
+
+    &__icon {
+        max-width: 4rem;
+        img {
+            mix-blend-mode: multiply;
+        }
+    }
+
+    &__copy {
+        padding: 1rem 0;
+    }
+
+    .form-wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+
+        input.email {
+            background: transparent;
+            border: 1px solid $mid-blue;
+            padding: 1rem;
+            height: 3rem;
+            line-height: 1em;
+            font-size: $type-size-200;
+            letter-spacing: 0.02em;
+            flex: 1;
+            color: $dark-blue;
+            margin-bottom: 0.5rem;
+            background: $white;
+
+            @include desktop-small {
+                margin-bottom: 0;
+            }
+
+            &:focus,
+            &:active {
+                outline: none;
+            }
+
+            @include placeholder {
+                color: $dark-blue;
+            }
+        }
+
+        input.button {
+            padding: 1rem 2rem;
+            height: 3rem;
+            line-height: 1em;
+            border: none;
+            background: $mid-blue;
+            color: $white;
+            font-size: $type-size-050;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-family: $adams;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+
+            @include desktop-small {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    #mce-responses {
+        transform: translateY(1rem);
+        color: #fff;
+        font-size: 0.875rem;
+
+        #mce-error-response,
+        #mce-success-response {
+            padding: 1rem;
+            max-width: 50rem;
+        }
+
+        #mce-error-response {
+            background: rgb(218, 91, 91);
+        }
+
+        #mce-success-response {
+            background: rgb(79, 141, 79);
+        }
+    }
+}

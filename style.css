@@ -1870,7 +1870,7 @@ body.single-post.postid-2036 body.single-post article.dropcap .article-body p.dr
 
 body.page-template-home .latest {
   padding-top: 0.25rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 body.page-template-home .latest .latest-issue {
   align-self: start;
@@ -1904,212 +1904,15 @@ body.page-template-home .latest .articles {
 body.page-template-home .latest .articles .upper-header {
   padding-bottom: 1.5rem;
 }
-body.page-template-home .latest .featured {
-  margin-top: 3rem;
-  border-top: 1px solid #9e9aaf;
-  padding-top: 3rem;
-}
-body.page-template-home .latest .featured .upper-header {
-  padding-bottom: 2rem;
-}
-body.page-template-home .latest .featured .teaser-conversation {
-  display: grid;
-  gap: 1rem 2rem;
-}
-@media screen and (min-width: 768px) {
-  body.page-template-home .latest .featured .teaser-conversation {
-    grid-template-columns: 10rem 1fr;
-  }
-}
-@media screen and (min-width: 992px) {
-  body.page-template-home .latest .featured .teaser-conversation {
-    grid-column: 3/span 10;
-  }
-}
-body.page-template-home .latest .featured .teaser-conversation + .teaser-conversation {
-  padding-top: 3rem;
-}
-@media screen and (min-width: 992px) {
-  body.page-template-home .latest .featured .teaser-conversation + .teaser-conversation {
-    padding-top: 6rem;
-  }
-}
-body.page-template-home .latest .featured .teaser-conversation__participants {
-  max-width: 7rem;
-}
-@media screen and (min-width: 768px) {
-  body.page-template-home .latest .featured .teaser-conversation__participants {
-    max-width: 10rem;
-  }
-}
-body.page-template-home .latest .featured .teaser-conversation__participant + .teaser-conversation__participant {
-  margin-top: -2.25rem;
-}
-@media screen and (min-width: 768px) {
-  body.page-template-home .latest .featured .teaser-conversation__participant + .teaser-conversation__participant {
-    margin-top: -2.5rem;
-  }
-}
-body.page-template-home .latest .featured .teaser-conversation__participant:nth-child(even) .photo {
-  margin-left: auto;
-}
-body.page-template-home .latest .featured .teaser-conversation__participant:nth-child(even) .photo img {
-  transform: translateX(-1px);
-}
-@media screen and (min-width: 768px) {
-  body.page-template-home .latest .featured .teaser-conversation__participant:nth-child(even) .photo img {
-    transform: translateX(-2px);
-  }
-}
-body.page-template-home .latest .featured .teaser-conversation__participant:nth-child(even) .photo svg {
-  transform: scaleX(-1);
-}
-body.page-template-home .latest .featured .teaser-conversation__participant:nth-child(1) {
-  z-index: 100;
-}
-body.page-template-home .latest .featured .teaser-conversation__participant:nth-child(2) {
-  z-index: 90;
-}
-body.page-template-home .latest .featured .teaser-conversation__participant:nth-child(3) {
-  z-index: 80;
-}
-body.page-template-home .latest .featured .teaser-conversation__participant .photo {
-  max-width: 4rem;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-@media screen and (min-width: 768px) {
-  body.page-template-home .latest .featured .teaser-conversation__participant .photo {
-    max-width: 6rem;
-  }
-}
-body.page-template-home .latest .featured .teaser-conversation__participant .photo svg {
-  grid-row: 1;
-  grid-column: 1;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-body.page-template-home .latest .featured .teaser-conversation__participant .photo img {
-  grid-row: 1;
-  grid-column: 1;
-  border-radius: 50%;
-  width: 85%;
-  margin: 0 auto;
-  transform: translateX(1px);
-  mix-blend-mode: multiply;
-}
-@media screen and (min-width: 768px) {
-  body.page-template-home .latest .featured .teaser-conversation__participant .photo img {
-    transform: translateX(2px);
-  }
-}
-body.page-template-home .latest .featured .teaser-conversation__participant .photo .no-photo {
-  grid-row: 1;
-  grid-column: 1;
-  width: 5rem;
-  height: 5rem;
-}
-body.page-template-home .latest .featured .teaser-conversation__meta {
-  font-family: "Adams", serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: clamp(0.66rem, 0.58rem + 0.48vw, 0.88rem);
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  padding-bottom: 2rem;
-}
-body.page-template-home .latest .featured .teaser-conversation__meta span {
-  display: block;
-}
-body.page-template-home .latest .featured .teaser-conversation__meta span + span {
-  padding-left: 0.5rem;
-  border-left: 1px solid;
-  margin-left: 0.5rem;
-}
-body.page-template-home .latest .featured .teaser-conversation .teaser__title {
-  font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
-  line-height: 1.25em;
-}
-body.page-template-home .latest .featured .teaser-conversation .copy {
-  padding-top: 0.5rem;
-}
-body.page-template-home .latest .featured .teaser-conversation .copy a {
-  text-decoration: underline;
-}
-body.page-template-home .latest .featured .teaser-conversation .listen {
-  display: flex;
-  align-items: center;
-  padding-top: 2rem;
-}
-body.page-template-home .latest .featured .teaser-conversation .listen strong {
-  font-family: "Adams", serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: clamp(0.66rem, 0.58rem + 0.48vw, 0.88rem);
-  font-weight: bold;
-}
-body.page-template-home .latest .featured .teaser-conversation .listen a {
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-left: 0.75rem;
-}
-body.page-template-home .latest .featured .teaser-conversation .listen a svg {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-body.page-template-home .latest .featured .teaser-conversation .listen a svg path {
-  transition: fill 300ms ease;
-}
-body.page-template-home .latest .featured .teaser-conversation .listen a.apple-podcasts:hover svg path {
-  fill: #b150e2;
-}
-body.page-template-home .latest .featured .teaser-conversation .listen a.spotify:hover svg path {
-  fill: #1db954;
-}
-body.page-template-home .latest .featured .teaser-conversation .listen a.google-podcasts:hover svg path {
-  fill: #db4437;
-}
-body.page-template-home .latest .featured .teaser-conversation .cta {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1rem;
-}
-@media screen and (min-width: 768px) {
-  body.page-template-home .latest .featured .teaser-conversation .cta {
-    margin-top: 0;
-  }
-}
-body.page-template-home .latest .featured .teaser-conversation .copy + .cta {
-  padding-top: 2rem;
-}
-@media screen and (min-width: 768px) {
-  body.page-template-home .latest .featured .teaser-conversation {
-    grid-template-columns: 8rem 1fr;
-  }
-}
-body.page-template-home .latest .featured .teaser-conversation__icon {
-  aspect-ratio: 7/6;
-}
-body.page-template-home .latest .featured .teaser-conversation__icon img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  mix-blend-mode: multiply;
-}
-body.page-template-home .latest .featured .teaser-conversation .cta {
-  justify-content: flex-start;
-  padding-top: 1.5rem;
-}
 body.page-template-home .newsletter__container {
-  padding: 3rem 2rem;
+  padding: 2rem;
   background: rgba(158, 154, 175, 0.1);
+  border: 1px solid rgba(158, 154, 175, 0.25);
+}
+@media screen and (min-width: 992px) {
+  body.page-template-home .newsletter__container {
+    padding: 3rem;
+  }
 }
 body.page-template-home .newsletter__content {
   max-width: 48rem;
@@ -2197,6 +2000,223 @@ body.page-template-home .newsletter #mce-responses #mce-error-response {
 }
 body.page-template-home .newsletter #mce-responses #mce-success-response {
   background: rgb(79, 141, 79);
+}
+body.page-template-home .below-fold__wrapper {
+  margin-top: 3rem;
+  border-top: 1px solid #9e9aaf;
+  padding-top: 3rem;
+  display: grid;
+  gap: 2rem;
+}
+@media screen and (min-width: 480px) {
+  body.page-template-home .below-fold__wrapper {
+    grid-column: 3/span 6;
+  }
+}
+@media screen and (min-width: 992px) {
+  body.page-template-home .below-fold__wrapper {
+    grid-column: 2/span 12;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+body.page-template-home .featured .upper-header {
+  padding-bottom: 2rem;
+}
+body.page-template-home .featured .teaser-conversation {
+  display: grid;
+  gap: 1rem 2rem;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-home .featured .teaser-conversation {
+    grid-template-columns: 10rem 1fr;
+  }
+}
+@media screen and (min-width: 992px) {
+  body.page-template-home .featured .teaser-conversation {
+    grid-column: 3/span 10;
+  }
+}
+body.page-template-home .featured .teaser-conversation + .teaser-conversation {
+  padding-top: 3rem;
+}
+@media screen and (min-width: 992px) {
+  body.page-template-home .featured .teaser-conversation + .teaser-conversation {
+    padding-top: 6rem;
+  }
+}
+body.page-template-home .featured .teaser-conversation__participants {
+  max-width: 7rem;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-home .featured .teaser-conversation__participants {
+    max-width: 10rem;
+  }
+}
+body.page-template-home .featured .teaser-conversation__participant + .teaser-conversation__participant {
+  margin-top: -2.25rem;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-home .featured .teaser-conversation__participant + .teaser-conversation__participant {
+    margin-top: -2.5rem;
+  }
+}
+body.page-template-home .featured .teaser-conversation__participant:nth-child(even) .photo {
+  margin-left: auto;
+}
+body.page-template-home .featured .teaser-conversation__participant:nth-child(even) .photo img {
+  transform: translateX(-1px);
+}
+@media screen and (min-width: 768px) {
+  body.page-template-home .featured .teaser-conversation__participant:nth-child(even) .photo img {
+    transform: translateX(-2px);
+  }
+}
+body.page-template-home .featured .teaser-conversation__participant:nth-child(even) .photo svg {
+  transform: scaleX(-1);
+}
+body.page-template-home .featured .teaser-conversation__participant:nth-child(1) {
+  z-index: 100;
+}
+body.page-template-home .featured .teaser-conversation__participant:nth-child(2) {
+  z-index: 90;
+}
+body.page-template-home .featured .teaser-conversation__participant:nth-child(3) {
+  z-index: 80;
+}
+body.page-template-home .featured .teaser-conversation__participant .photo {
+  max-width: 4rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-home .featured .teaser-conversation__participant .photo {
+    max-width: 6rem;
+  }
+}
+body.page-template-home .featured .teaser-conversation__participant .photo svg {
+  grid-row: 1;
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+body.page-template-home .featured .teaser-conversation__participant .photo img {
+  grid-row: 1;
+  grid-column: 1;
+  border-radius: 50%;
+  width: 85%;
+  margin: 0 auto;
+  transform: translateX(1px);
+  mix-blend-mode: multiply;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-home .featured .teaser-conversation__participant .photo img {
+    transform: translateX(2px);
+  }
+}
+body.page-template-home .featured .teaser-conversation__participant .photo .no-photo {
+  grid-row: 1;
+  grid-column: 1;
+  width: 5rem;
+  height: 5rem;
+}
+body.page-template-home .featured .teaser-conversation__meta {
+  font-family: "Adams", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: clamp(0.66rem, 0.58rem + 0.48vw, 0.88rem);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+body.page-template-home .featured .teaser-conversation__meta span {
+  display: block;
+}
+body.page-template-home .featured .teaser-conversation__meta span + span {
+  padding-left: 0.5rem;
+  border-left: 1px solid;
+  margin-left: 0.5rem;
+}
+body.page-template-home .featured .teaser-conversation .teaser__title {
+  font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
+  line-height: 1.25em;
+}
+body.page-template-home .featured .teaser-conversation .copy {
+  padding-top: 0.5rem;
+}
+body.page-template-home .featured .teaser-conversation .copy a {
+  text-decoration: underline;
+}
+body.page-template-home .featured .teaser-conversation .listen {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+body.page-template-home .featured .teaser-conversation .listen strong {
+  font-family: "Adams", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: clamp(0.66rem, 0.58rem + 0.48vw, 0.88rem);
+  font-weight: bold;
+}
+body.page-template-home .featured .teaser-conversation .listen a {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.75rem;
+}
+body.page-template-home .featured .teaser-conversation .listen a svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body.page-template-home .featured .teaser-conversation .listen a svg path {
+  transition: fill 300ms ease;
+}
+body.page-template-home .featured .teaser-conversation .listen a.apple-podcasts:hover svg path {
+  fill: #b150e2;
+}
+body.page-template-home .featured .teaser-conversation .listen a.spotify:hover svg path {
+  fill: #1db954;
+}
+body.page-template-home .featured .teaser-conversation .listen a.google-podcasts:hover svg path {
+  fill: #db4437;
+}
+body.page-template-home .featured .teaser-conversation .cta {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-home .featured .teaser-conversation .cta {
+    margin-top: 0;
+  }
+}
+body.page-template-home .featured .teaser-conversation .copy + .cta {
+  padding-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  body.page-template-home .featured .teaser-conversation {
+    grid-template-columns: 8rem 1fr;
+    gap: 1rem;
+  }
+}
+body.page-template-home .featured .teaser-conversation__icon {
+  aspect-ratio: 7/6;
+}
+body.page-template-home .featured .teaser-conversation__icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  mix-blend-mode: multiply;
+}
+body.page-template-home .featured .teaser-conversation .cta {
+  justify-content: flex-start;
+  padding-top: 1.5rem;
 }
 body.page-template-home .explore {
   margin-top: 3rem;

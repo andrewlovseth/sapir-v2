@@ -9,8 +9,8 @@
 get_header(); ?>
 
     <?php get_template_part('templates/home/latest'); ?>
-
-    <?php get_template_part('templates/home/newsletter'); ?>
+    
+    <?php get_template_part('templates/home/featured'); ?>
 
     <?php get_template_part('templates/home/explore'); ?>
     

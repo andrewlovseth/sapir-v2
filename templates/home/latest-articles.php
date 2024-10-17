@@ -20,5 +20,4 @@
         <?php endforeach; ?>
     <?php endif; ?>
 
-    <?php get_template_part('templates/home/featured'); ?>
 </div>

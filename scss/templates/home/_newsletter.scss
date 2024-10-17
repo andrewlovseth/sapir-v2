@@ -1,7 +1,12 @@
 .newsletter {
     &__container {
-        padding: 3rem 2rem;
+        padding: 2rem;
         background: rgba($light-blue, 0.1);
+        border: 1px solid rgba($light-blue, 0.25);
+
+        @include desktop-small {
+            padding: 3rem;
+        }
     }
 
     &__content {

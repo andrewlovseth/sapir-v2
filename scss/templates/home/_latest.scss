@@ -1,10 +1,8 @@
 .latest {
     padding-top: 0.25rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
 
     @import "latest-issue";
 
     @import "latest-articles";
-
-    @import "featured";
 }

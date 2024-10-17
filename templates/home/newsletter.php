@@ -8,14 +8,14 @@
 
 ?>
 
-<section class="newsletter grid">
+<section class="newsletter">
     <div class="newsletter__container">
         <div class="newsletter__content">
             <div class="newsletter__icon">
                 <?php echo wp_get_attachment_image($icon['ID'], 'full'); ?>
             </div>
 
-            <div class="newsletter__copy copy copy-1">
+            <div class="newsletter__copy copy copy-2">
                 <p><?php echo $headline; ?></p>
             </div>
             

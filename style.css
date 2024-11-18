@@ -2382,6 +2382,7 @@ body.page-template-home .most-read {
   color: #ac6e90;
   border: 1px solid #ac6e90;
   counter-reset: article;
+  align-self: start;
 }
 body.page-template-home .most-read::before {
   display: block;
@@ -6146,6 +6147,168 @@ body.single-post .issue-theme-volume-fourteen .article-footer__links .btn:hover 
 }
 .issue-theme-volume-fourteen .teaser__date .coming-soon {
   color: #2462ae;
+}
+
+.site-theme-volume-fifteen .site-banner .image,
+.issue-theme-volume-fifteen .site-banner .image {
+  height: 48px;
+}
+@media screen and (min-width: 768px) {
+  .site-theme-volume-fifteen .site-banner .image,
+  .issue-theme-volume-fifteen .site-banner .image {
+    height: 96px;
+  }
+}
+.site-theme-volume-fifteen .site-banner .image img,
+.issue-theme-volume-fifteen .site-banner .image img {
+  -o-object-position: bottom center;
+     object-position: bottom center;
+}
+.site-theme-volume-fifteen .site-header .search .newsletter-link,
+.issue-theme-volume-fifteen .site-header .search .newsletter-link {
+  background: #d7763c;
+  color: #fff;
+}
+.site-theme-volume-fifteen .site-header .search .newsletter-link:hover,
+.issue-theme-volume-fifteen .site-header .search .newsletter-link:hover {
+  background: #cf682a;
+}
+.site-theme-volume-fifteen .sapir-star,
+.issue-theme-volume-fifteen .sapir-star {
+  fill: #d7763c;
+}
+.site-theme-volume-fifteen .wp-block-pullquote:not(.basic) p,
+.issue-theme-volume-fifteen .wp-block-pullquote:not(.basic) p {
+  color: #d7763c;
+}
+.site-theme-volume-fifteen .teaser__title a:hover,
+.issue-theme-volume-fifteen .teaser__title a:hover {
+  color: #7a9360;
+}
+.site-theme-volume-fifteen .teaser__author-link:hover .teaser__author-name:after,
+.issue-theme-volume-fifteen .teaser__author-link:hover .teaser__author-name:after {
+  background: rgba(122, 147, 96, 0.5);
+}
+.site-theme-volume-fifteen .cta .btn,
+.issue-theme-volume-fifteen .cta .btn {
+  border-color: #3c565c;
+  color: #3c565c;
+}
+.site-theme-volume-fifteen .cta .btn:hover,
+.issue-theme-volume-fifteen .cta .btn:hover {
+  background-color: #3c565c;
+  border-color: #3c565c;
+  color: #fff;
+}
+.site-theme-volume-fifteen .site-header .header-nav .epigraph,
+.issue-theme-volume-fifteen .site-header .header-nav .epigraph {
+  color: #d7763c;
+  border-color: #d7763c;
+}
+.site-theme-volume-fifteen .site-header .header-nav .epigraph::before,
+.issue-theme-volume-fifteen .site-header .header-nav .epigraph::before {
+  border-color: #d7763c;
+}
+.site-theme-volume-fifteen .newsletter__wrapper,
+.issue-theme-volume-fifteen .newsletter__wrapper {
+  background: rgba(60, 86, 92, 0.2);
+}
+.site-theme-volume-fifteen .newsletter .slim-line-imge-content,
+.issue-theme-volume-fifteen .newsletter .slim-line-imge-content {
+  background: rgba(60, 86, 92, 0.23);
+}
+.site-theme-volume-fifteen ::-moz-selection,
+.issue-theme-volume-fifteen ::-moz-selection {
+  background: #d7763c;
+  color: #fff;
+  text-shadow: none;
+}
+.site-theme-volume-fifteen ::-moz-selection, .issue-theme-volume-fifteen ::-moz-selection {
+  background: #d7763c;
+  color: #fff;
+  text-shadow: none;
+}
+.site-theme-volume-fifteen ::selection,
+.issue-theme-volume-fifteen ::selection {
+  background: #d7763c;
+  color: #fff;
+  text-shadow: none;
+}
+
+body.page-template-home.site-theme-volume-fifteen .latest .latest-issue,
+body.page-template-home.site-theme-volume-fifteen .latest .latest-issue::before {
+  border-color: #3c565c;
+}
+body.page-template-home.site-theme-volume-fifteen .latest .latest-issue .ornament path {
+  fill: #d7763c;
+}
+body.page-template-home.site-theme-volume-fifteen .explore__sections-link a .label:after {
+  background: rgba(122, 147, 96, 0.5);
+}
+body.page-template-home.site-theme-volume-fifteen .explore__topics-list a:after {
+  background: rgba(122, 147, 96, 0.5);
+}
+body.page-template-home.site-theme-volume-fifteen .most-read,
+body.page-template-home.site-theme-volume-fifteen .most-read::before {
+  border-color: #d7763c;
+  color: #d7763c;
+}
+body.page-template-home.site-theme-volume-fifteen .most-read .teaser__title-link {
+  color: #d7763c;
+  transition: all 300ms ease;
+}
+body.page-template-home.site-theme-volume-fifteen .most-read .teaser__title-link:hover {
+  color: #d7763c;
+}
+body.page-template-home.site-theme-volume-fifteen .most-read .teaser__author-name {
+  color: #d7763c;
+}
+body.page-template-home.site-theme-volume-fifteen .most-read .teaser__author-name:hover::after {
+  background: rgba(215, 118, 60, 0.5);
+}
+body.page-template-home.site-theme-volume-fifteen .quote__header .section-title {
+  color: #d0d4d1;
+}
+body.page-template-home.site-theme-volume-fifteen .quote blockquote {
+  background: rgba(208, 212, 209, 0.2);
+  color: rgba(60, 86, 92, 0.7);
+}
+body.page-template-home.site-theme-volume-fifteen .quote blockquote::before, body.page-template-home.site-theme-volume-fifteen .quote blockquote::after {
+  color: rgba(60, 86, 92, 0.7);
+}
+body.page-template-home.site-theme-volume-fifteen .quote a:hover blockquote {
+  color: #3c565c;
+}
+body.page-template-home.site-theme-volume-fifteen .quote a:hover blockquote::before, body.page-template-home.site-theme-volume-fifteen .quote a:hover blockquote::after {
+  color: #3c565c;
+}
+
+body.single-post .issue-theme-volume-fifteen .article-header .authors a:hover {
+  border-color: rgba(122, 147, 96, 0.5);
+}
+body.single-post .issue-theme-volume-fifteen .article-body .sapir-star {
+  fill: #7a9360;
+}
+body.single-post .issue-theme-volume-fifteen .article-footer__links .btn,
+body.single-post .issue-theme-volume-fifteen .article-footer__links .btn:before {
+  border-color: #3c565c;
+}
+body.single-post .issue-theme-volume-fifteen .article-footer__links .btn {
+  color: #3c565c;
+}
+body.single-post .issue-theme-volume-fifteen .article-footer__links .btn:hover {
+  background-color: #3c565c;
+  color: #fff;
+}
+
+.issue-theme-volume-fifteen .issue__header .ornament svg path {
+  fill: #d7763c;
+}
+.issue-theme-volume-fifteen .issue__contents-header {
+  color: #d7763c;
+}
+.issue-theme-volume-fifteen .teaser__date .coming-soon {
+  color: #3c565c;
 }
 
 @media print {

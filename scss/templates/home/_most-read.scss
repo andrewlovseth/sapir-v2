@@ -3,6 +3,7 @@
     color: $red;
     @include double-border($red);
     counter-reset: article;
+    align-self: start;
 
     a {
         color: $red;

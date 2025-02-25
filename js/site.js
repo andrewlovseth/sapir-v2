@@ -68,7 +68,65 @@
                 function closeModal() {
                     $modal[0].close();
                     urlParams.delete("newsletter");
-                    window.history.pushState({}, "", window.location.pathname + (urlParams.toString() ? "?" + urlParams.toString() : ""));
+                    window.history.pushState(
+                        {},
+                        "",
+                        window.location.pathname + (urlParams.toString() ? "?" + urlParams.toString() : "")
+                    );
+                }
+            }
+        }
+
+        // Update share modal trigger conditions
+        if (urlParams.get("utm_source") === "qr" && urlParams.get("utm_medium") === "print") {
+            var $modal = $("#share-modal");
+
+            if ($modal.length) {
+                $modal[0].showModal();
+
+                // Hide SMS link on non-mobile or devices without SMS
+                const $smsLink = $modal.find(".share-modal__link--sms");
+                if (!navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/) || !navigator.maxTouchPoints) {
+                    $smsLink.hide();
+                }
+
+                // Add clipboard functionality
+                $modal.find(".share-modal__copy-link").on("click", function (e) {
+                    e.preventDefault();
+
+                    // Get the current page URL
+                    const url = window.location.href.split("?")[0]; // Remove any query parameters
+
+                    // Copy to clipboard
+                    navigator.clipboard.writeText(url).then(
+                        function () {
+                            // Show notification
+                            const $notification = $(this).find(".share-modal__copy-notification");
+                            $notification.addClass("active");
+
+                            // Hide notification after 1 second
+                            setTimeout(function () {
+                                $notification.removeClass("active");
+                            }, 1000);
+                        }.bind(this)
+                    );
+                });
+
+                // Close modal and update URL when the close button is clicked
+                $modal.find(".share-modal__close").on("click", function () {
+                    closeModal();
+                });
+
+                // Close modal and update URL when the backdrop (modal) is clicked
+                $modal.on("click", function (event) {
+                    if (event.target === this) {
+                        closeModal();
+                    }
+                });
+
+                // Function to close modal and remove URL parameter
+                function closeModal() {
+                    $modal[0].close();
                 }
             }
         }
@@ -92,7 +150,11 @@
         function closeModal() {
             $modal[0].close();
             urlParams.delete("newsletter");
-            window.history.pushState({}, "", window.location.pathname + (urlParams.toString() ? "?" + urlParams.toString() : ""));
+            window.history.pushState(
+                {},
+                "",
+                window.location.pathname + (urlParams.toString() ? "?" + urlParams.toString() : "")
+            );
         }
         if (e.keyCode == 27) {
             $("body").removeClass("nav-overlay-open search-overlay-open");

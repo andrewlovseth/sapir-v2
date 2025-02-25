@@ -16,6 +16,8 @@
 	
 	<?php get_template_part('template-parts/global/newsletter-modal'); ?>
 
+	<?php get_template_part('template-parts/footer/share-modal'); ?>
+
 	<?php wp_footer(); ?>
 	<?php echo get_field('body_bottom_js', 'options'); ?>
 

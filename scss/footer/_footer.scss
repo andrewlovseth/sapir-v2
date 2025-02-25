@@ -8,13 +8,15 @@
         color: $tan;
     }
 
-    @import 'logo';
+    @import "logo";
 
-    @import 'nav';
+    @import "nav";
 
-    @import 'epigraph';
+    @import "epigraph";
 
-    @import 'social';
+    @import "social";
 
-    @import 'copyright';
+    @import "copyright";
 }
+
+@import "share-modal";

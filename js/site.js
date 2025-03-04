@@ -77,12 +77,20 @@
             }
         }
 
-        // Update share modal trigger conditions
-        if (urlParams.get("utm_source") === "qr" && urlParams.get("utm_medium") === "print") {
+        // More robust share modal trigger with fallback methods
+        function showShareModal() {
             var $modal = $("#share-modal");
 
             if ($modal.length) {
-                $modal[0].showModal();
+                // Try using showModal() first
+                try {
+                    $modal[0].showModal();
+                } catch (e) {
+                    // Fallback: If native dialog fails, show using CSS
+                    console.warn("Native dialog failed, using CSS fallback");
+                    $modal.addClass("modal-visible").attr("open", "");
+                    $("body").addClass("modal-open");
+                }
 
                 // Hide SMS link on non-mobile or devices without SMS
                 const $smsLink = $modal.find(".share-modal__link--sms");
@@ -90,45 +98,113 @@
                     $smsLink.hide();
                 }
 
-                // Add clipboard functionality
+                // Add clipboard functionality with fallback
                 $modal.find(".share-modal__copy-link").on("click", function (e) {
                     e.preventDefault();
+                    const url = window.location.href.split("?")[0];
 
-                    // Get the current page URL
-                    const url = window.location.href.split("?")[0]; // Remove any query parameters
-
-                    // Copy to clipboard
-                    navigator.clipboard.writeText(url).then(
-                        function () {
-                            // Show notification
-                            const $notification = $(this).find(".share-modal__copy-notification");
-                            $notification.addClass("active");
-
-                            // Hide notification after 1 second
-                            setTimeout(function () {
-                                $notification.removeClass("active");
-                            }, 1000);
-                        }.bind(this)
-                    );
-                });
-
-                // Close modal and update URL when the close button is clicked
-                $modal.find(".share-modal__close").on("click", function () {
-                    closeModal();
-                });
-
-                // Close modal and update URL when the backdrop (modal) is clicked
-                $modal.on("click", function (event) {
-                    if (event.target === this) {
-                        closeModal();
+                    // Try modern clipboard API first
+                    if (navigator.clipboard && window.isSecureContext) {
+                        navigator.clipboard
+                            .writeText(url)
+                            .then(
+                                function () {
+                                    showCopyNotification(this);
+                                }.bind(this)
+                            )
+                            .catch(
+                                function () {
+                                    // Fallback to older execCommand method
+                                    fallbackCopyToClipboard(url, this);
+                                }.bind(this)
+                            );
+                    } else {
+                        // Use fallback for non-HTTPS or older browsers
+                        fallbackCopyToClipboard(url, this);
                     }
                 });
 
-                // Function to close modal and remove URL parameter
-                function closeModal() {
-                    $modal[0].close();
-                }
+                // Close modal handlers
+                $modal.find(".share-modal__close").on("click", closeShareModal);
+
+                $modal.on("click", function (event) {
+                    if (event.target === this) {
+                        closeShareModal();
+                    }
+                });
+
+                // Add escape key handler
+                $(document).on("keydown.shareModal", function (e) {
+                    if (e.key === "Escape") {
+                        closeShareModal();
+                    }
+                });
             }
+        }
+
+        function closeShareModal() {
+            var $modal = $("#share-modal");
+
+            try {
+                $modal[0].close();
+            } catch (e) {
+                // Fallback close method
+                $modal.removeClass("modal-visible").removeAttr("open");
+                $("body").removeClass("modal-open");
+            }
+
+            // Clean up escape key handler
+            $(document).off("keydown.shareModal");
+        }
+
+        function showCopyNotification(element) {
+            const $notification = $(element).find(".share-modal__copy-notification");
+            $notification.addClass("active");
+            setTimeout(function () {
+                $notification.removeClass("active");
+            }, 1000);
+        }
+
+        function fallbackCopyToClipboard(text, element) {
+            // Create temporary textarea
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-999999px";
+            document.body.appendChild(textArea);
+
+            try {
+                textArea.select();
+                document.execCommand("copy");
+                showCopyNotification(element);
+            } catch (err) {
+                console.warn("Fallback clipboard copy failed");
+            } finally {
+                document.body.removeChild(textArea);
+            }
+        }
+
+        // Check for share parameters using multiple methods
+        const shareUrlParams = new URLSearchParams(window.location.search);
+        const shouldShowShare =
+            // Check URL parameters
+            (shareUrlParams.get("utm_source") === "qr" && shareUrlParams.get("utm_medium") === "print") ||
+            // Check localStorage in case parameters were stripped
+            localStorage.getItem("showShareModal") === "true";
+
+        if (shouldShowShare) {
+            // Store state in case of page refresh
+            localStorage.setItem("showShareModal", "true");
+
+            // Ensure DOM is ready
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", showShareModal);
+            } else {
+                showShareModal();
+            }
+
+            // Clean up localStorage after showing modal
+            localStorage.removeItem("showShareModal");
         }
     });
 

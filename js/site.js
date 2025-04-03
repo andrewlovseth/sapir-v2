@@ -77,6 +77,40 @@
             }
         }
 
+        // Hide SMS links on non-mobile or devices without SMS
+        const smsLinks = document.querySelectorAll(".share-link__sms");
+        if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/) || !navigator.maxTouchPoints) {
+            smsLinks.forEach((link) => (link.style.display = "none"));
+        }
+
+        // Add clipboard functionality with fallback
+        document.querySelectorAll(".share-link__copy").forEach((copyLink) => {
+            copyLink.addEventListener("click", function (e) {
+                e.preventDefault();
+                const url = window.location.href.split("?")[0];
+
+                // Try modern clipboard API first
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard
+                        .writeText(url)
+                        .then(
+                            function () {
+                                showCopyNotification(this);
+                            }.bind(this)
+                        )
+                        .catch(
+                            function () {
+                                // Fallback to older execCommand method
+                                fallbackCopyToClipboard(url, this);
+                            }.bind(this)
+                        );
+                } else {
+                    // Use fallback for non-HTTPS or older browsers
+                    fallbackCopyToClipboard(url, this);
+                }
+            });
+        });
+
         // More robust share modal trigger with fallback methods
         function showShareModal() {
             var $modal = $("#share-modal");
@@ -91,38 +125,6 @@
                     $modal.addClass("modal-visible").attr("open", "");
                     $("body").addClass("modal-open");
                 }
-
-                // Hide SMS link on non-mobile or devices without SMS
-                const $smsLink = $modal.find(".share-modal__link--sms");
-                if (!navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/) || !navigator.maxTouchPoints) {
-                    $smsLink.hide();
-                }
-
-                // Add clipboard functionality with fallback
-                $modal.find(".share-modal__copy-link").on("click", function (e) {
-                    e.preventDefault();
-                    const url = window.location.href.split("?")[0];
-
-                    // Try modern clipboard API first
-                    if (navigator.clipboard && window.isSecureContext) {
-                        navigator.clipboard
-                            .writeText(url)
-                            .then(
-                                function () {
-                                    showCopyNotification(this);
-                                }.bind(this)
-                            )
-                            .catch(
-                                function () {
-                                    // Fallback to older execCommand method
-                                    fallbackCopyToClipboard(url, this);
-                                }.bind(this)
-                            );
-                    } else {
-                        // Use fallback for non-HTTPS or older browsers
-                        fallbackCopyToClipboard(url, this);
-                    }
-                });
 
                 // Close modal handlers
                 $modal.find(".share-modal__close").on("click", closeShareModal);
@@ -158,7 +160,7 @@
         }
 
         function showCopyNotification(element) {
-            const $notification = $(element).find(".share-modal__copy-notification");
+            const $notification = $(element).find(".share-link__copy-notification");
             $notification.addClass("active");
             setTimeout(function () {
                 $notification.removeClass("active");

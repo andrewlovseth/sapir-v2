@@ -54,21 +54,41 @@
         }
     }
 
-    &__links {
+    &__illustration {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-top: 1rem;
+
+        @include tablet {
+            justify-content: flex-end;
+            padding-top: 0;
+        }
+
+        svg {
+            max-width: 6rem;
+
+            @include tablet {
+                max-width: 8rem;
+            }
+        }
+    }
+
+    .share-links {
         @include tablet-small {
             columns: 2;
             column-gap: 2rem;
         }
     }
 
-    &__link {
+    .share-link {
         padding-bottom: 1rem;
 
         &:last-child {
             padding-bottom: 0;
         }
 
-        &-item {
+        &__item {
             display: flex;
             align-items: center;
             gap: 1rem;
@@ -99,7 +119,7 @@
             }
 
             &:hover {
-                .share-modal__link-item-icon {
+                .share-link__item-icon {
                     svg {
                         .bg-circle {
                             fill: $dark-blue;
@@ -108,24 +128,91 @@
                 }
             }
         }
+
+        &__copy-notification {
+            position: absolute;
+            background: $dark-blue;
+            font-family: $adams;
+            white-space: nowrap;
+            color: $white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            pointer-events: none;
+            opacity: 0;
+            transform: translateY(-100%);
+            transition: opacity 0.2s ease;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100%);
+
+            &.active {
+                opacity: 1;
+            }
+        }
     }
 
-    &__illustration {
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-        padding-top: 1rem;
+    // Fallback display method
+    &.modal-visible {
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+    }
+}
 
-        @include tablet {
-            justify-content: flex-end;
-            padding-top: 0;
+// Add backdrop styles for fallback method
+body.modal-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.share-link {
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+
+        &-icon {
+            svg {
+                width: 2rem;
+                height: 2rem;
+
+                @include tablet {
+                    width: 3rem;
+                    height: 3rem;
+                }
+
+                .bg-circle {
+                    transition: fill 0.3s ease;
+                }
+            }
         }
 
-        svg {
-            max-width: 6rem;
+        &-text {
+            font-size: $type-size-500;
 
             @include tablet {
-                max-width: 8rem;
+                font-size: $type-size-400;
+            }
+        }
+
+        &:hover {
+            .share-link__item-icon {
+                svg {
+                    .bg-circle {
+                        fill: $dark-blue;
+                    }
+                }
             }
         }
     }
@@ -151,26 +238,4 @@
             opacity: 1;
         }
     }
-
-    // Fallback display method
-    &.modal-visible {
-        display: block;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1000;
-    }
-}
-
-// Add backdrop styles for fallback method
-body.modal-open::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
 }

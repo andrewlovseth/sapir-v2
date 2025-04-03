@@ -19,6 +19,37 @@
         }
     }
 
+    .tags {
+        border-top: 1px solid rgba($light-blue, 0.5);
+        padding: 1.5rem 0;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0 0.5rem;
+
+        &-list {
+            line-height: 1.2;
+        }
+
+        .label {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        .comma {
+            padding-right: 0.25rem;
+        }
+
+        a {
+            text-decoration: underline;
+            text-decoration-color: $light-red;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.2em;
+            font-family: $adams;
+        }
+    }
+
     .authors {
         border-top: 1px solid rgba($light-blue, 0.5);
         padding-top: 1.5rem;

@@ -67,8 +67,6 @@
 
     <?php if($authors): ?>
         <div class="authors authors-<?php echo $authors_count; ?>">
-            
-
             <div class="authors-list">
                 <?php $i = 1; foreach($authors as $author): ?>
                     <div class="authors-item">
@@ -92,8 +90,7 @@
                 <?php foreach($interviewers as $interviewer): ?><a href="<?php echo get_permalink($interviewer); ?>"><?php echo get_the_title($interviewer); ?></a><?php endforeach; ?>
             </div>
         </div>
-    <?php endif; ?>    
-
+    <?php endif; ?>
 
 
     <?php if($pdf): ?>
@@ -101,6 +98,11 @@
             <a href="<?php echo $pdf['url']; ?>" target="_blank"><span>Download Print-Edition PDF</span></a>
         </div>
     <?php endif; ?>
+
+    <div class="article-header__share-links">
+        <span class="label">Share</span>
+        <?php get_template_part('template-parts/footer/share-links'); ?>
+    </div>
 
     <?php if($epigraph): ?>
         <div class="epigraph">

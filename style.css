@@ -1830,50 +1830,6 @@ body.single-post.postid-2036 body.single-post article.dropcap .article-body p.dr
     grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   }
 }
-@media screen and (min-width: 480px) {
-  .share-modal__links {
-    -moz-columns: 2;
-         columns: 2;
-    -moz-column-gap: 2rem;
-         column-gap: 2rem;
-  }
-}
-.share-modal__link {
-  padding-bottom: 1rem;
-}
-.share-modal__link:last-child {
-  padding-bottom: 0;
-}
-.share-modal__link-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  position: relative;
-}
-.share-modal__link-item-icon svg {
-  width: 2rem;
-  height: 2rem;
-}
-@media screen and (min-width: 768px) {
-  .share-modal__link-item-icon svg {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-.share-modal__link-item-icon svg .bg-circle {
-  transition: fill 0.3s ease;
-}
-.share-modal__link-item-text {
-  font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
-}
-@media screen and (min-width: 768px) {
-  .share-modal__link-item-text {
-    font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
-  }
-}
-.share-modal__link-item:hover .share-modal__link-item-icon svg .bg-circle {
-  fill: #424254;
-}
 .share-modal__illustration {
   display: flex;
   align-items: flex-end;
@@ -1894,7 +1850,51 @@ body.single-post.postid-2036 body.single-post article.dropcap .article-body p.dr
     max-width: 8rem;
   }
 }
-.share-modal__copy-notification {
+@media screen and (min-width: 480px) {
+  .share-modal .share-links {
+    -moz-columns: 2;
+         columns: 2;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+}
+.share-modal .share-link {
+  padding-bottom: 1rem;
+}
+.share-modal .share-link:last-child {
+  padding-bottom: 0;
+}
+.share-modal .share-link__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.share-modal .share-link__item-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .share-modal .share-link__item-icon svg {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.share-modal .share-link__item-icon svg .bg-circle {
+  transition: fill 0.3s ease;
+}
+.share-modal .share-link__item-text {
+  font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
+}
+@media screen and (min-width: 768px) {
+  .share-modal .share-link__item-text {
+    font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+  }
+}
+.share-modal .share-link__item:hover .share-link__item-icon svg .bg-circle {
+  fill: #424254;
+}
+.share-modal .share-link__copy-notification {
   position: absolute;
   background: #424254;
   font-family: "Adams", serif;
@@ -1911,7 +1911,7 @@ body.single-post.postid-2036 body.single-post article.dropcap .article-body p.dr
   left: 50%;
   transform: translateX(-50%) translateY(-100%);
 }
-.share-modal__copy-notification.active {
+.share-modal .share-link__copy-notification.active {
   opacity: 1;
 }
 .share-modal.modal-visible {
@@ -1932,6 +1932,57 @@ body.modal-open::before {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 999;
+}
+
+.share-link__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.share-link__item-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .share-link__item-icon svg {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.share-link__item-icon svg .bg-circle {
+  transition: fill 0.3s ease;
+}
+.share-link__item-text {
+  font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
+}
+@media screen and (min-width: 768px) {
+  .share-link__item-text {
+    font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+  }
+}
+.share-link__item:hover .share-link__item-icon svg .bg-circle {
+  fill: #424254;
+}
+.share-link__copy-notification {
+  position: absolute;
+  background: #424254;
+  font-family: "Adams", serif;
+  white-space: nowrap;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.2s ease;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+}
+.share-link__copy-notification.active {
+  opacity: 1;
 }
 
 .newsletter-signup {
@@ -4188,6 +4239,43 @@ body.single-post .article-header .dek {
   line-height: 1.5em;
   padding-top: 0.75rem;
 }
+body.single-post .article-header__share-links {
+  border-top: 1px solid rgba(158, 154, 175, 0.5);
+  border-bottom: 1px solid rgba(158, 154, 175, 0.5);
+  padding: 1rem 0.5rem;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+body.single-post .article-header__share-links .label {
+  display: block;
+  font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
+  font-family: "Adams", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-top: 2px;
+}
+body.single-post .article-header__share-links .share-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  flex-wrap: wrap;
+}
+body.single-post .article-header__share-links .share-link__item {
+  gap: 0.25rem;
+}
+body.single-post .article-header__share-links .share-link__item-icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+body.single-post .article-header__share-links .share-link__item-text {
+  font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
+}
+body.single-post .article-header__share-links .share-link__item:hover .share-link__item-text {
+  text-decoration: underline;
+}
 body.single-post .article-header .authors {
   padding-top: 1.5rem;
   display: flex;
@@ -4597,6 +4685,32 @@ body.single-post .article-footer .back a {
 }
 body.single-post .article-footer .back a:before {
   content: "← ";
+}
+body.single-post .article-footer .tags {
+  border-top: 1px solid rgba(158, 154, 175, 0.5);
+  padding: 1.5rem 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 0.5rem;
+}
+body.single-post .article-footer .tags-list {
+  line-height: 1.2;
+}
+body.single-post .article-footer .tags .label {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+body.single-post .article-footer .tags .comma {
+  padding-right: 0.25rem;
+}
+body.single-post .article-footer .tags a {
+  text-decoration: underline;
+  text-decoration-color: #dd594d;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  font-family: "Adams", serif;
 }
 body.single-post .article-footer .authors {
   border-top: 1px solid rgba(158, 154, 175, 0.5);

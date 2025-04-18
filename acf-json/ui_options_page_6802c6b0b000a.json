@@ -1,17 +1,17 @@
 {
     "key": "ui_options_page_6802c6b0b000a",
-    "title": "Letters",
+    "title": "Options (Letters)",
     "active": true,
     "menu_order": 0,
-    "page_title": "Letters",
-    "menu_slug": "letters",
-    "parent_slug": "options-general.php",
-    "advanced_configuration": 0,
+    "page_title": "Options (Letters)",
+    "menu_slug": "letters-options",
+    "parent_slug": "edit.php?post_type=letters",
+    "advanced_configuration": 1,
     "icon_url": "",
     "menu_title": "",
     "position": "",
     "redirect": false,
-    "description": "",
+    "description": "Options",
     "menu_icon": [],
     "update_button": "Update",
     "updated_message": "Options Updated",
@@ -19,5 +19,5 @@
     "data_storage": "options",
     "post_id": "",
     "autoload": 0,
-    "modified": 1745012405
+    "modified": 1745012822
 }

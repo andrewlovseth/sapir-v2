@@ -71,7 +71,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "conversations"
+                "value": "conversations-options"
             }
         ]
     ],
@@ -84,5 +84,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745012489
+    "modified": 1745012910
 }

@@ -1,17 +1,17 @@
 {
-    "key": "ui_options_page_6802c6993d717",
-    "title": "Options (Conversations)",
+    "key": "ui_options_page_6802c7620a677",
+    "title": "Options (Salons)",
     "active": true,
     "menu_order": 0,
-    "page_title": "Options (Conversations)",
-    "menu_slug": "conversations-options",
-    "parent_slug": "edit.php?post_type=conversations",
-    "advanced_configuration": 0,
+    "page_title": "Options (Salons)",
+    "menu_slug": "salons-options",
+    "parent_slug": "edit.php?post_type=salon",
+    "advanced_configuration": 1,
     "icon_url": "",
     "menu_title": "",
     "position": "",
     "redirect": false,
-    "description": "",
+    "description": "Salons",
     "menu_icon": [],
     "update_button": "Update",
     "updated_message": "Options Updated",
@@ -19,5 +19,5 @@
     "data_storage": "options",
     "post_id": "",
     "autoload": 0,
-    "modified": 1745012895
+    "modified": 1745012809
 }

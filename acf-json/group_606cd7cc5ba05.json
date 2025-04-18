@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_63cc490a04f2e",
@@ -165,7 +166,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_606cd7d87be21",
@@ -222,7 +224,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_60882e17a1572",
@@ -333,7 +336,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-footer"
+                "value": "footer"
             }
         ]
     ],
@@ -361,5 +364,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705599174
+    "modified": 1745012499
 }

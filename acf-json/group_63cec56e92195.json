@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_63cec56ea075d",
@@ -108,7 +109,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-letters"
+                "value": "letters"
             }
         ]
     ],
@@ -121,5 +122,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704733392
+    "modified": 1745012504
 }

@@ -4,20 +4,6 @@
     Advanced Custom Fields
 */
 
-
-// Add options pages
-if(function_exists('acf_add_options_page')) {
-    acf_add_options_page();
-    acf_add_options_sub_page('Header');
-    acf_add_options_sub_page('Footer');
-    acf_add_options_sub_page('Code Snippets');
-    acf_add_options_sub_page('Conversations');
-    acf_add_options_sub_page('Letters');
-    acf_add_options_sub_page('Email');
-
-}
-
-
 // Order Relationship fields
 function bearsmith_relationship_order_by_date($args, $field, $post_id) {
     $args['orderby'] = 'date';

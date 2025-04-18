@@ -6,6 +6,7 @@
             "key": "field_606ded5463b46",
             "label": "Head",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -16,12 +17,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_606decfe63b42",
             "label": "Head JS",
             "name": "head_js",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -41,6 +44,7 @@
             "key": "field_606ded5863b47",
             "label": "Body Top",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -51,12 +55,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_606ded0c63b43",
             "label": "Body Top JS",
             "name": "body_top_js",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -76,6 +82,7 @@
             "key": "field_606ded5c63b48",
             "label": "Body Bottom",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -86,12 +93,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_606ded2163b45",
             "label": "Body Bottom JS",
             "name": "body_bottom_js",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -113,7 +122,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-code-snippets"
+                "value": "code-snippets"
             }
         ]
     ],
@@ -140,5 +149,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1617816935
+    "show_in_rest": 0,
+    "modified": 1745012484
 }

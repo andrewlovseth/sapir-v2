@@ -21,5 +21,10 @@
             font-size: $type-size-200;
             font-style: italic;
         }
+
+        &-line {
+            display: block;
+            line-height: 1.2em;
+        }
     }
 }

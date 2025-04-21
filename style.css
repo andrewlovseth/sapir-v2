@@ -5154,6 +5154,10 @@ body.single-letters .letter .letter .meta .info {
   font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
   font-style: italic;
 }
+body.single-letters .letter .letter .meta-line {
+  display: block;
+  line-height: 1.2em;
+}
 body.single-letters .letter .back {
   margin-top: 6rem;
   border-top: 1px solid rgba(158, 154, 175, 0.5);

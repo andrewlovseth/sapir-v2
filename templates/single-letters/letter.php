@@ -4,6 +4,7 @@
     $copy = $letter['copy'];
     $name = $letter['name'];
     $meta = $letter['meta'];
+    $meta_line_2 = $letter['meta_line_2'];
 ?>
 
 <section class="letter">
@@ -13,9 +14,16 @@
 
     <div class="meta">
         <h3 class="name"><?php echo $name; ?></h3>
-        <?php if($meta): ?>
-            <h4 class="info"><?php echo $meta; ?></h4>
+        <?php if($meta || $meta_line_2): ?>
+            <h4 class="info">
+                <?php if($meta): ?>
+                    <span class="meta-line"><?php echo $meta; ?></span>
+                <?php endif; ?>
+
+                <?php if($meta_line_2): ?>
+                    <span class="meta-line"><?php echo $meta_line_2; ?></span>
+                <?php endif; ?>
+            </h4>
         <?php endif; ?>
     </div>
-
 </section>

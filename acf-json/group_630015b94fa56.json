@@ -6,6 +6,7 @@
             "key": "field_63001644b79b7",
             "label": "Letter",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -16,12 +17,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_630015c88afca",
             "label": "Letter",
             "name": "letter",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -37,6 +40,7 @@
                     "key": "field_630015d18afcb",
                     "label": "Copy",
                     "name": "copy",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -49,46 +53,71 @@
                     "default_value": "",
                     "tabs": "all",
                     "toolbar": "full",
-                    "media_upload": 0,
+                    "media_upload": 1,
                     "delay": 0
                 },
                 {
                     "key": "field_630015d58afcc",
                     "label": "Name",
                     "name": "name",
+                    "aria-label": "",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "Author of letter",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "34",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
                 },
                 {
                     "key": "field_630015e28afcd",
                     "label": "Meta",
                     "name": "meta",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "Location, etc.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "50",
+                        "width": "33",
                         "class": "",
                         "id": ""
                     },
                     "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
+                },
+                {
+                    "key": "field_6806a07cc7955",
+                    "label": "Meta Line 2",
+                    "name": "meta_line_2",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Optional, second meta line",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         },
@@ -96,6 +125,7 @@
             "key": "field_63001638b79b6",
             "label": "Response",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -106,12 +136,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_630015f5b79b4",
             "label": "Response",
             "name": "response",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -127,6 +159,7 @@
                     "key": "field_630015fab79b5",
                     "label": "Copy",
                     "name": "copy",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -148,6 +181,7 @@
             "key": "field_63001e263ba49",
             "label": "Teaser",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -158,12 +192,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_63001e183ba47",
             "label": "Teaser",
             "name": "teaser",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -179,6 +215,7 @@
                     "key": "field_63001e1d3ba48",
                     "label": "Copy",
                     "name": "copy",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -228,5 +265,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1660952113
+    "modified": 1745264855
 }

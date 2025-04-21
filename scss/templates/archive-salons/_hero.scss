@@ -1,0 +1,37 @@
+.salons-archive-hero {
+    &__header {
+        text-align: center;
+        border: 1px solid #dcdcdc;
+        padding: 5rem 2rem;
+
+        @include desktop-small {
+            grid-column: 3 / span 10;
+        }
+    }
+
+    &__title {
+        font-size: $type-size-800;
+        font-weight: 300;
+        font-family: $fournier-std-grand;
+        font-style: italic;
+        text-wrap: balance;
+        line-height: 1.1;
+
+        .small-caps {
+            font-style: normal;
+        }
+    }
+
+    &__body {
+        padding-top: 2rem;
+
+        @include desktop-small {
+            grid-column: 4 / span 8;
+        }
+    }
+
+    .diy-guide {
+        text-align: center;
+        margin-top: 2rem;
+    }
+}

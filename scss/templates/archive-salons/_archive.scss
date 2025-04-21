@@ -1,0 +1,74 @@
+.salons-archive {
+    .section-header {
+        margin-top: 3rem;
+        border-top: 1px solid rgba($light-blue, 0.5);
+        padding-top: 3rem;
+        text-align: center;
+    }
+
+    .issue {
+        &__gallery {
+            padding-top: 3rem;
+            display: grid;
+            gap: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        }
+
+        &__cover {
+            img {
+                aspect-ratio: 360 / 540;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                max-width: 24rem;
+                margin: 0 auto;
+            }
+        }
+
+        &__link {
+            color: $dark-blue;
+            text-align: center;
+
+            &:hover {
+                .issue__title {
+                    text-decoration: none;
+
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &__title {
+            display: inline-block;
+            padding-top: 1rem;
+            text-align: center;
+            font-size: $type-size-500;
+            font-family: $adams;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 200ms ease;
+
+            &:after {
+                display: block;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background: rgba($light-blue, 0.5);
+                transform: translateY(2px);
+                opacity: 0;
+                transition: all 200ms ease;
+            }
+        }
+
+        &__meta {
+            padding-top: 0.75rem;
+            text-align: center;
+            font-style: italic;
+            opacity: 0.85;
+            letter-spacing: 0;
+            text-transform: none;
+        }
+    }
+}

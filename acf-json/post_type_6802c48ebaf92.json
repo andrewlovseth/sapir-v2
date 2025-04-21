@@ -3,7 +3,7 @@
     "title": "Salons",
     "menu_order": 0,
     "active": true,
-    "post_type": "salon",
+    "post_type": "salons",
     "advanced_configuration": true,
     "import_source": "",
     "import_date": "",
@@ -66,14 +66,11 @@
     "plural_capability_name": "posts",
     "supports": [
         "title",
-        "editor",
-        "thumbnail",
-        "custom-fields"
+        "page-attributes",
+        "thumbnail"
     ],
-    "taxonomies": [
-        "category"
-    ],
-    "has_archive": false,
+    "taxonomies": "",
+    "has_archive": true,
     "has_archive_slug": "",
     "rewrite": {
         "permalink_rewrite": "post_type_key",
@@ -87,5 +84,5 @@
     "delete_with_user": false,
     "register_meta_box_cb": "",
     "enter_title_here": "",
-    "modified": 1745012025
+    "modified": 1745020912
 }

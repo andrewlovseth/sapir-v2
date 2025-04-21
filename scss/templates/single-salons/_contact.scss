@@ -1,0 +1,32 @@
+.salon-contact {
+    &__content {
+        text-align: center;
+        background: $dark-blue;
+        color: $white;
+        padding: 2rem;
+        margin-top: 3rem;
+
+        @include desktop-small {
+            grid-column: 4 / span 8;
+        }
+    }
+
+    &__title {
+        padding-bottom: 1.5rem;
+        font-style: italic;
+        font-weight: 400;
+        font-size: $type-size-600;
+    }
+
+    .cta {
+        .btn {
+            border-color: $white !important;
+            color: $white !important;
+
+            &:hover {
+                background: $white !important;
+                color: $dark-blue !important;
+            }
+        }
+    }
+}

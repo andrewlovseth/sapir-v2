@@ -12,9 +12,9 @@
         $image = get_field('header_default_meta_image', 'options');
     }
 
-    if(get_field('meta_description', $post->ID)) {
+    if(is_singular() && get_field('meta_description', $post->ID)) {
         $description = get_field('meta_description', $post->ID);
-    } elseif ($post !== NULL) {
+    } elseif (is_singular() && $post !== NULL) {
         $content = $post->post_content; 
         if($content) {
             $description = substr(strip_tags($content), 0, $char_limit)  . '...';

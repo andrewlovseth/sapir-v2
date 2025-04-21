@@ -15,3 +15,5 @@ require_once( plugin_dir_path( __FILE__ ) . '/functions/sapir.php');
 require_once( plugin_dir_path( __FILE__ ) . '/functions/disable-author-pages.php');
 
 require_once( plugin_dir_path( __FILE__ ) . '/functions/optin-monster.php');
+
+

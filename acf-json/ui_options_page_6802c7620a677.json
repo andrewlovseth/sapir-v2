@@ -5,7 +5,7 @@
     "menu_order": 0,
     "page_title": "Options (Salons)",
     "menu_slug": "salons-options",
-    "parent_slug": "edit.php?post_type=salon",
+    "parent_slug": "edit.php?post_type=salons",
     "advanced_configuration": 1,
     "icon_url": "",
     "menu_title": "",
@@ -19,5 +19,5 @@
     "data_storage": "options",
     "post_id": "",
     "autoload": 0,
-    "modified": 1745012809
+    "modified": 1745020248
 }

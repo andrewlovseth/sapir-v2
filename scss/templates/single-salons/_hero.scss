@@ -1,0 +1,46 @@
+.salon-hero {
+    padding-bottom: 3rem;
+    align-items: center;
+
+    &__cover {
+        max-width: 20rem;
+        margin: 0 auto;
+
+        @include desktop-small {
+            grid-column: 2 / span 4;
+            max-width: unset;
+        }
+
+        @include desktop-medium {
+            grid-column: 3 / span 4;
+        }
+    }
+
+    &__info {
+        padding-top: 1rem;
+
+        @include desktop-small {
+            padding-top: 0;
+            grid-column: 6 / span 8;
+        }
+
+        @include desktop-medium {
+            grid-column: 7 / span 6;
+        }
+    }
+
+    &__title {
+        font-size: $type-size-700;
+    }
+
+    &__description {
+        padding-top: 1rem;
+    }
+
+    .ctas {
+        padding-top: 1rem;
+        .cta + .cta {
+            margin-top: 0.5rem;
+        }
+    }
+}

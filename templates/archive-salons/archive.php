@@ -1,19 +1,12 @@
-<?php
-
-    $issue = get_field('issue');
-    $header = $issue['header'];
-
-?>
-
-<section class="issue grid" id="issue">
+<section class="salons-archive | grid">
 
     <div class="section-header">
-        <h5 class="upper-header"><?php echo $header; ?></h5>
+        <h5 class="upper-header">Resources for Past Issues</h5>
     </div>
 
     <?php
         $args = array(
-            'post_type' => 'issue',
+            'post_type' => 'salons',
             'posts_per_page' => 50
         );
         $query = new WP_Query( $args );
@@ -21,11 +14,13 @@
 
         <div class="issue__gallery">
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-                <?php 
-                    $cover = get_field('cover');
+                <?php
+                
+                    $issue = get_field('issue');
+                    $cover = get_field('cover', $issue->ID);
                     $title = get_the_title();
-                    $volume = get_field('volume');
-                    $season = get_field('season');
+                    $volume = get_field('volume', $issue->ID);
+                    $season = get_field('season', $issue->ID);
                 ?>
         
                 <div class="issue__gallery-item">

@@ -1,0 +1,44 @@
+.current-salon {
+    align-items: start;
+    padding-top: 3rem;
+    gap: 2rem;
+
+    @include desktop-small {
+        padding-top: 6rem;
+    }
+
+    .learning-guide {
+        gap: 2rem;
+        display: grid;
+        align-items: start;
+
+        @include desktop-small {
+            grid-column: 2 / span 6;
+        }
+
+        &__header {
+            text-align: left;
+            @include desktop-small {
+                grid-column: 1 / -1;
+            }
+
+            h2 {
+                font-size: $type-size-300;
+                border-bottom: none;
+                font-weight: bold;
+            }
+        }
+
+        &__article {
+            @include desktop-small {
+                grid-column: 1 / -1;
+            }
+        }
+    }
+
+    .latest-issue {
+        @include desktop-small {
+            grid-column: 9 / span 5;
+        }
+    }
+}

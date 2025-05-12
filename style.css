@@ -7001,6 +7001,169 @@ body.single-post .issue-theme-volume-sixteen .article-footer__links .btn:hover {
   color: #3c565c;
 }
 
+.site-theme-volume-seventeen .site-banner .image,
+.issue-theme-volume-seventeen .site-banner .image {
+  height: 48px;
+}
+@media screen and (min-width: 768px) {
+  .site-theme-volume-seventeen .site-banner .image,
+  .issue-theme-volume-seventeen .site-banner .image {
+    height: 96px;
+  }
+}
+.site-theme-volume-seventeen .site-banner .image img,
+.issue-theme-volume-seventeen .site-banner .image img {
+  -o-object-position: bottom center;
+     object-position: bottom center;
+}
+.site-theme-volume-seventeen .site-header .search .newsletter-link,
+.issue-theme-volume-seventeen .site-header .search .newsletter-link {
+  background: #966486;
+  color: #fff;
+}
+.site-theme-volume-seventeen .site-header .search .newsletter-link:hover,
+.issue-theme-volume-seventeen .site-header .search .newsletter-link:hover {
+  background: #875a78;
+}
+.site-theme-volume-seventeen .sapir-star,
+.issue-theme-volume-seventeen .sapir-star {
+  fill: #c84c41;
+}
+.site-theme-volume-seventeen .wp-block-pullquote:not(.basic) p,
+.issue-theme-volume-seventeen .wp-block-pullquote:not(.basic) p {
+  color: #3c565c;
+}
+.site-theme-volume-seventeen .teaser__title a:hover,
+.issue-theme-volume-seventeen .teaser__title a:hover {
+  color: #d77289;
+}
+.site-theme-volume-seventeen .teaser__author-link:hover .teaser__author-name:after,
+.issue-theme-volume-seventeen .teaser__author-link:hover .teaser__author-name:after {
+  background: #d77289;
+}
+.site-theme-volume-seventeen .cta .btn,
+.issue-theme-volume-seventeen .cta .btn {
+  border-color: #3c565c;
+  color: #3c565c;
+}
+.site-theme-volume-seventeen .cta .btn:hover,
+.issue-theme-volume-seventeen .cta .btn:hover {
+  background-color: #3c565c;
+  border-color: #3c565c;
+  color: #fff;
+}
+.site-theme-volume-seventeen .site-header .header-nav .epigraph,
+.issue-theme-volume-seventeen .site-header .header-nav .epigraph {
+  color: #966486;
+  border-color: #966486;
+}
+.site-theme-volume-seventeen .site-header .header-nav .epigraph::before,
+.issue-theme-volume-seventeen .site-header .header-nav .epigraph::before {
+  border-color: #966486;
+}
+.site-theme-volume-seventeen .newsletter__wrapper,
+.issue-theme-volume-seventeen .newsletter__wrapper {
+  background: rgba(60, 86, 92, 0.2);
+}
+.site-theme-volume-seventeen .newsletter .slim-line-imge-content,
+.issue-theme-volume-seventeen .newsletter .slim-line-imge-content {
+  background: rgba(60, 86, 92, 0.23);
+}
+.site-theme-volume-seventeen ::-moz-selection,
+.issue-theme-volume-seventeen ::-moz-selection {
+  background: #966486;
+  color: #fff;
+  text-shadow: none;
+}
+.site-theme-volume-seventeen ::-moz-selection, .issue-theme-volume-seventeen ::-moz-selection {
+  background: #966486;
+  color: #fff;
+  text-shadow: none;
+}
+.site-theme-volume-seventeen ::selection,
+.issue-theme-volume-seventeen ::selection {
+  background: #966486;
+  color: #fff;
+  text-shadow: none;
+}
+
+body.page-template-home.site-theme-volume-seventeen .latest .latest-issue,
+body.page-template-home.site-theme-volume-seventeen .latest .latest-issue::before {
+  border-color: #3c565c;
+}
+body.page-template-home.site-theme-volume-seventeen .latest .latest-issue .ornament path {
+  fill: #d77289;
+}
+body.page-template-home.site-theme-volume-seventeen .explore__sections-link a .label:after {
+  background: rgba(60, 86, 92, 0.5);
+}
+body.page-template-home.site-theme-volume-seventeen .explore__topics-list a:after {
+  background: rgba(60, 86, 92, 0.5);
+}
+body.page-template-home.site-theme-volume-seventeen .most-read,
+body.page-template-home.site-theme-volume-seventeen .most-read::before {
+  border-color: #966486;
+  color: #966486;
+}
+body.page-template-home.site-theme-volume-seventeen .most-read .teaser__title-link {
+  color: #966486;
+  transition: all 300ms ease;
+}
+body.page-template-home.site-theme-volume-seventeen .most-read .teaser__title-link:hover {
+  color: #966486;
+}
+body.page-template-home.site-theme-volume-seventeen .most-read .teaser__author-name {
+  color: #966486;
+}
+body.page-template-home.site-theme-volume-seventeen .most-read .teaser__author-name:hover::after {
+  background: rgba(150, 100, 134, 0.5);
+}
+body.page-template-home.site-theme-volume-seventeen .quote__header .section-title {
+  color: #3c565c;
+}
+body.page-template-home.site-theme-volume-seventeen .quote blockquote {
+  background: rgba(218, 214, 121, 0.05);
+  color: rgba(60, 86, 92, 0.7);
+  border: 1px solid #dad679;
+}
+body.page-template-home.site-theme-volume-seventeen .quote blockquote::before, body.page-template-home.site-theme-volume-seventeen .quote blockquote::after {
+  color: rgba(60, 86, 92, 0.7);
+}
+body.page-template-home.site-theme-volume-seventeen .quote a:hover blockquote {
+  color: #3c565c;
+}
+body.page-template-home.site-theme-volume-seventeen .quote a:hover blockquote::before, body.page-template-home.site-theme-volume-seventeen .quote a:hover blockquote::after {
+  color: #3c565c;
+}
+
+body.single-post .issue-theme-volume-seventeen .article-header .authors a:hover {
+  border-color: rgba(150, 100, 134, 0.5);
+}
+body.single-post .issue-theme-volume-seventeen .article-body .sapir-star {
+  fill: #c84c41;
+}
+body.single-post .issue-theme-volume-seventeen .article-footer__links .btn,
+body.single-post .issue-theme-volume-seventeen .article-footer__links .btn:before {
+  border-color: #3c565c;
+}
+body.single-post .issue-theme-volume-seventeen .article-footer__links .btn {
+  color: #3c565c;
+}
+body.single-post .issue-theme-volume-seventeen .article-footer__links .btn:hover {
+  background-color: #3c565c;
+  color: #fff;
+}
+
+.issue-theme-volume-seventeen .issue__header .ornament svg path {
+  fill: #c84c41;
+}
+.issue-theme-volume-seventeen .issue__contents-header {
+  color: #c84c41;
+}
+.issue-theme-volume-seventeen .teaser__date .coming-soon {
+  color: #966486;
+}
+
 @media print {
   .site-banner,
   .site-footer,

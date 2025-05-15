@@ -2,47 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 2rem;
-
-    @include tablet {
-        width: 8rem;
-    }
-
-    .about-link {
-        display: none;
-
-        @include tablet {
-            display: block;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            font-size: 0.6125rem;
-            font-family: $adams;
-            font-weight: bold;
-            color: $black;
-            margin-right: 0.75rem;
-            white-space: nowrap;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    .newsletter-link {
-        position: relative;
-        background: #e2d98e;
-        transition: all 300ms ease;
-        padding: 0.25rem 1.5rem;
-
-        &:hover {
-            text-decoration: none;
-            background: lighten(#e2d98e, 5%);
-        }
-
-        @include tablet {
-            margin-right: 1.5rem;
-        }
-    }
+    gap: 1.5rem;
 
     &__icon {
         transform: translateY(1px);

@@ -6,4 +6,9 @@
     </a>
 
     <a href="<?php echo site_url('/archive/'); ?>" class="explore-link">Explore</a>
+
+    <div class="cta">
+        <a href="<?php echo site_url('/salons/'); ?>" class="about-link newsletter-link salons-link">Salons</a>
+    </div>
+
 </div>

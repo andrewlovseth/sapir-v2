@@ -8,22 +8,53 @@
     }
 
     &__wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
     }
 
-    @import 'hamburger';
+    .newsletter-link {
+        position: relative;
+        background: #e2d98e;
+        transition: all 300ms ease;
+        padding: 0.25rem 1.5rem;
 
-    @import 'logo';
+        &:hover {
+            text-decoration: none;
+            background: lighten(#e2d98e, 5%);
+        }
+    }
 
-    @import 'search';
+    .about-link {
+        display: none;
 
-    @import 'navigation';
+        @include desktop-small {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.6125rem;
+            font-family: $adams;
+            font-weight: bold;
+            color: $black;
+            margin-right: 0.75rem;
+            white-space: nowrap;
 
-    @import 'tagline';
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 
-    @import 'divider';
+    @import "hamburger";
+
+    @import "logo";
+
+    @import "search";
+
+    @import "navigation";
+
+    @import "tagline";
+
+    @import "divider";
 }
 
-@import 'nav-overlay-open';
+@import "nav-overlay-open";

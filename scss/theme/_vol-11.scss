@@ -27,14 +27,12 @@ $vol-11-dark-green: #214547;
     }
 
     .site-header {
-        .search {
-            .newsletter-link {
-                background: $vol-11-pale-blue;
-                color: $white;
+        .newsletter-link {
+            background: $vol-11-pale-blue;
+            color: $white;
 
-                &:hover {
-                    background: lighten($vol-11-pale-blue, 5%);
-                }
+            &:hover {
+                background: lighten($vol-11-pale-blue, 5%);
             }
         }
     }

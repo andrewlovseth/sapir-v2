@@ -20,14 +20,12 @@ $vol-13-mint: #dfefdd;
     }
 
     .site-header {
-        .search {
-            .newsletter-link {
-                background: $vol-13-pink;
-                color: $white;
+        .newsletter-link {
+            background: $vol-13-pink;
+            color: $white;
 
-                &:hover {
-                    background: lighten($vol-13-pink, 5%);
-                }
+            &:hover {
+                background: lighten($vol-13-pink, 5%);
             }
         }
     }

@@ -21,14 +21,12 @@ $vol-17-dark-turquoise: #3c565c;
     }
 
     .site-header {
-        .search {
-            .newsletter-link {
-                background: $vol-17-deep-lilac;
-                color: $white;
+        .newsletter-link {
+            background: $vol-17-deep-lilac;
+            color: $white;
 
-                &:hover {
-                    background: darken($vol-17-deep-lilac, 5%);
-                }
+            &:hover {
+                background: darken($vol-17-deep-lilac, 5%);
             }
         }
     }

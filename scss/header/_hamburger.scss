@@ -1,14 +1,11 @@
 .hamburger {
-    width: 2rem;
-
-    @include tablet {
-        width: 8rem;
-        display: flex;
-        align-items: center;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
 
     &__link {
-        display: flex;
+        display: inline-flex;
         align-items: center;
     }
 
@@ -28,7 +25,7 @@
 
         &:after,
         &:before {
-            content: '';
+            content: "";
             display: block;
             width: 1.75rem;
             height: 1px;
@@ -51,14 +48,13 @@
         display: none;
 
         @include tablet {
-            display: block;
+            display: inline-block;
             text-transform: uppercase;
             letter-spacing: 0.15em;
             font-size: 0.6125rem;
             font-family: $adams;
             font-weight: bold;
             color: $black;
-            padding-left: 1rem;
 
             &:hover {
                 text-decoration: underline;

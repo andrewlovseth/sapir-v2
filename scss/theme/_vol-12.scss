@@ -21,14 +21,12 @@ $vol-12-yellow: #efc595;
     }
 
     .site-header {
-        .search {
-            .newsletter-link {
-                background: $vol-12-dark-blue;
-                color: $white;
+        .newsletter-link {
+            background: $vol-12-dark-blue;
+            color: $white;
 
-                &:hover {
-                    background: lighten($vol-12-dark-blue, 5%);
-                }
+            &:hover {
+                background: lighten($vol-12-dark-blue, 5%);
             }
         }
     }

@@ -3,24 +3,38 @@
     $title = get_the_title();
     $char_limit = 140;
 
-    if(is_single() && 'post' == get_post_type()) {
+    // Single page
+    if('page' == get_post_type()) {
+        $image = get_field('meta_image');
+        $description = get_field('meta_description');
+    }
+    // Single post
+    elseif('post' == get_post_type()) {
         $issue = get_field('issue');
         $image = get_field('meta_image', $issue);
-    } elseif(is_single() && 'issue' == get_post_type())  {
-        $image = get_field('meta_image');
-    } else {
-        $image = get_field('header_default_meta_image', 'options');
-    }
-
-    if(is_singular() && get_field('meta_description', $post->ID)) {
-        $description = get_field('meta_description', $post->ID);
-    } elseif (is_singular() && $post !== NULL) {
-        $content = $post->post_content; 
-        if($content) {
-            $description = substr(strip_tags($content), 0, $char_limit)  . '...';
+        if (get_field('meta_description', $post->ID)) {
+            $description = get_field('meta_description', $post->ID);
+        } elseif ($post !== NULL && $post->post_content) {
+            $description = substr(strip_tags($post->post_content), 0, $char_limit) . '...';
+        } else {
+            $description = '';
         }
-    } else {
-        $description = '';
+    }
+    // Single issue
+    elseif('issue' == get_post_type()) {
+        $image = get_field('meta_image');
+        if (get_field('meta_description', $post->ID)) {
+            $description = get_field('meta_description', $post->ID);
+        } elseif ($post !== NULL && $post->post_content) {
+            $description = substr(strip_tags($post->post_content), 0, $char_limit) . '...';
+        } else {
+            $description = '';
+        }
+    }
+    // Default fallback
+    else {
+        $image = get_field('header_default_meta_image', 'options');
+        $description = 'Teset';
     }
 ?>
 
@@ -33,5 +47,4 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="<?php echo $image['url']; ?>" />
 <meta name="twitter:site" content="@SapirJournal">
-
 <meta name="twitter:text" content="<?php echo $description; ?>" />

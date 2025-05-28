@@ -12,6 +12,7 @@
     $description = $details['description'];
     $authors = $details['authors'];
     $additional_authors = $details['additional_authors'];
+    $image = $details['image'];
 
     $meta = get_field('meta', $p);
     $running_time = $meta['running_time'];
@@ -25,41 +26,48 @@
 <article class="teaser teaser-large teaser-conversation">
    
     <div class="teaser-conversation__participants">
-        <?php if($authors): ?>
-            <?php foreach($authors as $a): ?>
-                <div class="teaser-conversation__participant">
-                    <div class="photo">
-                        <?php if(get_the_post_thumbnail($a->ID, 'thumbnail')): ?>
-                            <?php echo get_the_post_thumbnail($a->ID, 'thumbnail'); ?>
-                        <?php else: ?>
-                            <div class="no-photo"></div>
-                        <?php endif; ?>
-                        <?php get_template_part('svg/icon-speech-bubble'); ?>
+        <?php if($image): ?>
+            <div class="image">
+                <?php echo wp_get_attachment_image($image['ID'], 'thumbnail'); ?>
+            </div>
+        <?php else: ?>
+            <?php if($authors): ?>
+                <?php foreach($authors as $a): ?>
+                    <div class="teaser-conversation__participant">
+                        <div class="photo">
+                            <?php if(get_the_post_thumbnail($a->ID, 'thumbnail')): ?>
+                                <?php echo get_the_post_thumbnail($a->ID, 'thumbnail'); ?>
+                            <?php else: ?>
+                                <div class="no-photo"></div>
+                            <?php endif; ?>
+                            <?php get_template_part('svg/icon-speech-bubble'); ?>
+                        </div>
                     </div>
-                </div>
-            <?php endforeach; ?>
-        <?php endif; ?>
-        
-        <?php if($additional_authors): ?>
-            <?php foreach($additional_authors as $a): ?>
-                <?php 
-                    $photo = $a['photo'];
-                ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
+            
+            <?php if($additional_authors): ?>
+                <?php foreach($additional_authors as $a): ?>
+                    <?php 
+                        $photo = $a['photo'];
+                    ?>
 
-                <div class="teaser-conversation__participant">
-                    <div class="photo">
-                        <?php if(get_the_post_thumbnail($photo['ID'], 'thumbnail')): ?>
-                            <?php echo get_the_post_thumbnail($photo['ID'], 'thumbnail'); ?>
-                        <?php else: ?>
-                            <div class="no-photo"></div>
-                        <?php endif; ?>
+                    <div class="teaser-conversation__participant">
+                        <div class="photo">
+                            <?php if(get_the_post_thumbnail($photo['ID'], 'thumbnail')): ?>
+                                <?php echo get_the_post_thumbnail($photo['ID'], 'thumbnail'); ?>
+                            <?php else: ?>
+                                <div class="no-photo"></div>
+                            <?php endif; ?>
 
-                        <?php get_template_part('svg/icon-speech-bubble'); ?>
+                            <?php get_template_part('svg/icon-speech-bubble'); ?>
+                        </div>
                     </div>
-                </div>
 
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            <?php endif; ?>
         <?php endif; ?>
+
     </div>
 
     <div class="teaser-conversation__info">

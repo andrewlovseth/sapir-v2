@@ -38,7 +38,7 @@
     }
 ?>
 
-<meta property="og:title" content="<?php echo $title; ?> | SAPIR Journal" />
+<meta property="og:title" content="<?php echo htmlspecialchars($title); ?> | SAPIR Journal" />
 <meta property="og:image" content="<?php echo $image['url']; ?>" />
 <meta property="og:url" content="<?php echo $url; ?>" />
 <meta property="og:type" content="article" />

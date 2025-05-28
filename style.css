@@ -2247,6 +2247,12 @@ body.page-template-home .featured .teaser-conversation__participants {
     max-width: 10rem;
   }
 }
+body.page-template-home .featured .teaser-conversation__participants .image {
+  max-width: 7rem;
+}
+body.page-template-home .featured .teaser-conversation__participants .image img {
+  mix-blend-mode: multiply;
+}
 body.page-template-home .featured .teaser-conversation__participant + .teaser-conversation__participant {
   margin-top: -2.25rem;
 }
@@ -3977,6 +3983,12 @@ body.post-type-archive-conversations .teaser-conversation__participants {
   body.post-type-archive-conversations .teaser-conversation__participants {
     max-width: 10rem;
   }
+}
+body.post-type-archive-conversations .teaser-conversation__participants .image {
+  max-width: 7rem;
+}
+body.post-type-archive-conversations .teaser-conversation__participants .image img {
+  mix-blend-mode: multiply;
 }
 body.post-type-archive-conversations .teaser-conversation__participant + .teaser-conversation__participant {
   margin-top: -2.25rem;

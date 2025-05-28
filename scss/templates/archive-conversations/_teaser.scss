@@ -24,6 +24,14 @@
         @include tablet {
             max-width: 10rem;
         }
+
+        .image {
+            max-width: 7rem;
+
+            img {
+                mix-blend-mode: multiply;
+            }
+        }
     }
 
     &__participant {

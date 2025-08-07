@@ -4225,7 +4225,7 @@ body.post-type-archive-conversations .teaser-conversation .copy + .cta {
   padding-top: 3rem;
   display: grid;
   gap: 4rem;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
 }
 .salons-archive .issue__cover img {
   aspect-ratio: 360/540;
@@ -4241,29 +4241,19 @@ body.post-type-archive-conversations .teaser-conversation .copy + .cta {
   text-align: center;
 }
 .salons-archive .issue__link:hover .issue__title {
-  text-decoration: none;
-}
-.salons-archive .issue__link:hover .issue__title:after {
-  opacity: 1;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 .salons-archive .issue__title {
   display: inline-block;
   padding-top: 1rem;
   text-align: center;
-  font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
+  font-size: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
   font-family: "Adams", serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  transition: all 200ms ease;
-}
-.salons-archive .issue__title:after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 1px;
-  background: rgba(158, 154, 175, 0.5);
-  transform: translateY(2px);
-  opacity: 0;
+  line-height: 1.25em;
   transition: all 200ms ease;
 }
 .salons-archive .issue__meta {

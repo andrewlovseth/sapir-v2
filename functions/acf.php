@@ -31,7 +31,7 @@ add_action('acf/input/admin_head', 'bearsmith_acf_styles');
 
 // Order Post Object field by date
 function bearsmith_post_object_order_by_date($args, $field, $post_id) {
-    if ($field['key'] === 'field_606e240de3df9') {
+    if ($field['key'] === 'field_606e240de3df9' || $field['key'] === 'field_6802cba160511') {
         $args['orderby'] = 'date';
         $args['order'] = 'DESC';
     }

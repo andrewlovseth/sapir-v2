@@ -1,6 +1,11 @@
 <?php
 
 function wp_insert_shortcode_after_fifth_paragraph($content) {
+    // Only run on frontend, not in admin
+    if (is_admin()) {
+        return $content;
+    }
+    
     if (!is_single()) return $content; // Ensure this runs on single posts only
 
     $paragraphs = explode('</p>', $content);
@@ -15,4 +20,7 @@ function wp_insert_shortcode_after_fifth_paragraph($content) {
     return implode('</p>', $paragraphs);
 }
 
-add_filter('the_content', 'wp_insert_shortcode_after_fifth_paragraph');
+// Only add the filter on frontend
+if (!is_admin()) {
+    add_filter('the_content', 'wp_insert_shortcode_after_fifth_paragraph');
+}

@@ -151,6 +151,14 @@ function get_svg($svg) {
 
 
 add_filter( 'searchwp\source\post\attributes\content', function( $content, $args ) {
+    static $cache = [];
+    $post_id = $args['post']->ID;
+    
+    // Check if we've already processed this post
+    if (isset($cache[$post_id])) {
+        return $content . $cache[$post_id];
+    }
+    
     $authors = get_field('author', $args['post']->ID);
     $authors_string = '';
 
@@ -160,6 +168,9 @@ add_filter( 'searchwp\source\post\attributes\content', function( $content, $args
         }
     }
 
+    // Cache the result for this post
+    $cache[$post_id] = $authors_string;
+    
     $content = $content . $authors_string;
   
     return $content;

@@ -1,0 +1,209 @@
+$vol-18-red: #f0535c;
+$vol-18-green: #99b06b;
+$vol-18-orange: #c84c41;
+$vol-18-blush: #f7b5a2;
+$vol-18-dark-plum: #2d3c52;
+
+.site-theme-volume-eighteen,
+.issue-theme-volume-eighteen {
+    .site-banner {
+        .image {
+            height: 48px;
+
+            @include tablet {
+                height: 96px;
+            }
+
+            img {
+                object-position: bottom center;
+            }
+        }
+    }
+
+    .site-header {
+        .newsletter-link {
+            background: $vol-18-red;
+            color: $white;
+
+            &:hover {
+                background: darken($vol-18-red, 5%);
+            }
+        }
+    }
+
+    .sapir-star {
+        fill: $vol-18-orange;
+    }
+
+    .wp-block-pullquote:not(.basic) {
+        p {
+            color: $vol-18-red;
+        }
+    }
+
+    .teaser__title a:hover {
+        color: $vol-18-red;
+    }
+
+    .teaser__author-link:hover .teaser__author-name:after {
+        background: rgba($vol-18-red, 1);
+    }
+
+    .cta .btn {
+        border-color: $vol-18-red;
+        color: $vol-18-red;
+
+        &:hover {
+            background-color: $vol-18-red;
+            border-color: $vol-18-red;
+            color: $white;
+        }
+    }
+
+    .site-header .header-nav .epigraph {
+        color: $vol-18-dark-plum;
+        border-color: $vol-18-dark-plum;
+
+        &::before {
+            border-color: $vol-18-dark-plum;
+        }
+    }
+
+    .newsletter {
+        &__wrapper {
+            background: rgba($vol-18-dark-plum, 0.2);
+        }
+
+        .slim-line-imge-content {
+            background: rgba($vol-18-dark-plum, 0.23);
+        }
+    }
+
+    ::-moz-selection {
+        background: $vol-18-dark-plum;
+        color: $white;
+        text-shadow: none;
+    }
+
+    ::selection {
+        background: $vol-18-dark-plum;
+        color: $white;
+        text-shadow: none;
+    }
+}
+
+body.page-template-home.site-theme-volume-eighteen {
+    .latest .latest-issue,
+    .latest .latest-issue::before {
+        border-color: $vol-18-dark-plum;
+    }
+
+    .latest .latest-issue .ornament path {
+        fill: $vol-18-red;
+    }
+
+    .explore__sections-link a .label:after {
+        background: rgba($vol-18-dark-plum, 0.5);
+    }
+
+    .explore__topics-list a:after {
+        background: rgba($vol-18-dark-plum, 0.5);
+    }
+
+    .most-read,
+    .most-read::before {
+        border-color: $vol-18-orange;
+        color: $vol-18-orange;
+    }
+
+    .most-read {
+        .teaser__title-link {
+            color: $vol-18-orange;
+            transition: all 300ms ease;
+
+            &:hover {
+                color: $vol-18-orange;
+            }
+        }
+
+        .teaser__author-name {
+            color: $vol-18-orange;
+
+            &:hover {
+                &::after {
+                    background: rgba($vol-18-orange, 0.5);
+                }
+            }
+        }
+    }
+
+    .quote {
+        &__header {
+            .section-title {
+                color: $vol-18-blush;
+            }
+        }
+
+        blockquote {
+            background: rgba($vol-18-blush, 0.05);
+            color: rgba($vol-18-orange, 0.7);
+            border: 1px solid $vol-18-blush;
+
+            &::before,
+            &::after {
+                color: rgba($vol-18-orange, 0.7);
+            }
+        }
+
+        a:hover {
+            blockquote {
+                &::before,
+                &::after {
+                    color: $vol-18-orange;
+                }
+
+                color: $vol-18-orange;
+            }
+        }
+    }
+}
+
+body.single-post .issue-theme-volume-eighteen {
+    .article-header .authors a:hover {
+        border-color: rgba($vol-18-red, 0.5);
+    }
+
+    .article-body .sapir-star {
+        fill: $vol-18-orange;
+    }
+
+    .article-footer__links {
+        .btn,
+        .btn:before {
+            border-color: $vol-18-dark-plum;
+        }
+
+        .btn {
+            color: $vol-18-dark-plum;
+
+            &:hover {
+                background-color: $vol-18-dark-plum;
+                color: $white;
+            }
+        }
+    }
+}
+
+.issue-theme-volume-eighteen {
+    .issue__header .ornament svg path {
+        fill: $vol-18-red;
+    }
+
+    .issue__contents-header {
+        color: $vol-18-orange;
+    }
+
+    .teaser__date .coming-soon {
+        color: $vol-18-green;
+    }
+}

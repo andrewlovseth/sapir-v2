@@ -7160,6 +7160,169 @@ body.single-post .issue-theme-volume-seventeen .article-footer__links .btn:hover
   color: #966486;
 }
 
+.site-theme-volume-eighteen .site-banner .image,
+.issue-theme-volume-eighteen .site-banner .image {
+  height: 48px;
+}
+@media screen and (min-width: 768px) {
+  .site-theme-volume-eighteen .site-banner .image,
+  .issue-theme-volume-eighteen .site-banner .image {
+    height: 96px;
+  }
+}
+.site-theme-volume-eighteen .site-banner .image img,
+.issue-theme-volume-eighteen .site-banner .image img {
+  -o-object-position: bottom center;
+     object-position: bottom center;
+}
+.site-theme-volume-eighteen .site-header .newsletter-link,
+.issue-theme-volume-eighteen .site-header .newsletter-link {
+  background: #f0535c;
+  color: #fff;
+}
+.site-theme-volume-eighteen .site-header .newsletter-link:hover,
+.issue-theme-volume-eighteen .site-header .newsletter-link:hover {
+  background: #ee3c46;
+}
+.site-theme-volume-eighteen .sapir-star,
+.issue-theme-volume-eighteen .sapir-star {
+  fill: #c84c41;
+}
+.site-theme-volume-eighteen .wp-block-pullquote:not(.basic) p,
+.issue-theme-volume-eighteen .wp-block-pullquote:not(.basic) p {
+  color: #f0535c;
+}
+.site-theme-volume-eighteen .teaser__title a:hover,
+.issue-theme-volume-eighteen .teaser__title a:hover {
+  color: #f0535c;
+}
+.site-theme-volume-eighteen .teaser__author-link:hover .teaser__author-name:after,
+.issue-theme-volume-eighteen .teaser__author-link:hover .teaser__author-name:after {
+  background: #f0535c;
+}
+.site-theme-volume-eighteen .cta .btn,
+.issue-theme-volume-eighteen .cta .btn {
+  border-color: #f0535c;
+  color: #f0535c;
+}
+.site-theme-volume-eighteen .cta .btn:hover,
+.issue-theme-volume-eighteen .cta .btn:hover {
+  background-color: #f0535c;
+  border-color: #f0535c;
+  color: #fff;
+}
+.site-theme-volume-eighteen .site-header .header-nav .epigraph,
+.issue-theme-volume-eighteen .site-header .header-nav .epigraph {
+  color: #2d3c52;
+  border-color: #2d3c52;
+}
+.site-theme-volume-eighteen .site-header .header-nav .epigraph::before,
+.issue-theme-volume-eighteen .site-header .header-nav .epigraph::before {
+  border-color: #2d3c52;
+}
+.site-theme-volume-eighteen .newsletter__wrapper,
+.issue-theme-volume-eighteen .newsletter__wrapper {
+  background: rgba(45, 60, 82, 0.2);
+}
+.site-theme-volume-eighteen .newsletter .slim-line-imge-content,
+.issue-theme-volume-eighteen .newsletter .slim-line-imge-content {
+  background: rgba(45, 60, 82, 0.23);
+}
+.site-theme-volume-eighteen ::-moz-selection,
+.issue-theme-volume-eighteen ::-moz-selection {
+  background: #2d3c52;
+  color: #fff;
+  text-shadow: none;
+}
+.site-theme-volume-eighteen ::-moz-selection, .issue-theme-volume-eighteen ::-moz-selection {
+  background: #2d3c52;
+  color: #fff;
+  text-shadow: none;
+}
+.site-theme-volume-eighteen ::selection,
+.issue-theme-volume-eighteen ::selection {
+  background: #2d3c52;
+  color: #fff;
+  text-shadow: none;
+}
+
+body.page-template-home.site-theme-volume-eighteen .latest .latest-issue,
+body.page-template-home.site-theme-volume-eighteen .latest .latest-issue::before {
+  border-color: #2d3c52;
+}
+body.page-template-home.site-theme-volume-eighteen .latest .latest-issue .ornament path {
+  fill: #f0535c;
+}
+body.page-template-home.site-theme-volume-eighteen .explore__sections-link a .label:after {
+  background: rgba(45, 60, 82, 0.5);
+}
+body.page-template-home.site-theme-volume-eighteen .explore__topics-list a:after {
+  background: rgba(45, 60, 82, 0.5);
+}
+body.page-template-home.site-theme-volume-eighteen .most-read,
+body.page-template-home.site-theme-volume-eighteen .most-read::before {
+  border-color: #c84c41;
+  color: #c84c41;
+}
+body.page-template-home.site-theme-volume-eighteen .most-read .teaser__title-link {
+  color: #c84c41;
+  transition: all 300ms ease;
+}
+body.page-template-home.site-theme-volume-eighteen .most-read .teaser__title-link:hover {
+  color: #c84c41;
+}
+body.page-template-home.site-theme-volume-eighteen .most-read .teaser__author-name {
+  color: #c84c41;
+}
+body.page-template-home.site-theme-volume-eighteen .most-read .teaser__author-name:hover::after {
+  background: rgba(200, 76, 65, 0.5);
+}
+body.page-template-home.site-theme-volume-eighteen .quote__header .section-title {
+  color: #f7b5a2;
+}
+body.page-template-home.site-theme-volume-eighteen .quote blockquote {
+  background: rgba(247, 181, 162, 0.05);
+  color: rgba(200, 76, 65, 0.7);
+  border: 1px solid #f7b5a2;
+}
+body.page-template-home.site-theme-volume-eighteen .quote blockquote::before, body.page-template-home.site-theme-volume-eighteen .quote blockquote::after {
+  color: rgba(200, 76, 65, 0.7);
+}
+body.page-template-home.site-theme-volume-eighteen .quote a:hover blockquote {
+  color: #c84c41;
+}
+body.page-template-home.site-theme-volume-eighteen .quote a:hover blockquote::before, body.page-template-home.site-theme-volume-eighteen .quote a:hover blockquote::after {
+  color: #c84c41;
+}
+
+body.single-post .issue-theme-volume-eighteen .article-header .authors a:hover {
+  border-color: rgba(240, 83, 92, 0.5);
+}
+body.single-post .issue-theme-volume-eighteen .article-body .sapir-star {
+  fill: #c84c41;
+}
+body.single-post .issue-theme-volume-eighteen .article-footer__links .btn,
+body.single-post .issue-theme-volume-eighteen .article-footer__links .btn:before {
+  border-color: #2d3c52;
+}
+body.single-post .issue-theme-volume-eighteen .article-footer__links .btn {
+  color: #2d3c52;
+}
+body.single-post .issue-theme-volume-eighteen .article-footer__links .btn:hover {
+  background-color: #2d3c52;
+  color: #fff;
+}
+
+.issue-theme-volume-eighteen .issue__header .ornament svg path {
+  fill: #f0535c;
+}
+.issue-theme-volume-eighteen .issue__contents-header {
+  color: #c84c41;
+}
+.issue-theme-volume-eighteen .teaser__date .coming-soon {
+  color: #99b06b;
+}
+
 @media print {
   .site-banner,
   .site-footer,

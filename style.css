@@ -4859,7 +4859,7 @@ body.single-post .article-footer .author__photo img {
 body.single-post .article-footer__links {
   padding-top: 3rem;
   display: grid;
-  gap: 1rem 3rem;
+  gap: 2rem;
 }
 @media screen and (min-width: 768px) {
   body.single-post .article-footer__links {
@@ -4885,6 +4885,86 @@ body.single-post .article-footer__links .btn::before {
   bottom: -4px;
   z-index: 0;
   border: 1px solid #9e9aaf;
+}
+body.single-post .article-footer__pagination {
+  margin-top: 6rem;
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(158, 154, 175, 0.5);
+  border-bottom: 1px solid rgba(158, 154, 175, 0.5);
+}
+body.single-post .article-footer__pagination svg path {
+  stroke: #aaa;
+}
+body.single-post .article-footer__pagination-link {
+  display: grid;
+  align-items: center;
+  gap: 0 1rem;
+}
+body.single-post .article-footer__pagination-link:hover .article-footer__pagination-title {
+  text-decoration: underline;
+  text-decoration-color: #424254;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+body.single-post .article-footer__pagination-prev {
+  text-align: left;
+}
+body.single-post .article-footer__pagination-prev .article-footer__pagination-link {
+  grid-template-columns: auto 1fr;
+}
+body.single-post .article-footer__pagination-next {
+  text-align: right;
+}
+body.single-post .article-footer__pagination-next .article-footer__pagination-link {
+  grid-template-columns: 1fr auto;
+  justify-content: end;
+}
+body.single-post .article-footer__pagination-next .article-footer__pagination-title {
+  margin-left: auto;
+}
+body.single-post .article-footer__pagination-next .authors-item + .authors-item:before {
+  content: "&";
+  padding-left: 0.25rem;
+  padding-right: 0;
+}
+body.single-post .article-footer__pagination-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #424254;
+  margin-bottom: 0.5rem;
+  font-family: "Adams", serif;
+}
+body.single-post .article-footer__pagination-title {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  font-family: psfournier-std-grand, serif;
+  font-size: 1.125rem;
+  line-height: 1.25em;
+  text-wrap: balance;
+}
+body.single-post .article-footer__pagination .authors {
+  border-top: none;
+  padding-top: 0.25rem;
+  color: #424254;
+  font-size: 0.875rem;
+  line-height: 1.25em;
+  text-wrap: balance;
+}
+body.single-post .article-footer__pagination .authors-item + .authors-item:before {
+  content: "&";
+  padding-right: 0.25rem;
+}
+body.single-post .article-footer__pagination .interviewers {
+  padding-top: 0.25rem;
+  color: #424254;
+  font-size: 0.875rem;
 }
 
 body.single-authors .author-header {

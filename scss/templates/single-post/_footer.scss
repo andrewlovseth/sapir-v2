@@ -78,7 +78,7 @@
     &__links {
         padding-top: 3rem;
         display: grid;
-        gap: 1rem 3rem;
+        gap: 2rem;
 
         @include tablet {
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -90,6 +90,111 @@
             text-align: center;
             line-height: 2em;
             @include double-border($light-blue);
+        }
+    }
+
+    &__pagination {
+        margin-top: 6rem;
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        padding: 1.5rem 0;
+        border-top: 1px solid rgba($light-blue, 0.5);
+        border-bottom: 1px solid rgba($light-blue, 0.5);
+
+        svg {
+            path {
+                stroke: #aaa;
+            }
+        }
+
+        &-link {
+            display: grid;
+            align-items: center;
+            gap: 0 1rem;
+
+            &:hover {
+                .article-footer__pagination-title {
+                    text-decoration: underline;
+                    text-decoration-color: $dark-blue;
+                    text-decoration-thickness: 1px;
+                    text-underline-offset: 0.2em;
+                }
+            }
+        }
+
+        &-prev {
+            text-align: left;
+
+            .article-footer__pagination-link {
+                grid-template-columns: auto 1fr;
+            }
+        }
+
+        &-next {
+            text-align: right;
+
+            .article-footer__pagination-link {
+                grid-template-columns: 1fr auto;
+                justify-content: end;
+            }
+
+            .article-footer__pagination-title {
+                margin-left: auto;
+            }
+
+            .authors {
+                &-item {
+                    & + .authors-item:before {
+                        content: "&";
+                        padding-left: 0.25rem;
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+
+        &-label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: $dark-blue;
+            margin-bottom: 0.5rem;
+            font-family: $adams;
+        }
+
+        &-title {
+            display: block;
+            font-weight: 400;
+            margin-bottom: 0.25rem;
+            font-family: $fournier-std-grand;
+            font-size: 1.125rem;
+            line-height: 1.25em;
+            text-wrap: balance;
+        }
+
+        .authors {
+            border-top: none;
+            padding-top: 0.25rem;
+            color: $dark-blue;
+            font-size: 0.875rem;
+            line-height: 1.25em;
+            text-wrap: balance;
+
+            &-item {
+                & + .authors-item:before {
+                    content: "&";
+                    padding-right: 0.25rem;
+                }
+            }
+        }
+
+        .interviewers {
+            padding-top: 0.25rem;
+            color: $dark-blue;
+            font-size: 0.875rem;
         }
     }
 }

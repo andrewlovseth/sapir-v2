@@ -1,7 +1,7 @@
 <?php
 
     $issue = get_field('issue');
-    $issue_url = get_permalink($issue);
+    $issue_url = $issue ? get_permalink($issue) : '';
     $authors = get_field('author');
     $tags = get_the_tags();
 
@@ -48,6 +48,8 @@
     <?php endif; ?>
 
 
+    <?php get_template_part('templates/single-post/pagination'); ?>
+
 
     <div class="article-footer__links">
         <div class="cta">
@@ -56,11 +58,13 @@
             </a>
         </div>
 
+        <?php if ($issue_url): ?>
         <div class="link cta">
             <a class="btn small-upper" href="<?php echo $issue_url; ?>">
                 <span class="label">View contents<br/> of this issue</span>
             </a>
         </div>
+        <?php endif; ?>
 
     </div>
 

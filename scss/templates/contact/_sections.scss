@@ -1,0 +1,43 @@
+.contact-section {
+    @include tablet {
+        grid-column: 3 / span 6;
+    }
+    @include desktop-small {
+        grid-column: 4 / span 8;
+    }
+
+    @include desktop-medium {
+        grid-column: 5 / span 6;
+    }
+    & + .contact-section {
+        padding-top: 4rem;
+
+        @include desktop-medium {
+            padding-top: 6rem;
+        }
+    }
+
+    &__header {
+        font-size: $type-size-500;
+        font-weight: 400;
+        padding-bottom: 1rem;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 1.5rem;
+            height: 1.5px;
+            background: $black;
+            margin-top: 1rem;
+        }
+    }
+
+    &__copy {
+        a {
+            color: $dark-red;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 0.25rem;
+        }
+    }
+}

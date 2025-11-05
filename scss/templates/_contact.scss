@@ -5,7 +5,5 @@ body.page-template-contact {
         }
     }
 
-    @import 'contact/contact-form';
-
-    @import 'contact/faqs';
+    @import "contact/sections";
 }

@@ -3435,94 +3435,46 @@ body.page-template-events .recordings-cta .cta .btn:hover::before {
   }
 }
 @media screen and (min-width: 768px) {
-  body.page-template-contact .contact-form {
+  body.page-template-contact .contact-section {
     grid-column: 3/span 6;
   }
 }
 @media screen and (min-width: 992px) {
-  body.page-template-contact .contact-form {
-    grid-column: 2/span 8;
+  body.page-template-contact .contact-section {
+    grid-column: 4/span 8;
   }
 }
-body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form input.wpforms-field-medium,
-body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form select.wpforms-field-medium,
-body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium {
-  max-width: 100%;
-}
-body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form .wpforms-field-label {
-  font-size: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
-  font-weight: normal;
-}
-body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form .wpforms-field-sublabel {
-  font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
-  font-style: italic;
-}
-body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form .wpforms-field {
-  padding: 1rem 0;
-}
-body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form .wpforms-field input {
-  height: 3rem;
-}
-body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form .wpforms-field textarea {
-  height: unset;
-  min-height: 12rem;
-}
-body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form button[type=submit] {
-  display: inline-block;
-  border: 1px solid #9e9aaf;
-  padding: 1rem 1.5rem 0.875rem;
-  transition: all 200ms ease;
-  color: #000;
-  background: unset;
-  font-family: "Adams", serif;
-}
-body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form button[type=submit]:hover {
-  background: #65667a;
-  border-color: #355c7f;
-  color: #fbf9f7;
-  text-decoration: none;
-}
-body.page-template-contact .contact-form div.wpforms-container-full .wpforms-form label.wpforms-error {
-  margin-top: 0.25rem;
-}
-body.page-template-contact .contact-form .wpforms-confirmation-container-full {
-  background: #408ab6;
-  border: none;
-  color: #fff;
-  margin: 0;
-  text-align: center;
-}
-body.page-template-contact .faqs {
-  padding-top: 2rem;
-}
-@media screen and (min-width: 768px) {
-  body.page-template-contact .faqs {
-    grid-column: 3/span 6;
+@media screen and (min-width: 1280px) {
+  body.page-template-contact .contact-section {
+    grid-column: 5/span 6;
   }
 }
-@media screen and (min-width: 992px) {
-  body.page-template-contact .faqs {
-    grid-column: 10/span 4;
-    border-left: 1px solid rgba(158, 154, 175, 0.5);
-    padding: 1rem 0 1rem 2rem;
+body.page-template-contact .contact-section + .contact-section {
+  padding-top: 4rem;
+}
+@media screen and (min-width: 1280px) {
+  body.page-template-contact .contact-section + .contact-section {
+    padding-top: 6rem;
   }
 }
-body.page-template-contact .faqs .section-header {
+body.page-template-contact .contact-section__header {
+  font-size: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
+  font-weight: 400;
   padding-bottom: 1rem;
 }
-body.page-template-contact .faqs .faq + .faq {
-  margin-top: 2rem;
-  border-top: 1px solid rgba(158, 154, 175, 0.5);
-  padding-top: 2rem;
+body.page-template-contact .contact-section__header::after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5px;
+  background: #000;
+  margin-top: 1rem;
 }
-body.page-template-contact .faqs .faq .question {
-  padding-bottom: 1rem;
-  font-size: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
-  font-style: italic;
-  line-height: 1.375em;
-}
-body.page-template-contact .faqs .faq .answer a {
+body.page-template-contact .contact-section__copy a {
+  color: #8f3948;
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25rem;
 }
 
 body.page-template-newsletter .newsletter {

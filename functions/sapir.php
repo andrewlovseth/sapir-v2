@@ -7,12 +7,33 @@ function wrap_sapir_in_span( $content ) {
         $parts = array( $content );
     }
 
+    $small_caps_depth = 0; // number of currently-open span.small-caps
+    $span_stack = array(); // tracks all <span>, marks whether each was small-caps
+
     foreach ( $parts as $index => $part ) {
-        // Even indexes are text nodes when splitting with the above regex
-        if ( $index % 2 === 0 ) {
-            $part = preg_replace( '/\bsapir\b/i', '<span class="small-caps">$0</span>', $part );
-            $part = preg_replace( '/(A\.M\.|P\.M\.)/i', '<span class="small-caps lower">$0</span>', $part );
-            $parts[ $index ] = $part;
+        if ( $index % 2 === 1 ) {
+            // Tag segment: update span stack/depth and leave unchanged
+            if ( preg_match( '/^<\s*span\b/i', $part ) ) {
+                $is_small_caps = (bool) preg_match( '/\bclass\s*=\s*("|\')[^>]*\bsmall-caps\b/i', $part );
+                $span_stack[] = $is_small_caps ? 1 : 0;
+                if ( $is_small_caps ) {
+                    $small_caps_depth++;
+                }
+            } elseif ( preg_match( '/^<\s*\/\s*span\s*>/i', $part ) ) {
+                if ( !empty( $span_stack ) ) {
+                    $was_small = array_pop( $span_stack );
+                    if ( $was_small ) {
+                        $small_caps_depth = max( 0, $small_caps_depth - 1 );
+                    }
+                }
+            }
+        } else {
+            // Text segment: only transform when not inside an existing small-caps span
+            if ( $small_caps_depth === 0 ) {
+                $part = preg_replace( '/\bsapir\b/i', '<span class="small-caps">$0</span>', $part );
+                $part = preg_replace( '/(A\.M\.|P\.M\.)/i', '<span class="small-caps lower">$0</span>', $part );
+                $parts[ $index ] = $part;
+            }
         }
     }
 

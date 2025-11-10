@@ -7345,6 +7345,177 @@ body.single-post .issue-theme-volume-eighteen .article-footer__links .btn:hover 
   color: #99b06b;
 }
 
+.site-theme-volume-nineteen .site-banner .image,
+.issue-theme-volume-nineteen .site-banner .image {
+  height: 48px;
+}
+@media screen and (min-width: 768px) {
+  .site-theme-volume-nineteen .site-banner .image,
+  .issue-theme-volume-nineteen .site-banner .image {
+    height: 96px;
+  }
+}
+.site-theme-volume-nineteen .site-banner .image img,
+.issue-theme-volume-nineteen .site-banner .image img {
+  -o-object-position: bottom center;
+     object-position: bottom center;
+}
+.site-theme-volume-nineteen .site-header .newsletter-link,
+.issue-theme-volume-nineteen .site-header .newsletter-link {
+  background: #ef537b;
+  color: #fff;
+}
+.site-theme-volume-nineteen .site-header .newsletter-link:hover,
+.issue-theme-volume-nineteen .site-header .newsletter-link:hover {
+  background: #ed3c69;
+}
+.site-theme-volume-nineteen .sapir-star,
+.issue-theme-volume-nineteen .sapir-star {
+  fill: #ef537b;
+}
+.site-theme-volume-nineteen .wp-block-pullquote:not(.basic) p,
+.issue-theme-volume-nineteen .wp-block-pullquote:not(.basic) p {
+  color: #6c9ac7;
+}
+.site-theme-volume-nineteen .teaser__title a:hover,
+.issue-theme-volume-nineteen .teaser__title a:hover {
+  color: #d58471;
+}
+.site-theme-volume-nineteen .teaser__author-link:hover .teaser__author-name:after,
+.issue-theme-volume-nineteen .teaser__author-link:hover .teaser__author-name:after {
+  background: #d58471;
+}
+.site-theme-volume-nineteen .cta .btn,
+.issue-theme-volume-nineteen .cta .btn {
+  border-color: #576279;
+  color: #576279;
+}
+.site-theme-volume-nineteen .cta .btn:hover,
+.issue-theme-volume-nineteen .cta .btn:hover {
+  background-color: #576279;
+  border-color: #576279;
+  color: #fff;
+}
+.site-theme-volume-nineteen .site-header .header-nav .epigraph,
+.issue-theme-volume-nineteen .site-header .header-nav .epigraph {
+  color: #576279;
+  border-color: #576279;
+}
+.site-theme-volume-nineteen .site-header .header-nav .epigraph::before,
+.issue-theme-volume-nineteen .site-header .header-nav .epigraph::before {
+  border-color: #576279;
+}
+.site-theme-volume-nineteen ::-moz-selection,
+.issue-theme-volume-nineteen ::-moz-selection {
+  background: #576279;
+  color: #fff;
+  text-shadow: none;
+}
+.site-theme-volume-nineteen ::-moz-selection, .issue-theme-volume-nineteen ::-moz-selection {
+  background: #576279;
+  color: #fff;
+  text-shadow: none;
+}
+.site-theme-volume-nineteen ::selection,
+.issue-theme-volume-nineteen ::selection {
+  background: #576279;
+  color: #fff;
+  text-shadow: none;
+}
+
+body.page-template-home.site-theme-volume-nineteen .latest .latest-issue,
+body.page-template-home.site-theme-volume-nineteen .latest .latest-issue::before {
+  border-color: #6c9ac7;
+}
+body.page-template-home.site-theme-volume-nineteen .latest .latest-issue .ornament path {
+  fill: #ef537b;
+}
+body.page-template-home.site-theme-volume-nineteen .explore__sections-link a .label:after {
+  background: rgba(87, 98, 121, 0.5);
+}
+body.page-template-home.site-theme-volume-nineteen .explore__topics-list a:after {
+  background: rgba(87, 98, 121, 0.5);
+}
+body.page-template-home.site-theme-volume-nineteen .most-read,
+body.page-template-home.site-theme-volume-nineteen .most-read::before {
+  border-color: #6c9ac7;
+  color: #6c9ac7;
+}
+body.page-template-home.site-theme-volume-nineteen .most-read .teaser__title-link {
+  color: #6c9ac7;
+  transition: all 300ms ease;
+}
+body.page-template-home.site-theme-volume-nineteen .most-read .teaser__title-link:hover {
+  color: #6c9ac7;
+}
+body.page-template-home.site-theme-volume-nineteen .most-read .teaser__author-name {
+  color: #6c9ac7;
+}
+body.page-template-home.site-theme-volume-nineteen .most-read .teaser__author-name:hover::after {
+  background: rgba(108, 154, 199, 0.5);
+}
+body.page-template-home.site-theme-volume-nineteen .quote__header .section-title {
+  color: #fbf0ea;
+}
+body.page-template-home.site-theme-volume-nineteen .quote blockquote {
+  background: #fbf0ea;
+  color: #ef537b;
+  border: 1px solid #fbf0ea;
+}
+body.page-template-home.site-theme-volume-nineteen .quote blockquote::before, body.page-template-home.site-theme-volume-nineteen .quote blockquote::after {
+  color: #ef537b;
+}
+body.page-template-home.site-theme-volume-nineteen .quote a:hover blockquote {
+  color: #ef537b;
+}
+body.page-template-home.site-theme-volume-nineteen .quote a:hover blockquote::before, body.page-template-home.site-theme-volume-nineteen .quote a:hover blockquote::after {
+  color: #ef537b;
+}
+body.page-template-home.site-theme-volume-nineteen .cta .btn {
+  border-color: #6c9ac7;
+  color: #6c9ac7;
+}
+body.page-template-home.site-theme-volume-nineteen .cta .btn:hover {
+  background-color: #576279;
+  border-color: #576279;
+  color: #fff;
+}
+body.page-template-home.site-theme-volume-nineteen .site-footer {
+  background: #576279;
+  color: #dfdad2;
+}
+body.page-template-home.site-theme-volume-nineteen .site-footer a {
+  color: #dfdad2;
+}
+
+body.single-post .issue-theme-volume-nineteen .article-header .authors a:hover {
+  border-color: rgba(213, 132, 113, 0.5);
+}
+body.single-post .issue-theme-volume-nineteen .article-body .sapir-star {
+  fill: #d58471;
+}
+body.single-post .issue-theme-volume-nineteen .article-footer__links .btn,
+body.single-post .issue-theme-volume-nineteen .article-footer__links .btn:before {
+  border-color: #576279;
+}
+body.single-post .issue-theme-volume-nineteen .article-footer__links .btn {
+  color: #576279;
+}
+body.single-post .issue-theme-volume-nineteen .article-footer__links .btn:hover {
+  background-color: #576279;
+  color: #fff;
+}
+
+.issue-theme-volume-nineteen .issue__header .ornament svg path {
+  fill: #ef537b;
+}
+.issue-theme-volume-nineteen .issue__contents-header {
+  color: #d58471;
+}
+.issue-theme-volume-nineteen .teaser__date .coming-soon {
+  color: #6c9ac7;
+}
+
 @media print {
   .site-banner,
   .site-footer,

@@ -1,186 +1,156 @@
-$super-pink: #c16c9c;
-$vol-9-yellow: #fed098;
-$vol-9-brown: #a9806d;
-$vol-9-dark-blue: #355b77;
-$vol-9-light-blue: #82b0bc;
-$vol-9-red: #bf575d;
+// ═══════════════════════════════════════════════════════════════════════════
+// Volume 9 Theme - Red / Dark Blue / Light Blue / Brown / Yellow
+// ═══════════════════════════════════════════════════════════════════════════
 
 .site-theme-volume-nine,
 .issue-theme-volume-nine {
-    .site-banner {
-        .image {
-            height: 48px;
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 1: Color Palette (primitive values)
+    // ─────────────────────────────────────────────────────────────────────────
+    --vol-red: #bf575d;
+    --vol-red-dark: #a94c51;
+    --vol-dark-blue: #355b77;
+    --vol-dark-blue-50: rgba(53, 91, 119, 0.5);
+    --vol-dark-blue-70: rgba(53, 91, 119, 0.7);
+    --vol-light-blue: #82b0bc;
+    --vol-light-blue-25: rgba(130, 176, 188, 0.25);
+    --vol-yellow: #fed098;
+    --vol-yellow-50: rgba(254, 208, 152, 0.5);
+    --vol-brown: #a9806d;
+    --vol-brown-50: rgba(169, 128, 109, 0.5);
 
-            @include tablet {
-                height: 96px;
-            }
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 2: Semantic Tokens
+    // ─────────────────────────────────────────────────────────────────────────
 
-            img {
-                object-position: bottom center;
-            }
-        }
-    }
+    // Header (no newsletter button for this volume)
+    --vol-newsletter-bg: transparent;
+    --vol-newsletter-bg-hover: transparent;
+    --vol-epigraph-color: var(--vol-red);
 
-    .sapir-star {
-        fill: $vol-9-red;
-    }
+    // Icons & Decorations
+    --vol-star-fill: var(--vol-red);
+    --vol-ornament-fill: var(--vol-brown);
 
-    .wp-block-pullquote:not(.basic) {
-        p {
-            color: $vol-9-red;
-        }
-    }
+    // Typography
+    --vol-pullquote-text: var(--vol-red);
 
-    .teaser__title a:hover {
-        color: $vol-9-dark-blue;
-    }
+    // Interactive
+    --vol-link-hover: var(--vol-dark-blue);
+    --vol-author-underline: var(--vol-dark-blue-50);
 
-    .teaser__author-link:hover .teaser__author-name:after {
-        background: rgba($vol-9-dark-blue, 0.5);
-    }
+    // Buttons (global)
+    --vol-cta-border: var(--vol-red);
+    --vol-cta-text: var(--vol-red);
+    --vol-cta-hover-bg: var(--vol-red);
 
-    .cta .btn {
-        border-color: $vol-9-red;
-        color: $vol-9-red;
+    // Selection
+    --vol-selection-bg: var(--vol-red);
 
-        &:hover {
-            background-color: $vol-9-red;
-            border-color: $vol-9-red;
-            color: $white;
-        }
-    }
+    // Home: Latest Issue
+    --vol-latest-border: var(--vol-brown);
 
-    .site-header .header-nav .epigraph {
-        color: $vol-9-red;
-        border-color: $vol-9-red;
+    // Home: Explore
+    --vol-explore-underline: var(--vol-dark-blue-50);
 
-        &::before {
-            border-color: $vol-9-red;
-        }
-    }
-    .newsletter {
-        &__wrapper {
-            background: rgba($vol-9-light-blue, 0.25);
-        }
+    // Home: Most Read
+    --vol-most-read-color: var(--vol-red);
+    --vol-most-read-author-hover: var(--vol-red);
 
-        .section-header h3 {
-            color: $vol-9-dark-blue;
-        }
+    // Home: Quote
+    --vol-quote-title: var(--vol-dark-blue);
+    --vol-quote-bg: var(--vol-light-blue-25);
+    --vol-quote-text: var(--vol-dark-blue);
+    --vol-quote-marks: var(--vol-dark-blue-70);
+    --vol-quote-hover: var(--vol-dark-blue);
 
-        .form-wrapper {
-            input.email {
-                border-color: $vol-9-dark-blue;
-                color: $vol-9-dark-blue;
+    // Footer (not styled for this volume)
+    --vol-footer-bg: var(--color-tan);
 
-                @include placeholder {
-                    color: $vol-9-dark-blue;
-                }
-            }
-            input.button {
-                background: $vol-9-dark-blue;
-            }
-        }
-    }
+    // Article Page
+    --vol-author-border-hover: var(--vol-dark-blue-50);
+    --vol-article-btn-border: var(--vol-brown);
+    --vol-article-btn-text: var(--vol-brown);
+    --vol-article-btn-hover-bg: var(--vol-red);
 
-    .site-footer {
-        //background: $vol-9-dark-blue;
-    }
-
-    ::-moz-selection {
-        background: $vol-9-red;
-        color: $white;
-        text-shadow: none;
-    }
-
-    ::selection {
-        background: $vol-9-red;
-        color: $white;
-        text-shadow: none;
-    }
+    // Issue Page
+    --vol-contents-header: var(--vol-dark-blue);
+    --vol-coming-soon: var(--vol-red);
 }
 
+// Volume 9 uses `.issue` instead of `.latest-issue` on homepage
 body.page-template-home.site-theme-volume-nine {
     .latest .issue,
     .latest .issue::before {
-        border-color: $vol-9-brown;
+        border-color: var(--vol-latest-border);
     }
 
     .latest .issue .ornament path {
-        fill: $vol-9-brown;
+        fill: var(--vol-ornament-fill);
     }
 
-    .explore__sections-link a .label:after {
-        background: rgba($vol-9-dark-blue, 0.5);
-    }
-
-    .explore__topics-list a:after {
-        background: rgba($vol-9-dark-blue, 0.5);
-    }
-
-    .most-read,
-    .most-read::before {
-        border-color: $vol-9-red;
-        color: $vol-9-red;
-    }
-
+    // Most read uses simplified styling
     .most-read {
         a {
-            color: $vol-9-red;
-        }
-    }
-
-    .quote {
-        &__header {
-            .section-title {
-                color: $vol-9-dark-blue;
-            }
-        }
-
-        blockquote {
-            background: rgba($vol-9-light-blue, 0.25);
-            color: $vol-9-dark-blue;
-
-            &::before,
-            &::after {
-                color: rgba($vol-9-dark-blue, 0.7);
-            }
-        }
-
-        a:hover {
-            blockquote {
-                &::before,
-                &::after {
-                    color: $vol-9-dark-blue;
-                }
-            }
+            color: var(--vol-most-read-color);
         }
     }
 }
 
+// Volume 9 uses different selector for article page
 body.single-post.site-theme-volume-nine {
     .article-header .authors a:hover {
-        border-color: rgba($vol-9-dark-blue, 0.5);
+        border-color: var(--vol-author-border-hover);
     }
     .article-footer__links {
         .btn,
         .btn:before {
-            border-color: $vol-9-brown;
+            border-color: var(--vol-article-btn-border);
         }
 
         .btn {
             &:hover {
-                background-color: $vol-9-red;
-                color: $white;
+                background-color: var(--vol-article-btn-hover-bg);
+                color: var(--color-white);
             }
         }
     }
 }
 
+// Volume 9 uses different selector for issue page
 body.single-issue.site-theme-volume-nine {
     .issue__header .ornament svg path {
-        fill: $vol-9-dark-blue;
+        fill: var(--vol-dark-blue);
     }
     .teaser__date .coming-soon {
-        color: $vol-9-red;
+        color: var(--vol-coming-soon);
+    }
+}
+
+// Newsletter styling (unique to this volume)
+.site-theme-volume-nine,
+.issue-theme-volume-nine {
+    .newsletter {
+        &__wrapper {
+            background: var(--vol-light-blue-25);
+        }
+
+        .section-header h3 {
+            color: var(--vol-dark-blue);
+        }
+
+        .form-wrapper {
+            input.email {
+                border-color: var(--vol-dark-blue);
+                color: var(--vol-dark-blue);
+
+                @include placeholder {
+                    color: var(--vol-dark-blue);
+                }
+            }
+            input.button {
+                background: var(--vol-dark-blue);
+            }
+        }
     }
 }

@@ -1,213 +1,133 @@
-$vol-13-turquoise: #3aa383;
-$vol-13-light-blue: #82b0bc;
-$vol-13-pink: #e67b93;
-$vol-13-mint: #dfefdd;
+// ═══════════════════════════════════════════════════════════════════════════
+// Volume 13 Theme - Pink / Turquoise / Mint
+// ═══════════════════════════════════════════════════════════════════════════
 
 .site-theme-volume-thirteen,
 .issue-theme-volume-thirteen {
-    .site-banner {
-        .image {
-            height: 48px;
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 1: Color Palette (primitive values)
+    // ─────────────────────────────────────────────────────────────────────────
+    --vol-pink: #e67b93;
+    --vol-pink-light: #eb8fa4;
+    --vol-pink-70: rgba(230, 123, 147, 0.7);
+    --vol-pink-50: rgba(230, 123, 147, 0.5);
+    --vol-light-blue: #82b0bc;
+    --vol-light-blue-50: rgba(130, 176, 188, 0.5);
+    --vol-mint: #dfefdd;
+    --vol-mint-85: rgba(223, 239, 221, 0.85);
+    --vol-mint-82: rgba(223, 239, 221, 0.82);
+    --vol-mint-50: rgba(223, 239, 221, 0.5);
+    --vol-turquoise: #3aa383;
+    --vol-turquoise-50: rgba(58, 163, 131, 0.5);
 
-            @include tablet {
-                height: 96px;
-            }
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 2: Semantic Tokens
+    // ─────────────────────────────────────────────────────────────────────────
 
-            img {
-                object-position: bottom center;
-            }
+    // Header
+    --vol-newsletter-bg: var(--vol-pink);
+    --vol-newsletter-bg-hover: var(--vol-pink-light);
+    --vol-epigraph-color: var(--vol-pink);
+
+    // Icons & Decorations
+    --vol-star-fill: var(--vol-pink);
+    --vol-ornament-fill: var(--vol-pink);
+
+    // Typography
+    --vol-pullquote-text: var(--vol-pink);
+
+    // Interactive
+    --vol-link-hover: var(--vol-turquoise);
+    --vol-author-underline: var(--vol-turquoise-50);
+
+    // Buttons (global)
+    --vol-cta-border: var(--vol-turquoise);
+    --vol-cta-text: var(--vol-turquoise);
+    --vol-cta-hover-bg: var(--vol-turquoise);
+
+    // Selection
+    --vol-selection-bg: var(--vol-pink);
+
+    // Home: Latest Issue
+    --vol-latest-border: var(--vol-turquoise);
+
+    // Home: Explore
+    --vol-explore-underline: var(--vol-turquoise-50);
+
+    // Home: Most Read
+    --vol-most-read-color: var(--vol-pink);
+    --vol-most-read-author-hover: var(--vol-pink);
+
+    // Home: Quote (uses rgba blue-dark)
+    --vol-quote-title: var(--vol-mint);
+    --vol-quote-bg: var(--vol-mint-50);
+    --vol-quote-text: rgba(35, 48, 64, 0.7);
+    --vol-quote-marks: rgba(35, 48, 64, 0.7);
+    --vol-quote-hover: var(--color-black);
+
+    // Footer (not styled for this volume)
+    --vol-footer-bg: var(--color-tan);
+
+    // Article Page
+    --vol-author-border-hover: var(--vol-pink-50);
+    --vol-article-btn-border: var(--vol-turquoise);
+    --vol-article-btn-text: var(--vol-turquoise);
+    --vol-article-btn-hover-bg: var(--vol-turquoise);
+
+    // Issue Page
+    --vol-contents-header: var(--vol-turquoise);
+    --vol-coming-soon: var(--vol-turquoise);
+}
+
+// Most read has special hover for teaser title
+body.page-template-home.site-theme-volume-thirteen {
+    .most-read {
+        a {
+            color: var(--vol-most-read-color);
+        }
+
+        .teaser-small .teaser__title:hover::before {
+            border-bottom-color: var(--vol-most-read-color);
         }
     }
+}
 
-    .site-header {
-        .newsletter-link {
-            background: $vol-13-pink;
-            color: $white;
-
-            &:hover {
-                background: lighten($vol-13-pink, 5%);
-            }
-        }
-    }
-
-    .sapir-star {
-        fill: $vol-13-pink;
-    }
-
-    .wp-block-pullquote:not(.basic) {
-        p {
-            color: $vol-13-pink;
-        }
-    }
-
-    .teaser__title a:hover {
-        color: $vol-13-turquoise;
-    }
-
-    .teaser__author-link:hover .teaser__author-name:after {
-        background: rgba($vol-13-turquoise, 0.5);
-    }
-
-    .cta .btn {
-        border-color: $vol-13-turquoise;
-        color: $vol-13-turquoise;
-
-        &:hover {
-            background-color: $vol-13-turquoise;
-            border-color: $vol-13-turquoise;
-            color: $white;
-        }
-    }
-
-    .site-header .header-nav .epigraph {
-        color: $vol-13-pink;
-        border-color: $vol-13-pink;
-
-        &::before {
-            border-color: $vol-13-pink;
-        }
-    }
-
+// Newsletter styling (unique to this volume)
+.site-theme-volume-thirteen,
+.issue-theme-volume-thirteen {
     .newsletter {
         &__wrapper {
-            background: rgba($vol-13-mint, 0.85);
+            background: var(--vol-mint-85);
         }
 
         .slim-line-imge-content {
-            background: rgba($vol-13-mint, 0.82);
+            background: var(--vol-mint-82);
         }
 
         .section-header h3 {
-            color: $vol-13-pink;
+            color: var(--vol-pink);
         }
 
         .form-wrapper {
             input.email {
-                border-color: $vol-13-pink;
-                color: $vol-13-pink;
+                border-color: var(--vol-pink);
+                color: var(--vol-pink);
 
                 @include placeholder {
-                    color: rgba($vol-13-pink, 0.7);
+                    color: var(--vol-pink-70);
                 }
             }
             input.button {
-                background: $vol-13-pink;
-            }
-        }
-    }
-
-    ::-moz-selection {
-        background: $vol-13-pink;
-        color: $white;
-        text-shadow: none;
-    }
-
-    ::selection {
-        background: $vol-13-pink;
-        color: $white;
-        text-shadow: none;
-    }
-}
-
-body.page-template-home.site-theme-volume-thirteen {
-    .latest .latest-issue,
-    .latest .latest-issue::before {
-        border-color: $vol-13-turquoise;
-    }
-
-    .latest .latest-issue .ornament path {
-        fill: $vol-13-pink;
-    }
-
-    .explore__sections-link a .label:after {
-        background: rgba($vol-13-turquoise, 0.5);
-    }
-
-    .explore__topics-list a:after {
-        background: rgba($vol-13-turquoise, 0.5);
-    }
-
-    .most-read,
-    .most-read::before {
-        border-color: $vol-13-pink;
-        color: $vol-13-pink;
-    }
-
-    .most-read {
-        a {
-            color: $vol-13-pink;
-        }
-
-        .teaser-small .teaser__title:hover::before {
-            border-bottom-color: $vol-13-pink;
-        }
-    }
-
-    .quote {
-        &__header {
-            .section-title {
-                color: $vol-13-mint;
-            }
-        }
-
-        blockquote {
-            background: rgba($vol-13-mint, 0.5);
-            color: rgba($dark-blue, 0.7);
-
-            &::before,
-            &::after {
-                color: rgba($dark-blue, 0.7);
-            }
-        }
-
-        a:hover {
-            blockquote {
-                &::before,
-                &::after {
-                    color: $black;
-                }
-
-                color: $black;
+                background: var(--vol-pink);
             }
         }
     }
 }
 
-body.single-post .issue-theme-volume-thirteen {
-    .article-header .authors a:hover {
-        border-color: rgba($vol-13-pink, 0.5);
-    }
-
-    .article-footer__links {
-        .btn,
-        .btn:before {
-            border-color: $vol-13-turquoise;
-        }
-
-        .btn {
-            color: $vol-13-turquoise;
-
-            &:hover {
-                background-color: $vol-13-turquoise;
-                color: $white;
-            }
-        }
-    }
-}
-
-.issue-theme-volume-thirteen {
-    .issue__header .ornament svg path {
-        fill: $vol-13-pink;
-    }
-
-    .issue__contents-header {
-        color: $vol-13-turquoise;
-    }
-
-    .teaser__date .coming-soon {
-        color: $vol-13-turquoise;
-    }
-}
+// ═══════════════════════════════════════════════════════════════════════════
+// Volume 13 Special: Resilience Dropcaps
+// ═══════════════════════════════════════════════════════════════════════════
+// These are unique decorated dropcap styles for the "Resilience" issue
 
 .resilience-o-dropcap {
     &:before {

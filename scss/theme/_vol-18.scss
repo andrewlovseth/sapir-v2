@@ -1,209 +1,97 @@
-$vol-18-red: #f0535c;
-$vol-18-green: #99b06b;
-$vol-18-orange: #c84c41;
-$vol-18-blush: #f7b5a2;
-$vol-18-dark-plum: #2d3c52;
+// ═══════════════════════════════════════════════════════════════════════════
+// Volume 18 Theme - Red / Orange / Blush / Green / Dark Plum
+// ═══════════════════════════════════════════════════════════════════════════
 
 .site-theme-volume-eighteen,
 .issue-theme-volume-eighteen {
-    .site-banner {
-        .image {
-            height: 48px;
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 1: Color Palette (primitive values)
+    // ─────────────────────────────────────────────────────────────────────────
+    --vol-red: #f0535c;
+    --vol-red-dark: #e33d47;
+    --vol-red-50: rgba(240, 83, 92, 0.5);
+    --vol-green: #99b06b;
+    --vol-blush: #f7b5a2;
+    --vol-blush-05: rgba(247, 181, 162, 0.05);
+    --vol-orange: #c84c41;
+    --vol-orange-50: rgba(200, 76, 65, 0.5);
+    --vol-orange-70: rgba(200, 76, 65, 0.7);
+    --vol-dark-plum: #2d3c52;
+    --vol-dark-plum-20: rgba(45, 60, 82, 0.2);
+    --vol-dark-plum-23: rgba(45, 60, 82, 0.23);
+    --vol-dark-plum-50: rgba(45, 60, 82, 0.5);
 
-            @include tablet {
-                height: 96px;
-            }
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 2: Semantic Tokens
+    // ─────────────────────────────────────────────────────────────────────────
 
-            img {
-                object-position: bottom center;
-            }
-        }
-    }
+    // Header
+    --vol-newsletter-bg: var(--vol-red);
+    --vol-newsletter-bg-hover: var(--vol-red-dark);
+    --vol-epigraph-color: var(--vol-dark-plum);
 
-    .site-header {
-        .newsletter-link {
-            background: $vol-18-red;
-            color: $white;
+    // Icons & Decorations
+    --vol-star-fill: var(--vol-orange);
+    --vol-ornament-fill: var(--vol-red);
 
-            &:hover {
-                background: darken($vol-18-red, 5%);
-            }
-        }
-    }
+    // Typography
+    --vol-pullquote-text: var(--vol-red);
 
-    .sapir-star {
-        fill: $vol-18-orange;
-    }
+    // Interactive
+    --vol-link-hover: var(--vol-red);
+    --vol-author-underline: var(--vol-red);
 
-    .wp-block-pullquote:not(.basic) {
-        p {
-            color: $vol-18-red;
-        }
-    }
+    // Buttons (global)
+    --vol-cta-border: var(--vol-red);
+    --vol-cta-text: var(--vol-red);
+    --vol-cta-hover-bg: var(--vol-red);
 
-    .teaser__title a:hover {
-        color: $vol-18-red;
-    }
+    // Selection
+    --vol-selection-bg: var(--vol-dark-plum);
 
-    .teaser__author-link:hover .teaser__author-name:after {
-        background: rgba($vol-18-red, 1);
-    }
+    // Home: Latest Issue
+    --vol-latest-border: var(--vol-dark-plum);
 
-    .cta .btn {
-        border-color: $vol-18-red;
-        color: $vol-18-red;
+    // Home: Explore
+    --vol-explore-underline: var(--vol-dark-plum-50);
 
-        &:hover {
-            background-color: $vol-18-red;
-            border-color: $vol-18-red;
-            color: $white;
-        }
-    }
+    // Home: Most Read
+    --vol-most-read-color: var(--vol-orange);
+    --vol-most-read-author-hover: var(--vol-orange-50);
 
-    .site-header .header-nav .epigraph {
-        color: $vol-18-dark-plum;
-        border-color: $vol-18-dark-plum;
+    // Home: Quote
+    --vol-quote-title: var(--vol-blush);
+    --vol-quote-bg: var(--vol-blush-05);
+    --vol-quote-border: var(--vol-blush);
+    --vol-quote-text: var(--vol-orange-70);
+    --vol-quote-marks: var(--vol-orange-70);
+    --vol-quote-hover: var(--vol-orange);
 
-        &::before {
-            border-color: $vol-18-dark-plum;
-        }
-    }
+    // Footer (not styled for this volume)
+    --vol-footer-bg: var(--color-tan);
 
+    // Article Page
+    --vol-author-border-hover: var(--vol-red-50);
+    --vol-article-star-fill: var(--vol-orange);
+    --vol-article-btn-border: var(--vol-dark-plum);
+    --vol-article-btn-text: var(--vol-dark-plum);
+    --vol-article-btn-hover-bg: var(--vol-dark-plum);
+
+    // Issue Page
+    --vol-contents-header: var(--vol-orange);
+    --vol-coming-soon: var(--vol-green);
+}
+
+// Newsletter styling
+.site-theme-volume-eighteen,
+.issue-theme-volume-eighteen {
     .newsletter {
         &__wrapper {
-            background: rgba($vol-18-dark-plum, 0.2);
+            background: var(--vol-dark-plum-20);
         }
 
         .slim-line-imge-content {
-            background: rgba($vol-18-dark-plum, 0.23);
+            background: var(--vol-dark-plum-23);
         }
-    }
-
-    ::-moz-selection {
-        background: $vol-18-dark-plum;
-        color: $white;
-        text-shadow: none;
-    }
-
-    ::selection {
-        background: $vol-18-dark-plum;
-        color: $white;
-        text-shadow: none;
-    }
-}
-
-body.page-template-home.site-theme-volume-eighteen {
-    .latest .latest-issue,
-    .latest .latest-issue::before {
-        border-color: $vol-18-dark-plum;
-    }
-
-    .latest .latest-issue .ornament path {
-        fill: $vol-18-red;
-    }
-
-    .explore__sections-link a .label:after {
-        background: rgba($vol-18-dark-plum, 0.5);
-    }
-
-    .explore__topics-list a:after {
-        background: rgba($vol-18-dark-plum, 0.5);
-    }
-
-    .most-read,
-    .most-read::before {
-        border-color: $vol-18-orange;
-        color: $vol-18-orange;
-    }
-
-    .most-read {
-        .teaser__title-link {
-            color: $vol-18-orange;
-            transition: all 300ms ease;
-
-            &:hover {
-                color: $vol-18-orange;
-            }
-        }
-
-        .teaser__author-name {
-            color: $vol-18-orange;
-
-            &:hover {
-                &::after {
-                    background: rgba($vol-18-orange, 0.5);
-                }
-            }
-        }
-    }
-
-    .quote {
-        &__header {
-            .section-title {
-                color: $vol-18-blush;
-            }
-        }
-
-        blockquote {
-            background: rgba($vol-18-blush, 0.05);
-            color: rgba($vol-18-orange, 0.7);
-            border: 1px solid $vol-18-blush;
-
-            &::before,
-            &::after {
-                color: rgba($vol-18-orange, 0.7);
-            }
-        }
-
-        a:hover {
-            blockquote {
-                &::before,
-                &::after {
-                    color: $vol-18-orange;
-                }
-
-                color: $vol-18-orange;
-            }
-        }
-    }
-}
-
-body.single-post .issue-theme-volume-eighteen {
-    .article-header .authors a:hover {
-        border-color: rgba($vol-18-red, 0.5);
-    }
-
-    .article-body .sapir-star {
-        fill: $vol-18-orange;
-    }
-
-    .article-footer__links {
-        .btn,
-        .btn:before {
-            border-color: $vol-18-dark-plum;
-        }
-
-        .btn {
-            color: $vol-18-dark-plum;
-
-            &:hover {
-                background-color: $vol-18-dark-plum;
-                color: $white;
-            }
-        }
-    }
-}
-
-.issue-theme-volume-eighteen {
-    .issue__header .ornament svg path {
-        fill: $vol-18-red;
-    }
-
-    .issue__contents-header {
-        color: $vol-18-orange;
-    }
-
-    .teaser__date .coming-soon {
-        color: $vol-18-green;
     }
 }

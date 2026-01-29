@@ -1,11 +1,80 @@
-.issue-theme-volume-four {
-    .sapir-star {
-        fill: #c6c1a1;
-    }
+// ═══════════════════════════════════════════════════════════════════════════
+// Volume 4 Theme - Purple / Hay / Dark Purple
+// ═══════════════════════════════════════════════════════════════════════════
 
-    .wp-block-pullquote:not(.basic) {
-        p {
-            color: #c6c1a1;
-        }
-    }
+.site-theme-volume-four,
+.issue-theme-volume-four {
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 1: Color Palette (primitive values)
+    // ─────────────────────────────────────────────────────────────────────────
+    --vol-medium-purple: #6b6d88;
+    --vol-medium-purple-light: #7d7f98;
+    --vol-medium-purple-50: rgba(107, 109, 136, 0.5);
+    --vol-hay: #c6c1a1;
+    --vol-hay-50: rgba(198, 193, 161, 0.5);
+    --vol-dark-purple: #21253a;
+    --vol-dark-purple-50: rgba(33, 37, 58, 0.5);
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 2: Semantic Tokens
+    // ─────────────────────────────────────────────────────────────────────────
+
+    // Header
+    --vol-newsletter-bg: var(--vol-medium-purple);
+    --vol-newsletter-bg-hover: var(--vol-medium-purple-light);
+    --vol-epigraph-color: var(--vol-dark-purple);
+
+    // Icons & Decorations
+    --vol-star-fill: var(--vol-hay);
+    --vol-ornament-fill: var(--vol-medium-purple);
+
+    // Typography
+    --vol-pullquote-text: var(--vol-hay);
+
+    // Interactive
+    --vol-link-hover: var(--vol-medium-purple);
+    --vol-author-underline: var(--vol-medium-purple);
+
+    // Buttons (global)
+    --vol-cta-border: var(--vol-dark-purple);
+    --vol-cta-text: var(--vol-dark-purple);
+    --vol-cta-hover-bg: var(--vol-dark-purple);
+
+    // Buttons (homepage override)
+    --vol-cta-home-border: var(--vol-medium-purple);
+    --vol-cta-home-text: var(--vol-medium-purple);
+
+    // Selection
+    --vol-selection-bg: var(--vol-dark-purple);
+
+    // Home: Latest Issue
+    --vol-latest-border: var(--vol-medium-purple);
+
+    // Home: Explore
+    --vol-explore-underline: var(--vol-dark-purple-50);
+
+    // Home: Most Read
+    --vol-most-read-color: var(--vol-medium-purple);
+    --vol-most-read-author-hover: var(--vol-medium-purple-50);
+
+    // Home: Quote
+    --vol-quote-title: var(--vol-hay);
+    --vol-quote-bg: var(--vol-hay);
+    --vol-quote-text: var(--vol-dark-purple);
+    --vol-quote-marks: var(--vol-dark-purple);
+    --vol-quote-hover: var(--vol-medium-purple);
+
+    // Footer
+    --vol-footer-bg: var(--vol-dark-purple);
+
+    // Article Page
+    --vol-author-border-hover: var(--vol-medium-purple-50);
+    --vol-article-star-fill: var(--vol-medium-purple);
+    --vol-article-btn-border: var(--vol-dark-purple);
+    --vol-article-btn-text: var(--vol-dark-purple);
+    --vol-article-btn-hover-bg: var(--vol-dark-purple);
+
+    // Issue Page
+    --vol-contents-header: var(--vol-medium-purple);
+    --vol-coming-soon: var(--vol-hay);
 }

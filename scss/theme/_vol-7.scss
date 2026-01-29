@@ -1,17 +1,21 @@
-$blue-bell: rgb(174, 168, 198);
-$independence: #3b3c59;
+// Volume 7 Theme - Blue Bell / Independence
+// CSS custom properties defined here, used throughout this file
 
-.site-theme-volume-seven {
-}
-
+.site-theme-volume-seven,
 .issue-theme-volume-seven {
+    // Volume-specific color tokens
+    --vol-primary: #3b3c59;              // independence
+    --vol-primary-hover: #4a4b6d;        // independence lightened 5%
+    --vol-secondary: rgb(174, 168, 198); // blue-bell
+    --vol-secondary-50: rgba(174, 168, 198, 0.5);
+
     .sapir-star {
-        fill: $independence;
+        fill: var(--vol-primary);
     }
 
     .wp-block-pullquote:not(.basic) {
         p {
-            color: $independence;
+            color: var(--vol-primary);
         }
     }
 }

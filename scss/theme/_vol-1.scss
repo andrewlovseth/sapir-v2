@@ -1,11 +1,26 @@
+// Volume 1 Theme - Light Blue / Dark Blue
+// CSS custom properties defined here, used throughout this file
+
+.site-theme-volume-one,
 .issue-theme-volume-one {
+    // Volume-specific color tokens
+    --vol-primary: #408ab6;           // light-blue
+    --vol-primary-hover: #357499;     // light-blue darkened 5%
+    --vol-secondary: #408ab6;         // light-blue (same as primary for this volume)
+    --vol-secondary-50: rgba(64, 138, 182, 0.5);
+    --vol-accent: #408ab6;            // light-blue
+    --vol-highlight: #408ab6;         // light-blue
+    --vol-highlight-50: rgba(64, 138, 182, 0.5);
+    --vol-text: #233040;              // dark-blue
+    --vol-text-50: rgba(35, 48, 64, 0.5);
+
     .sapir-star {
-        fill: #408ab6;
+        fill: var(--vol-primary);
     }
 
     .wp-block-pullquote:not(.basic) {
         p {
-            color: #408ab6;
+            color: var(--vol-primary);
         }
     }
 }

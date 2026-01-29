@@ -1,192 +1,163 @@
-$vol-10-green: #91b869;
-$vol-10-dark-blue: #173256;
-$vol-10-purple: #b0a2ce;
-$vol-10-turquoise: #33aebe;
-$vol-10-light-orange: #f8ca7d;
+// ═══════════════════════════════════════════════════════════════════════════
+// Volume 10 Theme - Green / Dark Blue / Purple / Turquoise / Light Orange
+// ═══════════════════════════════════════════════════════════════════════════
 
 .site-theme-volume-ten,
 .issue-theme-volume-ten {
-    .site-banner {
-        .image {
-            height: 48px;
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 1: Color Palette (primitive values)
+    // ─────────────────────────────────────────────────────────────────────────
+    --vol-green: #91b869;
+    --vol-green-light: #a3c580;
+    --vol-green-50: rgba(145, 184, 105, 0.5);
+    --vol-light-orange: #f8ca7d;
+    --vol-light-orange-50: rgba(248, 202, 125, 0.5);
+    --vol-purple: #b0a2ce;
+    --vol-purple-25: rgba(176, 162, 206, 0.25);
+    --vol-turquoise: #33aebe;
+    --vol-turquoise-50: rgba(51, 174, 190, 0.5);
+    --vol-dark-blue: #173256;
+    --vol-dark-blue-50: rgba(23, 50, 86, 0.5);
+    --vol-dark-blue-70: rgba(23, 50, 86, 0.7);
 
-            @include tablet {
-                height: 96px;
-            }
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 2: Semantic Tokens
+    // ─────────────────────────────────────────────────────────────────────────
 
-            img {
-                object-position: bottom center;
-            }
-        }
-    }
+    // Header (no newsletter button for this volume)
+    --vol-newsletter-bg: transparent;
+    --vol-newsletter-bg-hover: transparent;
+    --vol-epigraph-color: var(--vol-dark-blue);
 
-    .sapir-star {
-        fill: $vol-10-green;
-    }
+    // Icons & Decorations
+    --vol-star-fill: var(--vol-green);
+    --vol-ornament-fill: var(--vol-purple);
 
-    .wp-block-pullquote:not(.basic) {
-        p {
-            color: $vol-10-green;
-        }
-    }
+    // Typography
+    --vol-pullquote-text: var(--vol-green);
 
-    .teaser__title a:hover {
-        color: $vol-10-turquoise;
-    }
+    // Interactive
+    --vol-link-hover: var(--vol-turquoise);
+    --vol-author-underline: var(--vol-turquoise-50);
 
-    .teaser__author-link:hover .teaser__author-name:after {
-        background: rgba($vol-10-turquoise, 0.5);
-    }
+    // Buttons (global)
+    --vol-cta-border: var(--vol-purple);
+    --vol-cta-text: var(--color-black);
+    --vol-cta-hover-bg: var(--vol-purple);
 
-    .cta .btn {
-        border-color: $vol-10-purple;
-        color: $black;
+    // Selection
+    --vol-selection-bg: var(--vol-green);
 
-        &:hover {
-            background-color: $vol-10-purple;
-            border-color: $vol-10-purple;
-            color: $white;
-        }
-    }
+    // Home: Latest Issue
+    --vol-latest-border: var(--vol-dark-blue);
 
-    .site-header .header-nav .epigraph {
-        color: $vol-10-dark-blue;
-        border-color: $vol-10-dark-blue;
+    // Home: Explore
+    --vol-explore-underline: var(--vol-green-50);
 
-        &::before {
-            border-color: $vol-10-dark-blue;
-        }
-    }
+    // Home: Most Read
+    --vol-most-read-color: var(--vol-turquoise);
+    --vol-most-read-author-hover: var(--vol-turquoise);
 
-    .newsletter {
-        &__wrapper {
-            background: rgba($vol-10-purple, 0.25);
-        }
+    // Home: Quote
+    --vol-quote-title: var(--vol-dark-blue);
+    --vol-quote-bg: var(--vol-purple-25);
+    --vol-quote-text: var(--vol-dark-blue);
+    --vol-quote-marks: var(--vol-dark-blue-70);
+    --vol-quote-hover: var(--vol-dark-blue);
 
-        .section-header h3 {
-            color: $vol-10-dark-blue;
-        }
+    // Footer (not styled for this volume)
+    --vol-footer-bg: var(--color-tan);
 
-        .form-wrapper {
-            input.email {
-                border-color: $vol-10-dark-blue;
-                color: $vol-10-dark-blue;
+    // Article Page
+    --vol-author-border-hover: var(--vol-green-50);
+    --vol-article-btn-border: var(--vol-green);
+    --vol-article-btn-text: var(--color-black);
+    --vol-article-btn-hover-bg: var(--vol-green);
 
-                @include placeholder {
-                    color: $dark-blue;
-                }
-            }
-            input.button {
-                background: $vol-10-dark-blue;
-            }
-        }
-    }
-
-    .site-footer {
-        //background: #000;
-    }
-
-    ::-moz-selection {
-        background: $vol-10-green;
-        color: $white;
-        text-shadow: none;
-    }
-
-    ::selection {
-        background: $vol-10-green;
-        color: $white;
-        text-shadow: none;
-    }
+    // Issue Page
+    --vol-contents-header: var(--vol-dark-blue);
+    --vol-coming-soon: var(--vol-green);
 }
 
+// Volume 10 uses `.issue` instead of `.latest-issue` on homepage
 body.page-template-home.site-theme-volume-ten {
     .latest .issue,
     .latest .issue::before {
-        border-color: $vol-10-dark-blue;
+        border-color: var(--vol-latest-border);
     }
 
     .latest .issue .ornament path {
-        fill: $vol-10-purple;
+        fill: var(--vol-ornament-fill);
     }
 
-    .explore__sections-link a .label:after {
-        background: rgba($vol-10-green, 0.5);
-    }
-
-    .explore__topics-list a:after {
-        background: rgba($vol-10-green, 0.5);
-    }
-
-    .most-read,
-    .most-read::before {
-        border-color: $vol-10-turquoise;
-        color: $vol-10-turquoise;
-    }
-
+    // Most read uses simplified styling
     .most-read {
         a {
-            color: $vol-10-turquoise;
-        }
-    }
-
-    .quote {
-        &__header {
-            .section-title {
-                color: $vol-10-dark-blue;
-            }
-        }
-
-        blockquote {
-            background: rgba($vol-10-purple, 0.25);
-            color: $vol-10-dark-blue;
-
-            &::before,
-            &::after {
-                color: rgba($vol-10-dark-blue, 0.7);
-            }
-        }
-
-        a:hover {
-            blockquote {
-                &::before,
-                &::after {
-                    color: $vol-10-dark-blue;
-                }
-            }
+            color: var(--vol-most-read-color);
         }
     }
 }
 
+// Volume 10 uses different selector for article page
 body.single-post .issue-theme-volume-ten {
     .article-header .authors a:hover {
-        border-color: rgba($vol-10-green, 0.5);
+        border-color: var(--vol-author-border-hover);
     }
     .article-footer__links {
         .btn,
         .btn:before {
-            border-color: $vol-10-green;
+            border-color: var(--vol-article-btn-border);
         }
 
         .btn {
-            color: $black;
+            color: var(--vol-article-btn-text);
             &:hover {
-                background-color: $vol-10-green;
-                color: $white;
+                background-color: var(--vol-article-btn-hover-bg);
+                color: var(--color-white);
             }
         }
     }
 }
 
+// Volume 10 uses body.single-issue selector
 body.single-issue .issue-theme-volume-ten {
     .issue__header .ornament svg path {
-        fill: $vol-10-purple;
+        fill: var(--vol-ornament-fill);
     }
 
     .issue__contents-header {
-        color: $vol-10-dark-blue;
+        color: var(--vol-contents-header);
     }
 
     .teaser__date .coming-soon {
-        color: $vol-10-green;
+        color: var(--vol-coming-soon);
+    }
+}
+
+// Newsletter styling (unique to this volume)
+.site-theme-volume-ten,
+.issue-theme-volume-ten {
+    .newsletter {
+        &__wrapper {
+            background: var(--vol-purple-25);
+        }
+
+        .section-header h3 {
+            color: var(--vol-dark-blue);
+        }
+
+        .form-wrapper {
+            input.email {
+                border-color: var(--vol-dark-blue);
+                color: var(--vol-dark-blue);
+
+                @include placeholder {
+                    color: var(--color-blue-dark);
+                }
+            }
+            input.button {
+                background: var(--vol-dark-blue);
+            }
+        }
     }
 }

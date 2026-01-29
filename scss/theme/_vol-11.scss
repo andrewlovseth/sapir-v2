@@ -1,208 +1,137 @@
-$vol-11-green: #91b869;
-$vol-11-dark-blue: #173256;
-$vol-11-purple: #b0a2ce;
-$vol-11-turquoise: #33aebe;
-$vol-11-light-orange: #f8ca7d;
-
-$vol-11-orange: #c86547;
-$vol-11-dusky-purple: #8b8187;
-$vol-11-bright-purple: #aaa1cd;
-$vol-11-pale-blue: #7cacbe;
-$vol-11-dark-green: #214547;
+// ═══════════════════════════════════════════════════════════════════════════
+// Volume 11 Theme - Pale Blue / Orange / Dusky Purple / Bright Purple
+// ═══════════════════════════════════════════════════════════════════════════
 
 .site-theme-volume-eleven,
 .issue-theme-volume-eleven {
-    .site-banner {
-        .image {
-            height: 48px;
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 1: Color Palette (primitive values)
+    // ─────────────────────────────────────────────────────────────────────────
+    --vol-pale-blue: #7cacbe;
+    --vol-pale-blue-light: #8fbacb;
+    --vol-pale-blue-50: rgba(124, 172, 190, 0.5);
+    --vol-dusky-purple: #8b8187;
+    --vol-bright-purple: #aaa1cd;
+    --vol-orange: #c86547;
+    --vol-orange-50: rgba(200, 101, 71, 0.5);
 
-            @include tablet {
-                height: 96px;
-            }
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 2: Semantic Tokens
+    // ─────────────────────────────────────────────────────────────────────────
 
-            img {
-                object-position: bottom center;
-            }
+    // Header
+    --vol-newsletter-bg: var(--vol-pale-blue);
+    --vol-newsletter-bg-hover: var(--vol-pale-blue-light);
+    --vol-epigraph-color: var(--vol-orange);
+
+    // Icons & Decorations
+    --vol-star-fill: var(--vol-bright-purple);
+    --vol-ornament-fill: var(--vol-dusky-purple);
+
+    // Typography
+    --vol-pullquote-text: var(--vol-orange);
+
+    // Interactive
+    --vol-link-hover: var(--vol-orange);
+    --vol-author-underline: var(--vol-orange-50);
+
+    // Buttons (global)
+    --vol-cta-border: var(--vol-dusky-purple);
+    --vol-cta-text: var(--color-black);
+    --vol-cta-hover-bg: var(--vol-dusky-purple);
+
+    // Selection
+    --vol-selection-bg: var(--vol-orange);
+
+    // Home: Latest Issue
+    --vol-latest-border: var(--vol-dusky-purple);
+
+    // Home: Explore
+    --vol-explore-underline: var(--vol-orange-50);
+
+    // Home: Most Read
+    --vol-most-read-color: var(--vol-orange);
+    --vol-most-read-author-hover: var(--vol-orange);
+
+    // Home: Quote (uses rgba black)
+    --vol-quote-title: var(--vol-dusky-purple);
+    --vol-quote-bg: var(--vol-pale-blue-50);
+    --vol-quote-text: rgba(0, 0, 0, 0.7);
+    --vol-quote-marks: rgba(0, 0, 0, 0.7);
+    --vol-quote-hover: var(--color-black);
+
+    // Footer (not styled for this volume)
+    --vol-footer-bg: var(--color-tan);
+
+    // Article Page
+    --vol-author-border-hover: var(--vol-orange-50);
+    --vol-article-btn-border: var(--vol-dusky-purple);
+    --vol-article-btn-text: var(--color-black);
+    --vol-article-btn-hover-bg: var(--vol-dusky-purple);
+
+    // Issue Page
+    --vol-contents-header: var(--vol-pale-blue);
+    --vol-coming-soon: var(--vol-orange);
+}
+
+// Volume 11 uses `.issue` instead of `.latest-issue` on homepage
+body.page-template-home.site-theme-volume-eleven {
+    .latest .issue,
+    .latest .issue::before {
+        border-color: var(--vol-latest-border);
+    }
+
+    .latest .issue .ornament path {
+        fill: var(--vol-ornament-fill);
+    }
+
+    // Most read uses simplified styling
+    .most-read {
+        a {
+            color: var(--vol-most-read-color);
         }
     }
+}
 
-    .site-header {
-        .newsletter-link {
-            background: $vol-11-pale-blue;
-            color: $white;
-
-            &:hover {
-                background: lighten($vol-11-pale-blue, 5%);
-            }
-        }
+// Volume 11 uses body.single-issue selector
+body.single-issue .issue-theme-volume-eleven {
+    .issue__header .ornament svg path {
+        fill: var(--vol-bright-purple);
     }
 
-    .sapir-star {
-        fill: $vol-11-bright-purple;
+    .issue__contents-header {
+        color: var(--vol-contents-header);
     }
 
-    .wp-block-pullquote:not(.basic) {
-        p {
-            color: $vol-11-orange;
-        }
+    .teaser__date .coming-soon {
+        color: var(--vol-coming-soon);
     }
+}
 
-    .teaser__title a:hover {
-        color: $vol-11-orange;
-    }
-
-    .teaser__author-link:hover .teaser__author-name:after {
-        background: rgba($vol-11-orange, 0.5);
-    }
-
-    .cta .btn {
-        border-color: $vol-11-dusky-purple;
-        color: $black;
-
-        &:hover {
-            background-color: $vol-11-dusky-purple;
-            border-color: $vol-11-dusky-purple;
-            color: $white;
-        }
-    }
-
-    .site-header .header-nav .epigraph {
-        color: $vol-11-orange;
-        border-color: $vol-11-orange;
-
-        &::before {
-            border-color: $vol-11-orange;
-        }
-    }
-
+// Newsletter styling (unique to this volume - uses black)
+.site-theme-volume-eleven,
+.issue-theme-volume-eleven {
     .newsletter {
         &__wrapper {
-            background: rgba($vol-11-pale-blue, 0.5);
+            background: var(--vol-pale-blue-50);
         }
 
         .section-header h3 {
-            color: $black;
+            color: var(--color-black);
         }
 
         .form-wrapper {
             input.email {
-                border-color: $black;
-                color: $black;
+                border-color: var(--color-black);
+                color: var(--color-black);
 
                 @include placeholder {
-                    color: rgba($black, 0.7);
+                    color: rgba(0, 0, 0, 0.7);
                 }
             }
             input.button {
-                background: $black;
+                background: var(--color-black);
             }
         }
-    }
-
-    ::-moz-selection {
-        background: $vol-11-orange;
-        color: $white;
-        text-shadow: none;
-    }
-
-    ::selection {
-        background: $vol-11-orange;
-        color: $white;
-        text-shadow: none;
-    }
-}
-
-body.page-template-home.site-theme-volume-eleven {
-    .latest .issue,
-    .latest .issue::before {
-        border-color: $vol-11-dusky-purple;
-    }
-
-    .latest .issue .ornament path {
-        fill: $vol-11-dusky-purple;
-    }
-
-    .explore__sections-link a .label:after {
-        background: rgba($vol-11-orange, 0.5);
-    }
-
-    .explore__topics-list a:after {
-        background: rgba($vol-11-orange, 0.5);
-    }
-
-    .most-read,
-    .most-read::before {
-        border-color: $vol-11-orange;
-        color: $vol-11-orange;
-    }
-
-    .most-read {
-        a {
-            color: $vol-11-orange;
-        }
-    }
-
-    .quote {
-        &__header {
-            .section-title {
-                color: $vol-11-dusky-purple;
-            }
-        }
-
-        blockquote {
-            background: rgba($vol-11-pale-blue, 0.5);
-            color: rgba($black, 0.7);
-
-            &::before,
-            &::after {
-                color: rgba($black, 0.7);
-            }
-        }
-
-        a:hover {
-            blockquote {
-                &::before,
-                &::after {
-                    color: $black;
-                }
-
-                color: $black;
-            }
-        }
-    }
-}
-
-body.single-post .issue-theme-volume-eleven {
-    .article-header .authors a:hover {
-        border-color: rgba($vol-11-orange, 0.5);
-    }
-
-    .article-footer__links {
-        .btn,
-        .btn:before {
-            border-color: $vol-11-dusky-purple;
-        }
-
-        .btn {
-            color: $black;
-            &:hover {
-                background-color: $vol-11-dusky-purple;
-                color: $white;
-            }
-        }
-    }
-}
-
-body.single-issue .issue-theme-volume-eleven {
-    .issue__header .ornament svg path {
-        fill: $vol-11-bright-purple;
-    }
-
-    .issue__contents-header {
-        color: $vol-11-pale-blue;
-    }
-
-    .teaser__date .coming-soon {
-        color: $vol-11-orange;
     }
 }

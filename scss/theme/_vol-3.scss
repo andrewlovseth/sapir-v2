@@ -1,11 +1,26 @@
+// Volume 3 Theme - Light Red / Dark Red
+// CSS custom properties defined here, used throughout this file
+
+.site-theme-volume-three,
 .issue-theme-volume-three {
+    // Volume-specific color tokens
+    --vol-primary: #dd594d;           // light-red
+    --vol-primary-hover: #d24a3d;     // light-red darkened 5%
+    --vol-secondary: #8f3948;         // dark-red
+    --vol-secondary-50: rgba(143, 57, 72, 0.5);
+    --vol-accent: #dd594d;            // light-red (same as primary)
+    --vol-highlight: #8f3948;         // dark-red
+    --vol-highlight-50: rgba(143, 57, 72, 0.5);
+    --vol-text: #8f3948;              // dark-red
+    --vol-text-50: rgba(143, 57, 72, 0.5);
+
     .sapir-star {
-        fill: #dd594d;
+        fill: var(--vol-primary);
     }
 
     .wp-block-pullquote:not(.basic) {
         p {
-            color: #dd594d;
+            color: var(--vol-primary);
         }
     }
 }

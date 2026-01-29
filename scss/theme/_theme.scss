@@ -1,3 +1,7 @@
+// Shared base rules (must come before individual volume files)
+@import "vol-base";
+
+// Individual volume themes (define semantic tokens)
 @import "vol-1";
 
 @import "vol-2";

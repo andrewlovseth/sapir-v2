@@ -1,0 +1,300 @@
+// ═══════════════════════════════════════════════════════════════════════════
+// Volume Base Theme
+// ═══════════════════════════════════════════════════════════════════════════
+// Shared CSS rules for all volume themes (4-19).
+// Each volume file defines semantic tokens that these rules consume.
+//
+// SEMANTIC TOKEN CONTRACT:
+// Each volume must define these tokens:
+//
+// Header/Navigation:
+//   --vol-newsletter-bg         Newsletter button background
+//   --vol-newsletter-bg-hover   Newsletter button hover
+//   --vol-epigraph-color        Header epigraph text/border color
+//
+// Icons & Decorations:
+//   --vol-star-fill             Sapir star icon fill
+//   --vol-ornament-fill         Decorative ornament fill
+//
+// Typography:
+//   --vol-pullquote-text        Pullquote text color
+//
+// Interactive Elements:
+//   --vol-link-hover            Teaser title hover color
+//   --vol-author-underline      Author name underline on hover (50% opacity)
+//
+// Buttons (global):
+//   --vol-cta-border            CTA button border
+//   --vol-cta-text              CTA button text
+//   --vol-cta-hover-bg          CTA button hover background
+//
+// Buttons (homepage):
+//   --vol-cta-home-border       Homepage CTA button border (optional, falls back to --vol-cta-border)
+//   --vol-cta-home-text         Homepage CTA button text (optional, falls back to --vol-cta-text)
+//
+// Selection:
+//   --vol-selection-bg          Text selection highlight background
+//
+// Home Page Sections:
+//   --vol-latest-border         Latest issue border
+//   --vol-explore-underline     Explore section link underlines (50% opacity)
+//   --vol-most-read-color       Most read section color (border + text)
+//   --vol-most-read-author-hover Author hover in most read (50% opacity)
+//   --vol-quote-title           Quote section title color
+//   --vol-quote-bg              Quote blockquote background
+//   --vol-quote-border          Quote blockquote border (optional)
+//   --vol-quote-text            Quote blockquote text
+//   --vol-quote-marks           Quote marks color (::before/::after)
+//   --vol-quote-hover           Quote hover text color
+//
+// Footer:
+//   --vol-footer-bg             Site footer background
+//
+// Article Page:
+//   --vol-author-border-hover   Author link border on hover (50% opacity)
+//   --vol-article-star-fill     Article body star fill (optional, falls back to --vol-star-fill)
+//   --vol-article-btn-border    Article footer button border
+//   --vol-article-btn-text      Article footer button text
+//   --vol-article-btn-hover-bg  Article footer button hover background
+//
+// Issue Page:
+//   --vol-contents-header       Issue contents header color
+//   --vol-coming-soon           Coming soon label color
+//
+// ═══════════════════════════════════════════════════════════════════════════
+
+// Global theme styles (all pages)
+[class*="site-theme-volume-"],
+[class*="issue-theme-volume-"] {
+    // Site banner
+    .site-banner {
+        .image {
+            height: 48px;
+
+            @include tablet {
+                height: 96px;
+            }
+
+            img {
+                object-position: bottom center;
+            }
+        }
+    }
+
+    // Header newsletter button
+    .site-header {
+        .newsletter-link {
+            background: var(--vol-newsletter-bg);
+            color: var(--color-white);
+
+            &:hover {
+                background: var(--vol-newsletter-bg-hover);
+            }
+        }
+    }
+
+    // Sapir star icon
+    .sapir-star {
+        fill: var(--vol-star-fill);
+    }
+
+    // Pullquotes
+    .wp-block-pullquote:not(.basic) {
+        p {
+            color: var(--vol-pullquote-text);
+        }
+    }
+
+    // Teaser hover states
+    .teaser__title a:hover {
+        color: var(--vol-link-hover);
+    }
+
+    .teaser__author-link:hover .teaser__author-name:after {
+        background: var(--vol-author-underline);
+    }
+
+    // CTA buttons (global)
+    .cta .btn {
+        border-color: var(--vol-cta-border);
+        color: var(--vol-cta-text);
+
+        &:hover {
+            background-color: var(--vol-cta-hover-bg);
+            border-color: var(--vol-cta-hover-bg);
+            color: var(--color-white);
+        }
+    }
+
+    // Header epigraph
+    .site-header .header-nav .epigraph {
+        color: var(--vol-epigraph-color);
+        border-color: var(--vol-epigraph-color);
+
+        &::before {
+            border-color: var(--vol-epigraph-color);
+        }
+    }
+
+    // Text selection
+    ::-moz-selection {
+        background: var(--vol-selection-bg);
+        color: var(--color-white);
+        text-shadow: none;
+    }
+
+    ::selection {
+        background: var(--vol-selection-bg);
+        color: var(--color-white);
+        text-shadow: none;
+    }
+}
+
+// Home page styles
+body.page-template-home {
+    [class*="site-theme-volume-"] {
+        // Latest issue section
+        .latest .latest-issue,
+        .latest .latest-issue::before {
+            border-color: var(--vol-latest-border);
+        }
+
+        .latest .latest-issue .ornament path {
+            fill: var(--vol-ornament-fill);
+        }
+
+        // Explore section
+        .explore__sections-link a .label:after {
+            background: var(--vol-explore-underline);
+        }
+
+        .explore__topics-list a:after {
+            background: var(--vol-explore-underline);
+        }
+
+        // Most read section
+        .most-read,
+        .most-read::before {
+            border-color: var(--vol-most-read-color);
+            color: var(--vol-most-read-color);
+        }
+
+        .most-read {
+            .teaser__title-link {
+                color: var(--vol-most-read-color);
+                transition: all 300ms ease;
+
+                &:hover {
+                    color: var(--vol-most-read-color);
+                }
+            }
+
+            .teaser__author-name {
+                color: var(--vol-most-read-color);
+
+                &:hover {
+                    &::after {
+                        background: var(--vol-most-read-author-hover);
+                    }
+                }
+            }
+        }
+
+        // Quote section
+        .quote {
+            &__header {
+                .section-title {
+                    color: var(--vol-quote-title);
+                }
+            }
+
+            blockquote {
+                background: var(--vol-quote-bg);
+                color: var(--vol-quote-text);
+                border: 1px solid var(--vol-quote-border, var(--vol-quote-bg));
+
+                &::before,
+                &::after {
+                    color: var(--vol-quote-marks);
+                }
+            }
+
+            a:hover {
+                blockquote {
+                    &::before,
+                    &::after {
+                        color: var(--vol-quote-hover);
+                    }
+
+                    color: var(--vol-quote-hover);
+                }
+            }
+        }
+
+        // Homepage CTA buttons (override global if different)
+        .cta .btn {
+            border-color: var(--vol-cta-home-border, var(--vol-cta-border));
+            color: var(--vol-cta-home-text, var(--vol-cta-text));
+
+            &:hover {
+                background-color: var(--vol-cta-hover-bg);
+                border-color: var(--vol-cta-hover-bg);
+                color: var(--color-white);
+            }
+        }
+
+        // Site footer
+        .site-footer {
+            background: var(--vol-footer-bg);
+            color: var(--color-tan);
+
+            a {
+                color: var(--color-tan);
+            }
+        }
+    }
+}
+
+// Article page styles
+body.single-post {
+    [class*="issue-theme-volume-"] {
+        .article-header .authors a:hover {
+            border-color: var(--vol-author-border-hover);
+        }
+
+        .article-body .sapir-star {
+            fill: var(--vol-article-star-fill, var(--vol-star-fill));
+        }
+
+        .article-footer__links {
+            .btn,
+            .btn:before {
+                border-color: var(--vol-article-btn-border);
+            }
+
+            .btn {
+                color: var(--vol-article-btn-text);
+
+                &:hover {
+                    background-color: var(--vol-article-btn-hover-bg);
+                    color: var(--color-white);
+                }
+            }
+        }
+    }
+}
+
+// Issue page styles
+[class*="issue-theme-volume-"] {
+    .issue__header .ornament svg path {
+        fill: var(--vol-ornament-fill);
+    }
+
+    .issue__contents-header {
+        color: var(--vol-contents-header);
+    }
+
+    .teaser__date .coming-soon {
+        color: var(--vol-coming-soon);
+    }
+}

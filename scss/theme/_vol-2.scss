@@ -1,11 +1,26 @@
+// Volume 2 Theme - Forest Green
+// CSS custom properties defined here, used throughout this file
+
+.site-theme-volume-two,
 .issue-theme-volume-two {
+    // Volume-specific color tokens
+    --vol-primary: #66a05a;           // forest-green
+    --vol-primary-hover: #5a8f50;     // forest-green darkened 5%
+    --vol-secondary: #66a05a;         // forest-green (same as primary for this volume)
+    --vol-secondary-50: rgba(102, 160, 90, 0.5);
+    --vol-accent: #66a05a;            // forest-green
+    --vol-highlight: #66a05a;         // forest-green
+    --vol-highlight-50: rgba(102, 160, 90, 0.5);
+    --vol-text: #66a05a;              // forest-green
+    --vol-text-50: rgba(102, 160, 90, 0.5);
+
     .sapir-star {
-        fill: #66a05a;
+        fill: var(--vol-primary);
     }
 
     .wp-block-pullquote:not(.basic) {
         p {
-            color: #66a05a;
+            color: var(--vol-primary);
         }
     }
 }

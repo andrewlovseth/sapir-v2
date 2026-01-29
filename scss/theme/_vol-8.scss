@@ -1,6 +1,10 @@
-$super-pink: #c16c9c;
+// Volume 8 Theme - Super Pink
+// CSS custom properties defined here, used throughout this file
 
 .issue-theme-volume-eight {
+    // Volume-specific color tokens
+    --vol-primary: #c16c9c;           // super-pink
+
     .site-banner {
         .image {
             height: 48px;
@@ -16,12 +20,12 @@ $super-pink: #c16c9c;
     }
 
     .sapir-star {
-        fill: $super-pink;
+        fill: var(--vol-primary);
     }
 
     .wp-block-pullquote:not(.basic) {
         p {
-            color: $super-pink;
+            color: var(--vol-primary);
         }
     }
 }

@@ -133,20 +133,47 @@ add_action( 'init', 'bearsmith_change_post_object' );
 
 
 function get_svg($svg) {
-    $arrContextOptions=array(
-        "ssl"=>array(
-            "verify_peer"=>false,
-            "verify_peer_name"=>false,
-        ),
-    );  
+    // Convert remote URLs to local file paths for local development
+    $upload_dir = wp_upload_dir();
+    $local_path = null;
 
-    $svg_file = file_get_contents($svg, false, stream_context_create($arrContextOptions));
+    // Check if this is a URL pointing to uploads
+    if (strpos($svg, '/wp-content/uploads/') !== false) {
+        // Extract the path after /wp-content/uploads/
+        preg_match('/\/wp-content\/uploads\/(.+)$/', $svg, $matches);
+        if (!empty($matches[1])) {
+            $local_path = $upload_dir['basedir'] . '/' . $matches[1];
+        }
+    }
+
+    // Try local file first, fall back to remote fetch
+    if ($local_path && file_exists($local_path)) {
+        $svg_file = file_get_contents($local_path);
+    } else {
+        $arrContextOptions = array(
+            "ssl" => array(
+                "verify_peer" => false,
+                "verify_peer_name" => false,
+            ),
+            "http" => array(
+                "header" => "User-Agent: Mozilla/5.0\r\n"
+            ),
+        );
+        $svg_file = @file_get_contents($svg, false, stream_context_create($arrContextOptions));
+    }
+
+    if (!$svg_file) {
+        return '';
+    }
+
     $find_string = '<svg';
     $position = strpos($svg_file, $find_string);
-    
-    $svg_file_new = substr($svg_file, $position);
 
-    return $svg_file_new;
+    if ($position === false) {
+        return '';
+    }
+
+    return substr($svg_file, $position);
 }
 
 

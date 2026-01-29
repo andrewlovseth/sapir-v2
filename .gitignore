@@ -68,10 +68,10 @@ library/vendors/composer
 assets/img/.DS_Store
 
 
-wpgulp.config.js
-gulpfile.babel.js
+# Editor configs #
 .editorconfig
 .eslintignore
 .eslintrc.js
-package-lock.json
-package.json
+
+# Bun #
+bun.lock

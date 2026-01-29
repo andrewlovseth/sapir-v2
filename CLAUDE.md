@@ -6,16 +6,19 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ```bash
 # Install dependencies
-npm install
+bun install
 
 # Compile SCSS to CSS (one-time build)
-gulp style
+bun run build
 
-# Watch mode with BrowserSync (proxies https://sapirjournal-v2.local)
-gulp watch
+# Watch mode with live reload (proxies https://sapirjournal.dev)
+bun run dev
+# Then open http://localhost:3030
 ```
 
-The gulpfile compiles `scss/style.scss` to `style.css` with autoprefixer and sourcemaps. Watch mode auto-reloads on changes to PHP files in root, `/templates/`, `/template-parts/`, `/blocks/`, and JS in `/js/`.
+Uses Bun with Dart Sass + LightningCSS for autoprefixing. Dev mode runs a proxy server with WebSocket-based live reload:
+- SCSS changes → CSS injection (no page reload)
+- PHP/JS changes → full page reload
 
 ## Architecture
 

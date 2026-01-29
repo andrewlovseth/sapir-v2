@@ -4,7 +4,7 @@
     }
 
     &__title {
-        font-size: $type-size-600;
+        font-size: var(--type-size-600);
         line-height: 1.375em;
     }
 
@@ -13,12 +13,12 @@
         text-align: right;
 
         .name {
-            font-size: $type-size-400;
+            font-size: var(--type-size-400);
         }
 
         .info {
             padding-top: 0.5rem;
-            font-size: $type-size-200;
+            font-size: var(--type-size-200);
             font-style: italic;
         }
 

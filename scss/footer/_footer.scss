@@ -1,11 +1,11 @@
 .site-footer {
     margin-top: 3rem;
     padding-bottom: 3rem;
-    background: $dark-blue;
-    color: $tan;
+    background: var(--color-blue-dark);
+    color: var(--color-tan);
 
     a {
-        color: $tan;
+        color: var(--color-tan);
     }
 
     @import "logo";

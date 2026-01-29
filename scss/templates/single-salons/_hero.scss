@@ -30,7 +30,7 @@
     }
 
     &__title {
-        font-size: $type-size-700;
+        font-size: var(--type-size-700);
     }
 
     &__description {

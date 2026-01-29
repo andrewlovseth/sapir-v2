@@ -1,7 +1,7 @@
 .theme {
     .section-header {
         margin-top: 3rem;
-        border-top: 1px solid rgba($light-blue, 0.5);
+        border-top: 1px solid rgba(var(--color-blue-light), 0.5);
         padding-top: 3rem;
         text-align: center;
     }
@@ -16,7 +16,7 @@
     }
 
     &__item {
-        border-right: 1px solid $light-blue;
+        border-right: 1px solid var(--color-blue-light);
         margin-bottom: 0.75rem;
 
         &:last-of-type {
@@ -26,7 +26,7 @@
 
     a {
         display: block;
-        font-size: $type-size-400;
+        font-size: var(--type-size-400);
         padding: 0.25rem 1.25rem;
         @include basic-underline;
     }

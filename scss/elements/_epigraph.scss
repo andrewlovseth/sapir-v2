@@ -9,16 +9,16 @@
 
     .text {
         text-align: right;
-        font-size: $type-size-300;
+        font-size: var(--type-size-300);
         line-height: 1.5em;
-        font-family: $adams;
+        font-family: var(--font-sans);
 
         @include desktop-small {
-            font-size: $type-size-200;
+            font-size: var(--type-size-200);
         }
 
         @include desktop-medium {
-            font-size: $type-size-300;
+            font-size: var(--type-size-300);
         }
     }
 

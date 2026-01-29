@@ -5,11 +5,11 @@
     .info {
         max-width: 40rem;
         &__title {
-            font-size: $type-size-500;
+            font-size: var(--type-size-500);
             line-height: 1.375em;
 
             @include tablet {
-                font-size: $type-size-600;
+                font-size: var(--type-size-600);
             }
         }
 

@@ -8,7 +8,7 @@
     @include desktop-small {
         grid-column: 10 / span 4;
 
-        border-left: 1px solid rgba($light-blue, 0.5);
+        border-left: 1px solid rgba(var(--color-blue-light), 0.5);
         padding: 1rem 0 1rem 2rem;
     }
 
@@ -19,13 +19,13 @@
     .faq {
         & + .faq {
             margin-top: 2rem;
-            border-top: 1px solid rgba($light-blue, 0.5);
+            border-top: 1px solid rgba(var(--color-blue-light), 0.5);
             padding-top: 2rem;
         }
 
         .question {
             padding-bottom: 1rem;
-            font-size: $type-size-200;
+            font-size: var(--type-size-200);
             font-style: italic;
             line-height: 1.375em;
         }

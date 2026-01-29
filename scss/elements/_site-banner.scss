@@ -1,5 +1,5 @@
 .site-banner {
-    background: $off-white;
+    background: var(--color-off-white);
     width: 100%;
     grid-column: 1 / -1;
 
@@ -11,11 +11,11 @@
 }
 
 .header-banner {
-    border-bottom: 1px solid $black;
+    border-bottom: 1px solid var(--color-black);
     margin-bottom: 3rem;
 }
 
 .footer-banner {
-    border-top: 1px solid $black;
+    border-top: 1px solid var(--color-black);
     margin-bottom: 3rem;
 }

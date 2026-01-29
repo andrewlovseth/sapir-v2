@@ -1,11 +1,11 @@
 .teaser {
     &__title {
-        font-family: $fournier-std-grand;
+        font-family: var(--font-display);
 
         a {
             &:hover {
                 text-decoration: none;
-                color: $red;
+                color: var(--color-red);
             }
         }
     }
@@ -118,22 +118,22 @@
             }
 
             &__title {
-                font-size: $type-size-600;
+                font-size: var(--type-size-600);
 
                 @include tablet {
-                    font-size: $type-size-700;
+                    font-size: var(--type-size-700);
                 }
             }
 
             &__dek {
-                font-size: $type-size-300;
+                font-size: var(--type-size-300);
                 line-height: 1.5em;
                 padding-top: 1rem;
             }
 
             &__authors {
                 padding-top: 1rem;
-                font-size: $type-size-300;
+                font-size: var(--type-size-300);
             }
         }
     }
@@ -145,19 +145,19 @@
 
         .teaser {
             &__title {
-                font-size: $type-size-300;
+                font-size: var(--type-size-300);
 
                 @include tablet {
-                    font-size: $type-size-400;
+                    font-size: var(--type-size-400);
                 }
             }
 
             &__authors {
-                font-size: $type-size-150;
+                font-size: var(--type-size-150);
                 padding-top: 0.675rem;
 
                 @include tablet {
-                    font-size: $type-size-200;
+                    font-size: var(--type-size-200);
                 }
             }
         }
@@ -166,8 +166,8 @@
     &-search-result {
         .teaser__meta {
             padding-bottom: 1rem;
-            font-size: $type-size-150;
-            font-family: $adams;
+            font-size: var(--type-size-150);
+            font-family: var(--font-sans);
             text-transform: uppercase;
             letter-spacing: 0.1em;
 

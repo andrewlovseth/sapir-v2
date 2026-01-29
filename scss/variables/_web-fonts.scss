@@ -1,7 +1,15 @@
-@import url('https://use.typekit.net/pmv6jwg.css');
+// ==========================================================================
+// Web Fonts - @font-face declarations
+// ==========================================================================
+// Font family CSS custom properties are defined in _tokens.scss:
+// - var(--font-primary)  → psfournier-std
+// - var(--font-display)  → psfournier-std-grand
+// - var(--font-sans)     → Adams
+// - var(--font-accent)   → Carnaby
+// - var(--font-numbers)  → Numbers
+// ==========================================================================
 
-$fournier-std: psfournier-std, serif;
-$fournier-std-grand: psfournier-std-grand, serif;
+@import url('https://use.typekit.net/pmv6jwg.css');
 
 @font-face {
     font-family: 'Adams';
@@ -11,8 +19,6 @@ $fournier-std-grand: psfournier-std-grand, serif;
     font-display: swap;
 }
 
-$adams: 'Adams', serif;
-
 @font-face {
     font-family: 'Carnaby';
     src: url('fonts/Carnaby-Street.woff2') format('woff2'), url('fonts/Carnaby-Street.woff') format('woff');
@@ -21,8 +27,6 @@ $adams: 'Adams', serif;
     font-display: swap;
 }
 
-$carnaby: 'Carnaby', sans-serif;
-
 @font-face {
     font-family: 'Numbers';
     src: url('fonts/Numbers.woff2') format('woff2'), url('fonts/Numbers.woff') format('woff');
@@ -30,5 +34,3 @@ $carnaby: 'Carnaby', sans-serif;
     font-style: normal;
     font-display: swap;
 }
-
-$numbers: 'Numbers', serif;

@@ -4,23 +4,23 @@ input,
 select,
 optgroup,
 textarea {
-    font-family: $fournier-std;
+    font-family: var(--font-primary);
 }
 
 a {
-    color: $black;
+    color: var(--color-black);
     transition: all 200ms ease;
 }
 
 ::-moz-selection {
-    background: $red;
-    color: $white;
+    background: var(--color-red);
+    color: var(--color-white);
     text-shadow: none;
 }
 
 ::selection {
-    background: $red;
-    color: $white;
+    background: var(--color-red);
+    color: var(--color-white);
     text-shadow: none;
 }
 

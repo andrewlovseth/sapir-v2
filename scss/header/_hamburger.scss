@@ -20,7 +20,7 @@
     &__patty {
         width: 1.25rem;
         height: 1px;
-        background: rgba($black, 0.4);
+        background: var(--color-black-40);
         transition: all 0.2s;
 
         &:after,
@@ -29,7 +29,7 @@
             display: block;
             width: 1.75rem;
             height: 1px;
-            background: rgba($black, 0.4);
+            background: var(--color-black-40);
             position: absolute;
             z-index: 1;
             transition: all 0.2s;
@@ -52,9 +52,9 @@
             text-transform: uppercase;
             letter-spacing: 0.15em;
             font-size: 0.6125rem;
-            font-family: $adams;
+            font-family: var(--font-sans);
             font-weight: bold;
-            color: $black;
+            color: var(--color-black);
 
             &:hover {
                 text-decoration: underline;

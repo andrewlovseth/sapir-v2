@@ -2,8 +2,8 @@
     text-align: center;
 
     blockquote {
-        background: $off-white;
-        color: $mid-blue;
+        background: var(--color-off-white);
+        color: var(--color-blue-mid);
         padding: 2rem;
         margin: 0;
         position: relative;
@@ -14,7 +14,7 @@
             display: block;
             position: absolute;
             font-size: clamp(5rem, 8vw, 6.5rem);
-            color: $light-blue;
+            color: var(--color-blue-light);
             transition: all 500ms ease;
         }
 
@@ -36,16 +36,16 @@
         padding-bottom: 1.5rem;
 
         .section-title {
-            color: $dark-blue;
+            color: var(--color-blue-dark);
         }
     }
 
     &__text {
-        font-size: $type-size-300;
+        font-size: var(--type-size-300);
         line-height: 1.5em;
 
         @include tablet {
-            font-size: $type-size-400;
+            font-size: var(--type-size-400);
         }
 
         @include tablet {
@@ -54,7 +54,7 @@
     }
 
     &__meta {
-        font-size: $type-size-300;
+        font-size: var(--type-size-300);
         line-height: 1.5em;
         padding: 1rem 3rem 0 3rem;
     }

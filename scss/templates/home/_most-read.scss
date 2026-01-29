@@ -1,12 +1,12 @@
 .most-read {
     padding: 2rem;
-    color: $red;
-    @include double-border($red);
+    color: var(--color-red);
+    @include double-border(var(--color-red));
     counter-reset: article;
     align-self: start;
 
     a {
-        color: $red;
+        color: var(--color-red);
     }
 
     .section-header {
@@ -23,8 +23,8 @@
 
         .teaser__title {
             &:before {
-                font-family: $numbers;
-                font-size: $type-size-400;
+                font-family: var(--font-numbers);
+                font-size: var(--type-size-400);
                 font-weight: bold;
                 position: absolute;
                 left: -2rem;

@@ -20,11 +20,11 @@
         height: 100%;
 
         path {
-            fill: $tan;
+            fill: var(--color-tan);
             transition: all 500ms ease;
 
             &:hover {
-                fill: $white;
+                fill: var(--color-white);
             }
         }
     }

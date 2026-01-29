@@ -6,19 +6,19 @@
 
         &:hover {
             blockquote {
-                color: $dark-blue;
+                color: var(--color-blue-dark);
 
                 &::before,
                 &::after {
-                    color: $mid-blue;
+                    color: var(--color-blue-mid);
                 }
             }
         }
     }
 
     blockquote {
-        background: $off-white;
-        color: $mid-blue;
+        background: var(--color-off-white);
+        color: var(--color-blue-mid);
         padding: 3rem;
         margin: 0;
         position: relative;
@@ -29,7 +29,7 @@
             display: block;
             position: absolute;
             font-size: clamp(6rem, 12vw, 14rem);
-            color: $light-blue;
+            color: var(--color-blue-light);
             transition: all 500ms ease;
         }
 
@@ -51,16 +51,16 @@
         padding-bottom: 1.5rem;
 
         .section-title {
-            color: $dark-blue;
+            color: var(--color-blue-dark);
         }
     }
 
     &__text {
-        font-size: $type-size-500;
+        font-size: var(--type-size-500);
         line-height: 1.5em;
 
         @include tablet {
-            font-size: $type-size-600;
+            font-size: var(--type-size-600);
         }
 
         @include tablet {
@@ -73,7 +73,7 @@
     }
 
     &__meta {
-        font-size: $type-size-400;
+        font-size: var(--type-size-400);
         line-height: 1.5em;
         padding-top: 1rem;
     }

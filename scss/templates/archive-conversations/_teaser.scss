@@ -115,10 +115,10 @@
     }
 
     &__meta {
-        font-family: $adams;
+        font-family: var(--font-sans);
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        font-size: $type-size-150;
+        font-size: var(--type-size-150);
         font-weight: bold;
         display: flex;
         align-items: center;
@@ -136,7 +136,7 @@
     }
 
     .teaser__title {
-        font-size: $type-size-500;
+        font-size: var(--type-size-500);
         line-height: 1.25em;
     }
 
@@ -153,10 +153,10 @@
         padding-top: 2rem;
 
         strong {
-            font-family: $adams;
+            font-family: var(--font-sans);
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            font-size: $type-size-150;
+            font-size: var(--type-size-150);
             font-weight: bold;
         }
 

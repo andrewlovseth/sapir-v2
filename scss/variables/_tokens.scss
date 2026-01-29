@@ -1,0 +1,112 @@
+// ==========================================================================
+// CSS Custom Properties (Design Tokens)
+// ==========================================================================
+// This file defines all CSS custom properties used throughout the theme.
+// Sass variables are only used for breakpoints (media queries can't use CSS vars).
+
+:root {
+  // ==========================================================================
+  // Core Colors
+  // ==========================================================================
+  --color-white: #fff;
+  --color-off-white: #f1eeed;
+  --color-beige: #f2f1f1;
+  --color-slate: #2a2a2a;
+  --color-black: #000;
+
+  --color-tan: #dfdad2;
+  --color-tan-light: #fbf9f7;
+
+  --color-blue-dark: #424254;
+  --color-blue-mid: #65667a;
+  --color-blue-light: #9e9aaf;
+
+  --color-red: #ac6e90;
+
+  // ==========================================================================
+  // Issue-Specific Colors (Legacy - used by early volumes)
+  // ==========================================================================
+
+  // Issue 1
+  --color-issue-1-blue-light: #408ab6;
+  --color-issue-1-blue-medium: #355c7f;
+  --color-issue-1-blue-dark: #233040;
+
+  // Issue 2
+  --color-issue-2-green-light: #66a05a;
+  --color-issue-2-green-medium: #437567;
+  --color-issue-2-green-dark: #1d3a41;
+
+  // Issue 3
+  --color-issue-3-red-light: #dd594d;
+  --color-issue-3-red-dark: #8f3948;
+
+  // Issue 4
+  --color-issue-4-purple-medium: #6b6d88;
+  --color-issue-4-purple-dark: #21253a;
+  --color-issue-4-hay: #c6c1a1;
+
+  // Issue 5
+  --color-issue-5-blue: #416eb4;
+  --color-issue-5-blue-dark: #0e304f;
+  --color-issue-5-blue-darker: #2d3b54;
+  --color-issue-5-turquoise: #2eafc3;
+  --color-issue-5-yellow: #dfb265;
+
+  // Issue 6
+  --color-issue-6-orange: #e3745e;
+  --color-issue-6-blue-dark: #24293b;
+  --color-issue-6-green: #9bb765;
+  --color-issue-6-purple: #585d88;
+
+  // Issue 7
+  --color-issue-7-red: #a02744;
+  --color-issue-7-orange: #db484c;
+  --color-issue-7-blue: #637e8a;
+
+  // ==========================================================================
+  // Opacity Variants (pre-calculated for use with CSS custom properties)
+  // ==========================================================================
+  --color-blue-light-50: rgba(158, 154, 175, 0.5);
+  --color-blue-light-100: rgba(158, 154, 175, 1);
+  --color-black-40: rgba(0, 0, 0, 0.4);
+  --color-black-70: rgba(0, 0, 0, 0.7);
+
+  // ==========================================================================
+  // Typography Scale
+  // ==========================================================================
+  --type-size-050: clamp(0.50rem, 0.42rem + 0.38vw, 0.675rem);
+  --type-size-100: clamp(0.60rem, 0.52rem + 0.43vw, 0.78rem);
+  --type-size-150: clamp(0.66rem, 0.58rem + 0.48vw, 0.88rem);
+  --type-size-200: clamp(0.72rem, 0.62rem + 0.52vw, 0.94rem);
+  --type-size-300: clamp(0.87rem, 0.74rem + 0.62vw, 1.13rem);
+  --type-size-400: clamp(1.04rem, 0.89rem + 0.74vw, 1.35rem);
+  --type-size-500: clamp(1.25rem, 1.07rem + 0.89vw, 1.63rem);
+  --type-size-600: clamp(1.50rem, 1.29rem + 1.07vw, 1.95rem);
+  --type-size-700: clamp(1.80rem, 1.54rem + 1.29vw, 2.34rem);
+  --type-size-800: clamp(2.16rem, 1.85rem + 1.54vw, 2.81rem);
+  --type-size-900: clamp(2.59rem, 2.22rem + 1.85vw, 3.37rem);
+  --type-size-1000: clamp(3.11rem, 2.67rem + 2.22vw, 4.04rem);
+
+  // ==========================================================================
+  // Font Families
+  // ==========================================================================
+  --font-primary: psfournier-std, serif;
+  --font-display: psfournier-std-grand, serif;
+  --font-sans: 'Adams', serif;
+  --font-accent: 'Carnaby', sans-serif;
+  --font-numbers: 'Numbers', serif;
+
+  // ==========================================================================
+  // Semantic Theme Colors (defaults - overridden by volume themes)
+  // ==========================================================================
+  --theme-primary: var(--color-red);
+  --theme-secondary: var(--color-blue-light);
+  --theme-accent: var(--color-tan);
+  --theme-text: var(--color-blue-dark);
+
+  // Hover/interaction states (pre-calculated)
+  --theme-primary-hover: #9a6180;
+  --theme-secondary-50: var(--color-blue-light-50);
+  --theme-secondary-100: var(--color-blue-light-100);
+}

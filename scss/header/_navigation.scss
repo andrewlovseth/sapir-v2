@@ -1,6 +1,6 @@
 .header-nav {
     grid-column: 1 / -1;
-    background: $light-tan;
+    background: var(--color-tan-light);
     display: none;
 
     &__wrapper {
@@ -8,9 +8,9 @@
         left: 0;
         width: 100%;
         z-index: 5555;
-        background: $light-tan;
+        background: var(--color-tan-light);
         transition: all 300ms ease;
-        box-shadow: 0 1.5rem 1rem rgba($dark-blue, 0.15);
+        box-shadow: 0 1.5rem 1rem rgba(var(--color-blue-dark), 0.15);
         padding: 3rem 0;
 
         @include desktop-small {
@@ -29,8 +29,8 @@
     }
 
     .epigraph {
-        @include double-border($light-blue);
-        color: $mid-blue;
+        @include double-border(var(--color-blue-light));
+        color: var(--color-blue-mid);
         margin-top: 3rem;
         align-self: start;
 

@@ -2,7 +2,7 @@
     border: none;
     padding: 1.25rem;
     max-width: 37.5rem;
-    box-shadow: 0 0 12px rgba($black, 0.1);
+    box-shadow: 0 0 12px rgba(var(--color-black), 0.1);
 
     &__wrapper {
         border: 1px solid #da9589;
@@ -34,7 +34,7 @@
 
     &__copy {
         text-align: center;
-        font-size: $type-size-500;
+        font-size: var(--type-size-500);
         line-height: 1.25em;
         padding: 2.5rem 0;
         font-weight: 300;
@@ -52,7 +52,7 @@
         border: 1px solid #9a9cb0;
         outline: none;
         padding: 0.75rem;
-        font-size: $fournier-std;
+        font-family: var(--font-primary);
         text-align: center;
     }
 
@@ -61,13 +61,13 @@
         margin: auto;
         display: inline-block;
         background: #da9589;
-        color: $white;
-        font-family: $adams;
+        color: var(--color-white);
+        font-family: var(--font-sans);
         text-transform: uppercase;
         letter-spacing: 0.05em;
         font-weight: normal;
         border: none;
-        font-size: $type-size-200;
+        font-size: var(--type-size-200);
         padding: 1rem;
     }
 }

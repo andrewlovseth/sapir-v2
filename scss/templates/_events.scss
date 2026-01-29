@@ -15,9 +15,9 @@ body.page-template-events {
                 max-width: 32rem;
                 position: relative;
                 display: inline-block;
-                @include double-border($light-blue);
+                @include double-border(var(--color-blue-light));
                 padding: 2rem 1.5rem 1.875rem;
-                font-size: $type-size-200;
+                font-size: var(--type-size-200);
 
                 &::before {
                     z-index: -1;

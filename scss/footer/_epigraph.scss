@@ -1,6 +1,6 @@
 .epigraph {
     margin-top: 3rem;
-    @include double-border($tan);
+    @include double-border(var(--color-tan));
     align-self: start;
 
     @include tablet-small {

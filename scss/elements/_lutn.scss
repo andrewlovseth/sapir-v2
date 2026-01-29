@@ -1,18 +1,18 @@
 body.single-post .article-body {
     .lutm-number {
-        font-family: $adams;
+        font-family: var(--font-sans);
         font-weight: bold;
-        font-size: $type-size-400;
+        font-size: var(--type-size-400);
         padding: 3rem 0 0 0;
     }
 
     .lutm-headline {
         margin: 0;
-        font-family: $adams;
+        font-family: var(--font-sans);
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 0.02em;
-        font-size: $type-size-400;
+        font-size: var(--type-size-400);
     }
 
     .lutn {

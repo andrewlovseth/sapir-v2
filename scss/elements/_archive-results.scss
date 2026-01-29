@@ -10,18 +10,18 @@
 
     &__title {
         padding-top: 2rem;
-        font-size: $type-size-800;
+        font-size: var(--type-size-800);
     }
 
     &__header {
-        border-top: 1px solid rgba($light-blue, 0.5);
-        border-bottom: 1px solid rgba($light-blue, 0.5);
+        border-top: 1px solid rgba(var(--color-blue-light), 0.5);
+        border-bottom: 1px solid rgba(var(--color-blue-light), 0.5);
         padding: 0.5rem 1rem;
-        font-size: $type-size-100;
+        font-size: var(--type-size-100);
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        font-family: $adams;
+        font-family: var(--font-sans);
         margin-bottom: 3rem;
         display: flex;
         justify-content: space-between;

@@ -40,8 +40,8 @@ body.post-type-archive-authors {
             display: inline-block;
             line-height: 1.25em;
             font-size: 1.25rem;
-            font-family: $fournier-std-grand;
-            color: $slate;
+            font-family: var(--font-display);
+            color: var(--color-slate);
 
             &:hover {
                 text-decoration: underline;

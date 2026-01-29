@@ -37,12 +37,12 @@ body.post-type-archive-news {
             }
 
             h3 {
-                font-family: $adams;
+                font-family: var(--font-sans);
                 font-size: clamp(1.25rem, 2vw, 1.5rem);
                 line-height: 1.25em;
 
                 a {
-                    color: $medium-blue;
+                    color: var(--color-issue-1-blue-medium);
 
                     &:hover {
                         text-decoration: underline;
@@ -60,7 +60,7 @@ body.post-type-archive-news {
             a {
                 font-style: italic;
                 text-decoration: underline;
-                color: $medium-blue;
+                color: var(--color-issue-1-blue-medium);
             }
         }
     }

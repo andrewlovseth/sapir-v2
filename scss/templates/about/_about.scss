@@ -16,7 +16,7 @@
     }
 
     &__masthead {
-        border-top: 1px solid rgba($light-blue, 0.5);
+        border-top: 1px solid rgba(var(--color-blue-light), 0.5);
         padding-top: 2rem;
 
         @include tablet-small {
@@ -25,7 +25,7 @@
 
         @include desktop-small {
             grid-column: 10 / span 3;
-            border-left: 1px solid rgba($light-blue, 0.5);
+            border-left: 1px solid rgba(var(--color-blue-light), 0.5);
             padding-left: 2rem;
             border-top: unset;
             padding-top: 1rem;
@@ -47,13 +47,13 @@
 
             .name {
                 font-style: italic;
-                font-size: $type-size-400;
+                font-size: var(--type-size-400);
                 letter-spacing: 0.02em;
                 padding-bottom: 0.5rem;
             }
 
             .job-title {
-                font-size: $type-size-100;
+                font-size: var(--type-size-100);
                 letter-spacing: 0.125em;
                 text-transform: uppercase;
             }
@@ -68,16 +68,16 @@
 
         input.email {
             background: transparent;
-            border: 1px solid $mid-blue;
+            border: 1px solid var(--color-blue-mid);
             padding: 1rem;
             height: 3rem;
             line-height: 1em;
-            font-size: $type-size-200;
+            font-size: var(--type-size-200);
             letter-spacing: 0.02em;
             flex: 1;
-            color: $dark-blue;
+            color: var(--color-blue-dark);
             margin-bottom: 0.5rem;
-            background: $white;
+            background: var(--color-white);
 
             @include desktop-small {
                 margin-bottom: 0;
@@ -89,7 +89,7 @@
             }
 
             @include placeholder {
-                color: $dark-blue;
+                color: var(--color-blue-dark);
             }
         }
 
@@ -98,12 +98,12 @@
             height: 3rem;
             line-height: 1em;
             border: none;
-            background: $mid-blue;
-            color: $white;
-            font-size: $type-size-050;
+            background: var(--color-blue-mid);
+            color: var(--color-white);
+            font-size: var(--type-size-050);
             text-transform: uppercase;
             letter-spacing: 0.2em;
-            font-family: $adams;
+            font-family: var(--font-sans);
             font-weight: bold;
             margin-bottom: 0.5rem;
 

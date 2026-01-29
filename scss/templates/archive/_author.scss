@@ -7,7 +7,7 @@
 
     .section-header {
         margin-top: 3rem;
-        border-top: 1px solid rgba($light-blue, 0.5);
+        border-top: 1px solid rgba(var(--color-blue-light), 0.5);
         padding-top: 3rem;
         text-align: center;
         padding-bottom: 1.5rem;
@@ -27,17 +27,17 @@
             padding: 0.5rem;
             text-transform: uppercase;
             font-weight: bold;
-            font-family: $adams;
-            font-size: $type-size-500;
+            font-family: var(--font-sans);
+            font-size: var(--type-size-500);
 
             @include desktop-small {
                 padding: 0.5rem 0.625rem;
-                font-size: $type-size-700;
+                font-size: var(--type-size-700);
             }
 
             &:hover,
             &.active {
-                color: $red;
+                color: var(--color-red);
             }
 
             &.empty {
@@ -79,7 +79,7 @@
     &__link {
         display: block;
         padding: 0.5rem 1rem;
-        font-size: $type-size-300;
+        font-size: var(--type-size-300);
         font-style: italic;
 
         @include hover-underline;

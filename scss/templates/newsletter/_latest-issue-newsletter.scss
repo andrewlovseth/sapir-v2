@@ -1,7 +1,7 @@
 .latest-issue-newsletter {
     margin-top: 3px;
     padding: 2rem;
-    @include double-border($light-blue);
+    @include double-border(var(--color-blue-light));
     align-self: start;
 
     @include tablet-small {

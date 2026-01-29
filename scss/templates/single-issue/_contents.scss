@@ -21,7 +21,7 @@
 
         &-header {
             padding-bottom: 2rem;
-            font-size: $type-size-300;
+            font-size: var(--type-size-300);
         }
     }
 }
@@ -42,12 +42,12 @@
 
         .coming-soon {
             display: inline-block;
-            color: $red;
+            color: var(--color-red);
         }
     }
 
     &__title {
-        font-size: $type-size-500;
+        font-size: var(--type-size-500);
         line-height: 1.375em;
     }
 

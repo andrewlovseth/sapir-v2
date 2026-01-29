@@ -3,7 +3,7 @@
     padding: 2rem;
     max-width: 55rem;
     width: calc(100% - 4rem);
-    box-shadow: 0 0 12px rgba($black, 0.1);
+    box-shadow: 0 0 12px rgba(var(--color-black), 0.1);
 
     background-color: #fcfbfa;
 
@@ -16,11 +16,11 @@
     }
 
     &__headline {
-        font-size: $type-size-600;
+        font-size: var(--type-size-600);
         font-weight: 100;
 
         @include tablet {
-            font-size: $type-size-700;
+            font-size: var(--type-size-700);
         }
     }
 
@@ -111,10 +111,10 @@
             }
 
             &-text {
-                font-size: $type-size-500;
+                font-size: var(--type-size-500);
 
                 @include tablet {
-                    font-size: $type-size-400;
+                    font-size: var(--type-size-400);
                 }
             }
 
@@ -122,7 +122,7 @@
                 .share-link__item-icon {
                     svg {
                         .bg-circle {
-                            fill: $dark-blue;
+                            fill: var(--color-blue-dark);
                         }
                     }
                 }
@@ -131,10 +131,10 @@
 
         &__copy-notification {
             position: absolute;
-            background: $dark-blue;
-            font-family: $adams;
+            background: var(--color-blue-dark);
+            font-family: var(--font-sans);
             white-space: nowrap;
-            color: $white;
+            color: var(--color-white);
             padding: 8px 12px;
             border-radius: 4px;
             font-size: 14px;
@@ -199,10 +199,10 @@ body.modal-open::before {
         }
 
         &-text {
-            font-size: $type-size-500;
+            font-size: var(--type-size-500);
 
             @include tablet {
-                font-size: $type-size-400;
+                font-size: var(--type-size-400);
             }
         }
 
@@ -210,7 +210,7 @@ body.modal-open::before {
             .share-link__item-icon {
                 svg {
                     .bg-circle {
-                        fill: $dark-blue;
+                        fill: var(--color-blue-dark);
                     }
                 }
             }
@@ -219,10 +219,10 @@ body.modal-open::before {
 
     &__copy-notification {
         position: absolute;
-        background: $dark-blue;
-        font-family: $adams;
+        background: var(--color-blue-dark);
+        font-family: var(--font-sans);
         white-space: nowrap;
-        color: $white;
+        color: var(--color-white);
         padding: 8px 12px;
         border-radius: 4px;
         font-size: 14px;

@@ -4,10 +4,10 @@
     }
     .btn {
         display: inline-block;
-        border: 1px solid $light-blue;
+        border: 1px solid var(--color-blue-light);
         padding: 1rem 1.5rem 0.875rem;
         transition: all 200ms ease;
-        color: $black;
+        color: var(--color-black);
 
         &.small-upper {
             &:after {
@@ -17,7 +17,7 @@
 
         &:hover {
             background: rgb(189, 205, 206);
-            border-color: $light-blue;
+            border-color: var(--color-blue-light);
             text-decoration: none;
         }
     }

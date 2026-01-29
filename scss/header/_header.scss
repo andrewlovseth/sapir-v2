@@ -1,6 +1,8 @@
+@use "sass:color";
+
 .site-header {
     padding-bottom: 0.5rem;
-    background: $light-tan;
+    background: var(--color-tan-light);
     z-index: 6666;
 
     @include tablet {
@@ -20,7 +22,7 @@
 
         &:hover {
             text-decoration: none;
-            background: lighten(#e2d98e, 5%);
+            background: color.adjust(#e2d98e, $lightness: 5%);
         }
     }
 
@@ -32,9 +34,9 @@
             text-transform: uppercase;
             letter-spacing: 0.15em;
             font-size: 0.6125rem;
-            font-family: $adams;
+            font-family: var(--font-sans);
             font-weight: bold;
-            color: $black;
+            color: var(--color-black);
             margin-right: 0.75rem;
             white-space: nowrap;
 

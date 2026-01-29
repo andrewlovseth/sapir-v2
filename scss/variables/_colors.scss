@@ -1,52 +1,16 @@
-$white: #fff;
-$off-white: #f1eeed;
-$beige: #f2f1f1;
-$slate: #2a2a2a;
-$black: #000;
-
-$tan: #dfdad2;
-$light-tan: #fbf9f7;
-
-$dark-blue: #424254;
-$mid-blue: #65667a;
-$light-blue: #9e9aaf;
-
-$red: #ac6e90;
-
-// Issue 1
-$issue-one-light-blue: #408ab6;
-$medium-blue: #355c7f;
-$issue-one-dark-blue: #233040;
-
-// Issue 2
-$light-green: #66a05a;
-$medium-green: #437567;
-$dark-green: #1d3a41;
-
-// Issue 3
-$light-red: #dd594d;
-$dark-red: #8f3948;
-
-// Issue 4
-$medium-purple: #6b6d88;
-$dark-purple: #21253a;
-$hay: #c6c1a1;
-
-// Issue 5
-$issue-five-blue: #416eb4;
-$issue-five-dark-blue: #0e304f;
-$issue-five-turquoise: #2eafc3;
-$issue-five-yellow: #dfb265;
-$issue-five-darker-blue: #2d3b54;
-
-// Issue 6
-$issue-six-orange: #e3745e;
-$issue-six-dark-blue: #24293b;
-$issue-six-green: #9bb765;
-$issue-six-purple: #585d88;
-
-// Issue 7
-$issue-seven-red: #a02744;
-$issue-seven-black: #000;
-$issue-seven-orange: #db484c;
-$issue-seven-blue: #637e8a;
+// ==========================================================================
+// Colors (DEPRECATED - use CSS custom properties from _tokens.scss)
+// ==========================================================================
+// All color values are now defined as CSS custom properties in _tokens.scss
+// This file is kept for backwards compatibility but will be removed in a future update.
+//
+// Migration guide:
+// - $white         → var(--color-white)
+// - $black         → var(--color-black)
+// - $tan           → var(--color-tan)
+// - $light-tan     → var(--color-tan-light)
+// - $dark-blue     → var(--color-blue-dark)
+// - $mid-blue      → var(--color-blue-mid)
+// - $light-blue    → var(--color-blue-light)
+// - $red           → var(--color-red)
+// ==========================================================================

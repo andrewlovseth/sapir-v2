@@ -1,6 +1,6 @@
 .archive {
     margin-top: 1.5rem;
-    border-top: 1px solid rgba($light-blue, 0.5);
+    border-top: 1px solid rgba(var(--color-blue-light), 0.5);
     padding-top: 1.5rem;
     align-self: start;
 
@@ -28,8 +28,8 @@
 
     &__copy {
         text-align: center;
-        font-size: $type-size-500;
-        font-family: $fournier-std-grand;
+        font-size: var(--type-size-500);
+        font-family: var(--font-display);
         line-height: 1.375em;
     }
 }

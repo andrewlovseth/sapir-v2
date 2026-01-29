@@ -1,8 +1,8 @@
 .salon-contact {
     &__content {
         text-align: center;
-        background: $dark-blue;
-        color: $white;
+        background: var(--color-blue-dark);
+        color: var(--color-white);
         padding: 2rem;
         margin-top: 3rem;
 
@@ -15,17 +15,17 @@
         padding-bottom: 1.5rem;
         font-style: italic;
         font-weight: 400;
-        font-size: $type-size-600;
+        font-size: var(--type-size-600);
     }
 
     .cta {
         .btn {
-            border-color: $white !important;
-            color: $white !important;
+            border-color: var(--color-white) !important;
+            color: var(--color-white) !important;
 
             &:hover {
-                background: $white !important;
-                color: $dark-blue !important;
+                background: var(--color-white) !important;
+                color: var(--color-blue-dark) !important;
             }
         }
     }

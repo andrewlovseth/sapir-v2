@@ -1,7 +1,7 @@
 .below-fold {
     &__wrapper {
         margin-top: 3rem;
-        border-top: 1px solid $light-blue;
+        border-top: 1px solid var(--color-blue-light);
         padding-top: 3rem;
         display: grid;
         gap: 2rem;

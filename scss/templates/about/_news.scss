@@ -7,7 +7,7 @@
 
     .section-header {
         margin-top: 3rem;
-        border-top: 1px solid rgba($light-blue, 0.5);
+        border-top: 1px solid rgba(var(--color-blue-light), 0.5);
         padding: 3rem 0;
         text-align: center;
 
@@ -23,7 +23,7 @@
     }
 
     .section-title-alt {
-        font-size: $type-size-600;
+        font-size: var(--type-size-600);
     }
 }
 
@@ -45,8 +45,8 @@
     }
 
     &__meta {
-        font-size: $type-size-150;
-        font-family: $adams;
+        font-size: var(--type-size-150);
+        font-family: var(--font-sans);
         text-transform: uppercase;
         letter-spacing: 0.1em;
         display: flex;
@@ -60,7 +60,7 @@
     }
 
     &__title {
-        font-size: $type-size-600;
+        font-size: var(--type-size-600);
         line-height: 1.375em;
 
         a:hover {

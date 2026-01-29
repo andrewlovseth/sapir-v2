@@ -2,16 +2,16 @@
     padding-top: 3rem;
 
     .back {
-        border-top: 1px solid $issue-one-dark-blue;
+        border-top: 1px solid var(--color-issue-1-blue-dark);
         padding-top: 1.5rem;
 
         a {
             font-style: italic;
             display: inline-block;
             font-size: 1;
-            color: $issue-one-dark-blue;
+            color: var(--color-issue-1-blue-dark);
             padding-bottom: 2px;
-            border-bottom: 1px solid $issue-one-light-blue;
+            border-bottom: 1px solid var(--color-issue-1-blue-light);
 
             &:before {
                 content: "← ";
@@ -20,7 +20,7 @@
     }
 
     .tags {
-        border-top: 1px solid rgba($light-blue, 0.5);
+        border-top: 1px solid rgba(var(--color-blue-light), 0.5);
         padding: 1.5rem 0;
         display: grid;
         grid-template-columns: auto 1fr;
@@ -43,15 +43,15 @@
 
         a {
             text-decoration: underline;
-            text-decoration-color: $light-red;
+            text-decoration-color: var(--color-issue-3-red-light);
             text-decoration-thickness: 1px;
             text-underline-offset: 0.2em;
-            font-family: $adams;
+            font-family: var(--font-sans);
         }
     }
 
     .authors {
-        border-top: 1px solid rgba($light-blue, 0.5);
+        border-top: 1px solid rgba(var(--color-blue-light), 0.5);
         padding-top: 1.5rem;
     }
 
@@ -89,7 +89,7 @@
             padding: 1.5rem 2.5rem;
             text-align: center;
             line-height: 2em;
-            @include double-border($light-blue);
+            @include double-border(var(--color-blue-light));
         }
     }
 
@@ -100,8 +100,8 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         align-items: start;
         padding: 1.5rem 0;
-        border-top: 1px solid rgba($light-blue, 0.5);
-        border-bottom: 1px solid rgba($light-blue, 0.5);
+        border-top: 1px solid rgba(var(--color-blue-light), 0.5);
+        border-bottom: 1px solid rgba(var(--color-blue-light), 0.5);
 
         svg {
             path {
@@ -117,7 +117,7 @@
             &:hover {
                 .article-footer__pagination-title {
                     text-decoration: underline;
-                    text-decoration-color: $dark-blue;
+                    text-decoration-color: var(--color-blue-dark);
                     text-decoration-thickness: 1px;
                     text-underline-offset: 0.2em;
                 }
@@ -160,16 +160,16 @@
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: $dark-blue;
+            color: var(--color-blue-dark);
             margin-bottom: 0.5rem;
-            font-family: $adams;
+            font-family: var(--font-sans);
         }
 
         &-title {
             display: block;
             font-weight: 400;
             margin-bottom: 0.25rem;
-            font-family: $fournier-std-grand;
+            font-family: var(--font-display);
             font-size: 1.125rem;
             line-height: 1.25em;
             text-wrap: balance;
@@ -178,7 +178,7 @@
         .authors {
             border-top: none;
             padding-top: 0.25rem;
-            color: $dark-blue;
+            color: var(--color-blue-dark);
             font-size: 0.875rem;
             line-height: 1.25em;
             text-wrap: balance;
@@ -193,7 +193,7 @@
 
         .interviewers {
             padding-top: 0.25rem;
-            color: $dark-blue;
+            color: var(--color-blue-dark);
             font-size: 0.875rem;
         }
     }

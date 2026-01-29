@@ -1,8 +1,8 @@
 .copyright {
     margin-top: 3rem;
-    border-top: 1px solid rgba($tan, 0.5);
+    border-top: 1px solid rgba(var(--color-tan), 0.5);
     padding: 0.875rem 1rem;
-    border-bottom: 1px solid rgba($tan, 0.5);
+    border-bottom: 1px solid rgba(var(--color-tan), 0.5);
 
     @include tablet-small {
         grid-column: 3 / span 6;
@@ -13,7 +13,7 @@
     }
 
     p {
-        font-size: $type-size-100;
+        font-size: var(--type-size-100);
         letter-spacing: 0.05em;
     }
 

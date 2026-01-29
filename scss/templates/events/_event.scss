@@ -16,10 +16,10 @@
     }
 
     &__meta {
-        font-family: $adams;
+        font-family: var(--font-sans);
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        font-size: $type-size-150;
+        font-size: var(--type-size-150);
         font-weight: bold;
         display: flex;
         align-items: center;
@@ -37,7 +37,7 @@
     }
 
     &__title {
-        font-size: $type-size-600;
+        font-size: var(--type-size-600);
     }
 
     &__description {
@@ -143,7 +143,7 @@
 
     .graphic {
         img {
-            border: 1px solid rgba($light-blue, 0.25);
+            border: 1px solid rgba(var(--color-blue-light), 0.25);
         }
     }
 }
@@ -155,7 +155,7 @@
     }
 
     &__title {
-        font-size: $type-size-400;
+        font-size: var(--type-size-400);
         font-style: italic;
     }
 }

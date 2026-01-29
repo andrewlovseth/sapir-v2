@@ -67,10 +67,24 @@
   // ==========================================================================
   // Opacity Variants (pre-calculated for use with CSS custom properties)
   // ==========================================================================
+  // Blue Light (#9e9aaf)
+  --color-blue-light-10: rgba(158, 154, 175, 0.1);
+  --color-blue-light-25: rgba(158, 154, 175, 0.25);
   --color-blue-light-50: rgba(158, 154, 175, 0.5);
   --color-blue-light-100: rgba(158, 154, 175, 1);
+
+  // Blue Dark (#424254)
+  --color-blue-dark-15: rgba(66, 66, 84, 0.15);
+  --color-blue-dark-50: rgba(66, 66, 84, 0.5);
+
+  // Black (#000)
+  --color-black-10: rgba(0, 0, 0, 0.1);
   --color-black-40: rgba(0, 0, 0, 0.4);
+  --color-black-50: rgba(0, 0, 0, 0.5);
   --color-black-70: rgba(0, 0, 0, 0.7);
+
+  // Tan (#dfdad2)
+  --color-tan-50: rgba(223, 218, 210, 0.5);
 
   // ==========================================================================
   // Typography Scale
@@ -109,4 +123,30 @@
   --theme-primary-hover: #9a6180;
   --theme-secondary-50: var(--color-blue-light-50);
   --theme-secondary-100: var(--color-blue-light-100);
+
+  // ==========================================================================
+  // Feedback Colors (form validation, alerts)
+  // ==========================================================================
+  --color-feedback-error: rgb(218, 91, 91);
+  --color-feedback-success: rgb(79, 141, 79);
+
+  // ==========================================================================
+  // Component-Specific Colors
+  // ==========================================================================
+  // Newsletter link in header
+  --color-newsletter-link: #e2d98e;
+  --color-newsletter-link-hover: #ede5a3;  // pre-calculated: lightness +5%
+
+  // Newsletter signup block
+  --color-newsletter-signup-bg: #e7e5ed;
+
+  // Newsletter modal
+  --color-modal-border: #da9589;
+  --color-modal-input-border: #9a9cb0;
+
+  // Divider line
+  --color-divider: #d2d1d5;
+
+  // Share modal background (slightly warmer than tan-light)
+  --color-share-modal-bg: #fcfbfa;
 }

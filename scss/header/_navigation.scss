@@ -10,7 +10,7 @@
         z-index: 5555;
         background: var(--color-tan-light);
         transition: all 300ms ease;
-        box-shadow: 0 1.5rem 1rem rgba(var(--color-blue-dark), 0.15);
+        box-shadow: 0 1.5rem 1rem var(--color-blue-dark-15);
         padding: 3rem 0;
 
         @include desktop-small {

@@ -1,5 +1,3 @@
-@use "sass:color";
-
 .site-header {
     padding-bottom: 0.5rem;
     background: var(--color-tan-light);
@@ -16,13 +14,13 @@
 
     .newsletter-link {
         position: relative;
-        background: #e2d98e;
+        background: var(--color-newsletter-link);
         transition: all 300ms ease;
         padding: 0.25rem 1.5rem;
 
         &:hover {
             text-decoration: none;
-            background: color.adjust(#e2d98e, $lightness: 5%);
+            background: var(--color-newsletter-link-hover);
         }
     }
 

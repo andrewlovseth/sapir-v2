@@ -1,6 +1,6 @@
 .back {
     margin-top: 6rem;
-    border-top: 1px solid rgba(var(--color-blue-light), 0.5);
+    border-top: 1px solid var(--color-blue-light-50);
     padding-top: 1.5rem;
     padding-bottom: 3rem;
 
@@ -9,7 +9,7 @@
         display: inline-block;
         font-size: var(--type-size-150);
         padding-bottom: 1px;
-        border-bottom: 1px solid rgba(var(--color-blue-light), 0.5);
+        border-bottom: 1px solid var(--color-blue-light-50);
 
         &:before {
             content: '← ';

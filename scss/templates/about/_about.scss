@@ -16,7 +16,7 @@
     }
 
     &__masthead {
-        border-top: 1px solid rgba(var(--color-blue-light), 0.5);
+        border-top: 1px solid var(--color-blue-light-50);
         padding-top: 2rem;
 
         @include tablet-small {
@@ -25,7 +25,7 @@
 
         @include desktop-small {
             grid-column: 10 / span 3;
-            border-left: 1px solid rgba(var(--color-blue-light), 0.5);
+            border-left: 1px solid var(--color-blue-light-50);
             padding-left: 2rem;
             border-top: unset;
             padding-top: 1rem;
@@ -115,7 +115,7 @@
 
     #mce-responses {
         transform: translateY(1rem);
-        color: #fff;
+        color: var(--color-white);
         font-size: 0.875rem;
 
         #mce-error-response,
@@ -125,11 +125,11 @@
         }
 
         #mce-error-response {
-            background: rgb(218, 91, 91);
+            background: var(--color-feedback-error);
         }
 
         #mce-success-response {
-            background: rgb(79, 141, 79);
+            background: var(--color-feedback-success);
         }
     }
 }

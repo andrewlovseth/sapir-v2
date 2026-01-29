@@ -1,11 +1,11 @@
 .share-modal {
-    border: 0.25rem solid #000;
+    border: 0.25rem solid var(--color-black);
     padding: 2rem;
     max-width: 55rem;
     width: calc(100% - 4rem);
-    box-shadow: 0 0 12px rgba(var(--color-black), 0.1);
+    box-shadow: 0 0 12px var(--color-black-10);
 
-    background-color: #fcfbfa;
+    background-color: var(--color-share-modal-bg);
 
     @include tablet {
         padding: 3rem;

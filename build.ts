@@ -70,6 +70,15 @@ async function compileCSS(entry: string, isDev = false): Promise<CompileResult> 
       sourceMapIncludeSources: true,
       style: "expanded",
       silenceDeprecations: ["import"],
+      // Suppress "obsolete deprecation" warnings (deprecations that have completed)
+      logger: {
+        warn(message, options) {
+          // Filter out obsolete deprecation notices - these are informational only
+          if (message.includes("deprecation is obsolete")) return;
+          // Log other warnings normally
+          console.warn(`Sass warning: ${message}`);
+        },
+      },
     });
 
     // Extract @charset and @import rules before LightningCSS processing

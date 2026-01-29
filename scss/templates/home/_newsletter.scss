@@ -1,8 +1,8 @@
 .newsletter {
     &__container {
         padding: 2rem;
-        background: rgba(var(--color-blue-light), 0.1);
-        border: 1px solid rgba(var(--color-blue-light), 0.25);
+        background: var(--color-blue-light-10);
+        border: 1px solid var(--color-blue-light-25);
 
         @include desktop-small {
             padding: 3rem;
@@ -80,7 +80,7 @@
 
     #mce-responses {
         transform: translateY(1rem);
-        color: #fff;
+        color: var(--color-white);
         font-size: 0.875rem;
 
         #mce-error-response,
@@ -90,11 +90,11 @@
         }
 
         #mce-error-response {
-            background: rgb(218, 91, 91);
+            background: var(--color-feedback-error);
         }
 
         #mce-success-response {
-            background: rgb(79, 141, 79);
+            background: var(--color-feedback-success);
         }
     }
 }

@@ -4,8 +4,8 @@
 
 .pagination {
     margin-top: 3rem;
-    border-top: 1px solid rgba(var(--color-blue-light), 0.5);
-    border-bottom: 1px solid rgba(var(--color-blue-light), 0.5);
+    border-top: 1px solid var(--color-blue-light-50);
+    border-bottom: 1px solid var(--color-blue-light-50);
     padding: 0.5rem 1rem;
     display: flex;
     align-items: flex-end;
@@ -22,7 +22,7 @@
         font-size: var(--type-size-100);
         display: block;
         padding: 0.5rem 0.75rem;
-        border: 1px solid rgba(var(--color-blue-light), 0.5);
+        border: 1px solid var(--color-blue-light-50);
         margin: 0 0.5rem;
 
         &:hover {
@@ -47,7 +47,7 @@
         font-size: var(--type-size-100);
         display: block;
         padding: 0.5rem 0.75rem;
-        border: 1px solid rgba(var(--color-blue-dark), 1);
+        border: 1px solid var(--color-blue-dark);
         background: var(--color-blue-dark);
         color: var(--color-white);
         margin: 0 0.5rem;

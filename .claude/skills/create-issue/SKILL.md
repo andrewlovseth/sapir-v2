@@ -1,0 +1,116 @@
+---
+name: create-issue
+description: Guide the quarterly workflow for bulk-creating articles for a new Sapir Journal issue
+user_invocable: true
+arguments:
+  - name: context
+    description: "Optional: paste article list, CSV data, or describe what you have"
+---
+
+# Create Issue — Quarterly Article Setup
+
+This skill guides you through creating all draft articles for a new Sapir Journal issue so the print team can get URLs for QR codes.
+
+## Workflow
+
+### Step 1: Prepare the CSV
+
+The WP-CLI command expects a CSV with these columns:
+
+```
+Title,Authors,Category,Issue,Interviewers
+```
+
+**Rules:**
+- Multiple authors/interviewers are comma-separated within quotes: `"Joshua Foer, William Foster"`
+- Author names must be full names (first + last), split on last space
+- Watch for shorthand like "Adiri and Lotan" — expand to full names: `"Yonatan Adiri, Shachar Lotan"`
+- The Issue and Category columns are typically the same (the issue name, e.g., "Aspiration II")
+- Interviewers column can be empty
+
+If the user pastes a list, email, or spreadsheet data, help them transform it into this CSV format. Save it to a temporary file.
+
+### Step 2: Validate
+
+Review the CSV for:
+- [ ] All rows have a Title
+- [ ] Author names are full names (not last-name-only or abbreviated)
+- [ ] No "and" in author fields (should be comma-separated)
+- [ ] Category and Issue columns are consistent
+- [ ] No obvious duplicates
+
+### Step 3: Dry Run
+
+```bash
+ddev wp sapir create-issue /path/to/articles.csv \
+  --season="<Season Year>" \
+  --volume="<Volume Name>" \
+  --dry-run
+```
+
+Review the output table. Confirm:
+- Correct number of articles
+- URLs look right (pattern: `/{category-slug}/{year}/{post-slug}/`)
+- No unexpected skips
+- Author names parsed correctly
+
+### Step 4: Execute
+
+```bash
+ddev wp sapir create-issue /path/to/articles.csv \
+  --season="<Season Year>" \
+  --volume="<Volume Name>"
+```
+
+### Step 5: Verify
+
+Run the command again — all articles should say "skipped" (idempotency check).
+
+Then verify in WP admin:
+- Category exists
+- Issue CPT has correct season and volume
+- All articles are drafts with correct ACF fields (issue, authors, interviewers)
+
+### Step 6: Deliver URLs to Print Team
+
+```bash
+ddev wp sapir create-issue /path/to/articles.csv \
+  --season="<Season Year>" \
+  --volume="<Volume Name>" \
+  --format=csv
+```
+
+This outputs a clean `Title,URL,Status` CSV. The URLs follow the site's permalink structure: `/{category-slug}/{year}/{post-slug}/`
+
+Production URLs use the base: `https://sapirjournal.org`
+
+## Reference
+
+### CSV Format
+
+| Column | Required | Notes |
+|--------|----------|-------|
+| Title | Yes | Article title |
+| Authors | Yes | Full names, comma-separated if multiple |
+| Category | Yes | Usually matches the issue name |
+| Issue | Yes | Issue name (e.g., "Aspiration II") |
+| Interviewers | No | For interview/conversation pieces |
+
+### CLI Flags
+
+| Flag | Required | Description |
+|------|----------|-------------|
+| `--season` | Yes | e.g., "Winter 2026" |
+| `--volume` | Yes | e.g., "Volume Twenty" |
+| `--dry-run` | No | Preview without creating anything |
+| `--format` | No | table (default), csv, or json |
+
+### ACF Field Keys (for debugging)
+
+- Article `issue`: `field_605cd86033e5b`
+- Article `author`: `field_605cd85233e5a`
+- Article `interviewers`: `field_64078dff145fe`
+- Author `first_name`: `field_63c5b45f618a5`
+- Author `last_name`: `field_63c5b4330ff52`
+- Issue `season`: `field_6066107c07bda`
+- Issue `volume`: `field_6066108207bdb`

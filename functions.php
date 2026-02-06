@@ -18,4 +18,8 @@ require_once( plugin_dir_path( __FILE__ ) . '/functions/optin-monster.php');
 
 require_once( plugin_dir_path( __FILE__ ) . '/functions/performance-optimizations.php');
 
+require_once( plugin_dir_path( __FILE__ ) . '/functions/newsletter-shortcode.php');
 
+if ( defined( 'WP_CLI' ) && WP_CLI ) {
+    require_once( plugin_dir_path( __FILE__ ) . '/functions/cli-commands.php');
+}

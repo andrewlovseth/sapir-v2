@@ -92,6 +92,62 @@ This outputs a clean `Title,URL,Status` CSV. The URLs follow the site's permalin
 
 Production URLs use the base: `https://sapirjournal.org`
 
+### Step 7: Deploy to Production
+
+The theme is deployed to WP Engine via WP Pusher (auto-deploys from GitHub). The CLI command runs on production to create articles there too.
+
+#### 7a. Push theme to GitHub
+
+```bash
+cd /Users/andrewlovseth/Dev/sapir-journal/wp/wp-content/themes/sapir-v2
+git push origin master
+```
+
+WP Pusher will automatically deploy the updated theme (including any CLI fixes) to production on WP Engine.
+
+#### 7b. Upload the CSV to WP Engine
+
+```bash
+scp articles.csv sapirjournal@sapirjournal.ssh.wpengine.net:sites/sapirjournal/
+```
+
+#### 7c. SSH into WP Engine and dry-run
+
+```bash
+ssh sapirjournal@sapirjournal.ssh.wpengine.net
+
+# On the server — no ddev prefix, wp is available directly
+wp sapir create-issue /sites/sapirjournal/articles.csv \
+  --season="<Season Year>" \
+  --volume="<Volume Name>" \
+  --dry-run
+```
+
+Review the output, same checks as Step 3.
+
+#### 7d. Execute on production
+
+```bash
+wp sapir create-issue /sites/sapirjournal/articles.csv \
+  --season="<Season Year>" \
+  --volume="<Volume Name>"
+```
+
+#### 7e. Verify and clean up
+
+```bash
+# Idempotency check — all articles should say "skipped"
+wp sapir create-issue /sites/sapirjournal/articles.csv \
+  --season="<Season Year>" \
+  --volume="<Volume Name>" \
+  --dry-run
+
+# Remove the CSV from the server
+rm /sites/sapirjournal/articles.csv
+```
+
+Spot-check a few articles in the production WP admin at `https://sapirjournal.org/wp-admin/`.
+
 ## Reference
 
 ### CSV Format
@@ -120,6 +176,6 @@ Production URLs use the base: `https://sapirjournal.org`
 - Article `interviewers`: `field_64078dff145fe`
 - Article `display_title`: `field_606e256e8e135` (clean title when post title has issue name appended)
 - Author `first_name`: `field_63c5b45f618a5`
-- Author `last_name`: `field_63c5b4330ff52`
+- Author `last_name`: `field_63c5b4340ff52`
 - Issue `season`: `field_6066107c07bda`
 - Issue `volume`: `field_6066108207bdb`

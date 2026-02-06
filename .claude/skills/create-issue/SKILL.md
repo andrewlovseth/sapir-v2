@@ -27,8 +27,14 @@ Title,Authors,Category,Issue,Interviewers
 - Watch for shorthand like "Adiri and Lotan" — expand to full names: `"Yonatan Adiri, Shachar Lotan"`
 - The Issue and Category columns are typically the same (the issue name, e.g., "Aspiration II")
 - Interviewers column can be empty
+- Recurring titles (Editor's Note, Publisher's Note) are handled automatically — the CLI appends the issue name and sets `display_title` for the clean front-end version
 
-If the user pastes a list, email, or spreadsheet data, help them transform it into this CSV format. Save it to a temporary file.
+If the user pastes a list, email, or spreadsheet data, help them transform it into this CSV format. Save it to the project root so DDEV can access it:
+
+```bash
+# Save/copy the CSV into the project root (DDEV can't see ~/Downloads/)
+cp ~/Downloads/articles.csv /Users/andrewlovseth/Dev/sapir-journal/articles.csv
+```
 
 ### Step 2: Validate
 
@@ -41,8 +47,10 @@ Review the CSV for:
 
 ### Step 3: Dry Run
 
+The CSV must be inside the project root so DDEV can access it. Use the container path `/var/www/html/` prefix:
+
 ```bash
-ddev wp sapir create-issue /path/to/articles.csv \
+ddev wp sapir create-issue /var/www/html/articles.csv \
   --season="<Season Year>" \
   --volume="<Volume Name>" \
   --dry-run
@@ -51,13 +59,13 @@ ddev wp sapir create-issue /path/to/articles.csv \
 Review the output table. Confirm:
 - Correct number of articles
 - URLs look right (pattern: `/{category-slug}/{year}/{post-slug}/`)
-- No unexpected skips
+- No unexpected skips — recurring titles (Editor's Note, etc.) should show "would create (renamed)"
 - Author names parsed correctly
 
 ### Step 4: Execute
 
 ```bash
-ddev wp sapir create-issue /path/to/articles.csv \
+ddev wp sapir create-issue /var/www/html/articles.csv \
   --season="<Season Year>" \
   --volume="<Volume Name>"
 ```
@@ -110,6 +118,7 @@ Production URLs use the base: `https://sapirjournal.org`
 - Article `issue`: `field_605cd86033e5b`
 - Article `author`: `field_605cd85233e5a`
 - Article `interviewers`: `field_64078dff145fe`
+- Article `display_title`: `field_606e256e8e135` (clean title when post title has issue name appended)
 - Author `first_name`: `field_63c5b45f618a5`
 - Author `last_name`: `field_63c5b4330ff52`
 - Issue `season`: `field_6066107c07bda`

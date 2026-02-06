@@ -90,20 +90,50 @@ class Sapir_CLI_Commands {
                 continue;
             }
 
-            $slug = sanitize_title( $title );
+            $slug          = sanitize_title( $title );
+            $display_title = null; // Set when a rename occurs
+            $post_title    = $title;
 
             // Check for existing post by slug
             $existing = get_page_by_path( $slug, OBJECT, 'post' );
             if ( $existing ) {
-                $url = $this->build_url( $cat_slug, $year, $slug );
-                $results[] = [
-                    'title'  => $title,
-                    'status' => 'skipped',
-                    'url'    => $url,
-                    'id'     => $existing->ID,
-                ];
-                WP_CLI::warning( sprintf( 'Skipped "%s" — slug already exists (ID %d).', $title, $existing->ID ) );
-                continue;
+                // Check if the existing post belongs to the same issue (true duplicate)
+                $existing_issue_id = get_field( 'field_605cd86033e5b', $existing->ID );
+                $existing_issue_id = is_object( $existing_issue_id ) ? $existing_issue_id->ID : (int) $existing_issue_id;
+
+                if ( $existing_issue_id === $issue_id ) {
+                    // Same issue — genuine duplicate, skip
+                    $url = $this->build_url( $cat_slug, $year, $slug );
+                    $results[] = [
+                        'title'  => $title,
+                        'status' => 'skipped',
+                        'url'    => $url,
+                        'id'     => $existing->ID,
+                    ];
+                    WP_CLI::warning( sprintf( 'Skipped "%s" — slug already exists in this issue (ID %d).', $title, $existing->ID ) );
+                    continue;
+                }
+
+                // Different issue — recurring title, rename with issue name
+                $display_title = $title;
+                $post_title    = sprintf( '%s (%s)', $title, $issue_title );
+                $slug          = sanitize_title( $post_title );
+
+                // Check if the renamed slug already exists (idempotency on re-run)
+                $renamed_existing = get_page_by_path( $slug, OBJECT, 'post' );
+                if ( $renamed_existing ) {
+                    $url = $this->build_url( $cat_slug, $year, $slug );
+                    $results[] = [
+                        'title'  => $post_title,
+                        'status' => 'skipped',
+                        'url'    => $url,
+                        'id'     => $renamed_existing->ID,
+                    ];
+                    WP_CLI::warning( sprintf( 'Skipped "%s" — renamed slug already exists (ID %d).', $post_title, $renamed_existing->ID ) );
+                    continue;
+                }
+
+                WP_CLI::log( sprintf( 'Renamed "%s" → "%s" (slug collision with ID %d)', $display_title, $post_title, $existing->ID ) );
             }
 
             // Parse authors and interviewers
@@ -128,8 +158,8 @@ class Sapir_CLI_Commands {
 
             if ( $dry_run ) {
                 $results[] = [
-                    'title'   => $title,
-                    'status'  => 'would create',
+                    'title'   => $display_title ? $post_title : $title,
+                    'status'  => $display_title ? 'would create (renamed)' : 'would create',
                     'url'     => $url,
                     'id'      => '-',
                     'authors' => implode( ', ', $author_names ),
@@ -139,7 +169,7 @@ class Sapir_CLI_Commands {
 
             // Create the draft post
             $post_id = wp_insert_post( [
-                'post_title'    => $title,
+                'post_title'    => $post_title,
                 'post_name'     => $slug,
                 'post_status'   => 'draft',
                 'post_type'     => 'post',
@@ -147,7 +177,7 @@ class Sapir_CLI_Commands {
             ], true );
 
             if ( is_wp_error( $post_id ) ) {
-                WP_CLI::warning( sprintf( 'Failed to create "%s": %s', $title, $post_id->get_error_message() ) );
+                WP_CLI::warning( sprintf( 'Failed to create "%s": %s', $post_title, $post_id->get_error_message() ) );
                 continue;
             }
 
@@ -159,15 +189,22 @@ class Sapir_CLI_Commands {
                 update_field( 'field_64078dff145fe', $interviewer_ids, $post_id ); // interviewers
             }
 
+            // Set display_title when a rename occurred (preserves clean title for front-end)
+            if ( $display_title ) {
+                update_field( 'field_606e256e8e135', $display_title, $post_id ); // display_title
+            }
+
+            $status = $display_title ? 'created (renamed)' : 'created';
+
             $results[] = [
-                'title'   => $title,
-                'status'  => 'created',
+                'title'   => $post_title,
+                'status'  => $status,
                 'url'     => $url,
                 'id'      => $post_id,
                 'authors' => implode( ', ', $author_names ),
             ];
 
-            WP_CLI::log( sprintf( 'Created "%s" (ID %d)', $title, $post_id ) );
+            WP_CLI::log( sprintf( 'Created "%s" (ID %d)', $post_title, $post_id ) );
         }
 
         // --- Output results ---

@@ -388,7 +388,7 @@ class Sapir_CLI_Commands {
 
         list( $first, $last ) = $this->split_name( $full_name );
         update_field( 'field_63c5b45f618a5', $first, $post_id ); // first_name
-        update_field( 'field_63c5b4330ff52', $last, $post_id );  // last_name
+        update_field( 'field_63c5b4340ff52', $last, $post_id );  // last_name
 
         WP_CLI::log( sprintf( 'Created author: "%s" (ID %d)', $full_name, $post_id ) );
         return $post_id;

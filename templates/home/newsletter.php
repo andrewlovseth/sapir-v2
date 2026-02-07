@@ -18,8 +18,10 @@
             <div class="newsletter__copy copy copy-2">
                 <p><?php echo $headline; ?></p>
             </div>
-            
-            <?php echo $embed; ?>
+
+            <?php if($embed): ?>
+                <?php echo do_shortcode($embed); ?>
+            <?php endif; ?>
         </div>
     </div>
 </section>

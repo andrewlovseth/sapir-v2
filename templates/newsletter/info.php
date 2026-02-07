@@ -22,7 +22,7 @@
 
     <?php if($cta == "newsletter-form"): ?>
 
-        <?php echo $embed; ?>
+        <?php echo do_shortcode($embed); ?>
 
     <?php elseif($cta == "button"): ?>
 

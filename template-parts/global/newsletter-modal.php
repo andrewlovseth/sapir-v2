@@ -26,7 +26,7 @@
                     </div>
 
                     <div class="newsletter-modal__embed">
-                        <?php echo $embed; ?>
+                        <?php echo do_shortcode($embed); ?>
                     </div>
                 </div>
             </div>

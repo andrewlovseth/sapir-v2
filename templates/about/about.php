@@ -11,7 +11,7 @@
         <?php echo $about; ?>
 
         <div class="newsletter">
-            <?php echo $embed; ?>
+            <?php echo do_shortcode($embed); ?>
         </div>
 
         <?php get_template_part('templates/about/quote'); ?>        

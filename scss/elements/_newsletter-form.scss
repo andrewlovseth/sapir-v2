@@ -1,3 +1,92 @@
+// ==========================================================================
+// Newsletter Form (Shortcode-based)
+// ==========================================================================
+// Matches the existing .form-wrapper styling used in home/newsletter
+// The parent section handles background/padding - this is just the form
+
+.newsletter-form {
+    position: relative; // For honeypot absolute positioning
+
+    &__fields {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    &__input {
+        flex: 1;
+        min-width: 200px;
+        background: var(--color-white);
+        border: 1px solid var(--color-blue-mid);
+        padding: 1rem;
+        height: 3rem;
+        line-height: 1em;
+        font-family: var(--font-primary);
+        font-size: var(--type-size-200);
+        letter-spacing: 0.02em;
+        color: var(--color-blue-dark);
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: var(--color-blue-dark);
+        }
+    }
+
+    &__button {
+        padding: 1rem 2rem;
+        height: 3rem;
+        line-height: 1em;
+        border: none;
+        background: var(--color-blue-mid);
+        color: var(--color-white);
+        font-size: var(--type-size-050);
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-family: var(--font-sans);
+        font-weight: bold;
+        cursor: pointer;
+        white-space: nowrap;
+
+        &:hover:not(:disabled) {
+            opacity: 0.85;
+        }
+
+        &:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    }
+
+    &__messages {
+        margin-top: 1rem;
+    }
+
+    &__message {
+        padding: 1rem;
+        max-width: 50rem;
+        color: var(--color-white);
+        font-size: 0.875rem;
+        font-family: var(--font-sans);
+
+        &--success {
+            background: var(--color-feedback-success);
+        }
+
+        &--error {
+            background: var(--color-feedback-error);
+        }
+    }
+}
+
+// ==========================================================================
+// Legacy Inline Newsletter Form (third-party embeds)
+// ==========================================================================
+
 .inline-newsletter-form {
     &__default {
         .blakeslee-powered-by {

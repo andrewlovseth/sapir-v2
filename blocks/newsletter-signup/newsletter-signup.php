@@ -45,6 +45,6 @@ $embed = $newsletter['embed'];
     </div>
 
     <div class="newsletter-signup__form">
-        <?php echo $embed; ?>
+        <?php echo do_shortcode($embed); ?>
     </div>
 </div>

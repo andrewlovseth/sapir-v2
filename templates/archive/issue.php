@@ -8,7 +8,7 @@
 <section class="issue grid" id="issue">
 
     <div class="section-header">
-        <h5 class="upper-header"><?php echo $header; ?></h5>
+        <span class="upper-header"><?php echo $header; ?></span>
     </div>
 
     <?php

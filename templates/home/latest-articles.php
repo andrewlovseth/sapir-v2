@@ -7,7 +7,7 @@
 ?>
 
 <div class="articles">
-    <h4 class="upper-header"><?php echo $header; ?></h4>
+    <span class="upper-header"><?php echo $header; ?></span>
 
     <?php if($latest_articles ): ?>
         <?php foreach($latest_articles  as $p): ?>

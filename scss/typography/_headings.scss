@@ -33,6 +33,7 @@ article.post {
 }
 
 .upper-header {
+    display: block;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     font-size: var(--type-size-150);

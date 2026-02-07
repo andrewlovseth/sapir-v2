@@ -33,7 +33,7 @@
     <?php else: ?>
 
         <div class="archive-results-list__summary">
-            <h5 class="upper-header">There are 0 results for</h5>
+            <span class="upper-header">There are 0 results for</span>
             <h2 class="archive-results-list__title">“<?php echo get_search_query(); ?>”</h2>
         </div>
 

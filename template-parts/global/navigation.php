@@ -9,7 +9,7 @@
 
                 <div class="site-nav__group">
                     <div class="site-nav__group-header">
-                        <h4 class="site-nav__title upper-header"><?php echo $header; ?></h4>
+                        <span class="site-nav__title upper-header"><?php echo $header; ?></span>
                     </div>
 
                     <ul class="site-nav__list">

@@ -34,7 +34,7 @@
 
 <section class="author grid" id="author">
     <div class="section-header">
-        <h5 class="upper-header"><?php echo $header; ?></h5>
+        <span class="upper-header"><?php echo $header; ?></span>
 
         <div class="copy copy-1">
             <p><?php echo $copy; ?></p>

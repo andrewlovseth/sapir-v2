@@ -34,7 +34,7 @@
     // Default fallback
     else {
         $image = get_field('header_default_meta_image', 'options');
-        $description = 'Teset';
+        $description = 'SAPIR Journal explores the big ideas shaping Jewish life and the world.';
     }
 ?>
 
@@ -43,6 +43,7 @@
 <meta property="og:url" content="<?php echo $url; ?>" />
 <meta property="og:type" content="article" />
 <meta property="og:description" content="<?php echo $description; ?>" />
+<meta name="description" content="<?php echo esc_attr($description); ?>" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="<?php echo $image['url']; ?>" />

@@ -25,7 +25,7 @@
         <?php echo do_shortcode($shortcode); ?>
     </div>
 
-    <h4 class="issue__contents-header | upper-header">Contents of the Issue</h4>
+    <span class="issue__contents-header | upper-header">Contents of the Issue</span>
 
     <div class="issue__contents-body">
         <?php if(have_rows('table_of_contents', $issue->ID)): while(have_rows('table_of_contents', $issue->ID)) : the_row(); ?>

@@ -40,6 +40,9 @@
         &-link {
             text-transform: uppercase;
             letter-spacing: 0.075em;
+            min-height: 44px;
+            display: inline-flex;
+            align-items: center;
 
             &:hover {
                 text-decoration: none;

@@ -22,7 +22,7 @@
     <section class="current-salon | grid">
         <div class="learning-guide learning-guide__archive">
             <div class="learning-guide__header">
-                <h5 class="upper-header">Recommended articles to get your conversation started</h5>
+                <span class="upper-header">Recommended articles to get your conversation started</span>
             </div>
 
             <?php while(have_rows('learning_guide', $current->ID)) : the_row(); ?>

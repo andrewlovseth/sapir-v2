@@ -1,7 +1,7 @@
 <section class="salons-archive | grid">
 
     <div class="section-header">
-        <h5 class="upper-header">Resources for Past Issues</h5>
+        <span class="upper-header">Resources for Past Issues</span>
     </div>
 
     <?php

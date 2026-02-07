@@ -302,7 +302,7 @@ img {
   --theme-secondary-50: var(--color-blue-light-50);
   --theme-secondary-100: var(--color-blue-light-100);
   --color-feedback-error: #da5b5b;
-  --color-feedback-success: #4f8d4f;
+  --color-feedback-success: #5bb75b;
   --color-newsletter-link: #e2d98e;
   --color-newsletter-link-hover: #ede5a3;
   --color-newsletter-signup-bg: #e7e5ed;
@@ -394,6 +394,7 @@ article.post .article-header .author .name-link:hover {
   font-size: var(--type-size-150);
   font-family: var(--font-accent);
   font-weight: normal;
+  display: block;
 }
 
 .small-upper {
@@ -778,6 +779,9 @@ body {
 .teaser__author-link {
   text-transform: uppercase;
   letter-spacing: .075em;
+  align-items: center;
+  min-height: 44px;
+  display: inline-flex;
 }
 
 .teaser__author-link .teaser__author-name:after {
@@ -1388,8 +1392,9 @@ body.single-post.postid-2036 article.dropcap .article-body > p:first-child:befor
 .newsletter-form__message {
   max-width: 50rem;
   color: var(--color-white);
-  padding: 1rem;
   font-size: .875rem;
+  font-family: var(--font-sans);
+  padding: 1rem;
 }
 
 .newsletter-form__message--success {

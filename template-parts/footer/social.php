@@ -6,10 +6,13 @@
             <?php
                 $icon = get_sub_field('icon');
                 $link = get_sub_field('link');
+                $label = pathinfo($icon['filename'], PATHINFO_FILENAME);
+                $label = preg_replace('/^icon-/i', '', $label);
+                $label = ucfirst($label);
             ?>
 
             <div class="social__item">
-                <a class="social__link" href="<?php echo $link; ?>" target="window">
+                <a class="social__link" href="<?php echo $link; ?>" target="_blank" rel="noopener" aria-label="<?php echo esc_attr($label); ?>">
                     <?php echo get_svg($icon['url']); ?>
                 </a>
             </div>

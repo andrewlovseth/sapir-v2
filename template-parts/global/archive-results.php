@@ -15,7 +15,7 @@
 <section class="archive-results-list grid">
     <?php if ( have_posts() ):?>
         <div class="archive-results-list__summary">
-            <h5 class="upper-header"><?php echo $header; ?></h5>
+            <span class="upper-header"><?php echo $header; ?></span>
             <h2 class="archive-results-list__title"><?php echo $title; ?></h2>
         </div>
 
@@ -52,7 +52,7 @@
     <?php else: ?>
 
         <div class="archive-results-list__summary">
-            <h5 class="upper-header">There are 0 results for</h5>
+            <span class="upper-header">There are 0 results for</span>
             <h2 class="archive-results-list__title">“<?php echo get_search_query(); ?>”</h2>
         </div>
 

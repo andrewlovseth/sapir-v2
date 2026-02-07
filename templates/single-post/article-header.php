@@ -120,7 +120,7 @@
 
             <div class="external-links">
                 <div class="header"> 
-                    <h5 class="upper-header"><?php echo $header; ?></h5>
+                    <span class="upper-header"><?php echo $header; ?></span>
                 </div>
                 
                 <ul class="links">

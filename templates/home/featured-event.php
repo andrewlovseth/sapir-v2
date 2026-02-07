@@ -10,7 +10,7 @@
         $link = get_sub_field('cta');
     ?>
 
-    <h5 class="upper-header"><?php echo $header; ?></h5>
+    <span class="upper-header"><?php echo $header; ?></span>
 
     <div class="teaser-conversation">
         <div class="teaser-conversation__icon">

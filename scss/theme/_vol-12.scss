@@ -13,6 +13,7 @@
     --vol-violet: #ddddda;
     --vol-violet-50: rgba(221, 221, 218, 0.5);
     --vol-purple: #aaa1cd;
+    --vol-purple-dark: #625889;
     --vol-purple-50: rgba(170, 161, 205, 0.5);
     --vol-dark-blue: #3d435d;
     --vol-dark-blue-light: #4a5170;
@@ -55,6 +56,7 @@
 
     // Home: Most Read
     --vol-most-read-color: var(--vol-purple);
+    --vol-most-read-text: var(--vol-purple-dark);
     --vol-most-read-author-hover: var(--vol-purple);
 
     // Home: Quote (uses rgba blue-dark)
@@ -92,7 +94,7 @@ body.page-template-home.site-theme-volume-twelve {
     // Most read has special hover for teaser title
     .most-read {
         a {
-            color: var(--vol-most-read-color);
+            color: var(--vol-most-read-text, var(--vol-most-read-color));
         }
 
         .teaser-small .teaser__title:hover::before {

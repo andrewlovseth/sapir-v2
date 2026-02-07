@@ -9,6 +9,7 @@
     // ─────────────────────────────────────────────────────────────────────────
     --vol-orange: #d7763c;
     --vol-orange-dark: #c26a35;
+    --vol-orange-accessible: #b05e2a;
     --vol-muted-blue: #d0d4d1;
     --vol-muted-blue-20: rgba(208, 212, 209, 0.2);
     --vol-green: #7a9360;
@@ -55,6 +56,7 @@
 
     // Home: Most Read
     --vol-most-read-color: var(--vol-orange);
+    --vol-most-read-text: var(--vol-orange-accessible);
     --vol-most-read-author-hover: var(--vol-green-50);
 
     // Home: Quote

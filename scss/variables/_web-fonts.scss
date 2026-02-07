@@ -9,7 +9,8 @@
 // - var(--font-numbers)  → Numbers
 // ==========================================================================
 
-@import url('https://use.typekit.net/pmv6jwg.css');
+// TypeKit loaded via wp_enqueue_style() in enqueue-styles-scripts.php
+// to avoid double-blocking waterfall (CSS @import delays discovery)
 
 @font-face {
     font-family: 'Adams';

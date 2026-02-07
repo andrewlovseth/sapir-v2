@@ -1,12 +1,12 @@
 .most-read {
     padding: 2rem;
-    color: var(--color-red);
+    color: var(--color-blue-dark);
     @include double-border(var(--color-red));
     counter-reset: article;
     align-self: start;
 
     a {
-        color: var(--color-red);
+        color: var(--color-blue-dark);
     }
 
     .section-header {

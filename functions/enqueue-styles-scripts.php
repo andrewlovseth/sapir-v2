@@ -5,6 +5,13 @@
 */
 
 
+// Preconnect to external origins (DNS + TLS handshake early)
+function sapir_preconnect_hints() {
+    echo '<link rel="preconnect" href="https://use.typekit.net" crossorigin>';
+    echo '<link rel="preconnect" href="https://code.jquery.com" crossorigin>';
+}
+add_action('wp_head', 'sapir_preconnect_hints', 1);
+
 // Enqueue custom styles and scripts
 function bearsmith_enqueue_styles_and_scripts() {
     // Register and noConflict jQuery 3.4.1
@@ -18,8 +25,12 @@ function bearsmith_enqueue_styles_and_scripts() {
     $script_last_updated_at = filemtime($dir . '/js/site.js');
     $style_last_updated_at = filemtime($dir . '/style.css');
 
-    // Add style.css and third-party css
-    // wp_enqueue_style( 'adobe-fonts', 'https://use.typekit.net/vcx3lxt.css' );
+    // TypeKit loaded from HTML (not CSS @import) so browser discovers it in parallel with style.css
+    wp_enqueue_style( 'adobe-fonts', 'https://use.typekit.net/pmv6jwg.css' );
+    wp_add_inline_style( 'adobe-fonts',
+        '@font-face { font-family: psfournier-std; font-display: swap; }' .
+        '@font-face { font-family: psfournier-std-grand; font-display: swap; }'
+    );
     wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css', '', $style_last_updated_at );
 
     // Add plugins.js & site.js (with jQuery dependency)

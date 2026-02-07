@@ -10,6 +10,7 @@
     --vol-hot-pink: #ef537b;
     --vol-hot-pink-dark: #d94468;
     --vol-cornflower: #6c9ac7;
+    --vol-cornflower-dark: #3b6a97;
     --vol-cornflower-50: rgba(108, 154, 199, 0.5);
     --vol-shell-pink: #fbf0ea;
     --vol-burnt-orange: #d58471;
@@ -57,6 +58,7 @@
 
     // Home: Most Read
     --vol-most-read-color: var(--vol-cornflower);
+    --vol-most-read-text: var(--vol-cornflower-dark);
     --vol-most-read-author-hover: var(--vol-cornflower-50);
 
     // Home: Quote

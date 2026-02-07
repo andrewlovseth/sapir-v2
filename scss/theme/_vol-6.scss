@@ -11,6 +11,7 @@
     --vol-orange-dark: #de6047;
     --vol-orange-50: rgba(227, 116, 94, 0.5);
     --vol-green: #9bb765;
+    --vol-green-dark: #5f7a2e;
     --vol-green-50: rgba(155, 183, 101, 0.5);
     --vol-purple: #585d88;
     --vol-dark-blue: #24293b;
@@ -56,6 +57,7 @@
 
     // Home: Most Read
     --vol-most-read-color: var(--vol-green);
+    --vol-most-read-text: var(--vol-green-dark);
     --vol-most-read-author-hover: var(--vol-green-50);
 
     // Home: Quote (uses white text on purple)

@@ -38,7 +38,8 @@
 // Home Page Sections:
 //   --vol-latest-border         Latest issue border
 //   --vol-explore-underline     Explore section link underlines (50% opacity)
-//   --vol-most-read-color       Most read section color (border + text)
+//   --vol-most-read-color       Most read section color (border + decorative)
+//   --vol-most-read-text        Most read text color (optional, falls back to --vol-most-read-color)
 //   --vol-most-read-author-hover Author hover in most read (50% opacity)
 //   --vol-quote-title           Quote section title color
 //   --vol-quote-bg              Quote blockquote background
@@ -176,21 +177,21 @@ body.page-template-home {
         .most-read,
         .most-read::before {
             border-color: var(--vol-most-read-color);
-            color: var(--vol-most-read-color);
+            color: var(--vol-most-read-text, var(--vol-most-read-color));
         }
 
         .most-read {
             .teaser__title-link {
-                color: var(--vol-most-read-color);
+                color: var(--vol-most-read-text, var(--vol-most-read-color));
                 transition: all 300ms ease;
 
                 &:hover {
-                    color: var(--vol-most-read-color);
+                    color: var(--vol-most-read-text, var(--vol-most-read-color));
                 }
             }
 
             .teaser__author-name {
-                color: var(--vol-most-read-color);
+                color: var(--vol-most-read-text, var(--vol-most-read-color));
 
                 &:hover {
                     &::after {

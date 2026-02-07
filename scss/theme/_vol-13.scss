@@ -8,6 +8,7 @@
     // TIER 1: Color Palette (primitive values)
     // ─────────────────────────────────────────────────────────────────────────
     --vol-pink: #e67b93;
+    --vol-pink-dark: #b5435c;
     --vol-pink-light: #eb8fa4;
     --vol-pink-70: rgba(230, 123, 147, 0.7);
     --vol-pink-50: rgba(230, 123, 147, 0.5);
@@ -56,6 +57,7 @@
 
     // Home: Most Read
     --vol-most-read-color: var(--vol-pink);
+    --vol-most-read-text: var(--vol-pink-dark);
     --vol-most-read-author-hover: var(--vol-pink);
 
     // Home: Quote (uses rgba blue-dark)
@@ -83,7 +85,7 @@
 body.page-template-home.site-theme-volume-thirteen {
     .most-read {
         a {
-            color: var(--vol-most-read-color);
+            color: var(--vol-most-read-text, var(--vol-most-read-color));
         }
 
         .teaser-small .teaser__title:hover::before {

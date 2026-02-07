@@ -11,6 +11,7 @@
     --vol-blue-light: #5580c0;
     --vol-blue-50: rgba(65, 110, 180, 0.5);
     --vol-turquoise: #2eafc3;
+    --vol-turquoise-dark: #1a7a8a;
     --vol-turquoise-50: rgba(46, 175, 195, 0.5);
     --vol-yellow: #dfb265;
     --vol-dark-blue: #0e304f;
@@ -56,6 +57,7 @@
 
     // Home: Most Read
     --vol-most-read-color: var(--vol-turquoise);
+    --vol-most-read-text: var(--vol-turquoise-dark);
     --vol-most-read-author-hover: var(--vol-turquoise-50);
 
     // Home: Quote

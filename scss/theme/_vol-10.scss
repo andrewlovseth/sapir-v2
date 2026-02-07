@@ -15,6 +15,7 @@
     --vol-purple: #b0a2ce;
     --vol-purple-25: rgba(176, 162, 206, 0.25);
     --vol-turquoise: #33aebe;
+    --vol-turquoise-dark: #1f7988;
     --vol-turquoise-50: rgba(51, 174, 190, 0.5);
     --vol-dark-blue: #173256;
     --vol-dark-blue-50: rgba(23, 50, 86, 0.5);
@@ -56,6 +57,7 @@
 
     // Home: Most Read
     --vol-most-read-color: var(--vol-turquoise);
+    --vol-most-read-text: var(--vol-turquoise-dark);
     --vol-most-read-author-hover: var(--vol-turquoise);
 
     // Home: Quote
@@ -93,7 +95,7 @@ body.page-template-home.site-theme-volume-ten {
     // Most read uses simplified styling
     .most-read {
         a {
-            color: var(--vol-most-read-color);
+            color: var(--vol-most-read-text, var(--vol-most-read-color));
         }
     }
 }

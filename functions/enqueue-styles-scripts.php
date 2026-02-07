@@ -9,6 +9,9 @@
 function sapir_preconnect_hints() {
     echo '<link rel="preconnect" href="https://use.typekit.net" crossorigin>';
     echo '<link rel="preconnect" href="https://code.jquery.com" crossorigin>';
+    if (is_singular('post')) {
+        echo '<link rel="preconnect" href="https://www.sefaria.org" crossorigin>';
+    }
 }
 add_action('wp_head', 'sapir_preconnect_hints', 1);
 
@@ -42,6 +45,14 @@ function bearsmith_enqueue_styles_and_scripts() {
     wp_enqueue_script( 'sapir-newsletter', get_stylesheet_directory_uri() . '/js/newsletter.js', array(), $newsletter_last_updated, true );
 }
 add_action( 'wp_enqueue_scripts', 'bearsmith_enqueue_styles_and_scripts' );
+
+// Sefaria linker — auto-links Torah references in article text
+function sapir_enqueue_sefaria() {
+    if (!is_singular('post')) return;
+    wp_enqueue_script('sefaria-linker', 'https://www.sefaria.org/linker.js', array(), null, true);
+    wp_add_inline_script('sefaria-linker', 'sefaria.link({selector: ".site-content .article-body, .simple-epigraph"});');
+}
+add_action('wp_enqueue_scripts', 'sapir_enqueue_sefaria');
 
 // Load TypeKit CSS without blocking render — downloads in background, swaps on load
 add_filter('style_loader_tag', 'sapir_nonblocking_typekit', 10, 4);

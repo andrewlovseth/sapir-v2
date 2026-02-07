@@ -33,7 +33,7 @@
 
     <div class="cover">
         <a href="<?php echo $issue_link; ?>" aria-label="<?php echo esc_attr($issue_title); ?> — view issue">
-            <?php echo wp_get_attachment_image($cover['ID'], 'medium'); ?>
+            <?php echo wp_get_attachment_image($cover['ID'], 'medium', false, ['fetchpriority' => 'high']); ?>
         </a>
     </div>
 

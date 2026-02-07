@@ -15,7 +15,7 @@ add_action('wp_head', 'sapir_preconnect_hints', 1);
 // Enqueue custom styles and scripts
 function bearsmith_enqueue_styles_and_scripts() {
     // Register and noConflict jQuery 3.4.1
-    wp_register_script( 'jquery.3.4.1', 'https://code.jquery.com/jquery-3.4.1.min.js' );
+    wp_register_script( 'jquery.3.4.1', 'https://code.jquery.com/jquery-3.4.1.min.js', array(), null, true );
     wp_add_inline_script( 'jquery.3.4.1', 'var jQuery = $.noConflict(true);' );
 
 
@@ -42,3 +42,10 @@ function bearsmith_enqueue_styles_and_scripts() {
     wp_enqueue_script( 'sapir-newsletter', get_stylesheet_directory_uri() . '/js/newsletter.js', array(), $newsletter_last_updated, true );
 }
 add_action( 'wp_enqueue_scripts', 'bearsmith_enqueue_styles_and_scripts' );
+
+// Load TypeKit CSS without blocking render — downloads in background, swaps on load
+add_filter('style_loader_tag', 'sapir_nonblocking_typekit', 10, 4);
+function sapir_nonblocking_typekit($tag, $handle, $href, $media) {
+    if ($handle !== 'adobe-fonts') return $tag;
+    return str_replace("media='all'", "media='print' onload=\"this.media='all'\"", $tag);
+}

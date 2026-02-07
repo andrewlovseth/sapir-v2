@@ -32,7 +32,7 @@
     </div>
 
     <div class="cover">
-        <a href="<?php echo $issue_link; ?>">
+        <a href="<?php echo $issue_link; ?>" aria-label="<?php echo esc_attr($issue_title); ?> — view issue">
             <?php echo wp_get_attachment_image($cover['ID'], 'medium'); ?>
         </a>
     </div>

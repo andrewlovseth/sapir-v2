@@ -29,6 +29,6 @@
 
 <div class="header-banner site-banner">
     <div class="image">
-        <?php echo wp_get_attachment_image($banner['ID'], 'full'); ?>
+        <?php echo wp_get_attachment_image($banner['ID'], 'full', false, ['fetchpriority' => 'high']); ?>
     </div>
 </div>

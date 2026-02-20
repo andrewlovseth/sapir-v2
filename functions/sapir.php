@@ -30,7 +30,7 @@ function wrap_sapir_in_span( $content ) {
         } else {
             // Text segment: only transform when not inside an existing small-caps span
             if ( $small_caps_depth === 0 ) {
-                $part = preg_replace( '/\bsapir\b/i', '<span class="small-caps">$0</span>', $part );
+                $part = preg_replace( '/\bsapir(?:\s+institute)?\b/i', '<span class="small-caps">$0</span>', $part );
                 $part = preg_replace( '/(A\.M\.|P\.M\.)/i', '<span class="small-caps lower">$0</span>', $part );
                 $parts[ $index ] = $part;
             }

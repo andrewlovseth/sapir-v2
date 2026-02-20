@@ -6,9 +6,10 @@
             return false;
         });
 
-        // First Line Wrap Class for Small Caps
+        // Dropcap first-letter wrapping
+        // Skip any leading HTML tags (e.g., <span class="small-caps">) to find the first visible text character
         $(".article-body > p.dropcap, .dropcap .article-body > p:first-child").html(function (i, html) {
-            return html.replace(/^[^a-zA-Z]*([a-zA-Z])/g, '<span class="first-letter">$1</span>');
+            return html.replace(/^(\s*(?:<[^>]+>\s*)*)([a-zA-Z])/, '$1<span class="first-letter">$2</span>');
         });
 
         $(".article-link.draft").on("click", function () {

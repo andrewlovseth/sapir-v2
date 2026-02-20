@@ -30,7 +30,7 @@
     $pdf = get_field('pdf'); 
 
     $external_links = get_field('external_links');
-    $links_header = $external_links['header'];
+    $links_header = $external_links ? $external_links['header'] : '';
     $volume = get_field('volume', $issue);
 
     $banner = get_field('banner'); 

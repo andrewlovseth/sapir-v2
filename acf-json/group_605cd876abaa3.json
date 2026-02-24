@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_63cddb05ef0a3",
@@ -85,6 +86,27 @@
             "maxlength": ""
         },
         {
+            "key": "field_699e248b87b83",
+            "label": "Issue Sub Header",
+            "name": "issue_sub_header",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_63bf6c86be45d",
             "label": "Cover",
             "name": "cover",
@@ -144,7 +166,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_606e23e6e3df6",
@@ -229,6 +252,7 @@
                                     "multiple": 0,
                                     "return_format": "object",
                                     "ui": 1,
+                                    "bidirectional_target": [],
                                     "parent_repeater": "field_606e2402e3df8"
                                 },
                                 {
@@ -279,7 +303,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_63cece964f2e2",
@@ -355,6 +380,7 @@
     ],
     "active": true,
     "description": "",
-    "show_in_rest": 0,
-    "modified": 1674497707
+    "show_in_rest": 1,
+    "display_title": "",
+    "modified": 1771971965
 }

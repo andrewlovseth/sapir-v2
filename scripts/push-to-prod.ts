@@ -531,6 +531,7 @@ const { values } = parseArgs({
     "issue-id": { type: "string" },
     "dry-run": { type: "boolean", default: false },
     "create-missing": { type: "boolean", default: false },
+    "slugs": { type: "string" },
   },
   allowPositionals: false,
 });
@@ -538,6 +539,9 @@ const { values } = parseArgs({
 const issueId = parseInt(values["issue-id"] ?? "", 10);
 const dryRun = values["dry-run"] ?? false;
 const createMissing = values["create-missing"] ?? false;
+const slugFilter = values["slugs"]
+  ? new Set(values["slugs"].split(",").map((s) => s.trim()))
+  : null;
 
 if (isNaN(issueId)) {
   console.error(
@@ -570,8 +574,13 @@ try {
 
 // --- Step 1: Collect local articles ---
 console.log("\n--- Collecting local articles ---");
-const localArticles = await getLocalArticles(issueId);
-console.log(`  Found ${localArticles.length} local drafts`);
+let localArticles = await getLocalArticles(issueId);
+if (slugFilter) {
+  localArticles = localArticles.filter((a) => slugFilter.has(a.slug));
+  console.log(`  Filtered to ${localArticles.length} articles by slug`);
+} else {
+  console.log(`  Found ${localArticles.length} local drafts`);
+}
 
 for (const a of localArticles) {
   const flags = [];

@@ -75,3 +75,6 @@ assets/img/.DS_Store
 
 # Bun #
 bun.lock
+
+# .claude #
+.claude/

@@ -7819,6 +7819,58 @@ body.page-template-home.site-theme-volume-fourteen .most-read .teaser__author-li
   --vol-coming-soon: var(--vol-cornflower);
 }
 
+.site-theme-volume-twenty, .issue-theme-volume-twenty {
+  --vol-yellow: #f2c378;
+  --vol-purple: #c16ca3;
+  --vol-purple-dark: #a8578b;
+  --vol-purple-50: #c16ca380;
+  --vol-denim: #48698e;
+  --vol-denim-50: #486a8f80;
+  --vol-brown: #bb7968;
+  --vol-brown-50: #bb796880;
+  --vol-ice-blue: #b3bfdb;
+  --vol-newsletter-bg: var(--vol-purple);
+  --vol-newsletter-bg-hover: var(--vol-purple-dark);
+  --vol-epigraph-color: var(--vol-purple);
+  --vol-star-fill: var(--vol-yellow);
+  --vol-ornament-fill: var(--vol-yellow);
+  --vol-pullquote-text: var(--vol-brown);
+  --vol-link-hover: var(--vol-brown);
+  --vol-author-underline: var(--vol-brown);
+  --vol-cta-border: var(--vol-denim);
+  --vol-cta-text: var(--vol-denim);
+  --vol-cta-hover-bg: var(--vol-denim);
+  --vol-cta-home-border: var(--vol-ice-blue);
+  --vol-cta-home-text: var(--vol-ice-blue);
+  --vol-selection-bg: var(--vol-denim);
+  --vol-latest-border: var(--vol-ice-blue);
+  --vol-explore-underline: var(--vol-denim-50);
+  --vol-most-read-color: var(--vol-purple);
+  --vol-most-read-text: var(--vol-purple-dark);
+  --vol-most-read-author-hover: var(--vol-purple-50);
+  --vol-quote-title: var(--vol-ice-blue);
+  --vol-quote-bg: var(--vol-ice-blue);
+  --vol-quote-text: var(--vol-denim);
+  --vol-quote-marks: var(--vol-denim);
+  --vol-quote-hover: var(--vol-denim);
+  --vol-footer-bg: var(--vol-denim);
+  --vol-author-border-hover: var(--vol-brown-50);
+  --vol-article-star-fill: var(--vol-yellow);
+  --vol-article-btn-border: var(--vol-denim);
+  --vol-article-btn-text: var(--vol-denim);
+  --vol-article-btn-hover-bg: var(--vol-denim);
+  --vol-contents-header: var(--vol-brown);
+  --vol-coming-soon: var(--vol-purple);
+}
+
+.site-theme-volume-twenty .newsletter__wrapper, .issue-theme-volume-twenty .newsletter__wrapper {
+  background: #b3bfdb33;
+}
+
+.site-theme-volume-twenty .newsletter .slim-line-imge-content, .issue-theme-volume-twenty .newsletter .slim-line-imge-content {
+  background: #b3bfdb3b;
+}
+
 @media print {
   .site-banner, .site-footer, .site-header .hamburger, .site-header .search {
     display: none !important;

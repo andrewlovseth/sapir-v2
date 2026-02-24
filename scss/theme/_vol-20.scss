@@ -1,0 +1,97 @@
+// ═══════════════════════════════════════════════════════════════════════════
+// Volume 20 Theme - Egg Yellow / Purple / Denim Blue / Brown / Ice Blue
+// ═══════════════════════════════════════════════════════════════════════════
+
+.site-theme-volume-twenty,
+.issue-theme-volume-twenty {
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 1: Color Palette (primitive values)
+    // ─────────────────────────────────────────────────────────────────────────
+    --vol-yellow: #f2c378;
+    --vol-purple: #c16ca3;
+    --vol-purple-dark: #a8578b;
+    --vol-purple-50: rgba(193, 108, 163, 0.5);
+    --vol-denim: #48698e;
+    --vol-denim-50: rgba(72, 106, 143, 0.5);
+    --vol-brown: #bb7968;
+    --vol-brown-50: rgba(187, 121, 104, 0.5);
+    --vol-ice-blue: #b3bfdb;
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 2: Semantic Tokens
+    // ─────────────────────────────────────────────────────────────────────────
+
+    // Header
+    --vol-newsletter-bg: var(--vol-purple);
+    --vol-newsletter-bg-hover: var(--vol-purple-dark);
+    --vol-epigraph-color: var(--vol-purple);
+
+    // Icons & Decorations
+    --vol-star-fill: var(--vol-yellow);
+    --vol-ornament-fill: var(--vol-yellow);
+
+    // Typography
+    --vol-pullquote-text: var(--vol-brown);
+
+    // Interactive
+    --vol-link-hover: var(--vol-brown);
+    --vol-author-underline: var(--vol-brown);
+
+    // Buttons (global)
+    --vol-cta-border: var(--vol-denim);
+    --vol-cta-text: var(--vol-denim);
+    --vol-cta-hover-bg: var(--vol-denim);
+
+    // Buttons (homepage override — ice blue for "Read it now")
+    --vol-cta-home-border: var(--vol-ice-blue);
+    --vol-cta-home-text: var(--vol-ice-blue);
+
+    // Selection
+    --vol-selection-bg: var(--vol-denim);
+
+    // Home: Latest Issue
+    --vol-latest-border: var(--vol-ice-blue);
+
+    // Home: Explore
+    --vol-explore-underline: var(--vol-denim-50);
+
+    // Home: Most Read
+    --vol-most-read-color: var(--vol-purple);
+    --vol-most-read-text: var(--vol-purple-dark);
+    --vol-most-read-author-hover: var(--vol-purple-50);
+
+    // Home: Quote
+    --vol-quote-title: var(--vol-ice-blue);
+    --vol-quote-bg: var(--vol-ice-blue);
+    --vol-quote-text: var(--vol-denim);
+    --vol-quote-marks: var(--vol-denim);
+    --vol-quote-hover: var(--vol-denim);
+
+    // Footer
+    --vol-footer-bg: var(--vol-denim);
+
+    // Article Page
+    --vol-author-border-hover: var(--vol-brown-50);
+    --vol-article-star-fill: var(--vol-yellow);
+    --vol-article-btn-border: var(--vol-denim);
+    --vol-article-btn-text: var(--vol-denim);
+    --vol-article-btn-hover-bg: var(--vol-denim);
+
+    // Issue Page
+    --vol-contents-header: var(--vol-brown);
+    --vol-coming-soon: var(--vol-purple);
+}
+
+// Newsletter section override — ice blue background
+.site-theme-volume-twenty,
+.issue-theme-volume-twenty {
+    .newsletter {
+        &__wrapper {
+            background: rgba(179, 191, 219, 0.2);
+        }
+
+        .slim-line-imge-content {
+            background: rgba(179, 191, 219, 0.23);
+        }
+    }
+}

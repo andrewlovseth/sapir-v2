@@ -52,7 +52,7 @@
         <div class="latest-issue">
             <div class="header">
                 <h3>
-                    <span class="upper-header">The Issue On</span>
+                    <span class="upper-header"><?php echo get_field('issue_sub_header', $current_issue_id) ?: 'The Issue On'; ?></span>
                     <a href="<?php echo $issue_link; ?>" class="issue__title"><?php echo $issue_title; ?></a>
                 </h3>
 

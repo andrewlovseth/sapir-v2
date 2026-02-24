@@ -10,7 +10,7 @@
 
     <div class="issue__info">
         <div class="issue__headline">
-            <span class="pre-header upper-header">Contents of the Issue on</span>
+            <span class="pre-header upper-header">Contents of <?php echo get_field('issue_sub_header') ?: 'The Issue On'; ?></span>
             <h1 class="issue__title"><?php echo $title ?></h1>
         </div>
 

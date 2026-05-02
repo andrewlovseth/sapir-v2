@@ -24,6 +24,15 @@ class Sapir_CLI_Commands {
      * [--dry-run]
      * : Preview what would be created without writing to the database.
      *
+     * [--new-author-status=<status>]
+     * : Status for newly created author CPT stubs. Default: publish.
+     * ---
+     * default: publish
+     * options:
+     *   - publish
+     *   - draft
+     * ---
+     *
      * [--format=<format>]
      * : Output format. Accepts: table, csv, json. Default: table.
      * ---
@@ -43,11 +52,12 @@ class Sapir_CLI_Commands {
      * @when after_wp_load
      */
     public function create_issue( $args, $assoc_args ) {
-        $file    = $args[0];
-        $season  = $assoc_args['season'] ?? '';
-        $volume  = $assoc_args['volume'] ?? '';
-        $dry_run = isset( $assoc_args['dry-run'] );
-        $format  = $assoc_args['format'] ?? 'table';
+        $file               = $args[0];
+        $season             = $assoc_args['season'] ?? '';
+        $volume             = $assoc_args['volume'] ?? '';
+        $dry_run            = isset( $assoc_args['dry-run'] );
+        $format             = $assoc_args['format'] ?? 'table';
+        $new_author_status  = $assoc_args['new-author-status'] ?? 'publish';
 
         if ( ! $season || ! $volume ) {
             WP_CLI::error( 'Both --season and --volume are required.' );
@@ -144,10 +154,10 @@ class Sapir_CLI_Commands {
             $interviewer_ids = [];
 
             foreach ( $author_names as $name ) {
-                $author_ids[] = $this->find_or_create_author( $name, $dry_run );
+                $author_ids[] = $this->find_or_create_author( $name, $dry_run, $new_author_status );
             }
             foreach ( $interviewer_names as $name ) {
-                $interviewer_ids[] = $this->find_or_create_author( $name, $dry_run );
+                $interviewer_ids[] = $this->find_or_create_author( $name, $dry_run, $new_author_status );
             }
 
             // Filter out nulls from dry-run placeholder IDs
@@ -358,7 +368,7 @@ class Sapir_CLI_Commands {
     /**
      * Find or create an Author CPT entry. Returns post ID.
      */
-    private function find_or_create_author( $full_name, $dry_run ) {
+    private function find_or_create_author( $full_name, $dry_run, $new_status = 'publish' ) {
         $existing = get_posts( [
             'post_type'      => 'authors',
             'title'          => $full_name,
@@ -371,14 +381,14 @@ class Sapir_CLI_Commands {
         }
 
         if ( $dry_run ) {
-            WP_CLI::log( sprintf( 'Would create author: "%s"', $full_name ) );
+            WP_CLI::log( sprintf( 'Would create author: "%s" (status: %s)', $full_name, $new_status ) );
             return null;
         }
 
         $post_id = wp_insert_post( [
             'post_title'  => $full_name,
             'post_type'   => 'authors',
-            'post_status' => 'publish',
+            'post_status' => $new_status,
         ], true );
 
         if ( is_wp_error( $post_id ) ) {

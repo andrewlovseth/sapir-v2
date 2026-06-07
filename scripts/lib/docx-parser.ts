@@ -148,9 +148,23 @@ export async function parseDocx(filePath: string): Promise<ParsedArticle> {
   };
 }
 
-/** Strip HTML tags to get plain text */
+/**
+ * Strip HTML tags AND decode common entities to get plain text.
+ * Entity decoding matters for detection logic: mammoth encodes a literal "&"
+ * in a byline (e.g. "SARA PAASCHE-ORLOW & AMY SCHECTMAN") as "&amp;". Without
+ * decoding, the lowercase "amp" defeats the all-caps author-line check and the
+ * byline leaks into the body. Only detection uses this — stored paragraph
+ * content keeps the original HTML entities.
+ */
 function stripHtml(html: string): string {
-  return html.replace(/<[^>]+>/g, "");
+  return html
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, " ");
 }
 
 /** Check if a string is all uppercase (ignoring punctuation/spaces) */

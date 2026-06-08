@@ -40,6 +40,8 @@ export interface ParsedArticle {
   signoffIndices: number[];
   /** Ranges of paragraphs inside [[block q]] markers → wp:pullquote.basic */
   blockQuoteRanges: { start: number; end: number }[];
+  /** Pull-quote excerpts from the trailing "BLOCK QUOTES:" annotation list → wp:pullquote (no class) */
+  pullQuotes: string[];
 }
 
 export interface MatchedArticle {

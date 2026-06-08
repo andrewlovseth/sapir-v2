@@ -125,22 +125,37 @@ for (const article of matched) {
     if (article.hasContent) {
       console.log(`    Skipping content: already set`);
     } else {
-      // --- Extract pullquotes ---
+      // --- Determine pullquotes ---
+      // Prefer the explicit "BLOCK QUOTES:" annotation captured from the docx —
+      // it's the designer's exact, intended pull quotes. Only fall back to the
+      // heuristic PDF extractor when the docx had no annotation list.
       let pullquotes: string[] = [];
       if (!skipPullquotes) {
-        try {
-          pullquotes = await extractPullquotes(
-            article.folder.pdfPath,
-            article.parsed.paragraphs
+        if (article.parsed.pullQuotes.length > 0) {
+          pullquotes = article.parsed.pullQuotes;
+          console.log(
+            `    Using ${pullquotes.length} pullquote(s) from docx annotation`
           );
-          if (pullquotes.length > 0) {
-            console.log(`    Found ${pullquotes.length} pullquote(s)`);
-            result.actions.push(`extracted ${pullquotes.length} pullquotes`);
+          result.actions.push(`set ${pullquotes.length} pullquotes from docx`);
+        } else {
+          try {
+            pullquotes = await extractPullquotes(
+              article.folder.pdfPath,
+              article.parsed.paragraphs
+            );
+            if (pullquotes.length > 0) {
+              console.log(
+                `    Found ${pullquotes.length} pullquote(s) from PDF (fallback)`
+              );
+              result.actions.push(
+                `extracted ${pullquotes.length} pullquotes from PDF`
+              );
+            }
+          } catch (err) {
+            console.warn(
+              `    Pullquote extraction failed: ${err instanceof Error ? err.message : err}`
+            );
           }
-        } catch (err) {
-          console.warn(
-            `    Pullquote extraction failed: ${err instanceof Error ? err.message : err}`
-          );
         }
       }
 

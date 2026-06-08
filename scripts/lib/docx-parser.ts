@@ -34,6 +34,7 @@ export async function parseDocx(filePath: string): Promise<ParsedArticle> {
   const paragraphs: string[] = [];
   const separatorIndices: number[] = [];
   const blockQuoteRanges: { start: number; end: number }[] = [];
+  const pullQuotes: string[] = [];
   let blockQuoteOpen = -1;
   let isConversation = false;
 
@@ -46,6 +47,24 @@ export async function parseDocx(filePath: string): Promise<ParsedArticle> {
 
     // Skip empty paragraphs
     if (!text) continue;
+
+    // Capture the designer's trailing pull-quote annotation, then stop. Each
+    // docx ends with a "BLOCK QUOTES:" (or "PULL QUOTES:") heading followed by
+    // an <ol> of the quotes pulled for the print layout. mammoth renders it as
+    //   <p>BLOCK QUOTES:</p><ol><li>quote one…</li><li>quote two…</li></ol>
+    // Because we split on </p><p>, this final chunk's `raw` contains both the
+    // heading and the whole <ol>. We harvest each <li>'s inner HTML (keeping
+    // inline <em> etc.) into pullQuotes, then break: the annotation never lands
+    // in `paragraphs`, so the real final paragraph keeps its .last-p dingbat.
+    if (/^(block|pull)\s*quotes?\b/i.test(text)) {
+      const liRegex = /<li>([\s\S]*?)<\/li>/gi;
+      let liMatch: RegExpExecArray | null;
+      while ((liMatch = liRegex.exec(raw)) !== null) {
+        const item = liMatch[1].trim();
+        if (item) pullQuotes.push(item);
+      }
+      break;
+    }
 
     // Skip author name line (all caps, first real paragraph)
     if (!hed && !dek && paragraphs.length === 0 && isAllCaps(text)) continue;
@@ -145,6 +164,7 @@ export async function parseDocx(filePath: string): Promise<ParsedArticle> {
     lastBodyIndex,
     signoffIndices,
     blockQuoteRanges,
+    pullQuotes,
   };
 }
 

@@ -14,4 +14,24 @@
     .upper-header {
         padding-bottom: 1.5rem;
     }
+
+    // Tighter rhythm than the global .teaser-large defaults so the
+    // list reads as grouped entries rather than floating lines
+    .teaser-large {
+        & + .teaser-large {
+            padding-top: 2rem;
+
+            @include tablet {
+                padding-top: 2.5rem;
+            }
+        }
+
+        .teaser__dek {
+            padding-top: 0.75rem;
+        }
+
+        .teaser__authors {
+            padding-top: 0.5rem;
+        }
+    }
 }

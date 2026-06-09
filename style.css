@@ -6067,6 +6067,10 @@ body.single-letters .letter .letter .meta-line {
   display: block;
 }
 
+body.single-letters .letter .response {
+  padding-top: 2.5rem;
+}
+
 body.single-letters .letter .back {
   border-top: 1px solid var(--color-blue-light-50);
   margin-top: 6rem;

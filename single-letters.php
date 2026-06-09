@@ -9,6 +9,8 @@
 
             <?php get_template_part('templates/single-letters/letter'); ?>
 
+            <?php get_template_part('templates/single-letters/response'); ?>
+
             <?php get_template_part('templates/single-letters/back'); ?>
         </article>
    

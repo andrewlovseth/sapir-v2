@@ -113,14 +113,14 @@ export async function parseDocx(filePath: string): Promise<ParsedArticle> {
       // Prepend the dropcap letter to the rest of the paragraph.
       // CSS hides the first letter visually (replaced by the dropcap image),
       // but the letter must be in the HTML for copy/paste and printing.
-      let restOfPara = dropCapMatch[2].trim();
+      let restOfPara = cleanSoftBreaks(dropCapMatch[2].trim());
       paragraphs.push(dropcapLetter.toUpperCase() + restOfPara);
       bodyParaCount++;
       continue;
     }
 
     // Regular body paragraph — keep the HTML formatting
-    paragraphs.push(raw.trim());
+    paragraphs.push(cleanSoftBreaks(raw.trim()));
     bodyParaCount++;
 
     // Check for conversation format (speaker names in lowercase followed by colon)
@@ -185,6 +185,18 @@ function stripHtml(html: string): string {
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
     .replace(/&nbsp;/g, " ");
+}
+
+/**
+ * Convert soft line breaks within a body paragraph to spaces.
+ * Designers use shift+enter in the docx to control line wrapping; mammoth turns
+ * those into <br/> mid-sentence (e.g. "five years of <br/>government service"),
+ * which renders as an ugly break in flowing prose. Replace each <br> with a
+ * space and collapse the doubled space. (Verse/poetry in these articles comes
+ * through as separate paragraphs or [[block]] quotes, not <br>.)
+ */
+function cleanSoftBreaks(html: string): string {
+  return html.replace(/<br\s*\/?>/gi, " ").replace(/ {2,}/g, " ").trim();
 }
 
 /** Check if a string is all uppercase (ignoring punctuation/spaces) */

@@ -145,6 +145,9 @@ function planPullquotePlacement(
 
   // Maximum paragraph distance a pull quote may sit from its source sentence.
   const MAX_DIST = 6;
+  // A pull quote must not appear in the article opening — keep it past the first
+  // few paragraphs so it never interrupts the lede/dropcap intro.
+  const MIN_START = 4;
 
   const separatorSet = new Set(separatorIndices);
   const normalizedParas = paragraphs.map(normalizeForMatch);
@@ -153,8 +156,9 @@ function planPullquotePlacement(
 
   const isValidGap = (g: number, src: number): boolean => {
     // In-range: a gap of 0 (before the first paragraph) or after the last are
-    // both unusable — a pull quote must sit between two real paragraphs.
-    if (g < 1 || g > paragraphs.length - 1) return false;
+    // both unusable — a pull quote must sit between two real paragraphs. Also
+    // enforce MIN_START so a pull quote never lands in the article opening.
+    if (g < MIN_START || g > paragraphs.length - 1) return false;
     // Never hug the source: src+1 is the "repeat" right under the sentence,
     // src-1 sits immediately above it.
     if (g === src + 1 || g === src - 1) return false;
@@ -165,9 +169,11 @@ function planPullquotePlacement(
     }
     // Avoid the newsletter form slot (injected ≈ body paragraph index 10).
     if (g === 9 || g === 10 || g === 11) return false;
-    // Never inside a block-quote range [start, end).
+    // Never inside a block-quote range, nor directly after it: a pull quote
+    // immediately following a basic block quote (g === r.end) reads as two
+    // stacked quote blocks. Forbid [r.start, r.end] inclusive.
     for (const r of blockQuoteRanges) {
-      if (g >= r.start && g < r.end) return false;
+      if (g >= r.start && g <= r.end) return false;
     }
     // Keep ≥1 paragraph from an already-placed pull quote.
     for (const placed of placedGaps) {
@@ -217,6 +223,18 @@ function planPullquotePlacement(
         k,
         pullquotes.length,
         (g) => isValidGap(g, src)
+      );
+    }
+
+    // Last resort: guarantee a placement so a pull quote is never dropped.
+    if (chosen === -1) {
+      chosen = bestEffortGap(
+        paragraphs.length,
+        src,
+        MIN_START,
+        separatorSet,
+        blockQuoteRanges,
+        placedGaps
       );
     }
 
@@ -288,6 +306,48 @@ function fallbackPlacement(
     if (mid - d > section.start && isValid(mid - d)) return mid - d;
   }
   return -1;
+}
+
+/**
+ * Guaranteed placement of last resort. When neither the near-source search nor
+ * the even-distribution fallback finds a strictly valid gap (common in articles
+ * dense with block quotes), score EVERY gap by how many soft rules it violates
+ * and return the least-bad one — so a pull quote is never silently dropped.
+ *
+ * Only three things are hard (never violated): a gap inside a block-quote range,
+ * a gap already holding a pull quote, and out-of-range. Everything else
+ * (MIN_START, src-adjacency, separator-adjacency, the newsletter slot, sitting
+ * directly after a block quote) is a weighted penalty, so a clean gap always
+ * wins when one exists and a "least-ugly" gap is chosen only when forced.
+ */
+function bestEffortGap(
+  totalParagraphs: number,
+  src: number,
+  minStart: number,
+  separatorSet: Set<number>,
+  blockQuoteRanges: { start: number; end: number }[],
+  placedGaps: number[]
+): number {
+  const ideal = src >= 0 ? src + 3 : Math.floor(totalParagraphs / 2);
+  let best = -1;
+  let bestPenalty = Infinity;
+  for (let g = 1; g <= totalParagraphs - 1; g++) {
+    // Hard: never inside a block quote or on an occupied gap.
+    if (blockQuoteRanges.some((r) => g >= r.start && g < r.end)) continue;
+    if (placedGaps.includes(g)) continue;
+    let pen = Math.abs(g - ideal); // prefer near the source's ideal target
+    if (blockQuoteRanges.some((r) => g === r.end)) pen += 50; // directly after a block quote
+    if (g < minStart) pen += 40;
+    if (g === src + 1 || g === src - 1) pen += 30;
+    if (separatorSet.has(g) || separatorSet.has(g - 1) || separatorSet.has(g + 1)) pen += 20;
+    if (g === 9 || g === 10 || g === 11) pen += 20;
+    for (const p of placedGaps) if (Math.abs(g - p) <= 1) pen += 15;
+    if (pen < bestPenalty) {
+      bestPenalty = pen;
+      best = g;
+    }
+  }
+  return best;
 }
 
 /** Strip HTML tags from a string (for text matching only). */

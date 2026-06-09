@@ -109,25 +109,28 @@ function pullquoteBasic(innerHtml: string): string {
  * A pull quote is inserted in the "gap" BEFORE a given paragraph index — i.e.
  * gap g means the pull quote renders between paragraph g-1 and paragraph g.
  *
- * A pull quote must stay in the SAME SECTION as its source — sections are the
- * paragraph ranges between separators. Crossing a separator would strand the
- * quote far from the sentence it was pulled from.
+ * A pull quote must stay NEAR its source — within MAX_DIST paragraphs. This is
+ * a soft distance bound rather than a hard same-section rule: it still prevents
+ * a quote from being stranded far from its sentence, but it lets a quote whose
+ * source sits right at a section boundary (e.g. in a tiny 3-paragraph opening
+ * section) cross one separator to reach a clean, non-adjacent gap nearby. The
+ * separator-adjacency rule keeps it from hugging the separator itself.
  *
  * Algorithm (per pull quote, in document order):
  *   1. Find source paragraph: match the first 6 normalized words of the quote
  *      against each paragraph (then retry with 4 words). src = that index, or -1.
- *   2. Determine the source's section [secStart, secEnd) from separatorIndices.
- *      Only gaps strictly inside that section are eligible.
- *   3. Target gap = src + 3 — two full body paragraphs sit between the source
- *      and the pull quote, the house convention.
- *   4. Reject invalid gaps (out of section, the src+1 "repeat" slot, adjacent to
- *      a separator, the newsletter slot ~10, inside a block-quote range, or too
- *      close to an already-placed pull quote).
- *   5. Search AFTER the source within-section, preferring LATER gaps (src+3,
- *      src+4, src+2, src+5…), never src+1; if none, search BEFORE the source
- *      within-section (src-2, src-3…; skip src-1 to avoid hugging the source).
- *   6. If the source can't be found OR no valid gap exists in the whole section,
- *      fall back to the old even-distribution placement for that one quote.
+ *   2. Build candidate gaps in preference order, all with |gap - src| <= MAX_DIST
+ *      and clamped to [1, nParagraphs-1]:
+ *        ideal after: src+3, src+4, src+2  (never src+1)
+ *        near before: src-2, src-3         (never src-1)
+ *        far after:   src+5, src+6
+ *        far before:  src-4, src-5
+ *   3. Reject invalid gaps (the src±1 adjacency slots, adjacent to a separator,
+ *      the newsletter slot ~10, inside a block-quote range, or too close to an
+ *      already-placed pull quote).
+ *   4. First valid candidate wins.
+ *   5. If the source can't be found OR no valid gap exists within MAX_DIST, fall
+ *      back to the old even-distribution placement for that one quote.
  *
  * Returns Map<gapIndex, pullquoteArrayIndex>, consumed by toGutenbergBlocks.
  */
@@ -140,35 +143,21 @@ function planPullquotePlacement(
   const placements = new Map<number, number>();
   if (pullquotes.length === 0) return placements;
 
+  // Maximum paragraph distance a pull quote may sit from its source sentence.
+  const MAX_DIST = 6;
+
   const separatorSet = new Set(separatorIndices);
   const normalizedParas = paragraphs.map(normalizeForMatch);
   // Gaps (the index a pull quote sits before) that already hold a pull quote.
   const placedGaps: number[] = [];
 
-  // Section boundaries: paragraph ranges between separators. separatorIndices
-  // are "separator before this paragraph index", so they double as the section
-  // split points. e.g. separators [4, 14] over 20 paras → sections [0,4), [4,14),
-  // [14,20). Return the [start, end) section containing a given paragraph index.
-  const sortedSeparators = [...separatorIndices].sort((a, b) => a - b);
-  const sectionOf = (paraIdx: number): { start: number; end: number } => {
-    let start = 0;
-    let end = paragraphs.length;
-    for (const sep of sortedSeparators) {
-      if (sep <= paraIdx) start = sep;
-      else {
-        end = sep;
-        break;
-      }
-    }
-    return { start, end };
-  };
-
   const isValidGap = (g: number, src: number): boolean => {
     // In-range: a gap of 0 (before the first paragraph) or after the last are
     // both unusable — a pull quote must sit between two real paragraphs.
     if (g < 1 || g > paragraphs.length - 1) return false;
-    // Never directly after the source (the "repeat" right under the sentence).
-    if (g === src + 1) return false;
+    // Never hug the source: src+1 is the "repeat" right under the sentence,
+    // src-1 sits immediately above it.
+    if (g === src + 1 || g === src - 1) return false;
     // Keep ≥1 paragraph away from any separator. separatorIndices are "separator
     // before this index", so a separator at g, g-1, or g+1 is too close.
     if (separatorSet.has(g) || separatorSet.has(g - 1) || separatorSet.has(g + 1)) {
@@ -193,34 +182,29 @@ function planPullquotePlacement(
     let chosen = -1;
 
     if (src !== -1) {
-      // Keep all searching inside the source's own section. Gaps strictly inside
-      // [secStart, secEnd) are secStart+1 .. secEnd-1 (both adjacent paragraphs
-      // must belong to the section).
-      const { start: secStart, end: secEnd } = sectionOf(src);
-      const minGap = secStart + 1;
-      const maxGap = secEnd - 1;
-
-      // Search AFTER the source, within-section. Preference order is the target
-      // (src+3) first, then bias later: src+4, src+2, src+5, src+6, … never src+1.
-      // Build that ordered list of gaps, then keep going strictly later (src+7+)
-      // if the section is long enough.
-      const afterGaps = [src + 3, src + 4, src + 2, src + 5, src + 6];
-      for (let g = src + 7; g <= maxGap; g++) afterGaps.push(g);
-      for (const g of afterGaps) {
-        if (g >= src + 2 && g <= maxGap && isValidGap(g, src)) {
+      // Candidate gaps in preference order: the house target is ~3 paragraphs
+      // after the source, so try the ideal after-zone first (src+3,4,2); then a
+      // NEAR-before gap (src-2,3) — closeness beats direction, so a quote whose
+      // ideal after-zone is blocked sits just above its source rather than
+      // drifting far downstream; only then a far-after (src+5,6), then far-before.
+      // Every candidate is within MAX_DIST of the source and never src±1.
+      const candidates = [
+        src + 3,
+        src + 4,
+        src + 2,
+        src - 2,
+        src - 3,
+        src + 5,
+        src + 6,
+        src - 4,
+        src - 5,
+      ];
+      for (const g of candidates) {
+        if (Math.abs(g - src) > MAX_DIST) continue;
+        if (g < 1 || g > paragraphs.length - 1) continue;
+        if (isValidGap(g, src)) {
           chosen = g;
           break;
-        }
-      }
-
-      // Nothing valid after the source in this section — try before it,
-      // within-section (src-2, src-3, …; skip src-1 to avoid hugging the source).
-      if (chosen === -1) {
-        for (let g = src - 2; g >= minGap; g--) {
-          if (isValidGap(g, src)) {
-            chosen = g;
-            break;
-          }
         }
       }
     }

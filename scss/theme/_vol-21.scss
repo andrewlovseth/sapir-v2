@@ -1,0 +1,96 @@
+// ═══════════════════════════════════════════════════════════════════════════
+// Volume 21 Theme - Brick Red / Vermillion / Cornflower Blue / Medium Blue / Pink Frost
+// ═══════════════════════════════════════════════════════════════════════════
+
+.site-theme-volume-twenty-one,
+.issue-theme-volume-twenty-one {
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 1: Color Palette (primitive values)
+    // ─────────────────────────────────────────────────────────────────────────
+    --vol-brick: #b5515c;
+    --vol-brick-dark: #9a414b;
+    --vol-brick-50: rgba(181, 81, 92, 0.5);
+    --vol-vermillion: #f1653f;
+    --vol-cornflower: #6b95b5;
+    --vol-medium-blue: #576279;
+    --vol-medium-blue-50: rgba(87, 98, 121, 0.5);
+    --vol-pink-frost: #f5e7e8;
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIER 2: Semantic Tokens
+    // ─────────────────────────────────────────────────────────────────────────
+
+    // Header
+    --vol-newsletter-bg: var(--vol-brick);
+    --vol-newsletter-bg-hover: var(--vol-brick-dark);
+    --vol-epigraph-color: var(--vol-brick);
+
+    // Icons & Decorations
+    --vol-star-fill: var(--vol-vermillion);
+    --vol-ornament-fill: var(--vol-vermillion);
+
+    // Typography
+    --vol-pullquote-text: var(--vol-brick);
+
+    // Interactive
+    --vol-link-hover: var(--vol-brick);
+    --vol-author-underline: var(--vol-brick);
+
+    // Buttons (global)
+    --vol-cta-border: var(--vol-cornflower);
+    --vol-cta-text: var(--vol-cornflower);
+    --vol-cta-hover-bg: var(--vol-cornflower);
+
+    // Buttons (homepage override — pink frost for "Read it now")
+    --vol-cta-home-border: var(--vol-pink-frost);
+    --vol-cta-home-text: var(--vol-pink-frost);
+
+    // Selection
+    --vol-selection-bg: var(--vol-cornflower);
+
+    // Home: Latest Issue
+    --vol-latest-border: var(--vol-pink-frost);
+
+    // Home: Explore
+    --vol-explore-underline: var(--vol-medium-blue-50);
+
+    // Home: Most Read
+    --vol-most-read-color: var(--vol-medium-blue);
+    --vol-most-read-text: var(--vol-medium-blue);
+    --vol-most-read-author-hover: var(--vol-brick-50);
+
+    // Home: Quote
+    --vol-quote-title: var(--vol-brick);
+    --vol-quote-bg: var(--vol-pink-frost);
+    --vol-quote-text: var(--vol-brick);
+    --vol-quote-marks: var(--vol-brick);
+    --vol-quote-hover: var(--vol-brick);
+
+    // Footer
+    --vol-footer-bg: var(--vol-medium-blue);
+
+    // Article Page
+    --vol-author-border-hover: var(--vol-brick-50);
+    --vol-article-star-fill: var(--vol-vermillion);
+    --vol-article-btn-border: var(--vol-cornflower);
+    --vol-article-btn-text: var(--vol-cornflower);
+    --vol-article-btn-hover-bg: var(--vol-cornflower);
+
+    // Issue Page
+    --vol-contents-header: var(--vol-brick);
+    --vol-coming-soon: var(--vol-cornflower);
+}
+
+// Newsletter section override — pink frost flood
+.site-theme-volume-twenty-one,
+.issue-theme-volume-twenty-one {
+    .newsletter {
+        &__wrapper {
+            background: var(--vol-pink-frost);
+        }
+
+        .slim-line-imge-content {
+            background: var(--vol-pink-frost);
+        }
+    }
+}

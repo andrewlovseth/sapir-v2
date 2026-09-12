@@ -17,7 +17,28 @@
 
 import mammoth from "mammoth";
 import { readFile } from "fs/promises";
+import { readFileSync } from "fs";
 import type { ParsedArticle } from "./types";
+
+// The dropcap marker doesn't distinguish "[T DROP CAP] he rest" (letter starts
+// the first word) from "[A DROP CAP] law school…" (letter IS the first word,
+// e.g. standalone "A"). Distinguish via /usr/share/dict/words: standalone when
+// the following token is a word on its own but the concatenation is not.
+let dictWords: Set<string> | null = null;
+function isDictWord(word: string): boolean {
+  if (!dictWords) {
+    try {
+      dictWords = new Set(
+        readFileSync("/usr/share/dict/words", "utf-8")
+          .split("\n")
+          .map((w) => w.toLowerCase())
+      );
+    } catch {
+      dictWords = new Set();
+    }
+  }
+  return dictWords.has(word.toLowerCase());
+}
 
 export async function parseDocx(filePath: string): Promise<ParsedArticle> {
   const buffer = await readFile(filePath);
@@ -114,7 +135,15 @@ export async function parseDocx(filePath: string): Promise<ParsedArticle> {
       // CSS hides the first letter visually (replaced by the dropcap image),
       // but the letter must be in the HTML for copy/paste and printing.
       let restOfPara = cleanSoftBreaks(dropCapMatch[2].trim());
-      paragraphs.push(dropcapLetter.toUpperCase() + restOfPara);
+      const firstToken =
+        restOfPara.replace(/<[^>]+>/g, "").match(/^[A-Za-z]+/)?.[0] ?? "";
+      const standaloneLetter =
+        firstToken.length > 0 &&
+        isDictWord(firstToken) &&
+        !isDictWord(dropcapLetter + firstToken);
+      paragraphs.push(
+        dropcapLetter.toUpperCase() + (standaloneLetter ? " " : "") + restOfPara
+      );
       bodyParaCount++;
       continue;
     }

@@ -101,10 +101,10 @@ while (i < paras.length) {
         continue;
     }
 
-    // Dropcap paragraph
-    const dc = p.match(/^\[\[([A-Z]) drop cap\]\](.*)$/s);
+    // Dropcap paragraph (letter case varies by quarter: "[[t drop cap]]" vs "[[I drop cap]]")
+    const dc = p.match(/^\[\[([A-Za-z]) drop cap\]\](.*)$/s);
     if (dc) {
-        const letter = dc[1];
+        const letter = dc[1].toUpperCase();
         let rest = dc[2];
         // "I" reads as a standalone word ("I typically…") — keep its space.
         // Other letters continue the word ("Y" + "arom") — strip it.

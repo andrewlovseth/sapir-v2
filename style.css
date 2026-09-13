@@ -7940,6 +7940,52 @@ body.page-template-home.site-theme-volume-fourteen .most-read .teaser__author-li
   background: var(--vol-pink-frost);
 }
 
+.site-theme-volume-twenty-two, .issue-theme-volume-twenty-two {
+  --vol-tangerine: #ef9e42;
+  --vol-seafoam: #c9e6d3;
+  --vol-salmon: #de837c;
+  --vol-salmon-50: #de837c80;
+  --vol-teal: #537672;
+  --vol-teal-dark: #42605c;
+  --vol-teal-50: #53767280;
+  --vol-newsletter-bg: var(--vol-teal);
+  --vol-newsletter-bg-hover: var(--vol-teal-dark);
+  --vol-epigraph-color: var(--vol-tangerine);
+  --vol-star-fill: var(--vol-tangerine);
+  --vol-ornament-fill: var(--vol-tangerine);
+  --vol-pullquote-text: var(--vol-salmon);
+  --vol-link-hover: var(--vol-salmon);
+  --vol-author-underline: var(--vol-salmon);
+  --vol-cta-border: var(--vol-teal);
+  --vol-cta-text: var(--vol-teal);
+  --vol-cta-hover-bg: var(--vol-teal);
+  --vol-cta-home-border: var(--vol-seafoam);
+  --vol-cta-home-text: var(--vol-seafoam);
+  --vol-selection-bg: var(--vol-seafoam);
+  --vol-latest-border: var(--vol-seafoam);
+  --vol-explore-underline: var(--vol-teal-50);
+  --vol-most-read-color: var(--vol-salmon);
+  --vol-most-read-text: var(--vol-salmon);
+  --vol-most-read-author-hover: var(--vol-salmon-50);
+  --vol-quote-title: var(--vol-teal);
+  --vol-quote-bg: var(--vol-seafoam);
+  --vol-quote-text: var(--vol-teal);
+  --vol-quote-marks: var(--vol-teal);
+  --vol-quote-hover: var(--vol-salmon);
+  --vol-footer-bg: var(--vol-teal);
+  --vol-author-border-hover: var(--vol-salmon-50);
+  --vol-article-star-fill: var(--vol-tangerine);
+  --vol-article-btn-border: var(--vol-seafoam);
+  --vol-article-btn-text: var(--vol-teal);
+  --vol-article-btn-hover-bg: var(--vol-seafoam);
+  --vol-contents-header: var(--vol-teal);
+  --vol-coming-soon: var(--vol-teal);
+}
+
+.site-theme-volume-twenty-two .newsletter__wrapper, .issue-theme-volume-twenty-two .newsletter__wrapper, .site-theme-volume-twenty-two .newsletter .slim-line-imge-content, .issue-theme-volume-twenty-two .newsletter .slim-line-imge-content {
+  background: var(--vol-seafoam);
+}
+
 @media print {
   .site-banner, .site-footer, .site-header .hamburger, .site-header .search {
     display: none !important;

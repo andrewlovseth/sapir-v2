@@ -20,6 +20,14 @@ Uses Bun with Dart Sass + LightningCSS for autoprefixing. Dev mode runs a proxy 
 - SCSS changes → CSS injection (no page reload)
 - PHP/JS changes → full page reload
 
+## Publishing Pipeline Lives Elsewhere
+
+This repo auto-deploys to production (WP Engine via WP Pusher) on every push to `master`, so keep it theme-only. The quarterly issue tooling (import/push scripts, the `/new-issue`, `/create-issue`, `/import-articles`, `/push-to-prod`, `/import-letters`, `/volume-theme` skills) lives in **`andrewlovseth/sapir-journal`**, the DDEV project root this theme is checked out inside (`wp/wp-content/themes/sapir-v2`). Run Claude from that root for issue work.
+
+The `wp sapir create-issue` WP-CLI command stays here (`functions/cli-commands.php`) because it has to run on production.
+
+`style.css` is compiled output and is committed: rebuild with `bun run build` and commit it with any SCSS change.
+
 ## Architecture
 
 ### Content Model

@@ -8,17 +8,11 @@
     "start": "bun run dev.ts"
   },
   "devDependencies": {
-    "@types/pdf-parse": "^1.1.5",
     "lightningcss": "^1.28.0",
     "sass": "^1.83.0"
   },
   "description": "",
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "mammoth": "^1.11.0",
-    "pdf-parse": "^2.4.5",
-    "sharp": "^0.34.5"
-  }
+  "license": "ISC"
 }
